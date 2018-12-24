@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2018 MuriloVenturoso <{{email}}> -->
+<!-- Copyright 2018 MuriloVenturoso <muriloventuroso@gmail.com> -->
 <component type="desktop">
   <id>com.github.muriloventuroso.pdftricks.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -9,8 +9,25 @@
   <summary></summary>
   <description></description>
   <releases>
-    <release version="0.0.1" date="2018-05-05"/>
+    <release version="0.0.1" date="2018-12-24"/>
+      <description>
+        <p>Compress File</p>
+        <p>Split File</p>
+        <p>Merge File</p>
+      </description>
   </releases>
+  <categories>
+    <category>Office</category>
+    <category>Utility</category>
+  </categories>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/muriloventuroso/pdftricks/master/data/screenshot.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/muriloventuroso/pdftricks/master/data/screenshot2.png</image>
+    </screenshot>
+  </screenshots>
   <provides>
     <binary>com.github.muriloventuroso.pdftricks</binary>
   </provides>
@@ -43,13 +60,13 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
-  <developer_name>MuriloVenturoso</developer_name>
-  <url type="homepage"></url>
-  <url type="bugtracker">http://github.com/muriloventuroso//pdftricks/issues</url>
-  <url type="help">http://github.com/muriloventuroso//pdftricks/issues</url>
-  <update_contact>muriloventuroso_AT_gmail.com</update_contact>
-  <screenshots>
-    <screenshot type="default">
-    </screenshot>
-  </screenshots>
+  <developer_name>Murilo Venturoso</developer_name>
+  <url type="homepage">https://github.com/muriloventuroso/pdftricks</url>
+  <url type="bugtracker">https://github.com/muriloventuroso/pdftricks/issues</url>
+  <url type="translate">https://github.com/muriloventuroso/tricks/tree/master/po</url>
+  <custom>
+    <value key="x-appcenter-color-primary">#F6546A</value>
+    <value key="x-appcenter-color-primary-text">#fff</value>
+    <value key="x-appcenter-suggested-price">2</value>
+  </custom>
 </component>
