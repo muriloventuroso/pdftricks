@@ -7,9 +7,9 @@
   <project_license>GPL-3.0+</project_license>
   <name>PDF Tricks</name>
   <summary>Tricks for PDF Files</summary>
-  <description>A simple, efficient application for small manipulations in PDF files using Ghostscript.</description>
+  <description><p>A simple, efficient application for small manipulations in PDF files using Ghostscript.</p></description>
   <releases>
-    <release version="0.1.1" date="2018-12-24">
+    <release version="0.1.2" date="2018-12-24">
       <description>
         <p>Compress File</p>
         <p>Split File</p>
