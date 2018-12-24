@@ -1,0 +1,167 @@
+# Portuguese translations for com.github.muriloventuroso.pdftricks package.
+# Copyright (C) 2018 THE com.github.muriloventuroso.pdftricks'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.muriloventuroso.pdftricks package.
+# Automatically generated, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-24 17:42-0200\n"
+"PO-Revision-Date: 2018-12-24 17:29-0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/Application.vala:70
+msgid "Back"
+msgstr "Voltar"
+
+#: src/Application.vala:75 src/Application.vala:91
+msgid "PDF Tricks"
+msgstr "PDF Tricks"
+
+#: src/Widgets/Welcome.vala:25
+msgid "Tricks for PDF files"
+msgstr "Truques para Arquivos PDF"
+
+#: src/Widgets/Welcome.vala:26
+msgid "Compress PDF"
+msgstr "Comprimir PDF"
+
+#: src/Widgets/Welcome.vala:26
+msgid "Compress PDF file to get the same PDF quality but less filesize."
+msgstr "Comprima o arquivo PDF para obter a mesma qualidade de PDF, mas menos tamanho de arquivo."
+
+#: src/Widgets/Welcome.vala:27
+msgid "Split PDF"
+msgstr "Dividir PDF"
+
+#: src/Widgets/Welcome.vala:27
+msgid ""
+"Split a PDF file by page ranges or extract all PDF pages to multiple PDF "
+"files."
+msgstr "Divida um arquivo PDF por intervalos de páginas ou extraia todas as páginas para vários arquivos PDF."
+
+#: src/Widgets/Welcome.vala:28
+msgid "Merge PDF"
+msgstr "Mesclar PDF"
+
+#: src/Widgets/Welcome.vala:28
+msgid "Select multiple PDF files and merge them in seconds."
+msgstr "Selecione vários arquivos PDF e mescle-os em segundos."
+
+#: src/Widgets/CompressPDF.vala:41
+msgid "Select the file to compress"
+msgstr "Selecione o arquivo para comprimir"
+
+#: src/Widgets/CompressPDF.vala:42 src/Widgets/CompressPDF.vala:108
+#: src/Widgets/SplitPDF.vala:44 src/Widgets/SplitPDF.vala:243
+#: src/Widgets/MergePDF.vala:65 src/Widgets/MergePDF.vala:211
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/Widgets/CompressPDF.vala:44 src/Widgets/SplitPDF.vala:46
+#: src/Widgets/MergePDF.vala:67
+msgid "Open"
+msgstr "Abrir"
+
+#: src/Widgets/CompressPDF.vala:53
+msgid "Low"
+msgstr "Baixa"
+
+#: src/Widgets/CompressPDF.vala:55
+msgid "High"
+msgstr "Alta"
+
+#: src/Widgets/CompressPDF.vala:65
+msgid "Compress"
+msgstr "Comprimir"
+
+#: src/Widgets/CompressPDF.vala:85
+msgid "File to Compress:"
+msgstr "Arquivo para Comprimir:"
+
+#: src/Widgets/CompressPDF.vala:88
+msgid "Resolution to Compress:"
+msgstr "Resolução para Comprimir:"
+
+#: src/Widgets/CompressPDF.vala:107 src/Widgets/SplitPDF.vala:242
+#: src/Widgets/MergePDF.vala:210
+msgid "Select the file to output"
+msgstr "Selecione o arquivo de saída"
+
+#: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:245
+#: src/Widgets/MergePDF.vala:213
+msgid "Save"
+msgstr "Salvar"
+
+#: src/Widgets/CompressPDF.vala:123 src/Widgets/SplitPDF.vala:270
+#: src/Widgets/MergePDF.vala:224
+msgid "Success."
+msgstr "Sucesso."
+
+#: src/Widgets/CompressPDF.vala:123
+msgid "Your file was succefully compressed."
+msgstr "Seu arquivo foi comprimido com sucesso."
+
+#: src/Widgets/SplitPDF.vala:43
+msgid "Select the file to split"
+msgstr "Selecione o arquivo para dividir"
+
+#: src/Widgets/SplitPDF.vala:54
+msgid "Extract all pages"
+msgstr "Extrair todas as páginas"
+
+#: src/Widgets/SplitPDF.vala:57
+msgid "Select range of pages"
+msgstr "Selecione um intervalo de paginas"
+
+#: src/Widgets/SplitPDF.vala:183
+msgid "Split"
+msgstr "Dividir"
+
+#: src/Widgets/SplitPDF.vala:224
+msgid "File to Split:"
+msgstr "Arquivo para Dividir:"
+
+#: src/Widgets/SplitPDF.vala:270
+msgid "Your file was succefully splited."
+msgstr "Seu arquivo foi dividido com sucesso."
+
+#. The Model:
+#: src/Widgets/MergePDF.vala:43
+msgid "Add File"
+msgstr "Adicionar Arquivo"
+
+#: src/Widgets/MergePDF.vala:44
+msgid "Remove Selected"
+msgstr "Remover Selecionados"
+
+#: src/Widgets/MergePDF.vala:45
+msgid "Clear All"
+msgstr "Limpar Todos"
+
+#: src/Widgets/MergePDF.vala:64
+msgid "Select the file to merge"
+msgstr "Selecione o arquivo para mesclar"
+
+#: src/Widgets/MergePDF.vala:100
+msgid "Files"
+msgstr "Arquivos"
+
+#: src/Widgets/MergePDF.vala:101
+msgid "Pages"
+msgstr "PáSginas"
+
+#: src/Widgets/MergePDF.vala:114
+msgid "Merge"
+msgstr "Mesclar"
+
+#: src/Widgets/MergePDF.vala:224
+msgid "Your file was succefully merged."
+msgstr "Seu arquivo foi mesclado com sucesso."
