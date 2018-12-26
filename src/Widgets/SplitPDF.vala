@@ -39,16 +39,11 @@ namespace pdftricks {
         construct {
             page_size = 0;
             type_split = "all";
-            Gtk.FileChooserDialog chooser = new Gtk.FileChooserDialog (
-                _("Select the file to split"), window, Gtk.FileChooserAction.OPEN,
-                _("Cancel"),
-                Gtk.ResponseType.CANCEL,
-                _("Open"),
-                Gtk.ResponseType.ACCEPT);
-            filechooser = new Gtk.FileChooserButton.with_dialog (chooser);
+
+            filechooser = new Gtk.FileChooserButton (_("Select the file to compress"), Gtk.FileChooserAction.OPEN);
 
             Gtk.FileFilter filter = new Gtk.FileFilter ();
-            chooser.set_filter (filter);
+            filechooser.set_filter (filter);
             filter.add_mime_type ("application/pdf");
 
             Gtk.RadioButton btn_all = new Gtk.RadioButton.with_label_from_widget (null, _("Extract all pages"));
@@ -238,12 +233,10 @@ namespace pdftricks {
 
             var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/");
             var output_file = "";
-            Gtk.FileChooserDialog chooser_output = new Gtk.FileChooserDialog (
-                _("Select the file to output"), window, Gtk.FileChooserAction.SAVE,
-                _("Cancel"),
-                Gtk.ResponseType.CANCEL,
+            Gtk.FileChooserNative chooser_output = new Gtk.FileChooserNative (
+                _("Select the file to compress"), window, Gtk.FileChooserAction.SAVE,
                 _("Save"),
-                Gtk.ResponseType.ACCEPT);
+                _("Cancel"));
             var split_filename = file_pdf.split("/");
             var filename = split_filename[split_filename.length - 1];
             chooser_output.set_current_name(filename);

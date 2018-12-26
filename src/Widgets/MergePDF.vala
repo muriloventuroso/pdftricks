@@ -60,12 +60,10 @@ namespace pdftricks {
             view.drag_data_get.connect(on_drag_data_get);
             view.drag_data_received.connect(on_drag_data_received);
             add_button.clicked.connect(() => {
-                Gtk.FileChooserDialog chooser_file = new Gtk.FileChooserDialog (
-                    _("Select the file to merge"), window, Gtk.FileChooserAction.OPEN,
-                    _("Cancel"),
-                    Gtk.ResponseType.CANCEL,
-                    _("Open"),
-                    Gtk.ResponseType.ACCEPT);
+                Gtk.FileChooserNative chooser_file = new Gtk.FileChooserNative (
+                _("Select the file to compress"), window, Gtk.FileChooserAction.OPEN,
+                _("Open"),
+                _("Cancel"));
 
                 chooser_file.set_filter (filter);
                 chooser_file.set_select_multiple(true);
@@ -206,12 +204,10 @@ namespace pdftricks {
                 return;
             }
             var output_file = "";
-            Gtk.FileChooserDialog chooser_output = new Gtk.FileChooserDialog (
-                _("Select the file to output"), window, Gtk.FileChooserAction.SAVE,
-                _("Cancel"),
-                Gtk.ResponseType.CANCEL,
+            Gtk.FileChooserNative chooser_output = new Gtk.FileChooserNative (
+                _("Select the file to compress"), window, Gtk.FileChooserAction.SAVE,
                 _("Save"),
-                Gtk.ResponseType.ACCEPT);
+                _("Cancel"));
             chooser_output.do_overwrite_confirmation = true;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
                 output_file = chooser_output.get_uri().split(":")[1].replace("///", "/");
@@ -234,7 +230,6 @@ namespace pdftricks {
             int exit_status = 0;
             try{
                 var cmd = "gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=" + output_file + " -dBATCH " + inputs;
-                print(cmd);
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
