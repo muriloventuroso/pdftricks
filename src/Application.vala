@@ -105,10 +105,6 @@ namespace pdftricks {
 
             add_action (quit_action);
 
-            var provider = new Gtk.CssProvider ();
-            provider.load_from_resource ("/com/github/muriloventuroso/pdftricks/Application.css");
-            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
             quit_action.activate.connect (() => {
                 if (main_window != null) {
                     main_window.destroy ();
