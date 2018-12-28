@@ -2,7 +2,7 @@
 Name=PDF Tricks
 GenericName=Tips & Tricks for PDF files
 Comment=Tips & Tricks for PDF files
-Categories=Utility;
+Categories=GTK;Utility;Publishing;Graphics;2DGraphics;VectorGraphics;
 Exec=com.github.muriloventuroso.pdftricks
 Icon=com.github.muriloventuroso.pdftricks
 Terminal=false
