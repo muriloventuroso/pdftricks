@@ -9,6 +9,11 @@
   <summary>Tricks for PDF Files</summary>
   <description><p>A simple, efficient application for small manipulations in PDF files using Ghostscript. Compress, split and merge PDF Files.</p></description>
   <releases>
+    <release version="0.1.4" date="2019-01-01">
+      <description>
+        <p>Bugfix</p>
+      </description>
+    </release>
     <release version="0.1.2" date="2018-12-24">
       <description>
         <p>Compress File</p>
