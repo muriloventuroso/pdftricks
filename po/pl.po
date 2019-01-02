@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-24 17:42-0200\n"
+"POT-Creation-Date: 2019-01-02 17:08-0200\n"
 "PO-Revision-Date: 2018-12-24 17:29-0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: src/Application.vala:70
+#: src/Application.vala:72
 msgid "Back"
 msgstr ""
 
-#: src/Application.vala:75 src/Application.vala:91
+#: src/Application.vala:77 src/Application.vala:93
 msgid "PDF Tricks"
 msgstr ""
 
@@ -56,113 +56,117 @@ msgstr ""
 msgid "Select multiple PDF files and merge them in seconds."
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:41
+#: src/Widgets/CompressPDF.vala:42 src/Widgets/CompressPDF.vala:109
+#: src/Widgets/SplitPDF.vala:44 src/Widgets/SplitPDF.vala:247
+#: src/Widgets/MergePDF.vala:65 src/Widgets/MergePDF.vala:217
 msgid "Select the file to compress"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:42 src/Widgets/CompressPDF.vala:108
-#: src/Widgets/SplitPDF.vala:44 src/Widgets/SplitPDF.vala:243
-#: src/Widgets/MergePDF.vala:65 src/Widgets/MergePDF.vala:211
-msgid "Cancel"
-msgstr ""
-
-#: src/Widgets/CompressPDF.vala:44 src/Widgets/SplitPDF.vala:46
-#: src/Widgets/MergePDF.vala:67
-msgid "Open"
-msgstr ""
-
-#: src/Widgets/CompressPDF.vala:53
+#: src/Widgets/CompressPDF.vala:49
 msgid "Low"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:55
+#: src/Widgets/CompressPDF.vala:51
 msgid "High"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:65
+#: src/Widgets/CompressPDF.vala:61
 msgid "Compress"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:85
+#: src/Widgets/CompressPDF.vala:81
 msgid "File to Compress:"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:88
+#: src/Widgets/CompressPDF.vala:84
 msgid "Resolution to Compress:"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:107 src/Widgets/SplitPDF.vala:242
-#: src/Widgets/MergePDF.vala:210
-msgid "Select the file to output"
-msgstr ""
-
-#: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:245
-#: src/Widgets/MergePDF.vala:213
+#: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:248
+#: src/Widgets/MergePDF.vala:218
 msgid "Save"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:123 src/Widgets/SplitPDF.vala:270
-#: src/Widgets/MergePDF.vala:224
+#: src/Widgets/CompressPDF.vala:111 src/Widgets/SplitPDF.vala:249
+#: src/Widgets/MergePDF.vala:67 src/Widgets/MergePDF.vala:219
+msgid "Cancel"
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:273
+#: src/Widgets/MergePDF.vala:229
 msgid "Success."
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:123
+#: src/Widgets/CompressPDF.vala:124
 msgid "Your file was succefully compressed."
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:43
-msgid "Select the file to split"
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:279
+#: src/Widgets/MergePDF.vala:235
+msgid "Failure."
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:54
+#: src/Widgets/CompressPDF.vala:130
+msgid "There was a problem compressing your file."
+msgstr ""
+
+#: src/Widgets/SplitPDF.vala:50
 msgid "Extract all pages"
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:57
+#: src/Widgets/SplitPDF.vala:53
 msgid "Select range of pages"
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:183
+#: src/Widgets/SplitPDF.vala:179
 msgid "Split"
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:224
+#: src/Widgets/SplitPDF.vala:220
 msgid "File to Split:"
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:270
+#: src/Widgets/SplitPDF.vala:273
 msgid "Your file was succefully splited."
 msgstr ""
 
+#: src/Widgets/SplitPDF.vala:279
+msgid "There was a problem spliting your file."
+msgstr ""
+
 #. The Model:
-#: src/Widgets/MergePDF.vala:43
+#: src/Widgets/MergePDF.vala:44
 msgid "Add File"
 msgstr ""
 
-#: src/Widgets/MergePDF.vala:44
+#: src/Widgets/MergePDF.vala:45
 msgid "Remove Selected"
 msgstr ""
 
-#: src/Widgets/MergePDF.vala:45
+#: src/Widgets/MergePDF.vala:46
 msgid "Clear All"
 msgstr ""
 
-#: src/Widgets/MergePDF.vala:64
-msgid "Select the file to merge"
+#: src/Widgets/MergePDF.vala:66
+msgid "Open"
 msgstr ""
 
-#: src/Widgets/MergePDF.vala:100
+#: src/Widgets/MergePDF.vala:99
 msgid "Files"
 msgstr ""
 
-#: src/Widgets/MergePDF.vala:101
+#: src/Widgets/MergePDF.vala:100
 msgid "Pages"
 msgstr ""
 
-#: src/Widgets/MergePDF.vala:114
+#: src/Widgets/MergePDF.vala:113
 msgid "Merge"
 msgstr ""
 
-#: src/Widgets/MergePDF.vala:224
+#: src/Widgets/MergePDF.vala:229
 msgid "Your file was succefully merged."
+msgstr ""
+
+#: src/Widgets/MergePDF.vala:235
+msgid "There was a problem merging your file."
 msgstr ""

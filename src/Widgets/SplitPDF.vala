@@ -26,6 +26,7 @@ namespace pdftricks {
         private int page_size;
         private Gtk.Entry entry_range;
         private string type_split;
+        private Gtk.Spinner spinner;
 
         public SplitPDF (Gtk.Window window) {
             Object (
@@ -223,8 +224,17 @@ namespace pdftricks {
             grid.attach (btn_range, 2, 1, 1, 1);
             grid.attach (revealer, 0, 2, 4, 2);
             grid.attach (split_button, 1, 5, 2, 1);
+
+            spinner = new Gtk.Spinner();
+            spinner.active = true;
+
+            grid.attach (spinner, 1, 6, 2, 1);
             pack_start(grid, true, true, 0);
 
+        }
+
+        public void hide_spinner(){
+            spinner.hide();
         }
 
         private void confirm_split(){
@@ -261,6 +271,7 @@ namespace pdftricks {
 
                 if(result_split = true){
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully splited."), "process-completed", Gtk.ButtonsType.CLOSE);
+                    message_dialog.set_transient_for(window);
                     message_dialog.show_all ();
                     message_dialog.run ();
                     message_dialog.destroy ();
@@ -300,18 +311,22 @@ namespace pdftricks {
             string output, stderr  = "";
             int exit_status = 0;
             string output_filename = output_file.replace(".pdf", "_" + label + ".pdf");
+            spinner.show();
             try{
                 var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dColorConversionStrategy=/LeaveColorUnchange -dFirstPage=" + page_start.to_string() + " -dLastPage=" + page_end.to_string() + " -sOutputFile=" + output_filename +" " + input;
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
+                spinner.hide();
                 return false;
             }
             if(output != ""){
                 if(output.contains("Error")){
+                    spinner.hide();
                     return false;
                 }
             }
+            spinner.hide();
             return true;
         }
 
@@ -325,10 +340,11 @@ namespace pdftricks {
                 result = int.parse(output);
             } catch (Error e) {
                 critical (e.message);
+                return 0;
             }
             if(output != ""){
                 if(output.contains("Error")){
-                    return false;
+                    return 0;
                 }
             }
             return result;

@@ -26,6 +26,8 @@ namespace pdftricks {
         private Gtk.TreeIter iter;
         private Gtk.ComboBox resolution_box;
         public Gtk.Window window { get; construct; }
+        private Gtk.Grid grid;
+        private Gtk.Spinner spinner;
 
         public CompressPDF (Gtk.Window window) {
             Object (
@@ -69,7 +71,7 @@ namespace pdftricks {
                 resolution_box.set_sensitive (true);
             });
 
-            var grid = new Gtk.Grid ();
+            grid = new Gtk.Grid ();
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.halign = Gtk.Align.CENTER;
             grid.valign = Gtk.Align.CENTER;
@@ -83,9 +85,15 @@ namespace pdftricks {
             grid.attach (resolution_box, 1, 1, 1, 1);
 
             grid.attach (compress_button, 0, 2, 2, 2);
+            spinner = new Gtk.Spinner();
+            spinner.active = true;
 
+            grid.attach (spinner, 0, 4, 2, 2);
             add(grid);
 
+        }
+        public void hide_spinner(){
+            spinner.hide();
         }
 
         private void confirm_compress(){
@@ -111,7 +119,8 @@ namespace pdftricks {
             }
             chooser_output.destroy();
             if(compress == true){
-                if(compress_file(file_pdf, output_file, str_resolution)){
+                var result_compress = compress_file(file_pdf, output_file, str_resolution);
+                if(result_compress){
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully compressed."), "process-completed", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for(window);
                     message_dialog.show_all ();
@@ -128,20 +137,27 @@ namespace pdftricks {
         }
 
         private bool compress_file(string input, string output_file, string resolution){
+
             string output, stderr  = "";
             int exit_status = 0;
+
+            spinner.show();
+
             try{
                 var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/" + resolution + " -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + output_file + " " + input;
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
+                spinner.hide();
                 return false;
             }
             if(output != ""){
                 if(output.contains("Error")){
+                    spinner.hide();
                     return false;
                 }
             }
+            spinner.hide();
             return true;
         }
 

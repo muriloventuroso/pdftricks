@@ -96,6 +96,9 @@ namespace pdftricks {
             main_window.set_titlebar (headerbar);
             main_window.insert_action_group ("win", actions);
             main_window.show_all();
+            compress_pdf.hide_spinner();
+            split_pdf.hide_spinner();
+            merge_pdf.hide_spinner();
             navigation_button.hide();
 
             add_window (main_window);

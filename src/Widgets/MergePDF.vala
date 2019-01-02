@@ -24,6 +24,7 @@ namespace pdftricks {
         public Gtk.Window window { get; construct; }
         private Gtk.TreeView view;
         private Gtk.ListStore list_store;
+        private Gtk.Spinner spinner;
         private const Gtk.TargetEntry[] targets = {
             {"STRING",0,0}
         };
@@ -123,7 +124,15 @@ namespace pdftricks {
             grid.attach (clear_button, 3, 0, 1, 1);
             grid.attach (scroll, 0, 1, 5, 6);
             grid.attach (merge_button, 2, 7, 1, 1);
+            spinner = new Gtk.Spinner();
+            spinner.active = true;
+
+            grid.attach (spinner, 2, 8, 2, 2);
             pack_start(grid, true, true, 0);
+        }
+
+        public void hide_spinner(){
+            spinner.hide();
         }
 
         private int get_page_count(string input_file){
@@ -218,6 +227,7 @@ namespace pdftricks {
 
                 if(merge_file(files_pdf, output_file)){
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully merged."), "process-completed", Gtk.ButtonsType.CLOSE);
+                    message_dialog.set_transient_for(window);
                     message_dialog.show_all ();
                     message_dialog.run ();
                     message_dialog.destroy ();
