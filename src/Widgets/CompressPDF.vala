@@ -113,6 +113,13 @@ namespace pdftricks {
             if(compress == true){
                 if(compress_file(file_pdf, output_file, str_resolution)){
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully compressed."), "process-completed", Gtk.ButtonsType.CLOSE);
+                    message_dialog.set_transient_for(window);
+                    message_dialog.show_all ();
+                    message_dialog.run ();
+                    message_dialog.destroy ();
+                }else{
+                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem compressing your file."), "process-stop", Gtk.ButtonsType.CLOSE);
+                    message_dialog.set_transient_for(window);
                     message_dialog.show_all ();
                     message_dialog.run ();
                     message_dialog.destroy ();
@@ -129,6 +136,11 @@ namespace pdftricks {
             } catch (Error e) {
                 critical (e.message);
                 return false;
+            }
+            if(output != ""){
+                if(output.contains("Error")){
+                    return false;
+                }
             }
             return true;
         }

@@ -264,7 +264,13 @@ namespace pdftricks {
                     message_dialog.show_all ();
                     message_dialog.run ();
                     message_dialog.destroy ();
-                }
+                }else{
+                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem spliting your file."), "process-stop", Gtk.ButtonsType.CLOSE);
+                    message_dialog.set_transient_for(window);
+                    message_dialog.show_all ();
+                    message_dialog.run ();
+                    message_dialog.destroy ();
+                };
             }
         }
 
@@ -301,6 +307,11 @@ namespace pdftricks {
                 critical (e.message);
                 return false;
             }
+            if(output != ""){
+                if(output.contains("Error")){
+                    return false;
+                }
+            }
             return true;
         }
 
@@ -315,6 +326,11 @@ namespace pdftricks {
             } catch (Error e) {
                 critical (e.message);
             }
+            if(output != ""){
+                if(output.contains("Error")){
+                    return false;
+                }
+            }
             return result;
 
         }
@@ -328,6 +344,11 @@ namespace pdftricks {
             } catch (Error e) {
                 critical (e.message);
                 return false;
+            }
+            if(output != ""){
+                if(output.contains("Error")){
+                    return false;
+                }
             }
             return true;
         }
