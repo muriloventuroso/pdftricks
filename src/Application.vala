@@ -60,7 +60,9 @@ namespace pdftricks {
                 get_windows ().data.present ();
                 return;
             }
-
+            //patch for forcing elementary os theme and icons
+            Gtk.Settings.get_default().set_property("gtk-theme-name", "elementary");
+            Gtk.Settings.get_default().set_property("gtk-icon-theme-name", "elementary");
             actions = new SimpleActionGroup ();
             actions.add_action_entries (action_entries, this);
             main_window = new Gtk.Window();
