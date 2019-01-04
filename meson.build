@@ -56,6 +56,10 @@ foreach i : icon_sizes
         join_paths('data/icons', i, 'merge-pdf.svg'),
         install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
     )
+    install_data(
+        join_paths('data/icons', i, 'convert-pdf.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
+    )
 endforeach
 
 config_data = configuration_data()
@@ -102,7 +106,8 @@ code_files = files(
     'src/Widgets/Welcome.vala',
     'src/Widgets/CompressPDF.vala',
     'src/Widgets/SplitPDF.vala',
-    'src/Widgets/MergePDF.vala'
+    'src/Widgets/MergePDF.vala',
+    'src/Widgets/ConvertPDF.vala'
 )
 
 message ('Defines executable')

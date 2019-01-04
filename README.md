@@ -4,7 +4,7 @@
 
 ## Tricks for PDF Files
 
-A simple, efficient application for small manipulations in PDF files using Ghostscript.
+A simple, efficient application for small manipulations in PDF files.
 
 <p align="center">
   <a href="https://appcenter.elementary.io/com.github.muriloventuroso.pdftricks"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
@@ -15,6 +15,7 @@ A simple, efficient application for small manipulations in PDF files using Ghost
 * Compress PDF (multiple resolutions)
 * Split PDF (All pages or page ranges)
 * Merge PDF
+* Convert PDF
 
 ### Donate
 <a href="https://www.paypal.me/muriloventuroso">PayPal</a> | <a href="https://www.patreon.com/muriloventuroso">Patreon</a>

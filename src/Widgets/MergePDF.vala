@@ -71,7 +71,7 @@ namespace pdftricks {
 
                 if (chooser_file.run () == Gtk.ResponseType.ACCEPT) {
                     foreach(string pdf_file in chooser_file.get_uris()){
-                        pdf_file = pdf_file.split(":")[1].replace("///", "/");
+                        pdf_file = pdf_file.split(":")[1].replace("///", "/").replace("%20", " ");
                         var page_size = get_page_count(pdf_file);
                         list_store.append (out iter);
                         list_store.set (iter, 0, pdf_file, 1, page_size.to_string());
@@ -140,7 +140,7 @@ namespace pdftricks {
             int exit_status = 0;
             int result = 0;
             try{
-                var cmd = "gs -q -dNODISPLAY -c \"(" + input_file + ") (r) file runpdfbegin pdfpagecount = quit\"";
+                var cmd = "gs -q -dNODISPLAY -c \"(" + input_file.replace(" ", "\\ ") + ") (r) file runpdfbegin pdfpagecount = quit\"";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
                 result = int.parse(output);
             } catch (Error e) {
@@ -205,8 +205,8 @@ namespace pdftricks {
                 GLib.Value cell1;
 
                 list_store.get_value (iter, 0, out cell1);
-
-                files_pdf = files_pdf + " " + (string) cell1;
+                var file_pdf = (string) cell1;
+                files_pdf = files_pdf + " " + file_pdf.replace(" ", "\\ ");
                 return false;
             });
             if(files_pdf == ""){
@@ -219,7 +219,7 @@ namespace pdftricks {
                 _("Cancel"));
             chooser_output.do_overwrite_confirmation = true;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-                output_file = chooser_output.get_uri().split(":")[1].replace("///", "/");
+                output_file = chooser_output.get_uri().split(":")[1].replace("///", "/").replace("%20", "\\ ");
                 merge = true;
             }
             chooser_output.destroy();

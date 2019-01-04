@@ -102,11 +102,11 @@ namespace pdftricks {
             resolution_box.get_active_iter (out iter);
             resolution_store.get_value (iter, 0, out resolution);
 
-            var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/");
+            var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
             var str_resolution = resolution.dup_string();
             var output_file = "";
             Gtk.FileChooserNative chooser_output = new Gtk.FileChooserNative (
-                _("Select the file to compress"), window, Gtk.FileChooserAction.SAVE,
+                _("Select the file to save"), window, Gtk.FileChooserAction.SAVE,
                 _("Save"),
                 _("Cancel"));
             var split_filename = file_pdf.split("/");
@@ -114,7 +114,7 @@ namespace pdftricks {
             chooser_output.set_current_name(filename.split(".")[0] + "_compressed.pdf");
             chooser_output.do_overwrite_confirmation = true;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-                output_file = chooser_output.get_uri().split(":")[1].replace("///", "/");
+                output_file = chooser_output.get_uri().split(":")[1].replace("///", "/").replace("%20", "\\ ");
                 compress = true;
             }
             chooser_output.destroy();
@@ -144,7 +144,7 @@ namespace pdftricks {
             spinner.show();
 
             try{
-                var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/" + resolution + " -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + output_file + " " + input;
+                var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/" + resolution + " -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + output_file + " " + input.replace(" ", "\\ ");
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);

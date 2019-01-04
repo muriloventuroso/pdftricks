@@ -30,12 +30,14 @@ namespace pdftricks {
         private CompressPDF compress_pdf;
         private SplitPDF split_pdf;
         private MergePDF merge_pdf;
+        private ConvertPDF convert_pdf;
         private Gtk.Stack stack;
 
         public const string ACTION_PREFIX = "win.";
         public const string ACTION_COMPRESS_PDF = "action_compress_pdf";
         public const string ACTION_SPLIT_PDF = "action_split_pdf";
         public const string ACTION_MERGE_PDF = "action_merge_pdf";
+        public const string ACTION_CONVERT_PDF = "action_convert_pdf";
 
         public SimpleActionGroup actions;
         public Gtk.ActionGroup main_actions;
@@ -43,7 +45,8 @@ namespace pdftricks {
         private const ActionEntry[] action_entries = {
             { ACTION_COMPRESS_PDF, action_compress_pdf },
             { ACTION_SPLIT_PDF, action_split_pdf },
-            { ACTION_MERGE_PDF, action_merge_pdf }
+            { ACTION_MERGE_PDF, action_merge_pdf },
+            { ACTION_CONVERT_PDF, action_convert_pdf }
         };
 
         public Application () {
@@ -81,12 +84,14 @@ namespace pdftricks {
             compress_pdf = new CompressPDF(main_window);
             split_pdf = new SplitPDF(main_window);
             merge_pdf = new MergePDF(main_window);
+            convert_pdf = new ConvertPDF(main_window);
             stack = new Gtk.Stack ();
             stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
             stack.add_named (welcome, "main");
             stack.add_named (compress_pdf, "compress_pdf");
             stack.add_named (split_pdf, "split_pdf");
             stack.add_named (merge_pdf, "merge_pdf");
+            stack.add_named (convert_pdf, "convert_pdf");
 
             main_window.application = this;
             main_window.icon_name = "pdftricks";
@@ -99,6 +104,7 @@ namespace pdftricks {
             compress_pdf.hide_spinner();
             split_pdf.hide_spinner();
             merge_pdf.hide_spinner();
+            convert_pdf.hide_spinner();
             navigation_button.hide();
 
             add_window (main_window);
@@ -140,6 +146,11 @@ namespace pdftricks {
 
         private void action_merge_pdf() {
             stack.set_visible_child_name ("merge_pdf");
+            navigation_button.show();
+        }
+
+        private void action_convert_pdf() {
+            stack.set_visible_child_name ("convert_pdf");
             navigation_button.show();
         }
 

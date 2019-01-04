@@ -241,7 +241,7 @@ namespace pdftricks {
             var split = false;
 
 
-            var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/");
+            var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
             var output_file = "";
             Gtk.FileChooserNative chooser_output = new Gtk.FileChooserNative (
                 _("Select the file to compress"), window, Gtk.FileChooserAction.SAVE,
@@ -252,7 +252,7 @@ namespace pdftricks {
             chooser_output.set_current_name(filename);
             chooser_output.do_overwrite_confirmation = false;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-                output_file = chooser_output.get_uri().split(":")[1].replace("///", "/");
+                output_file = chooser_output.get_uri().split(":")[1].replace("///", "/").replace("%20", "\\ ");
                 split = true;
             }
             chooser_output.destroy();
@@ -313,7 +313,7 @@ namespace pdftricks {
             string output_filename = output_file.replace(".pdf", "_" + label + ".pdf");
             spinner.show();
             try{
-                var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dColorConversionStrategy=/LeaveColorUnchange -dFirstPage=" + page_start.to_string() + " -dLastPage=" + page_end.to_string() + " -sOutputFile=" + output_filename +" " + input;
+                var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dColorConversionStrategy=/LeaveColorUnchange -dFirstPage=" + page_start.to_string() + " -dLastPage=" + page_end.to_string() + " -sOutputFile=" + output_filename +" " + input.replace(" ", "\\ ");
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
@@ -355,7 +355,7 @@ namespace pdftricks {
             string output, stderr  = "";
             int exit_status = 0;
             try{
-                var cmd = "gs -dNumRenderingThreads=4 -dNOPAUSE -sDEVICE=jpeg -g125x175 -dPDFFitPage -sOutputFile=/tmp/h%d.jpg -dJPEGQ=100 -r300 -q " + input_file +" -c quit";
+                var cmd = "gs -dNumRenderingThreads=4 -dNOPAUSE -sDEVICE=jpeg -g125x175 -dPDFFitPage -sOutputFile=/tmp/h%d.jpg -dJPEGQ=100 -r300 -q " + input_file.replace(" ", "\\ ") +" -c quit";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
