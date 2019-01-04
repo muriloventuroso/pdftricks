@@ -151,7 +151,7 @@ namespace pdftricks {
                 if(btn_range.get_active() == true){
                     model_thumbs.clear();
                     type_split = "range";
-                    var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/");
+                    var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
                     view_thumbs.set_columns(page_size);
                     if(create_thumbs(file_pdf)){
                         for (int a = 1; a <= page_size; a++) {
@@ -184,7 +184,7 @@ namespace pdftricks {
             split_button.set_sensitive(false);
 
             filechooser.file_set.connect(() => {
-                var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/");
+                var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
                 page_size = get_page_count(file_pdf);
                 split_button.set_sensitive (true);
                 btn_all.set_sensitive (true);

@@ -57,9 +57,10 @@ foreach i : icon_sizes
         install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
     )
     install_data(
-        join_paths('data/icons', i, 'convert-pdf.svg'),
+        join_paths('data/icons', i, 'pdf-convert.svg'),
         install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
     )
+
 endforeach
 
 config_data = configuration_data()

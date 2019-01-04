@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-02 17:08-0200\n"
+"POT-Creation-Date: 2019-01-04 09:50-0200\n"
 "PO-Revision-Date: 2018-12-24 17:29-0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/Application.vala:72
+#: src/Application.vala:75
 msgid "Back"
 msgstr ""
 
-#: src/Application.vala:77 src/Application.vala:93
+#: src/Application.vala:80 src/Application.vala:98
 msgid "PDF Tricks"
 msgstr ""
 
@@ -55,9 +55,17 @@ msgstr ""
 msgid "Select multiple PDF files and merge them in seconds."
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:42 src/Widgets/CompressPDF.vala:109
-#: src/Widgets/SplitPDF.vala:44 src/Widgets/SplitPDF.vala:247
-#: src/Widgets/MergePDF.vala:65 src/Widgets/MergePDF.vala:217
+#: src/Widgets/Welcome.vala:29
+msgid "Convert PDF"
+msgstr ""
+
+#: src/Widgets/Welcome.vala:29
+msgid "Convert PDF files to jpg, png and txt formats."
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
+#: src/Widgets/SplitPDF.vala:247 src/Widgets/MergePDF.vala:65
+#: src/Widgets/MergePDF.vala:217
 msgid "Select the file to compress"
 msgstr ""
 
@@ -79,6 +87,10 @@ msgstr ""
 
 #: src/Widgets/CompressPDF.vala:84
 msgid "Resolution to Compress:"
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:109
+msgid "Select the file to save"
 msgstr ""
 
 #: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:248
