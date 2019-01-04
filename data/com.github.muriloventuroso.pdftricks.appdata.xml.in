@@ -9,6 +9,12 @@
   <summary>Tricks for PDF Files</summary>
   <description><p>A simple, efficient application for small manipulations in PDF files. Compress, split, merge and convert PDF Files.</p></description>
   <releases>
+    <release version="0.1.5" date="2019-01-04">
+      <description>
+        <p>Convert PDF</p>
+        <p>Bugfix</p>
+      </description>
+    </release>
     <release version="0.1.4" date="2019-01-01">
       <description>
         <p>Bugfix</p>
