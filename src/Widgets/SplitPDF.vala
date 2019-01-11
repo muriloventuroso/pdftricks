@@ -53,6 +53,9 @@ namespace pdftricks {
             Gtk.RadioButton btn_range = new Gtk.RadioButton.with_label_from_widget (btn_all, _("Select range of pages"));
             btn_range.set_sensitive (false);
 
+            Gtk.RadioButton btn_colors = new Gtk.RadioButton.with_label_from_widget (btn_all, _("Separate colored pages"));
+            btn_colors.set_sensitive (false);
+
             var revealer = new Gtk.Revealer();
 
             Gtk.ListStore model_thumbs = new Gtk.ListStore (2, typeof (Gdk.Pixbuf), typeof (string));
@@ -99,49 +102,7 @@ namespace pdftricks {
                     }
                 }
 
-                var list_result = result.split(",");
-                var first = list_result[0];
-                var last = list_result[0];
-                var result_grouped = "";
-                for(int a = 0; a < list_result.length; a++){
-                    if(a == 0){
-                        continue;
-                    }
-                    var n = list_result[a];
-
-                    if(int.parse(n) - 1 == int.parse(last)){
-                        last = n;
-                    }else{
-                        if(first == last){
-                            if(result_grouped == ""){
-                                result_grouped = first;
-                            }else{
-                                result_grouped = result_grouped + "," + first;
-                            }
-                        }else{
-                            if(result_grouped == ""){
-                                result_grouped = first + "-" + last;
-                            }else{
-                                result_grouped = result_grouped + "," + first + "-" + last;
-                            }
-                        }
-                        first = n;
-                        last = n;
-                    }
-                }
-                if(first == last){
-                    if(result_grouped == ""){
-                        result_grouped = first;
-                    }else{
-                        result_grouped = result_grouped + "," + first;
-                    }
-                }else{
-                    if(result_grouped == ""){
-                        result_grouped = first + "-" + last;
-                    }else{
-                        result_grouped = result_grouped + "," + first + "-" + last;
-                    }
-                }
+                var result_grouped = group_list(result);
                 if(result_grouped != ""){
                     entry_range.set_text(result_grouped);
                 }
@@ -176,6 +137,13 @@ namespace pdftricks {
                     revealer.set_reveal_child(false);
                 }
             });
+
+            btn_colors.toggled.connect(() => {
+                if(btn_colors.get_active() == true){
+                    type_split = "colors";
+                    revealer.set_reveal_child(false);
+                }
+            });
             var split_button = new Gtk.Button.with_label (_("Split"));
             split_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             split_button.can_default = true;
@@ -189,6 +157,7 @@ namespace pdftricks {
                 split_button.set_sensitive (true);
                 btn_all.set_sensitive (true);
                 btn_range.set_sensitive (true);
+                btn_colors.set_sensitive (true);
                 model_thumbs.clear();
                 if(btn_range.get_active() == true){
                     view_thumbs.set_columns(page_size);
@@ -218,12 +187,13 @@ namespace pdftricks {
             grid.vexpand = true;
 
             grid.attach (new Granite.HeaderLabel (_("File to Split:")), 1, 0, 1, 1);
-            grid.attach (filechooser, 2, 0, 1, 1);
+            grid.attach (filechooser, 2, 0, 2, 1);
 
             grid.attach (btn_all, 1, 1, 1, 1);
             grid.attach (btn_range, 2, 1, 1, 1);
-            grid.attach (revealer, 0, 2, 4, 2);
-            grid.attach (split_button, 1, 5, 2, 1);
+            grid.attach (btn_colors, 3, 1, 1, 1);
+            grid.attach (revealer, 0, 2, 5, 2);
+            grid.attach (split_button, 1, 5, 3, 1);
 
             spinner = new Gtk.Spinner();
             spinner.active = true;
@@ -267,6 +237,20 @@ namespace pdftricks {
                     if(split_file_range(file_pdf, output_file, pages)){
                         result_split = true;
                     };
+                }else if(type_split == "colors"){
+                    var pages = get_colors(file_pdf);
+                    if(pages != "" && pages != ";"){
+                        var pages_black = group_list(pages.split(";")[0]);
+                        var pages_colored = group_list(pages.split(";")[1]);
+                        var output_file_black = output_file.replace(".pdf", "_black.pdf");
+                        var output_file_colored = output_file.replace(".pdf", "_colored.pdf");
+                        if(split_file_range(file_pdf, output_file_black, pages_black)){
+                            result_split = true;
+                        };
+                        if(split_file_range(file_pdf, output_file_colored, pages_colored)){
+                            result_split = true;
+                        };
+                    }
                 }
 
                 if(result_split = true){
@@ -283,6 +267,45 @@ namespace pdftricks {
                     message_dialog.destroy ();
                 };
             }
+        }
+
+        private string get_colors(string input){
+            string output, stderr  = "";
+            int exit_status = 0;
+            spinner.show();
+            try{
+                var cmd = "gs -dNOPAUSE -dQUIET -dBATCH -q  -o - -sDEVICE=inkcov " + input.replace(" ", "\\ ") + " -c quit  | grep -v Page";
+                Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
+            } catch (Error e) {
+                critical (e.message);
+                spinner.hide();
+                return "";
+            }
+            if(output == ""){
+                return "";
+            }
+            spinner.hide();
+            var split_output = output.split("\n");
+            var pages_color = "";
+            var pages_black = "";
+            for (var i = 0; i< split_output.length; i++) {
+                var page = split_output[i].strip();
+                if(page.contains("CMYK OK")){
+                    var cmyk = page.replace("  ", " ").split(" ");
+                    if(cmyk[0] == "0.00000" && cmyk[1] == "0.00000" && cmyk[2] == "0.00000"){
+                        pages_black = pages_black + (i + 1).to_string() + ",";
+                    }else{
+                        pages_color = pages_color + (i + 1).to_string() + ",";
+                    }
+                }
+            }
+            if(pages_black.substring(pages_black.length - 1) == ","){
+                pages_black = pages_black.substring(0, pages_black.length - 1);
+            }
+            if(pages_color.substring(pages_color.length - 1) == ","){
+                pages_color = pages_color.substring(0, pages_color.length - 1);
+            }
+            return pages_black + ";" + pages_color;
         }
 
         private bool split_file_all(string input, string output_file) {
@@ -367,6 +390,54 @@ namespace pdftricks {
                 }
             }
             return true;
+        }
+
+        private string group_list(string result){
+            var list_result = result.split(",");
+            var first = list_result[0];
+            var last = list_result[0];
+            var result_grouped = "";
+            for(int a = 0; a < list_result.length; a++){
+                if(a == 0){
+                    continue;
+                }
+                var n = list_result[a];
+
+                if(int.parse(n) - 1 == int.parse(last)){
+                    last = n;
+                }else{
+                    if(first == last){
+                        if(result_grouped == ""){
+                            result_grouped = first;
+                        }else{
+                            result_grouped = result_grouped + "," + first;
+                        }
+                    }else{
+                        if(result_grouped == ""){
+                            result_grouped = first + "-" + last;
+                        }else{
+                            result_grouped = result_grouped + "," + first + "-" + last;
+                        }
+                    }
+                    first = n;
+                    last = n;
+                }
+            }
+            if(first == last){
+                if(result_grouped == ""){
+                    result_grouped = first;
+                }else{
+                    result_grouped = result_grouped + "," + first;
+                }
+            }else{
+                if(result_grouped == ""){
+                    result_grouped = first + "-" + last;
+                }else{
+                    result_grouped = result_grouped + "," + first + "-" + last;
+                }
+            }
+
+            return result_grouped;
         }
 
 
