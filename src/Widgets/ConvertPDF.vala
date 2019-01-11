@@ -63,6 +63,9 @@ namespace pdftricks {
                     format_conversion.append_text ("png");
                     format_conversion.append_text ("txt");
                     format_conversion.active = 0;
+                }else if(input_format == "jpg"){
+                    format_conversion.append_text ("pdf");
+                    format_conversion.active = 0;
                 }
 
             });
@@ -155,8 +158,15 @@ namespace pdftricks {
                     var n_output_file = output_file;
                     cmd = "gs -ps2ascii -sDEVICE=txtwrite -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
                 }
+            }else if(format_input == "jpg"){
+                var n_output_file = output_file;
+                var gs_version = get_version();
+                if(gs_version != ""){
+                    cmd = "gs -q -sPAPERSIZE=letter -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=" + n_output_file + " /usr/share/ghostscript/" + gs_version + "/lib/viewjpeg.ps -c \\(" + input.replace(" ", "\\ ") + "\\) viewJPEG ";
+                }
             }
             if(cmd != ""){
+                print(cmd);
                 try{
                     Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
                 } catch (Error e) {
@@ -173,6 +183,26 @@ namespace pdftricks {
             }
             spinner.hide();
             return true;
+        }
+
+        private string get_version(){
+            string output, stderr  = "";
+            int exit_status = 0;
+
+            try{
+                var cmd = "gs --version";
+                Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
+            } catch (Error e) {
+                critical (e.message);
+                return "";
+            }
+            if(output != ""){
+                if(output.contains("Error")){
+                    return "";
+                }
+            }
+            output = output.replace("\n", "");
+            return output;
         }
 
 

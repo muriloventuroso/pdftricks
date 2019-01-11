@@ -3,3 +3,4 @@ src/Widgets/Welcome.vala
 src/Widgets/CompressPDF.vala
 src/Widgets/SplitPDF.vala
 src/Widgets/MergePDF.vala
+src/Widgets/ConvertPDF.vala

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-04 09:50-0200\n"
+"POT-Creation-Date: 2019-01-11 10:15-0200\n"
 "PO-Revision-Date: 2018-12-24 17:29-0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/Application.vala:75
+#: src/Application.vala:72
 msgid "Back"
 msgstr ""
 
-#: src/Application.vala:80 src/Application.vala:98
+#: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
 msgstr ""
 
@@ -64,7 +64,7 @@ msgid "Convert PDF files to jpg, png and txt formats."
 msgstr ""
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
-#: src/Widgets/SplitPDF.vala:247 src/Widgets/MergePDF.vala:65
+#: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:65
 #: src/Widgets/MergePDF.vala:217
 msgid "Select the file to compress"
 msgstr ""
@@ -89,22 +89,23 @@ msgstr ""
 msgid "Resolution to Compress:"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:109
+#: src/Widgets/CompressPDF.vala:109 src/Widgets/ConvertPDF.vala:114
 msgid "Select the file to save"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:248
-#: src/Widgets/MergePDF.vala:218
+#: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:218
+#: src/Widgets/MergePDF.vala:218 src/Widgets/ConvertPDF.vala:115
 msgid "Save"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:111 src/Widgets/SplitPDF.vala:249
+#: src/Widgets/CompressPDF.vala:111 src/Widgets/SplitPDF.vala:219
 #: src/Widgets/MergePDF.vala:67 src/Widgets/MergePDF.vala:219
+#: src/Widgets/ConvertPDF.vala:116
 msgid "Cancel"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:273
-#: src/Widgets/MergePDF.vala:229
+#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:257
+#: src/Widgets/MergePDF.vala:229 src/Widgets/ConvertPDF.vala:129
 msgid "Success."
 msgstr ""
 
@@ -112,8 +113,9 @@ msgstr ""
 msgid "Your file was succefully compressed."
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:279
-#: src/Widgets/MergePDF.vala:235
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:263
+#: src/Widgets/MergePDF.vala:235 src/Widgets/ConvertPDF.vala:105
+#: src/Widgets/ConvertPDF.vala:135
 msgid "Failure."
 msgstr ""
 
@@ -129,19 +131,23 @@ msgstr ""
 msgid "Select range of pages"
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:179
+#: src/Widgets/SplitPDF.vala:56
+msgid "Separate colored pages"
+msgstr ""
+
+#: src/Widgets/SplitPDF.vala:147
 msgid "Split"
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:220
+#: src/Widgets/SplitPDF.vala:189
 msgid "File to Split:"
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:273
+#: src/Widgets/SplitPDF.vala:257
 msgid "Your file was succefully splited."
 msgstr ""
 
-#: src/Widgets/SplitPDF.vala:279
+#: src/Widgets/SplitPDF.vala:263
 msgid "There was a problem spliting your file."
 msgstr ""
 
@@ -180,4 +186,32 @@ msgstr ""
 
 #: src/Widgets/MergePDF.vala:235
 msgid "There was a problem merging your file."
+msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:40
+msgid "Select the file to convert"
+msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:48
+msgid "Convert"
+msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:80
+msgid "File to Convert:"
+msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:83
+msgid "Format to Convert:"
+msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:105
+msgid "The input format is the same as the output format."
+msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:129
+msgid "Your file was succefully converted."
+msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:135
+msgid "There was a problem converting your file."
 msgstr ""
