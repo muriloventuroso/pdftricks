@@ -1,0 +1,54 @@
+# Maltese translations for extra package.
+# Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-28 11:13-0200\n"
+"PO-Revision-Date: 2019-01-28 11:13-0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: mt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ASCII\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:3
+msgid "PDF Tricks"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
+msgid "Tricks for PDF Files"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:10
+msgid ""
+"A simple, efficient application for small manipulations in PDF files. "
+"Compress, split, merge and convert PDF Files."
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:82
+msgid "Murilo Venturoso"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:4
+msgid "Tips & Tricks for PDF files"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:6
+msgid ""
+"A simple, efficient application for small manipulations in PDF files. "
+"Compress, split, merge and convert PDF."
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:10
+msgid "com.github.muriloventuroso.pdftricks"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:14
+msgid "pdf;utilies;"
+msgstr ""
