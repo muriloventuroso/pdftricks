@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 10:23-0200\n"
-"PO-Revision-Date: 2018-12-24 17:29-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-01-28 13:15+0000\n"
+"Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
+"pdftricks/translations/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -65,7 +67,7 @@ msgstr "Converter PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to jpg, png and txt formats."
-msgstr "Converter arquivos PDF para os formatos jpg, png e txt"
+msgstr "Converter arquivos PDF para os formatos jpg, png e txt."
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
 #: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:65
@@ -121,7 +123,7 @@ msgstr "Seu arquivo foi comprimido com sucesso."
 #: src/Widgets/MergePDF.vala:235 src/Widgets/ConvertPDF.vala:105
 #: src/Widgets/ConvertPDF.vala:135
 msgid "Failure."
-msgstr "Falha"
+msgstr "Falha."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "There was a problem compressing your file."
@@ -206,11 +208,11 @@ msgstr "Arquivo para Converter:"
 
 #: src/Widgets/ConvertPDF.vala:83
 msgid "Format to Convert:"
-msgstr ""
+msgstr "Formato para Converter:"
 
 #: src/Widgets/ConvertPDF.vala:105
 msgid "The input format is the same as the output format."
-msgstr ""
+msgstr "O formato de entrada é o mesmo formato de saída."
 
 #: src/Widgets/ConvertPDF.vala:129
 msgid "Your file was succefully converted."
