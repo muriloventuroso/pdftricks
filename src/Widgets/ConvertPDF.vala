@@ -166,7 +166,6 @@ namespace pdftricks {
                 }
             }
             if(cmd != ""){
-                print(cmd);
                 try{
                     Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
                 } catch (Error e) {
