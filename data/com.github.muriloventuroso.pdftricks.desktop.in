@@ -1,7 +1,9 @@
 [Desktop Entry]
 Name=PDF Tricks
 GenericName=Tips & Tricks for PDF files
-Comment=A simple, efficient application for small manipulations in PDF files. Convert, split, merge and convert PDF.
+GenericName[lt]=Patarimai ir triukai PDF failams
+Comment=A simple, efficient application for small manipulations in PDF files. Compress, split, merge and convert PDF.
+Comment[lt]=Paprasta, efektyvi programa, skirta valdymui PDF failuose. Glaudinti, padalyti, sulieti ir konvertuoti PDF.
 Categories=GTK;Utility;Publishing;Office;
 Exec=com.github.muriloventuroso.pdftricks
 Icon=com.github.muriloventuroso.pdftricks
@@ -9,3 +11,4 @@ Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=com.github.muriloventuroso.pdftricks
 Keywords=pdf;utilies;
+Keywords[lt]=pdf;paslaugos;

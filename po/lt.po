@@ -1,218 +1,222 @@
-# Lithuanian translations for com.github.muriloventuroso.pdftricks package.
-# Copyright (C) 2018 THE com.github.muriloventuroso.pdftricks'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.muriloventuroso.pdftricks package.
-# Automatically generated, 2018.
+# Moo, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 10:23-0200\n"
-"PO-Revision-Date: 2018-12-24 17:29-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: lt\n"
+"POT-Creation-Date: 2019-01-11 10:15-0200\n"
+"PO-Revision-Date: 2019-01-28 14:17+0200\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: Moo\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: lt\n"
 
 #: src/Application.vala:72
 msgid "Back"
-msgstr ""
+msgstr "Atgal"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr ""
+msgstr "Triukai PDF failams"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr ""
+msgstr "Glaudinti PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF file to get the same PDF quality but less filesize."
 msgstr ""
+"Glaudinti PDF failą į tokią pačią PDF kokybę, bet mažesnį failo dydį."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr ""
+msgstr "Padalyti PDF"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
+"Padalyti PDF failą pagal puslapių rėžius ar išskleisti visus PDF "
+"puslapius į kelis PDF failus."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr ""
+msgstr "Sulieti PDF"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files and merge them in seconds."
-msgstr ""
+msgstr "Pasirinkti keletą PDF failų ir per kelias akimirkas juos sulieti."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr ""
+msgstr "Konvertuoti PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to jpg, png and txt formats."
-msgstr ""
+msgstr "Konvertuoti PDF failus į jpg, png ir txt formatus."
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
 #: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:65
 #: src/Widgets/MergePDF.vala:217
 msgid "Select the file to compress"
-msgstr ""
+msgstr "Pasirinkite failą, kurį glaudinti"
 
 #: src/Widgets/CompressPDF.vala:49
 msgid "Low"
-msgstr ""
+msgstr "Žema"
 
 #: src/Widgets/CompressPDF.vala:51
 msgid "High"
-msgstr ""
+msgstr "Aukšta"
 
 #: src/Widgets/CompressPDF.vala:61
 msgid "Compress"
-msgstr ""
+msgstr "Glaudinti"
 
 #: src/Widgets/CompressPDF.vala:81
 msgid "File to Compress:"
-msgstr ""
+msgstr "Failas, kurį glaudinti:"
 
 #: src/Widgets/CompressPDF.vala:84
 msgid "Resolution to Compress:"
-msgstr ""
+msgstr "Raiška į kurią glaudinti:"
 
 #: src/Widgets/CompressPDF.vala:109 src/Widgets/ConvertPDF.vala:114
 msgid "Select the file to save"
-msgstr ""
+msgstr "Pasirinkite failą į kurį įrašyti"
 
 #: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:218
 #: src/Widgets/MergePDF.vala:218 src/Widgets/ConvertPDF.vala:115
 msgid "Save"
-msgstr ""
+msgstr "Įrašyti"
 
 #: src/Widgets/CompressPDF.vala:111 src/Widgets/SplitPDF.vala:219
 #: src/Widgets/MergePDF.vala:67 src/Widgets/MergePDF.vala:219
 #: src/Widgets/ConvertPDF.vala:116
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:257
 #: src/Widgets/MergePDF.vala:229 src/Widgets/ConvertPDF.vala:129
 msgid "Success."
-msgstr ""
+msgstr "Pavyko."
 
 #: src/Widgets/CompressPDF.vala:124
 msgid "Your file was succefully compressed."
-msgstr ""
+msgstr "Jūsų failas buvo sėkmingai suglaudintas."
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:263
 #: src/Widgets/MergePDF.vala:235 src/Widgets/ConvertPDF.vala:105
 #: src/Widgets/ConvertPDF.vala:135
 msgid "Failure."
-msgstr ""
+msgstr "Nesėkmė."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "There was a problem compressing your file."
-msgstr ""
+msgstr "Glaudinant jūsų failą, atsirado problemų."
 
 #: src/Widgets/SplitPDF.vala:50
 msgid "Extract all pages"
-msgstr ""
+msgstr "Išskleisti visus puslapius"
 
 #: src/Widgets/SplitPDF.vala:53
 msgid "Select range of pages"
-msgstr ""
+msgstr "Pasirinkti puslapių rėžį"
 
 #: src/Widgets/SplitPDF.vala:56
 msgid "Separate colored pages"
-msgstr ""
+msgstr "Atskirti spalvotus puslapius"
 
 #: src/Widgets/SplitPDF.vala:147
 msgid "Split"
-msgstr ""
+msgstr "Padalyti"
 
 #: src/Widgets/SplitPDF.vala:189
 msgid "File to Split:"
-msgstr ""
+msgstr "Failas, kurį padalyti:"
 
 #: src/Widgets/SplitPDF.vala:257
 msgid "Your file was succefully splited."
-msgstr ""
+msgstr "Jūsų failas buvo sėkmingai padalytas."
 
 #: src/Widgets/SplitPDF.vala:263
 msgid "There was a problem spliting your file."
-msgstr ""
+msgstr "Padalijant jūsų failą, atsirado problemų."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
 msgid "Add File"
-msgstr ""
+msgstr "Pridėti failą"
 
 #: src/Widgets/MergePDF.vala:45
 msgid "Remove Selected"
-msgstr ""
+msgstr "Šalinti pasirinktus"
 
 #: src/Widgets/MergePDF.vala:46
 msgid "Clear All"
-msgstr ""
+msgstr "Išvalyti visus"
 
 #: src/Widgets/MergePDF.vala:66
 msgid "Open"
-msgstr ""
+msgstr "Atverti"
 
 #: src/Widgets/MergePDF.vala:99
 msgid "Files"
-msgstr ""
+msgstr "Failai"
 
 #: src/Widgets/MergePDF.vala:100
 msgid "Pages"
-msgstr ""
+msgstr "Puslapių"
 
 #: src/Widgets/MergePDF.vala:113
 msgid "Merge"
-msgstr ""
+msgstr "Sulieti"
 
 #: src/Widgets/MergePDF.vala:229
 msgid "Your file was succefully merged."
-msgstr ""
+msgstr "Jūsų failas buvo sėkmingai sulietas."
 
 #: src/Widgets/MergePDF.vala:235
 msgid "There was a problem merging your file."
-msgstr ""
+msgstr "Suliejant jūsų failą, atsirado problemų."
 
 #: src/Widgets/ConvertPDF.vala:40
 msgid "Select the file to convert"
-msgstr ""
+msgstr "Pasirinkite failą, kurį konvertuoti"
 
 #: src/Widgets/ConvertPDF.vala:48
 msgid "Convert"
-msgstr ""
+msgstr "Konvertuoti"
 
 #: src/Widgets/ConvertPDF.vala:80
 msgid "File to Convert:"
-msgstr ""
+msgstr "Failas, kurį konvertuoti:"
 
 #: src/Widgets/ConvertPDF.vala:83
 msgid "Format to Convert:"
-msgstr ""
+msgstr "Formatas į kurį konvertuoti:"
 
 #: src/Widgets/ConvertPDF.vala:105
 msgid "The input format is the same as the output format."
-msgstr ""
+msgstr "Įvesties formatas yra toks pats kaip ir išvesties formatas."
 
 #: src/Widgets/ConvertPDF.vala:129
 msgid "Your file was succefully converted."
-msgstr ""
+msgstr "Jūsų failas buvo sėkmingai konvertuotas."
 
 #: src/Widgets/ConvertPDF.vala:135
 msgid "There was a problem converting your file."
-msgstr ""
+msgstr "Konvertuojant jūsų failą, atsirado problemų."

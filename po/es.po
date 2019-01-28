@@ -1,217 +1,220 @@
-# Spanish translations for com.github.muriloventuroso.pdftricks package.
-# Copyright (C) 2018 THE com.github.muriloventuroso.pdftricks'S COPYRIGHT HOLDER
+# Spanish translation for PDF Tricks.
+# Copyright (C) 2019 Murilo Venturoso
 # This file is distributed under the same license as the com.github.muriloventuroso.pdftricks package.
-# Automatically generated, 2018.
+# Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 10:23-0200\n"
-"PO-Revision-Date: 2018-12-24 17:29-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: es\n"
+"POT-Creation-Date: 2019-01-11 10:15-0200\n"
+"PO-Revision-Date: 2019-01-23 02:37-0600\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
 
 #: src/Application.vala:72
 msgid "Back"
-msgstr ""
+msgstr "Volver"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr ""
+msgstr "Amaños para archivos PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr ""
+msgstr "Comprimir PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF file to get the same PDF quality but less filesize."
-msgstr ""
+msgstr "Comprima un archivo PDF para reducir su tamaño sin perder calidad."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr ""
+msgstr "Dividir PDF"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
+"Divida un PDF por intervalos de páginas o extráigalas todas en múltiples "
+"archivos PDF."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr ""
+msgstr "Combinar PDF"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files and merge them in seconds."
-msgstr ""
+msgstr "Seleccione varios archivos PDF y combínelos en segundos."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr ""
+msgstr "Convertir PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to jpg, png and txt formats."
-msgstr ""
+msgstr "Convierta archivos PDF en los formatos JPG, PNG y TXT."
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
 #: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:65
 #: src/Widgets/MergePDF.vala:217
 msgid "Select the file to compress"
-msgstr ""
+msgstr "Seleccione el archivo que comprimir"
 
 #: src/Widgets/CompressPDF.vala:49
 msgid "Low"
-msgstr ""
+msgstr "Baja"
 
 #: src/Widgets/CompressPDF.vala:51
 msgid "High"
-msgstr ""
+msgstr "Alta"
 
 #: src/Widgets/CompressPDF.vala:61
 msgid "Compress"
-msgstr ""
+msgstr "Comprimir"
 
 #: src/Widgets/CompressPDF.vala:81
 msgid "File to Compress:"
-msgstr ""
+msgstr "Archivo que comprimir:"
 
 #: src/Widgets/CompressPDF.vala:84
 msgid "Resolution to Compress:"
-msgstr ""
+msgstr "Resolución para comprimir:"
 
 #: src/Widgets/CompressPDF.vala:109 src/Widgets/ConvertPDF.vala:114
 msgid "Select the file to save"
-msgstr ""
+msgstr "Seleccione el archivo que guardar"
 
 #: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:218
 #: src/Widgets/MergePDF.vala:218 src/Widgets/ConvertPDF.vala:115
 msgid "Save"
-msgstr ""
+msgstr "Guardar"
 
 #: src/Widgets/CompressPDF.vala:111 src/Widgets/SplitPDF.vala:219
 #: src/Widgets/MergePDF.vala:67 src/Widgets/MergePDF.vala:219
 #: src/Widgets/ConvertPDF.vala:116
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:257
 #: src/Widgets/MergePDF.vala:229 src/Widgets/ConvertPDF.vala:129
 msgid "Success."
-msgstr ""
+msgstr "Éxito."
 
 #: src/Widgets/CompressPDF.vala:124
 msgid "Your file was succefully compressed."
-msgstr ""
+msgstr "Se comprimió el archivo correctamente."
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:263
 #: src/Widgets/MergePDF.vala:235 src/Widgets/ConvertPDF.vala:105
 #: src/Widgets/ConvertPDF.vala:135
 msgid "Failure."
-msgstr ""
+msgstr "Fallo."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "There was a problem compressing your file."
-msgstr ""
+msgstr "Se produjo un problema al comprimir el archivo."
 
 #: src/Widgets/SplitPDF.vala:50
 msgid "Extract all pages"
-msgstr ""
+msgstr "Extraer todas las páginas"
 
 #: src/Widgets/SplitPDF.vala:53
 msgid "Select range of pages"
-msgstr ""
+msgstr "Seleccionar intervalo de páginas"
 
 #: src/Widgets/SplitPDF.vala:56
 msgid "Separate colored pages"
-msgstr ""
+msgstr "Separar páginas en color"
 
 #: src/Widgets/SplitPDF.vala:147
 msgid "Split"
-msgstr ""
+msgstr "Dividir"
 
 #: src/Widgets/SplitPDF.vala:189
 msgid "File to Split:"
-msgstr ""
+msgstr "Archivo que dividir:"
 
 #: src/Widgets/SplitPDF.vala:257
 msgid "Your file was succefully splited."
-msgstr ""
+msgstr "Se dividió su archivo correctamente."
 
 #: src/Widgets/SplitPDF.vala:263
 msgid "There was a problem spliting your file."
-msgstr ""
+msgstr "Se produjo un problema al dividir el archivo."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
 msgid "Add File"
-msgstr ""
+msgstr "Añadir archivo"
 
 #: src/Widgets/MergePDF.vala:45
 msgid "Remove Selected"
-msgstr ""
+msgstr "Quitar seleccionados"
 
 #: src/Widgets/MergePDF.vala:46
 msgid "Clear All"
-msgstr ""
+msgstr "Vaciar"
 
 #: src/Widgets/MergePDF.vala:66
 msgid "Open"
-msgstr ""
+msgstr "Abrir"
 
 #: src/Widgets/MergePDF.vala:99
 msgid "Files"
-msgstr ""
+msgstr "Archivos"
 
 #: src/Widgets/MergePDF.vala:100
 msgid "Pages"
-msgstr ""
+msgstr "Páginas"
 
 #: src/Widgets/MergePDF.vala:113
 msgid "Merge"
-msgstr ""
+msgstr "Combinar"
 
 #: src/Widgets/MergePDF.vala:229
 msgid "Your file was succefully merged."
-msgstr ""
+msgstr "Se combinó su archivo correctamente."
 
 #: src/Widgets/MergePDF.vala:235
 msgid "There was a problem merging your file."
-msgstr ""
+msgstr "Se produjo un problema al combinar el archivo."
 
 #: src/Widgets/ConvertPDF.vala:40
 msgid "Select the file to convert"
-msgstr ""
+msgstr "Seleccione el archivo que convertir"
 
 #: src/Widgets/ConvertPDF.vala:48
 msgid "Convert"
-msgstr ""
+msgstr "Convertir"
 
 #: src/Widgets/ConvertPDF.vala:80
 msgid "File to Convert:"
-msgstr ""
+msgstr "Archivo que convertir:"
 
 #: src/Widgets/ConvertPDF.vala:83
 msgid "Format to Convert:"
-msgstr ""
+msgstr "Formato que convertir:"
 
 #: src/Widgets/ConvertPDF.vala:105
 msgid "The input format is the same as the output format."
-msgstr ""
+msgstr "El formato de entrada es el mismo que el de salida."
 
 #: src/Widgets/ConvertPDF.vala:129
 msgid "Your file was succefully converted."
-msgstr ""
+msgstr "Se convirtió su archivo correctamente."
 
 #: src/Widgets/ConvertPDF.vala:135
 msgid "There was a problem converting your file."
-msgstr ""
+msgstr "Se produjo un problema al convertir el archivo."
