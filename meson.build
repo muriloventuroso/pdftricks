@@ -30,39 +30,6 @@ dependencies = [
     dependency('granite'),
 ]
 
-# Adds subfolders specific build system
-message ('Adds subfolders specific build system')
-
-icon_sizes = ['128', '256']
-
-foreach i : icon_sizes
-    install_data(
-        join_paths('data/icons', i, meson.project_name() + '.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i, 'apps')
-    )
-    install_data(
-        join_paths('data/icons', i, meson.project_name() + '.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
-    )
-    install_data(
-        join_paths('data/icons', i, 'compress-pdf.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
-    )
-    install_data(
-        join_paths('data/icons', i, 'split-pdf.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
-    )
-    install_data(
-        join_paths('data/icons', i, 'merge-pdf.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
-    )
-    install_data(
-        join_paths('data/icons', i, 'pdf-convert.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
-    )
-
-endforeach
-
 config_data = configuration_data()
 config_data.set('EXEC_NAME', meson.project_name())
 
@@ -75,30 +42,6 @@ conf_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 conf_data.set_quoted('VERSION', meson.project_version())
 conf_data.set_quoted('PREFIX', get_option('prefix'))
 
-message ('Configuring desktop entry: ' + meson.project_name() + '.desktop')
-
-desktop_in_file = configure_file(
-    input: join_paths('data', meson.project_name() + '.desktop.in.in'),
-    output: '@BASENAME@',
-    configuration: config_data
-)
-
-desktop_file = i18n.merge_file(
-    input: desktop_in_file,
-    output: meson.project_name() + '.desktop',
-    po_dir: join_paths(meson.source_root(), 'po'),
-    type: 'desktop',
-    install: true,
-    install_dir: join_paths(get_option('datadir'), 'applications')
-)
-
-appstream_file = i18n.merge_file(
-    input: join_paths (meson.source_root(), 'data', meson.project_name() + '.appdata.xml.in'),
-    output: '@BASENAME@',
-    po_dir: join_paths(meson.source_root(), 'po'),
-    install: true,
-    install_dir: join_paths(get_option('datadir'), 'metainfo')
-)
 
 message ('Adds files to build')
 
@@ -119,4 +62,6 @@ executable(
     dependencies: dependencies,
     install: true
 )
+subdir('data')
 subdir('po')
+

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 10:15-0200\n"
+"POT-Creation-Date: 2019-01-28 10:23-0200\n"
 "PO-Revision-Date: 2018-12-24 17:29-0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -35,15 +35,21 @@ msgstr "Compresser PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF file to get the same PDF quality but less filesize."
-msgstr "Compressez le fichier PDF pour obtenir la même qualité PDF en réduisant la taille du fichier."
+msgstr ""
+"Compressez le fichier PDF pour obtenir la même qualité PDF en réduisant la "
+"taille du fichier."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
 msgstr "Diviser PDF"
 
 #: src/Widgets/Welcome.vala:27
-msgid "Split a PDF file by page ranges or extract all PDF pages to multiple PDF files."
-msgstr "Divisez un fichier PDF par plages de pages ou extrayez toutes les pages PDF en plusieurs fichiers PDF."
+msgid ""
+"Split a PDF file by page ranges or extract all PDF pages to multiple PDF "
+"files."
+msgstr ""
+"Divisez un fichier PDF par plages de pages ou extrayez toutes les pages PDF "
+"en plusieurs fichiers PDF."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
@@ -51,7 +57,8 @@ msgstr "Fusionner PDF"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files and merge them in seconds."
-msgstr "Sélectionnez plusieurs fichiers PDF et fusionnez-les en quelques secondes."
+msgstr ""
+"Sélectionnez plusieurs fichiers PDF et fusionnez-les en quelques secondes."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
