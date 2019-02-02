@@ -8,49 +8,56 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 11:13-0200\n"
-"PO-Revision-Date: 2019-01-28 11:13-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-02-03 21:10+0000\n"
+"Last-Translator: Moo <hazap@hotmail.com>\n"
+"Language-Team: Lithuanian <https://hosted.weblate.org/projects/pdftricks/"
+"extra/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Tricks"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
 msgid "Tricks for PDF Files"
-msgstr ""
+msgstr "Triukai PDF failams"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:10
 msgid ""
 "A simple, efficient application for small manipulations in PDF files. "
 "Compress, split, merge and convert PDF Files."
 msgstr ""
+"Paprasta, efektyvi programa, skirta valdymui PDF failuose. Glaudinti, "
+"padalyti, sulieti ir konvertuoti PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:82
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "Murilo Venturoso"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:4
 msgid "Tips & Tricks for PDF files"
-msgstr ""
+msgstr "Patarimai ir triukai PDF failams"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
 msgid ""
 "A simple, efficient application for small manipulations in PDF files. "
 "Compress, split, merge and convert PDF."
 msgstr ""
+"Paprasta, efektyvi programa, skirta valdymui PDF failuose. Glaudinti, "
+"padalyti, sulieti ir konvertuoti PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:10
 msgid "com.github.muriloventuroso.pdftricks"
-msgstr ""
+msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:14
 msgid "pdf;utilies;"
-msgstr ""
+msgstr "pdf;paslaugos;"
