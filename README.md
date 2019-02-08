@@ -50,6 +50,28 @@ To install, use `ninja install`, then execute with `com.github.muriloventuroso.p
     com.github.muriloventuroso.pdftricks
 
 
+## ImageMagick
+
+In recent versions of ImageMagick has been added a security policy that blocks manipulations in PDF files. This affects PDFTricks operations. To correct this change the settings of your ImageMagick installation.
+
+Find and edit the configuration file.
+
+    /etc/ImageMagick-7/policy.xml
+
+To check the ImageMagick version:
+
+    convert --version
+
+Find the line that contains the rule for PDF files:
+
+    <policy domain="coder" rights="read | write" pattern="PDF" />
+
+And change to:
+
+    <!-- <policy domain="coder" rights="none" pattern="PDF" /> -->
+
+And ready!
+
 ## Install with Flatpak
 
 Install:
