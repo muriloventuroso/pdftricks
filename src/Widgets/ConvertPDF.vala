@@ -54,9 +54,9 @@ namespace pdftricks {
 
             filechooser.file_set.connect(() => {
 
-                convert_button.set_sensitive (true);
                 var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
-                var input_format = file_pdf.substring(file_pdf.length - 3, 3);
+                var file_name_split = file_pdf.split(".");
+                var input_format = file_name_split[file_name_split.length - 1];
                 format_conversion.remove_all();
                 if(input_format == "pdf"){
                     format_conversion.append_text ("jpg");
@@ -66,7 +66,22 @@ namespace pdftricks {
                 }else if(input_format == "jpg"){
                     format_conversion.append_text ("pdf");
                     format_conversion.active = 0;
+                }else if(input_format == "png"){
+                    format_conversion.append_text ("pdf");
+                    format_conversion.active = 0;
+                }else if(input_format == "jpeg"){
+                    format_conversion.append_text ("pdf");
+                    format_conversion.active = 0;
+                }else if(input_format == "svg"){
+                    format_conversion.append_text ("pdf");
+                    format_conversion.active = 0;
+                }else if(input_format == "bmp"){
+                    format_conversion.append_text ("pdf");
+                    format_conversion.active = 0;
+                }else {
+                    return;
                 }
+                convert_button.set_sensitive (true);
 
             });
 
@@ -100,7 +115,8 @@ namespace pdftricks {
             var format = format_conversion.get_active_text();
 
             var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
-            var input_format = file_pdf.substring(file_pdf.length - 3, 3);
+            var file_name_split = file_pdf.split(".");
+            var input_format = file_name_split[file_name_split.length - 1];
             if(input_format == format){
                 var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("The input format is the same as the output format."), "process-stop", Gtk.ButtonsType.CLOSE);
                 message_dialog.set_transient_for(window);
@@ -160,10 +176,24 @@ namespace pdftricks {
                 }
             }else if(format_input == "jpg"){
                 var n_output_file = output_file;
-                var gs_version = get_version();
-                if(gs_version != ""){
-                    cmd = "gs -q -sPAPERSIZE=letter -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=" + n_output_file + " /usr/share/ghostscript/" + gs_version + "/lib/viewjpeg.ps -c \\(" + input.replace(" ", "\\ ") + "\\) viewJPEG ";
-                }
+                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+
+            }else if(format_input == "png"){
+                var n_output_file = output_file;
+                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+
+            }else if(format_input == "jpeg"){
+                var n_output_file = output_file;
+                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+
+            }else if(format_input == "svg"){
+                var n_output_file = output_file;
+                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+
+            }else if(format_input == "bmp"){
+                var n_output_file = output_file;
+                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+
             }
             if(cmd != ""){
                 try{
@@ -173,8 +203,22 @@ namespace pdftricks {
                     spinner.hide();
                     return false;
                 }
-                if(output != ""){
+
+                if(output != "" || exit_status != 0 || stderr != ""){
                     if(output.contains("Error")){
+                        spinner.hide();
+                        return false;
+                    }
+                    if(stderr.contains("not authorized")){
+                        spinner.hide();
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("The security policies of your ImageMagick installation do not allow this operation. Please release the manipulation of pdf files in ImageMagick and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
+                        message_dialog.set_transient_for(window);
+                        message_dialog.show_all ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                        return false;
+                    }
+                    if(exit_status != 0){
                         spinner.hide();
                         return false;
                     }
@@ -183,27 +227,6 @@ namespace pdftricks {
             spinner.hide();
             return true;
         }
-
-        private string get_version(){
-            string output, stderr  = "";
-            int exit_status = 0;
-
-            try{
-                var cmd = "gs --version";
-                Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
-            } catch (Error e) {
-                critical (e.message);
-                return "";
-            }
-            if(output != ""){
-                if(output.contains("Error")){
-                    return "";
-                }
-            }
-            output = output.replace("\n", "");
-            return output;
-        }
-
 
     }
 }

@@ -8,7 +8,8 @@ Build-Depends: cmake (>= 2.8),
                valac (>= 0.16),
                meson,
                libgranite-dev,
-               ghostscript
+               ghostscript,
+               imagemagick
 Standards-Version: 3.9.3
 
 Package: com.github.muriloventuroso.pdftricks
