@@ -64,7 +64,7 @@ To check the ImageMagick version:
 
 Find the line that contains the rule for PDF files:
 
-    <policy domain="coder" rights="read | write" pattern="PDF" />
+    <policy domain="coder" rights="none" pattern="PDF" />
 
 And change to:
 

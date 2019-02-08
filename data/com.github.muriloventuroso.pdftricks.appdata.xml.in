@@ -7,8 +7,23 @@
   <project_license>GPL-3.0+</project_license>
   <name>PDF Tricks</name>
   <summary>Tricks for PDF Files</summary>
-  <description><p>A simple, efficient application for small manipulations in PDF files. Compress, split, merge and convert PDF Files.</p></description>
+  <description>
+    <p>A simple, efficient application for small manipulations in PDF files. </p>
+    <ul>
+      <li>Compress PDF (multiple resolutions)</li>
+      <li>Split PDF (All pages or page ranges)</li>
+      <li>Merge PDF</li>
+      <li>Convert PDF</li>
+    </ul>
+    <p>In recent versions of ImageMagick has been added a security policy that blocks manipulations in PDF files. This affects PDFTricks operations. To correct this change the settings of your ImageMagick installation. Check de homepage for instructions.</p>
+  </description>
   <releases>
+    <release version="0.2.0" date="2019-02-08">
+      <description>
+        <p>Convert PNG, JPG, SVG, BMP to PDF</p>
+        <p>Merge image files into PDF</p>
+      </description>
+    </release>
     <release version="0.1.7" date="2019-01-11">
       <description>
         <p>Convert JPG to PDF</p>
