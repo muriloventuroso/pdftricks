@@ -39,7 +39,7 @@ namespace pdftricks {
             );
         }
         construct {
-
+            string[] input_formats = {"pdf", "png", "jpg", "jpeg", "svg", "bmp"};
             // The Model:
             var add_button = new Gtk.Button.with_label (_("Add File"));
             var del_button = new Gtk.Button.with_label (_("Remove Selected"));
@@ -48,6 +48,10 @@ namespace pdftricks {
             Gtk.TreeIter iter;
             Gtk.FileFilter filter = new Gtk.FileFilter ();
             filter.add_mime_type ("application/pdf");
+            filter.add_mime_type ("image/jpeg");
+            filter.add_mime_type ("image/png");
+            filter.add_mime_type ("image/bmp");
+            filter.add_mime_type ("image/svg+xml");
 
             // The View:
             view = new Gtk.TreeView.with_model (list_store);
@@ -72,9 +76,13 @@ namespace pdftricks {
                 if (chooser_file.run () == Gtk.ResponseType.ACCEPT) {
                     foreach(string pdf_file in chooser_file.get_uris()){
                         pdf_file = pdf_file.split(":")[1].replace("///", "/").replace("%20", " ");
-                        var page_size = get_page_count(pdf_file);
-                        list_store.append (out iter);
-                        list_store.set (iter, 0, pdf_file, 1, page_size.to_string());
+                        var file_name_split = pdf_file.split(".");
+                        var input_format = file_name_split[file_name_split.length - 1];
+                        if(input_format in input_formats){
+                            var page_size = get_page_count(pdf_file);
+                            list_store.append (out iter);
+                            list_store.set (iter, 0, pdf_file, 1, page_size.to_string());
+                        }
                     }
                 }
                 chooser_file.destroy();
@@ -139,6 +147,11 @@ namespace pdftricks {
             string output, stderr  = "";
             int exit_status = 0;
             int result = 0;
+            var file_name_split = input_file.split(".");
+            var input_format = file_name_split[file_name_split.length - 1];
+            if(input_format != "pdf"){
+                return 1;
+            }
             try{
                 var cmd = "gs -q -dNODISPLAY -c \"(" + input_file.replace(" ", "\\ ") + ") (r) file runpdfbegin pdfpagecount = quit\"";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
@@ -245,14 +258,18 @@ namespace pdftricks {
             string output, stderr  = "";
             int exit_status = 0;
             try{
-                var cmd = "gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=" + output_file + " -dBATCH " + inputs;
+                var cmd = "convert " + inputs + " " + output_file;
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
                 return false;
             }
-            if(output != ""){
+            if(output != "" || exit_status != 0 || stderr != ""){
                 if(output.contains("Error")){
+                    return false;
+                }
+                if(exit_status != 0){
+                    spinner.hide();
                     return false;
                 }
             }

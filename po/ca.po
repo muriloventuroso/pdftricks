@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-11 10:15-0200\n"
+"POT-Creation-Date: 2019-02-08 10:52-0200\n"
 "PO-Revision-Date: 2019-01-23 02:37-0600\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.1\n"
-"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: ca\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -37,8 +37,7 @@ msgstr "Comprimeix un PDF"
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF file to get the same PDF quality but less filesize."
 msgstr ""
-"Compressió de fitxers PDF per a reduir-ne la mida sense pèrdues de "
-"qualitat."
+"Compressió de fitxers PDF per a reduir-ne la mida sense pèrdues de qualitat."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
@@ -49,8 +48,8 @@ msgid ""
 "Split a PDF file by page ranges or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
-"Divisió de PDF per intervals de pàgines o extracció de totes les pàgines "
-"en fitxers individuals."
+"Divisió de PDF per intervals de pàgines o extracció de totes les pàgines en "
+"fitxers individuals."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
@@ -69,8 +68,8 @@ msgid "Convert PDF files to jpg, png and txt formats."
 msgstr "Conversió de fitxers PDF als formats JPG, PNG i TXT."
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
-#: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:65
-#: src/Widgets/MergePDF.vala:217
+#: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:69
+#: src/Widgets/MergePDF.vala:230
 msgid "Select the file to compress"
 msgstr "Seleccioneu el fitxer a comprimir"
 
@@ -94,23 +93,23 @@ msgstr "Fitxer a comprimir:"
 msgid "Resolution to Compress:"
 msgstr "Resolució a comprimir:"
 
-#: src/Widgets/CompressPDF.vala:109 src/Widgets/ConvertPDF.vala:114
+#: src/Widgets/CompressPDF.vala:109 src/Widgets/ConvertPDF.vala:130
 msgid "Select the file to save"
 msgstr "Seleccioneu el fitxer a desar"
 
 #: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:218
-#: src/Widgets/MergePDF.vala:218 src/Widgets/ConvertPDF.vala:115
+#: src/Widgets/MergePDF.vala:231 src/Widgets/ConvertPDF.vala:131
 msgid "Save"
 msgstr "Desa"
 
 #: src/Widgets/CompressPDF.vala:111 src/Widgets/SplitPDF.vala:219
-#: src/Widgets/MergePDF.vala:67 src/Widgets/MergePDF.vala:219
-#: src/Widgets/ConvertPDF.vala:116
+#: src/Widgets/MergePDF.vala:71 src/Widgets/MergePDF.vala:232
+#: src/Widgets/ConvertPDF.vala:132
 msgid "Cancel"
 msgstr "Cancel·la"
 
 #: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:257
-#: src/Widgets/MergePDF.vala:229 src/Widgets/ConvertPDF.vala:129
+#: src/Widgets/MergePDF.vala:242 src/Widgets/ConvertPDF.vala:145
 msgid "Success."
 msgstr "Èxit."
 
@@ -119,8 +118,8 @@ msgid "Your file was succefully compressed."
 msgstr "S’ha comprimit el fitxer correctament."
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:263
-#: src/Widgets/MergePDF.vala:235 src/Widgets/ConvertPDF.vala:105
-#: src/Widgets/ConvertPDF.vala:135
+#: src/Widgets/MergePDF.vala:248 src/Widgets/ConvertPDF.vala:121
+#: src/Widgets/ConvertPDF.vala:151
 msgid "Failure."
 msgstr "Fallada."
 
@@ -169,27 +168,27 @@ msgstr "Treu la selecció"
 msgid "Clear All"
 msgstr "Neteja-ho tot"
 
-#: src/Widgets/MergePDF.vala:66
+#: src/Widgets/MergePDF.vala:70
 msgid "Open"
 msgstr "Obre"
 
-#: src/Widgets/MergePDF.vala:99
+#: src/Widgets/MergePDF.vala:107
 msgid "Files"
 msgstr "Fitxers"
 
-#: src/Widgets/MergePDF.vala:100
+#: src/Widgets/MergePDF.vala:108
 msgid "Pages"
 msgstr "Pàgines"
 
-#: src/Widgets/MergePDF.vala:113
+#: src/Widgets/MergePDF.vala:121
 msgid "Merge"
 msgstr "Fusiona"
 
-#: src/Widgets/MergePDF.vala:229
+#: src/Widgets/MergePDF.vala:242
 msgid "Your file was succefully merged."
 msgstr "S’ha fusionat el fitxer correctament."
 
-#: src/Widgets/MergePDF.vala:235
+#: src/Widgets/MergePDF.vala:248
 msgid "There was a problem merging your file."
 msgstr "S’ha produït un problema en fusionar el fitxer."
 
@@ -201,22 +200,33 @@ msgstr "Seleccioneu el fitxer a convertir"
 msgid "Convert"
 msgstr "Converteix"
 
-#: src/Widgets/ConvertPDF.vala:80
+#: src/Widgets/ConvertPDF.vala:95
 msgid "File to Convert:"
 msgstr "Fitxer a convertir:"
 
-#: src/Widgets/ConvertPDF.vala:83
+#: src/Widgets/ConvertPDF.vala:98
 msgid "Format to Convert:"
 msgstr "Format a convertir:"
 
-#: src/Widgets/ConvertPDF.vala:105
+#: src/Widgets/ConvertPDF.vala:121
 msgid "The input format is the same as the output format."
 msgstr "El format d’entrada és el mateix que el de sortida."
 
-#: src/Widgets/ConvertPDF.vala:129
+#: src/Widgets/ConvertPDF.vala:145
 msgid "Your file was succefully converted."
 msgstr "S’ha comprimit el fitxer correctament."
 
-#: src/Widgets/ConvertPDF.vala:135
+#: src/Widgets/ConvertPDF.vala:151
 msgid "There was a problem converting your file."
 msgstr "S’ha produït un problema en comprimir el fitxer."
+
+#: src/Widgets/ConvertPDF.vala:214
+msgid "ImageMagick Policies"
+msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:214
+msgid ""
+"The security policies of your ImageMagick installation do not allow this "
+"operation. Please release the manipulation of pdf files in ImageMagick and "
+"try again."
+msgstr ""

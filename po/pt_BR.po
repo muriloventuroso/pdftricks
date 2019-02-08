@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 10:23-0200\n"
+"POT-Creation-Date: 2019-02-08 10:52-0200\n"
 "PO-Revision-Date: 2019-01-28 13:15+0000\n"
 "Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -70,8 +70,8 @@ msgid "Convert PDF files to jpg, png and txt formats."
 msgstr "Converter arquivos PDF para os formatos jpg, png e txt."
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
-#: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:65
-#: src/Widgets/MergePDF.vala:217
+#: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:69
+#: src/Widgets/MergePDF.vala:230
 msgid "Select the file to compress"
 msgstr "Selecione o arquivo para comprimir"
 
@@ -95,23 +95,23 @@ msgstr "Arquivo para Comprimir:"
 msgid "Resolution to Compress:"
 msgstr "Resolução para Comprimir:"
 
-#: src/Widgets/CompressPDF.vala:109 src/Widgets/ConvertPDF.vala:114
+#: src/Widgets/CompressPDF.vala:109 src/Widgets/ConvertPDF.vala:130
 msgid "Select the file to save"
 msgstr "Selecione o arquivo para salvar"
 
 #: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:218
-#: src/Widgets/MergePDF.vala:218 src/Widgets/ConvertPDF.vala:115
+#: src/Widgets/MergePDF.vala:231 src/Widgets/ConvertPDF.vala:131
 msgid "Save"
 msgstr "Salvar"
 
 #: src/Widgets/CompressPDF.vala:111 src/Widgets/SplitPDF.vala:219
-#: src/Widgets/MergePDF.vala:67 src/Widgets/MergePDF.vala:219
-#: src/Widgets/ConvertPDF.vala:116
+#: src/Widgets/MergePDF.vala:71 src/Widgets/MergePDF.vala:232
+#: src/Widgets/ConvertPDF.vala:132
 msgid "Cancel"
 msgstr "Cancelar"
 
 #: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:257
-#: src/Widgets/MergePDF.vala:229 src/Widgets/ConvertPDF.vala:129
+#: src/Widgets/MergePDF.vala:242 src/Widgets/ConvertPDF.vala:145
 msgid "Success."
 msgstr "Sucesso."
 
@@ -120,8 +120,8 @@ msgid "Your file was succefully compressed."
 msgstr "Seu arquivo foi comprimido com sucesso."
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:263
-#: src/Widgets/MergePDF.vala:235 src/Widgets/ConvertPDF.vala:105
-#: src/Widgets/ConvertPDF.vala:135
+#: src/Widgets/MergePDF.vala:248 src/Widgets/ConvertPDF.vala:121
+#: src/Widgets/ConvertPDF.vala:151
 msgid "Failure."
 msgstr "Falha."
 
@@ -170,27 +170,27 @@ msgstr "Remover Selecionados"
 msgid "Clear All"
 msgstr "Limpar Todos"
 
-#: src/Widgets/MergePDF.vala:66
+#: src/Widgets/MergePDF.vala:70
 msgid "Open"
 msgstr "Abrir"
 
-#: src/Widgets/MergePDF.vala:99
+#: src/Widgets/MergePDF.vala:107
 msgid "Files"
 msgstr "Arquivos"
 
-#: src/Widgets/MergePDF.vala:100
+#: src/Widgets/MergePDF.vala:108
 msgid "Pages"
 msgstr "Páginas"
 
-#: src/Widgets/MergePDF.vala:113
+#: src/Widgets/MergePDF.vala:121
 msgid "Merge"
 msgstr "Mesclar"
 
-#: src/Widgets/MergePDF.vala:229
+#: src/Widgets/MergePDF.vala:242
 msgid "Your file was succefully merged."
 msgstr "Seu arquivo foi mesclado com sucesso."
 
-#: src/Widgets/MergePDF.vala:235
+#: src/Widgets/MergePDF.vala:248
 msgid "There was a problem merging your file."
 msgstr "Houve um problema ao mesclar seus arquivos."
 
@@ -202,25 +202,36 @@ msgstr "Selecione o arquivo para converter"
 msgid "Convert"
 msgstr "Converter"
 
-#: src/Widgets/ConvertPDF.vala:80
+#: src/Widgets/ConvertPDF.vala:95
 msgid "File to Convert:"
 msgstr "Arquivo para Converter:"
 
-#: src/Widgets/ConvertPDF.vala:83
+#: src/Widgets/ConvertPDF.vala:98
 msgid "Format to Convert:"
 msgstr "Formato para Converter:"
 
-#: src/Widgets/ConvertPDF.vala:105
+#: src/Widgets/ConvertPDF.vala:121
 msgid "The input format is the same as the output format."
 msgstr "O formato de entrada é o mesmo formato de saída."
 
-#: src/Widgets/ConvertPDF.vala:129
+#: src/Widgets/ConvertPDF.vala:145
 msgid "Your file was succefully converted."
 msgstr "Seu arquivo foi convertido com sucesso."
 
-#: src/Widgets/ConvertPDF.vala:135
+#: src/Widgets/ConvertPDF.vala:151
 msgid "There was a problem converting your file."
 msgstr "Houve um problema ao converter seu arquivo."
+
+#: src/Widgets/ConvertPDF.vala:214
+msgid "ImageMagick Policies"
+msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:214
+msgid ""
+"The security policies of your ImageMagick installation do not allow this "
+"operation. Please release the manipulation of pdf files in ImageMagick and "
+"try again."
+msgstr ""
 
 #~ msgid "Select the file to output"
 #~ msgstr "Selecione o arquivo de saída"
