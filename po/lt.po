@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-08 10:52-0200\n"
-"PO-Revision-Date: 2019-02-10 00:10+0000\n"
+"PO-Revision-Date: 2019-02-15 12:18+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/pdftricks/"
 "translations/lt/>\n"
@@ -58,9 +58,10 @@ msgid "Merge PDF"
 msgstr "Sulieti PDF"
 
 #: src/Widgets/Welcome.vala:28
-#, fuzzy
 msgid "Select multiple PDF files or images and merge them in seconds."
-msgstr "Pasirinkti keletą PDF failų ir per kelias akimirkas juos sulieti."
+msgstr ""
+"Pasirinkti keletą PDF failų ar paveikslų ir per kelias akimirkas juos "
+"sulieti."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
