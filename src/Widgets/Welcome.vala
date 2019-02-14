@@ -25,7 +25,7 @@ namespace pdftricks {
             var welcome = new Granite.Widgets.Welcome ("PDF Tricks", _("Tricks for PDF files"));
             welcome.append ("compress-pdf", _("Compress PDF"), _("Compress PDF file to get the same PDF quality but less filesize."));
             welcome.append ("split-pdf", _("Split PDF"), _("Split a PDF file by page ranges or extract all PDF pages to multiple PDF files."));
-            welcome.append ("merge-pdf", _("Merge PDF"), _("Select multiple PDF files and merge them in seconds."));
+            welcome.append ("merge-pdf", _("Merge PDF"), _("Select multiple PDF files or images and merge them in seconds."));
             welcome.append ("view-refresh", _("Convert PDF"), _("Convert PDF files to jpg, png and txt formats."));
             add (welcome);
 

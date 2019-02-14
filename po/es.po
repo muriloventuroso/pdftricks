@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 10:52-0200\n"
+"POT-Creation-Date: 2019-02-14 08:53-0200\n"
 "PO-Revision-Date: 2019-01-23 02:37-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
@@ -55,7 +55,8 @@ msgid "Merge PDF"
 msgstr "Combinar PDF"
 
 #: src/Widgets/Welcome.vala:28
-msgid "Select multiple PDF files and merge them in seconds."
+#, fuzzy
+msgid "Select multiple PDF files or images and merge them in seconds."
 msgstr "Seleccione varios archivos PDF y combínelos en segundos."
 
 #: src/Widgets/Welcome.vala:29
@@ -219,11 +220,11 @@ msgstr "Se convirtió su archivo correctamente."
 msgid "There was a problem converting your file."
 msgstr "Se produjo un problema al convertir el archivo."
 
-#: src/Widgets/ConvertPDF.vala:214
+#: src/Widgets/ConvertPDF.vala:216
 msgid "ImageMagick Policies"
 msgstr ""
 
-#: src/Widgets/ConvertPDF.vala:214
+#: src/Widgets/ConvertPDF.vala:216
 msgid ""
 "The security policies of your ImageMagick installation do not allow this "
 "operation. Please release the manipulation of pdf files in ImageMagick and "

@@ -180,7 +180,7 @@ namespace pdftricks {
 
             }else if(format_input == "png"){
                 var n_output_file = output_file;
-                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+                cmd = "convert -verbose " + input.replace(" ", "\\ ") + " " + n_output_file;
 
             }else if(format_input == "jpeg"){
                 var n_output_file = output_file;
@@ -203,7 +203,9 @@ namespace pdftricks {
                     spinner.hide();
                     return false;
                 }
-
+                print(output);
+                print(stderr);
+                print(exit_status.to_string());
                 if(output != "" || exit_status != 0 || stderr != ""){
                     if(output.contains("Error")){
                         spinner.hide();
