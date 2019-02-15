@@ -254,13 +254,13 @@ namespace pdftricks {
                 }
 
                 if(result_split = true){
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully splited."), "process-completed", Gtk.ButtonsType.CLOSE);
+                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for(window);
                     message_dialog.show_all ();
                     message_dialog.run ();
                     message_dialog.destroy ();
                 }else{
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem spliting your file."), "process-stop", Gtk.ButtonsType.CLOSE);
+                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not split this file."), "process-stop", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for(window);
                     message_dialog.show_all ();
                     message_dialog.run ();
