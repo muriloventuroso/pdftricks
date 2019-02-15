@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-14 08:53-0200\n"
+"POT-Creation-Date: 2019-02-15 09:45-0200\n"
 "PO-Revision-Date: 2019-01-23 02:37-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
@@ -35,7 +35,8 @@ msgid "Compress PDF"
 msgstr "Comprimeix un PDF"
 
 #: src/Widgets/Welcome.vala:26
-msgid "Compress PDF file to get the same PDF quality but less filesize."
+#, fuzzy
+msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
 "Compressió de fitxers PDF per a reduir-ne la mida sense pèrdues de qualitat."
 
@@ -44,8 +45,9 @@ msgid "Split PDF"
 msgstr "Divideix un PDF"
 
 #: src/Widgets/Welcome.vala:27
+#, fuzzy
 msgid ""
-"Split a PDF file by page ranges or extract all PDF pages to multiple PDF "
+"Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
 "Divisió de PDF per intervals de pàgines o extracció de totes les pàgines en "
@@ -57,7 +59,7 @@ msgstr "Fusiona PDF"
 
 #: src/Widgets/Welcome.vala:28
 #, fuzzy
-msgid "Select multiple PDF files or images and merge them in seconds."
+msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr "Seleccioneu diversos PDF i fusioneu-los en qüestió de segons."
 
 #: src/Widgets/Welcome.vala:29
@@ -65,7 +67,8 @@ msgid "Convert PDF"
 msgstr "Converteix un PDF"
 
 #: src/Widgets/Welcome.vala:29
-msgid "Convert PDF files to jpg, png and txt formats."
+#, fuzzy
+msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Conversió de fitxers PDF als formats JPG, PNG i TXT."
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
@@ -149,12 +152,13 @@ msgid "File to Split:"
 msgstr "Fitxer a dividir:"
 
 #: src/Widgets/SplitPDF.vala:257
-msgid "Your file was succefully splited."
-msgstr "S’ha dividit el fitxer correctament."
+#, fuzzy
+msgid "File split."
+msgstr "Fitxer a dividir:"
 
 #: src/Widgets/SplitPDF.vala:263
-msgid "There was a problem spliting your file."
-msgstr "S’ha produït un problema en dividir el fitxer."
+msgid "Could not split this file."
+msgstr ""
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
@@ -214,12 +218,13 @@ msgid "The input format is the same as the output format."
 msgstr "El format d’entrada és el mateix que el de sortida."
 
 #: src/Widgets/ConvertPDF.vala:145
-msgid "Your file was succefully converted."
-msgstr "S’ha comprimit el fitxer correctament."
+#, fuzzy
+msgid "File converted."
+msgstr "Fitxer a convertir:"
 
 #: src/Widgets/ConvertPDF.vala:151
-msgid "There was a problem converting your file."
-msgstr "S’ha produït un problema en comprimir el fitxer."
+msgid "Could not convert this file."
+msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid "ImageMagick Policies"
@@ -227,7 +232,18 @@ msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid ""
-"The security policies of your ImageMagick installation do not allow this "
-"operation. Please release the manipulation of pdf files in ImageMagick and "
-"try again."
+"Change the ImageMagick security policies that prevent this operation and try "
+"again."
 msgstr ""
+
+#~ msgid "Your file was succefully splited."
+#~ msgstr "S’ha dividit el fitxer correctament."
+
+#~ msgid "There was a problem spliting your file."
+#~ msgstr "S’ha produït un problema en dividir el fitxer."
+
+#~ msgid "Your file was succefully converted."
+#~ msgstr "S’ha comprimit el fitxer correctament."
+
+#~ msgid "There was a problem converting your file."
+#~ msgstr "S’ha produït un problema en comprimir el fitxer."

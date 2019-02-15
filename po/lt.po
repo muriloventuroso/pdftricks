@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-08 10:52-0200\n"
+"POT-Creation-Date: 2019-02-15 09:45-0200\n"
 "PO-Revision-Date: 2019-02-10 00:10+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/pdftricks/"
@@ -38,7 +38,8 @@ msgid "Compress PDF"
 msgstr "Glaudinti PDF"
 
 #: src/Widgets/Welcome.vala:26
-msgid "Compress PDF file to get the same PDF quality but less filesize."
+#, fuzzy
+msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr "Glaudinti PDF failą į tokią pačią PDF kokybę, bet mažesnį failo dydį."
 
 #: src/Widgets/Welcome.vala:27
@@ -46,8 +47,9 @@ msgid "Split PDF"
 msgstr "Padalyti PDF"
 
 #: src/Widgets/Welcome.vala:27
+#, fuzzy
 msgid ""
-"Split a PDF file by page ranges or extract all PDF pages to multiple PDF "
+"Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
 "Padalyti PDF failą pagal puslapių rėžius ar išskleisti visus PDF puslapius į "
@@ -59,7 +61,7 @@ msgstr "Sulieti PDF"
 
 #: src/Widgets/Welcome.vala:28
 #, fuzzy
-msgid "Select multiple PDF files or images and merge them in seconds."
+msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr "Pasirinkti keletą PDF failų ir per kelias akimirkas juos sulieti."
 
 #: src/Widgets/Welcome.vala:29
@@ -67,7 +69,8 @@ msgid "Convert PDF"
 msgstr "Konvertuoti PDF"
 
 #: src/Widgets/Welcome.vala:29
-msgid "Convert PDF files to jpg, png and txt formats."
+#, fuzzy
+msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Konvertuoti PDF failus į jpg, png ir txt formatus."
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
@@ -151,12 +154,13 @@ msgid "File to Split:"
 msgstr "Failas, kurį padalyti:"
 
 #: src/Widgets/SplitPDF.vala:257
-msgid "Your file was succefully splited."
-msgstr "Jūsų failas buvo sėkmingai padalytas."
+#, fuzzy
+msgid "File split."
+msgstr "Failas, kurį padalyti:"
 
 #: src/Widgets/SplitPDF.vala:263
-msgid "There was a problem spliting your file."
-msgstr "Padalijant jūsų failą, atsirado problemų."
+msgid "Could not split this file."
+msgstr ""
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
@@ -216,12 +220,13 @@ msgid "The input format is the same as the output format."
 msgstr "Įvesties formatas yra toks pats kaip ir išvesties formatas."
 
 #: src/Widgets/ConvertPDF.vala:145
-msgid "Your file was succefully converted."
-msgstr "Jūsų failas buvo sėkmingai konvertuotas."
+#, fuzzy
+msgid "File converted."
+msgstr "Failas, kurį konvertuoti:"
 
 #: src/Widgets/ConvertPDF.vala:151
-msgid "There was a problem converting your file."
-msgstr "Konvertuojant jūsų failą, atsirado problemų."
+msgid "Could not convert this file."
+msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid "ImageMagick Policies"
@@ -229,10 +234,27 @@ msgstr "ImageMagick politikos"
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid ""
-"The security policies of your ImageMagick installation do not allow this "
-"operation. Please release the manipulation of pdf files in ImageMagick and "
-"try again."
+"Change the ImageMagick security policies that prevent this operation and try "
+"again."
 msgstr ""
-"Jūsų ImageMagick diegimo saugumo politikos neleidžia šios operacijos. "
-"Atlaisvinkite pdf failų manipuliacijas ImageMagick programoje ir bandykite "
-"dar kartą."
+
+#~ msgid "Your file was succefully splited."
+#~ msgstr "Jūsų failas buvo sėkmingai padalytas."
+
+#~ msgid "There was a problem spliting your file."
+#~ msgstr "Padalijant jūsų failą, atsirado problemų."
+
+#~ msgid "Your file was succefully converted."
+#~ msgstr "Jūsų failas buvo sėkmingai konvertuotas."
+
+#~ msgid "There was a problem converting your file."
+#~ msgstr "Konvertuojant jūsų failą, atsirado problemų."
+
+#~ msgid ""
+#~ "The security policies of your ImageMagick installation do not allow this "
+#~ "operation. Please release the manipulation of pdf files in ImageMagick "
+#~ "and try again."
+#~ msgstr ""
+#~ "Jūsų ImageMagick diegimo saugumo politikos neleidžia šios operacijos. "
+#~ "Atlaisvinkite pdf failų manipuliacijas ImageMagick programoje ir "
+#~ "bandykite dar kartą."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-14 08:53-0200\n"
+"POT-Creation-Date: 2019-02-15 09:45-0200\n"
 "PO-Revision-Date: 2019-01-28 13:15+0000\n"
 "Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -36,7 +36,8 @@ msgid "Compress PDF"
 msgstr "Comprimir PDF"
 
 #: src/Widgets/Welcome.vala:26
-msgid "Compress PDF file to get the same PDF quality but less filesize."
+#, fuzzy
+msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
 "Comprima o arquivo PDF para obter a mesma qualidade de PDF, mas menos "
 "tamanho de arquivo."
@@ -46,8 +47,9 @@ msgid "Split PDF"
 msgstr "Dividir PDF"
 
 #: src/Widgets/Welcome.vala:27
+#, fuzzy
 msgid ""
-"Split a PDF file by page ranges or extract all PDF pages to multiple PDF "
+"Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
 "Divida um arquivo PDF por intervalos de páginas ou extraia todas as páginas "
@@ -59,7 +61,7 @@ msgstr "Mesclar PDF"
 
 #: src/Widgets/Welcome.vala:28
 #, fuzzy
-msgid "Select multiple PDF files or images and merge them in seconds."
+msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr "Selecione vários arquivos PDF e mescle-os em segundos."
 
 #: src/Widgets/Welcome.vala:29
@@ -67,7 +69,8 @@ msgid "Convert PDF"
 msgstr "Converter PDF"
 
 #: src/Widgets/Welcome.vala:29
-msgid "Convert PDF files to jpg, png and txt formats."
+#, fuzzy
+msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Converter arquivos PDF para os formatos jpg, png e txt."
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
@@ -151,12 +154,13 @@ msgid "File to Split:"
 msgstr "Arquivo para Dividir:"
 
 #: src/Widgets/SplitPDF.vala:257
-msgid "Your file was succefully splited."
-msgstr "Seu arquivo foi dividido com sucesso."
+#, fuzzy
+msgid "File split."
+msgstr "Arquivo para Dividir:"
 
 #: src/Widgets/SplitPDF.vala:263
-msgid "There was a problem spliting your file."
-msgstr "Houve um problema ao dividir seu arquivo."
+msgid "Could not split this file."
+msgstr ""
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
@@ -216,12 +220,13 @@ msgid "The input format is the same as the output format."
 msgstr "O formato de entrada é o mesmo formato de saída."
 
 #: src/Widgets/ConvertPDF.vala:145
-msgid "Your file was succefully converted."
-msgstr "Seu arquivo foi convertido com sucesso."
+#, fuzzy
+msgid "File converted."
+msgstr "Arquivo para Converter:"
 
 #: src/Widgets/ConvertPDF.vala:151
-msgid "There was a problem converting your file."
-msgstr "Houve um problema ao converter seu arquivo."
+msgid "Could not convert this file."
+msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid "ImageMagick Policies"
@@ -229,10 +234,21 @@ msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid ""
-"The security policies of your ImageMagick installation do not allow this "
-"operation. Please release the manipulation of pdf files in ImageMagick and "
-"try again."
+"Change the ImageMagick security policies that prevent this operation and try "
+"again."
 msgstr ""
+
+#~ msgid "Your file was succefully splited."
+#~ msgstr "Seu arquivo foi dividido com sucesso."
+
+#~ msgid "There was a problem spliting your file."
+#~ msgstr "Houve um problema ao dividir seu arquivo."
+
+#~ msgid "Your file was succefully converted."
+#~ msgstr "Seu arquivo foi convertido com sucesso."
+
+#~ msgid "There was a problem converting your file."
+#~ msgstr "Houve um problema ao converter seu arquivo."
 
 #~ msgid "Select the file to output"
 #~ msgstr "Selecione o arquivo de saída"

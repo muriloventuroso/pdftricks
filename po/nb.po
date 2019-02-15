@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-14 08:53-0200\n"
+"POT-Creation-Date: 2019-02-15 09:45-0200\n"
 "PO-Revision-Date: 2019-02-02 14:10+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
@@ -36,7 +36,8 @@ msgid "Compress PDF"
 msgstr "Pakk sammen PDF"
 
 #: src/Widgets/Welcome.vala:26
-msgid "Compress PDF file to get the same PDF quality but less filesize."
+#, fuzzy
+msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
 "Pakk sammen PDF-fil for å få samme PDF-kvalitet med mindre filstørrelse."
 
@@ -47,7 +48,7 @@ msgstr "Del PDF"
 #: src/Widgets/Welcome.vala:27
 #, fuzzy
 msgid ""
-"Split a PDF file by page ranges or extract all PDF pages to multiple PDF "
+"Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
 "Slitt en PDF-fil etter inndelinger, eller pakk ut PDF-sider til flere PDF-"
@@ -59,7 +60,7 @@ msgstr "Flett PDF"
 
 #: src/Widgets/Welcome.vala:28
 #, fuzzy
-msgid "Select multiple PDF files or images and merge them in seconds."
+msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr "Velg flere PDF-filer og flett dem i løpet av sekunder"
 
 #: src/Widgets/Welcome.vala:29
@@ -68,7 +69,7 @@ msgstr "Konverter PDF"
 
 #: src/Widgets/Welcome.vala:29
 #, fuzzy
-msgid "Convert PDF files to jpg, png and txt formats."
+msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Konverter PDF-filer til JPG, PNG og TXT-.formater."
 
 #: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
@@ -156,13 +157,12 @@ msgstr "Fil å dele:"
 
 #: src/Widgets/SplitPDF.vala:257
 #, fuzzy
-msgid "Your file was succefully splited."
-msgstr "Fil delt."
+msgid "File split."
+msgstr "Fil å dele:"
 
 #: src/Widgets/SplitPDF.vala:263
-#, fuzzy
-msgid "There was a problem spliting your file."
-msgstr "Kunne ikke dele filen din."
+msgid "Could not split this file."
+msgstr ""
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
@@ -224,12 +224,13 @@ msgid "The input format is the same as the output format."
 msgstr "Inndataformatet er det samme som utdataformatet."
 
 #: src/Widgets/ConvertPDF.vala:145
-msgid "Your file was succefully converted."
-msgstr "Fil konvertert:"
+#, fuzzy
+msgid "File converted."
+msgstr "Fil å konvertere:"
 
 #: src/Widgets/ConvertPDF.vala:151
-msgid "There was a problem converting your file."
-msgstr "Kunne ikke konvertere filen din."
+msgid "Could not convert this file."
+msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid "ImageMagick Policies"
@@ -237,7 +238,20 @@ msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid ""
-"The security policies of your ImageMagick installation do not allow this "
-"operation. Please release the manipulation of pdf files in ImageMagick and "
-"try again."
+"Change the ImageMagick security policies that prevent this operation and try "
+"again."
 msgstr ""
+
+#, fuzzy
+#~ msgid "Your file was succefully splited."
+#~ msgstr "Fil delt."
+
+#, fuzzy
+#~ msgid "There was a problem spliting your file."
+#~ msgstr "Kunne ikke dele filen din."
+
+#~ msgid "Your file was succefully converted."
+#~ msgstr "Fil konvertert:"
+
+#~ msgid "There was a problem converting your file."
+#~ msgstr "Kunne ikke konvertere filen din."
