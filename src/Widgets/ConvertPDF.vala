@@ -142,13 +142,13 @@ namespace pdftricks {
             if(convert == true){
                 var result_convert = convert_file(file_pdf, output_file, input_format, format);
                 if(result_convert){
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully converted."), "process-completed", Gtk.ButtonsType.CLOSE);
+                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File converted."), "process-completed", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for(window);
                     message_dialog.show_all ();
                     message_dialog.run ();
                     message_dialog.destroy ();
                 }else{
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem converting your file."), "process-stop", Gtk.ButtonsType.CLOSE);
+                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not convert this file."), "process-stop", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for(window);
                     message_dialog.show_all ();
                     message_dialog.run ();
@@ -213,7 +213,7 @@ namespace pdftricks {
                     }
                     if(stderr.contains("not authorized")){
                         spinner.hide();
-                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("The security policies of your ImageMagick installation do not allow this operation. Please release the manipulation of pdf files in ImageMagick and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies preventing this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
                         message_dialog.set_transient_for(window);
                         message_dialog.show_all ();
                         message_dialog.run ();
