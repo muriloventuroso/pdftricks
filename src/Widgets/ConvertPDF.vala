@@ -213,7 +213,7 @@ namespace pdftricks {
                     }
                     if(stderr.contains("not authorized")){
                         spinner.hide();
-                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies preventing this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
                         message_dialog.set_transient_for(window);
                         message_dialog.show_all ();
                         message_dialog.run ();
