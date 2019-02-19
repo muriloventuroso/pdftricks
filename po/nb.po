@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-14 08:53-0200\n"
-"PO-Revision-Date: 2019-02-15 12:18+0000\n"
+"PO-Revision-Date: 2019-02-20 21:18+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "pdftricks/translations/nb_NO/>\n"
@@ -162,7 +162,7 @@ msgstr "Fil å dele:"
 
 #: src/Widgets/SplitPDF.vala:263
 msgid "Could not split this file."
-msgstr ""
+msgstr "Kunne ikke dele denne filen."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
@@ -230,7 +230,7 @@ msgstr "Fil å konvertere:"
 
 #: src/Widgets/ConvertPDF.vala:151
 msgid "Could not convert this file."
-msgstr ""
+msgstr "Kunne ikke konvertere denne filen."
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid "ImageMagick Policies"
