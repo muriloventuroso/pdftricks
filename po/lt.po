@@ -60,9 +60,10 @@ msgid "Merge PDF"
 msgstr "Sulieti PDF"
 
 #: src/Widgets/Welcome.vala:28
-#, fuzzy
-msgid "Select multiple PDF files or images, and merge them in seconds."
-msgstr "Pasirinkti keletą PDF failų ir per kelias akimirkas juos sulieti."
+msgid "Select multiple PDF files or images and merge them in seconds."
+msgstr ""
+"Pasirinkti keletą PDF failų ar paveikslų ir per kelias akimirkas juos "
+"sulieti."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
