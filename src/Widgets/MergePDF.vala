@@ -266,6 +266,16 @@ namespace pdftricks {
             }
             if(output != "" || exit_status != 0 || stderr != ""){
                 if(output.contains("Error")){
+                    spinner.hide();
+                    return false;
+                }
+                if(stderr.contains("not authorized")){
+                    spinner.hide();
+                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
+                    message_dialog.set_transient_for(window);
+                    message_dialog.show_all ();
+                    message_dialog.run ();
+                    message_dialog.destroy ();
                     return false;
                 }
                 if(exit_status != 0){

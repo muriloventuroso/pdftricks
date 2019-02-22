@@ -203,9 +203,6 @@ namespace pdftricks {
                     spinner.hide();
                     return false;
                 }
-                print(output);
-                print(stderr);
-                print(exit_status.to_string());
                 if(output != "" || exit_status != 0 || stderr != ""){
                     if(output.contains("Error")){
                         spinner.hide();
