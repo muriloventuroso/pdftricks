@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-14 08:53-0200\n"
+"POT-Creation-Date: 2019-02-22 15:39-0300\n"
 "PO-Revision-Date: 2019-02-15 12:18+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
@@ -72,64 +72,81 @@ msgstr "Konverter PDF"
 msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Konverter PDF-filer til JPG, PNG og TXT-.formater."
 
-#: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
+#: src/Widgets/CompressPDF.vala:43 src/Widgets/SplitPDF.vala:44
 #: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:69
 #: src/Widgets/MergePDF.vala:230
 msgid "Select the file to compress"
 msgstr "Velg filen å pakke sammen"
 
-#: src/Widgets/CompressPDF.vala:49
-msgid "Low"
-msgstr "Lav"
+#: src/Widgets/CompressPDF.vala:44 src/Widgets/CompressPDF.vala:68
+msgid "Good quality, good compression"
+msgstr ""
 
-#: src/Widgets/CompressPDF.vala:51
-msgid "High"
-msgstr "Høy"
+#: src/Widgets/CompressPDF.vala:50
+msgid "Extreme Compression"
+msgstr ""
 
-#: src/Widgets/CompressPDF.vala:61
+#: src/Widgets/CompressPDF.vala:52
+msgid "Recommended Compression"
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:54
+#, fuzzy
+msgid "Less Compression"
+msgstr "Pakk sammen"
+
+#: src/Widgets/CompressPDF.vala:66
+msgid "Less quality, high compression"
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:70
+msgid "High quality, less compression"
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:79
 msgid "Compress"
 msgstr "Pakk sammen"
 
-#: src/Widgets/CompressPDF.vala:81
+#: src/Widgets/CompressPDF.vala:99
 msgid "File to Compress:"
 msgstr "Filer å pakke sammen:"
 
-#: src/Widgets/CompressPDF.vala:84
+#: src/Widgets/CompressPDF.vala:102
 #, fuzzy
-msgid "Resolution to Compress:"
-msgstr "Oppløsning å pakke sammen:"
+msgid "Compression Level:"
+msgstr "Pakk sammen"
 
-#: src/Widgets/CompressPDF.vala:109 src/Widgets/ConvertPDF.vala:130
+#: src/Widgets/CompressPDF.vala:129 src/Widgets/ConvertPDF.vala:130
 msgid "Select the file to save"
 msgstr "Velg filen å lagre"
 
-#: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:218
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:218
 #: src/Widgets/MergePDF.vala:231 src/Widgets/ConvertPDF.vala:131
 msgid "Save"
 msgstr "Lagre"
 
-#: src/Widgets/CompressPDF.vala:111 src/Widgets/SplitPDF.vala:219
+#: src/Widgets/CompressPDF.vala:131 src/Widgets/SplitPDF.vala:219
 #: src/Widgets/MergePDF.vala:71 src/Widgets/MergePDF.vala:232
 #: src/Widgets/ConvertPDF.vala:132
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:257
+#: src/Widgets/CompressPDF.vala:144 src/Widgets/SplitPDF.vala:257
 #: src/Widgets/MergePDF.vala:242 src/Widgets/ConvertPDF.vala:145
 msgid "Success."
 msgstr "Vellykket."
 
-#: src/Widgets/CompressPDF.vala:124
+#: src/Widgets/CompressPDF.vala:144
 msgid "Your file was succefully compressed."
 msgstr "Fil sammenpakket."
 
-#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:263
+#: src/Widgets/CompressPDF.vala:150 src/Widgets/SplitPDF.vala:263
 #: src/Widgets/MergePDF.vala:248 src/Widgets/ConvertPDF.vala:121
 #: src/Widgets/ConvertPDF.vala:151
 msgid "Failure."
 msgstr "Mislyktes."
 
-#: src/Widgets/CompressPDF.vala:130
+#: src/Widgets/CompressPDF.vala:150
 msgid "There was a problem compressing your file."
 msgstr "Kunne ikke pakke sammen filen din."
 
@@ -203,6 +220,18 @@ msgstr "Fil flettet."
 msgid "There was a problem merging your file."
 msgstr "Kunne ikke flette filen din."
 
+#: src/Widgets/MergePDF.vala:274 src/Widgets/ConvertPDF.vala:213
+msgid "ImageMagick Policies"
+msgstr "ImageMagick-praksiser"
+
+#: src/Widgets/MergePDF.vala:274 src/Widgets/ConvertPDF.vala:213
+msgid ""
+"Change the ImageMagick security policies that prevent this operation and try "
+"again."
+msgstr ""
+"Sikkerhetspraksisene for din ImageMagick-installasjon tillater ikke dette. "
+"Frigjør manipulering av PDF-filer i ImageMagick og prøv igjen."
+
 #: src/Widgets/ConvertPDF.vala:40
 msgid "Select the file to convert"
 msgstr "Fil å konvertere:"
@@ -232,14 +261,12 @@ msgstr "Fil å konvertere:"
 msgid "Could not convert this file."
 msgstr ""
 
-#: src/Widgets/ConvertPDF.vala:216
-msgid "ImageMagick Policies"
-msgstr "ImageMagick-praksiser"
+#~ msgid "Low"
+#~ msgstr "Lav"
 
-#: src/Widgets/ConvertPDF.vala:216
-msgid ""
-"Change the ImageMagick security policies that prevent this operation and try "
-"again."
-msgstr ""
-"Sikkerhetspraksisene for din ImageMagick-installasjon tillater ikke dette. "
-"Frigjør manipulering av PDF-filer i ImageMagick og prøv igjen."
+#~ msgid "High"
+#~ msgstr "Høy"
+
+#, fuzzy
+#~ msgid "Resolution to Compress:"
+#~ msgstr "Oppløsning å pakke sammen:"

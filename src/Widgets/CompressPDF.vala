@@ -28,6 +28,7 @@ namespace pdftricks {
         public Gtk.Window window { get; construct; }
         private Gtk.Grid grid;
         private Gtk.Spinner spinner;
+        private Gtk.Label level_description;
 
         public CompressPDF (Gtk.Window window) {
             Object (
@@ -40,18 +41,35 @@ namespace pdftricks {
         }
         construct {
             filechooser = new Gtk.FileChooserButton (_("Select the file to compress"), Gtk.FileChooserAction.OPEN);
-
+            level_description = new Gtk.Label(_("Good quality, good compression"));
             Gtk.FileFilter filter = new Gtk.FileFilter ();
             filter.add_mime_type ("application/pdf");
             filechooser.set_filter (filter);
             resolution_store =  new Gtk.ListStore (2, typeof (string), typeof (string));
             resolution_store.append(out iter);
-            resolution_store.set (iter, 0, "screen", 1, _("Low"));
+            resolution_store.set (iter, 0, "screen", 1, _("Extreme Compression"));
             resolution_store.append(out iter);
-            resolution_store.set (iter, 0, "ebook", 1, _("High"));
+            resolution_store.set (iter, 0, "printer", 1, _("Recommended Compression"));
+            resolution_store.append(out iter);
+            resolution_store.set (iter, 0, "prepress", 1, _("Less Compression"));
 
             resolution_box = new Gtk.ComboBox.with_model (resolution_store);
             resolution_box.set_sensitive (false);
+
+            resolution_box.changed.connect(() => {
+                Value resolution;
+                var compress = false;
+                resolution_box.get_active_iter (out iter);
+                resolution_store.get_value (iter, 0, out resolution);
+                var str_resolution = resolution.dup_string();
+                if(str_resolution == "screen"){
+                    level_description.label = _("Less quality, high compression");
+                }else if(str_resolution == "printer"){
+                    level_description.label = _("Good quality, good compression");
+                }else if(str_resolution == "prepress"){
+                    level_description.label = _("High quality, less compression");
+                }
+            });
 
             var renderer = new Gtk.CellRendererText ();
             resolution_box.pack_start (renderer, true);
@@ -81,10 +99,12 @@ namespace pdftricks {
             grid.attach (new Granite.HeaderLabel (_("File to Compress:")), 0, 0, 1, 1);
             grid.attach (filechooser, 1, 0, 1, 1);
 
-            grid.attach (new Granite.HeaderLabel (_("Resolution to Compress:")), 0, 1, 1, 1);
+            grid.attach (new Granite.HeaderLabel (_("Compression Level:")), 0, 1, 1, 1);
             grid.attach (resolution_box, 1, 1, 1, 1);
 
-            grid.attach (compress_button, 0, 2, 2, 2);
+            grid.attach (level_description, 0, 2, 2, 1);
+
+            grid.attach (compress_button, 0, 3, 2, 2);
             spinner = new Gtk.Spinner();
             spinner.active = true;
 

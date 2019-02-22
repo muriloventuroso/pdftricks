@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-15 09:45-0200\n"
+"POT-Creation-Date: 2019-02-22 15:39-0300\n"
 "PO-Revision-Date: 2018-12-24 17:29-0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -70,64 +70,82 @@ msgstr "Compress PDF"
 msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:42 src/Widgets/SplitPDF.vala:44
+#: src/Widgets/CompressPDF.vala:43 src/Widgets/SplitPDF.vala:44
 #: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:69
 #: src/Widgets/MergePDF.vala:230
 msgid "Select the file to compress"
 msgstr "Select the file to compress"
 
-#: src/Widgets/CompressPDF.vala:49
-msgid "Low"
-msgstr "Low"
+#: src/Widgets/CompressPDF.vala:44 src/Widgets/CompressPDF.vala:68
+msgid "Good quality, good compression"
+msgstr ""
 
-#: src/Widgets/CompressPDF.vala:51
-msgid "High"
-msgstr "High"
+#: src/Widgets/CompressPDF.vala:50
+msgid "Extreme Compression"
+msgstr ""
 
-#: src/Widgets/CompressPDF.vala:61
+#: src/Widgets/CompressPDF.vala:52
+msgid "Recommended Compression"
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:54
+#, fuzzy
+msgid "Less Compression"
+msgstr "Compress"
+
+#: src/Widgets/CompressPDF.vala:66
+msgid "Less quality, high compression"
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:70
+msgid "High quality, less compression"
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:79
 msgid "Compress"
 msgstr "Compress"
 
-#: src/Widgets/CompressPDF.vala:81
+#: src/Widgets/CompressPDF.vala:99
 msgid "File to Compress:"
 msgstr "File to Compress:"
 
-#: src/Widgets/CompressPDF.vala:84
-msgid "Resolution to Compress:"
-msgstr "Resolution to Compress:"
+#: src/Widgets/CompressPDF.vala:102
+#, fuzzy
+msgid "Compression Level:"
+msgstr "Compress"
 
-#: src/Widgets/CompressPDF.vala:109 src/Widgets/ConvertPDF.vala:130
+#: src/Widgets/CompressPDF.vala:129 src/Widgets/ConvertPDF.vala:130
 #, fuzzy
 msgid "Select the file to save"
 msgstr "Select the file to split"
 
-#: src/Widgets/CompressPDF.vala:110 src/Widgets/SplitPDF.vala:218
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:218
 #: src/Widgets/MergePDF.vala:231 src/Widgets/ConvertPDF.vala:131
 msgid "Save"
 msgstr "Save"
 
-#: src/Widgets/CompressPDF.vala:111 src/Widgets/SplitPDF.vala:219
+#: src/Widgets/CompressPDF.vala:131 src/Widgets/SplitPDF.vala:219
 #: src/Widgets/MergePDF.vala:71 src/Widgets/MergePDF.vala:232
 #: src/Widgets/ConvertPDF.vala:132
 msgid "Cancel"
 msgstr "Cancel"
 
-#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:257
+#: src/Widgets/CompressPDF.vala:144 src/Widgets/SplitPDF.vala:257
 #: src/Widgets/MergePDF.vala:242 src/Widgets/ConvertPDF.vala:145
 msgid "Success."
 msgstr "Success."
 
-#: src/Widgets/CompressPDF.vala:124
+#: src/Widgets/CompressPDF.vala:144
 msgid "Your file was succefully compressed."
 msgstr "Your file was succefully compressed."
 
-#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:263
+#: src/Widgets/CompressPDF.vala:150 src/Widgets/SplitPDF.vala:263
 #: src/Widgets/MergePDF.vala:248 src/Widgets/ConvertPDF.vala:121
 #: src/Widgets/ConvertPDF.vala:151
 msgid "Failure."
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:130
+#: src/Widgets/CompressPDF.vala:150
 msgid "There was a problem compressing your file."
 msgstr ""
 
@@ -198,6 +216,16 @@ msgstr "Your file was succefully merged."
 msgid "There was a problem merging your file."
 msgstr ""
 
+#: src/Widgets/MergePDF.vala:274 src/Widgets/ConvertPDF.vala:213
+msgid "ImageMagick Policies"
+msgstr ""
+
+#: src/Widgets/MergePDF.vala:274 src/Widgets/ConvertPDF.vala:213
+msgid ""
+"Change the ImageMagick security policies that prevent this operation and try "
+"again."
+msgstr ""
+
 #: src/Widgets/ConvertPDF.vala:40
 #, fuzzy
 msgid "Select the file to convert"
@@ -230,15 +258,14 @@ msgstr "File to Compress:"
 msgid "Could not convert this file."
 msgstr ""
 
-#: src/Widgets/ConvertPDF.vala:216
-msgid "ImageMagick Policies"
-msgstr ""
+#~ msgid "Low"
+#~ msgstr "Low"
 
-#: src/Widgets/ConvertPDF.vala:216
-msgid ""
-"Change the ImageMagick security policies that prevent this operation and try "
-"again."
-msgstr ""
+#~ msgid "High"
+#~ msgstr "High"
+
+#~ msgid "Resolution to Compress:"
+#~ msgstr "Resolution to Compress:"
 
 #~ msgid "Your file was succefully splited."
 #~ msgstr "Your file was succefully splited."
