@@ -54,7 +54,7 @@ namespace pdftricks {
 
             filechooser.file_set.connect(() => {
 
-                var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
+                var file_pdf = filechooser.get_filename().replace("%20", " ");
                 var file_name_split = file_pdf.split(".");
                 var input_format = file_name_split[file_name_split.length - 1];
                 format_conversion.remove_all();
@@ -114,7 +114,7 @@ namespace pdftricks {
             var convert = false;
             var format = format_conversion.get_active_text();
 
-            var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
+            var file_pdf = filechooser.get_filename();
             var file_name_split = file_pdf.split(".");
             var input_format = file_name_split[file_name_split.length - 1];
             if(input_format == format){
@@ -135,7 +135,7 @@ namespace pdftricks {
             chooser_output.set_current_name(filename.split(".")[0] + "." + format);
             chooser_output.do_overwrite_confirmation = true;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-                output_file = chooser_output.get_uri().split(":")[1].replace("///", "/").replace("%20", "\\ ");
+                output_file = chooser_output.get_filename().replace(" ", "\\ ");
                 convert = true;
             }
             chooser_output.destroy();

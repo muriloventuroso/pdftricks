@@ -74,8 +74,8 @@ namespace pdftricks {
                 chooser_file.set_select_multiple(true);
 
                 if (chooser_file.run () == Gtk.ResponseType.ACCEPT) {
-                    foreach(string pdf_file in chooser_file.get_uris()){
-                        pdf_file = pdf_file.split(":")[1].replace("///", "/").replace("%20", " ");
+                    foreach(string pdf_file in chooser_file.get_filenames()){
+                        pdf_file = pdf_file.replace("%20", " ");
                         var file_name_split = pdf_file.split(".");
                         var input_format = file_name_split[file_name_split.length - 1];
                         if(input_format in input_formats){
@@ -232,7 +232,7 @@ namespace pdftricks {
                 _("Cancel"));
             chooser_output.do_overwrite_confirmation = true;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-                output_file = chooser_output.get_uri().split(":")[1].replace("///", "/").replace("%20", "\\ ");
+                output_file = chooser_output.get_filename().replace(" ", "\\ ");
                 merge = true;
             }
             chooser_output.destroy();
