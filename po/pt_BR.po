@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-22 15:39-0300\n"
-"PO-Revision-Date: 2019-01-28 13:15+0000\n"
+"PO-Revision-Date: 2019-02-22 18:46+0000\n"
 "Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "pdftricks/translations/pt_BR/>\n"
@@ -77,28 +77,27 @@ msgstr "Selecione o arquivo para comprimir"
 
 #: src/Widgets/CompressPDF.vala:44 src/Widgets/CompressPDF.vala:68
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "Boa qualidade, boa compressão"
 
 #: src/Widgets/CompressPDF.vala:50
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Compressão Extrema"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Recommended Compression"
-msgstr ""
+msgstr "Compressão Recomendada"
 
 #: src/Widgets/CompressPDF.vala:54
-#, fuzzy
 msgid "Less Compression"
-msgstr "Comprimir"
+msgstr "Compressão Leve"
 
 #: src/Widgets/CompressPDF.vala:66
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Menos qualidade, alta compressão"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Alta qualidade, menos compressão"
 
 #: src/Widgets/CompressPDF.vala:79
 msgid "Compress"
@@ -109,9 +108,8 @@ msgid "File to Compress:"
 msgstr "Arquivo para Comprimir:"
 
 #: src/Widgets/CompressPDF.vala:102
-#, fuzzy
 msgid "Compression Level:"
-msgstr "Comprimir"
+msgstr "Nível de Compressão:"
 
 #: src/Widgets/CompressPDF.vala:129 src/Widgets/ConvertPDF.vala:130
 msgid "Select the file to save"
@@ -252,14 +250,14 @@ msgstr "Não foi possível converter esse arquivo."
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid "ImageMagick Policies"
-msgstr "Políticas ImageMagick"
+msgstr "Políticas do ImageMagick"
 
 #: src/Widgets/ConvertPDF.vala:216
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
-"Altere as políticas de segurança do ImageMagick para previnir esse erro e "
+"Altere as políticas de segurança do ImageMagick que impedem essa operação e "
 "tente novamente."
 
 #~ msgid "Your file was succefully splited."
