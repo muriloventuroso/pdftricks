@@ -179,7 +179,7 @@ msgstr "Fil å dele:"
 
 #: src/Widgets/SplitPDF.vala:263
 msgid "Could not split this file."
-msgstr ""
+msgstr "Kunne ikke dele denne filen."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
@@ -259,7 +259,7 @@ msgstr "Fil å konvertere:"
 
 #: src/Widgets/ConvertPDF.vala:151
 msgid "Could not convert this file."
-msgstr ""
+msgstr "Kunne ikke konvertere denne filen."
 
 #~ msgid "Low"
 #~ msgstr "Lav"

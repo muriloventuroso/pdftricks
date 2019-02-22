@@ -38,7 +38,6 @@ msgid "Compress PDF"
 msgstr "Glaudinti PDF"
 
 #: src/Widgets/Welcome.vala:26
-#, fuzzy
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr "Glaudinti PDF failą į tokią pačią PDF kokybę, bet mažesnį failo dydį."
 
@@ -47,7 +46,6 @@ msgid "Split PDF"
 msgstr "Padalyti PDF"
 
 #: src/Widgets/Welcome.vala:27
-#, fuzzy
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
@@ -71,9 +69,8 @@ msgid "Convert PDF"
 msgstr "Konvertuoti PDF"
 
 #: src/Widgets/Welcome.vala:29
-#, fuzzy
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr "Konvertuoti PDF failus į jpg, png ir txt formatus."
+msgstr "Konvertuoti PDF failus į JPG, PNG ir TXT formatus."
 
 #: src/Widgets/CompressPDF.vala:43 src/Widgets/SplitPDF.vala:44
 #: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:69
@@ -174,13 +171,12 @@ msgid "File to Split:"
 msgstr "Failas, kurį padalyti:"
 
 #: src/Widgets/SplitPDF.vala:257
-#, fuzzy
 msgid "File split."
-msgstr "Failas, kurį padalyti:"
+msgstr "Failas padalytas."
 
 #: src/Widgets/SplitPDF.vala:263
 msgid "Could not split this file."
-msgstr ""
+msgstr "Nepavyko padalyti šio failo."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
@@ -250,22 +246,23 @@ msgid "The input format is the same as the output format."
 msgstr "Įvesties formatas yra toks pats kaip ir išvesties formatas."
 
 #: src/Widgets/ConvertPDF.vala:145
-#, fuzzy
 msgid "File converted."
-msgstr "Failas, kurį konvertuoti:"
+msgstr "Failas konvertuotas."
 
 #: src/Widgets/ConvertPDF.vala:151
 msgid "Could not convert this file."
-msgstr ""
+msgstr "Nepavyko konvertuoti šio failo."
 
 #~ msgid "Low"
 #~ msgstr "Žema"
 
-#~ msgid "High"
-#~ msgstr "Aukšta"
-
-#~ msgid "Resolution to Compress:"
-#~ msgstr "Raiška į kurią glaudinti:"
+#: src/Widgets/ConvertPDF.vala:216
+msgid ""
+"Change the ImageMagick security policies that prevent this operation and try "
+"again."
+msgstr ""
+"Pakeiskite ImageMagick saugumo politikas, kurios neleidžia šios operacijos "
+"ir bandykite dar kartą."
 
 #~ msgid "Your file was succefully splited."
 #~ msgstr "Jūsų failas buvo sėkmingai padalytas."

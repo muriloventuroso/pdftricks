@@ -36,18 +36,16 @@ msgid "Compress PDF"
 msgstr "Comprimir PDF"
 
 #: src/Widgets/Welcome.vala:26
-#, fuzzy
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
-"Comprima o arquivo PDF para obter a mesma qualidade de PDF, mas menos "
-"tamanho de arquivo."
+"Comprima o arquivo PDF para obter a mesma qualidade de PDF com tamanho "
+"reduzido do arquivo."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
 msgstr "Dividir PDF"
 
 #: src/Widgets/Welcome.vala:27
-#, fuzzy
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
@@ -60,7 +58,6 @@ msgid "Merge PDF"
 msgstr "Mesclar PDF"
 
 #: src/Widgets/Welcome.vala:28
-#, fuzzy
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr "Selecione vários arquivos PDF e mescle-os em segundos."
 
@@ -69,7 +66,6 @@ msgid "Convert PDF"
 msgstr "Converter PDF"
 
 #: src/Widgets/Welcome.vala:29
-#, fuzzy
 msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Converter arquivos PDF para os formatos jpg, png e txt."
 
@@ -172,13 +168,12 @@ msgid "File to Split:"
 msgstr "Arquivo para Dividir:"
 
 #: src/Widgets/SplitPDF.vala:257
-#, fuzzy
 msgid "File split."
-msgstr "Arquivo para Dividir:"
+msgstr "Dividir arquivo."
 
 #: src/Widgets/SplitPDF.vala:263
 msgid "Could not split this file."
-msgstr ""
+msgstr "Não foi possível dividir esse arquivo."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
@@ -248,22 +243,24 @@ msgid "The input format is the same as the output format."
 msgstr "O formato de entrada é o mesmo formato de saída."
 
 #: src/Widgets/ConvertPDF.vala:145
-#, fuzzy
 msgid "File converted."
-msgstr "Arquivo para Converter:"
+msgstr "Arquivo convertido."
 
 #: src/Widgets/ConvertPDF.vala:151
 msgid "Could not convert this file."
+msgstr "Não foi possível converter esse arquivo."
+
+#: src/Widgets/ConvertPDF.vala:216
+msgid "ImageMagick Policies"
+msgstr "Políticas ImageMagick"
+
+#: src/Widgets/ConvertPDF.vala:216
+msgid ""
+"Change the ImageMagick security policies that prevent this operation and try "
+"again."
 msgstr ""
-
-#~ msgid "Low"
-#~ msgstr "Baixa"
-
-#~ msgid "High"
-#~ msgstr "Alta"
-
-#~ msgid "Resolution to Compress:"
-#~ msgstr "Resolução para Comprimir:"
+"Altere as políticas de segurança do ImageMagick para previnir esse erro e "
+"tente novamente."
 
 #~ msgid "Your file was succefully splited."
 #~ msgstr "Seu arquivo foi dividido com sucesso."
