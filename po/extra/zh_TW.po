@@ -8,47 +8,50 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 11:13-0200\n"
-"PO-Revision-Date: 2019-01-28 11:13-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-02-25 04:18+0000\n"
+"Last-Translator: ezjerry liao <ezjerry@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
+"pdftricks/extra/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF 技巧"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
 msgid "Tricks for PDF Files"
-msgstr ""
+msgstr "PDF 檔案的技巧"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:10
 msgid ""
 "A simple, efficient application for small manipulations in PDF files. "
 "Compress, split, merge and convert PDF Files."
-msgstr ""
+msgstr "用於在 PDF 檔案處理的一種簡單、高效的應用程式。壓縮、拆分、合併和轉換 PDF 檔案。"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:82
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "Murilo Venturoso"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:4
 msgid "Tips & Tricks for PDF files"
-msgstr ""
+msgstr "PDF  檔案的提示和技巧"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
 msgid ""
 "A simple, efficient application for small manipulations in PDF files. "
 "Compress, split, merge and convert PDF."
-msgstr ""
+msgstr "用於在 PDF 檔案處理的一種簡單、高效的應用程式。壓縮、拆分、合併和轉換 PDF 檔案。"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:10
 msgid "com.github.muriloventuroso.pdftricks"
-msgstr ""
+msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:14
 msgid "pdf;utilies;"
-msgstr ""
+msgstr "pdf;運用;"
