@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-22 16:20-0300\n"
-"PO-Revision-Date: 2019-02-10 00:10+0000\n"
+"PO-Revision-Date: 2019-02-26 17:18+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/pdftricks/"
 "translations/lt/>\n"
@@ -58,7 +58,6 @@ msgid "Merge PDF"
 msgstr "Sulieti PDF"
 
 #: src/Widgets/Welcome.vala:28
-#, fuzzy
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr ""
 "Pasirinkti keletą PDF failų ar paveikslų ir per kelias akimirkas juos "
@@ -80,28 +79,27 @@ msgstr "Pasirinkite failą, kurį glaudinti"
 
 #: src/Widgets/CompressPDF.vala:44 src/Widgets/CompressPDF.vala:68
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "Gera kokybė, geras glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:50
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Ekstremalus glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Recommended Compression"
-msgstr ""
+msgstr "Rekomenduojamas glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:54
-#, fuzzy
 msgid "Less Compression"
-msgstr "Glaudinti"
+msgstr "Mažesnis glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:66
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Žemesnė kokybė, didelis glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Aukšta kokybė, mažesnis glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:79
 msgid "Compress"
@@ -112,9 +110,8 @@ msgid "File to Compress:"
 msgstr "Failas, kurį glaudinti:"
 
 #: src/Widgets/CompressPDF.vala:102
-#, fuzzy
 msgid "Compression Level:"
-msgstr "Glaudinti"
+msgstr "Glaudinimo lygis:"
 
 #: src/Widgets/CompressPDF.vala:129 src/Widgets/ConvertPDF.vala:130
 msgid "Select the file to save"
