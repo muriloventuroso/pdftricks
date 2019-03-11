@@ -258,7 +258,7 @@ namespace pdftricks {
             string output, stderr  = "";
             int exit_status = 0;
             try{
-                var cmd = "convert " + inputs + " " + output_file;
+                var cmd = "convert -density 288" + inputs + " " + output_file;
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
