@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-22 16:20-0300\n"
-"PO-Revision-Date: 2019-02-15 12:18+0000\n"
+"PO-Revision-Date: 2019-02-25 04:18+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "pdftricks/translations/nb_NO/>\n"
@@ -80,15 +80,15 @@ msgstr "Velg filen å pakke sammen"
 
 #: src/Widgets/CompressPDF.vala:44 src/Widgets/CompressPDF.vala:68
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "God kvalitet, god plassbesparelse"
 
 #: src/Widgets/CompressPDF.vala:50
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Ekstrem komprimering"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Recommended Compression"
-msgstr ""
+msgstr "Anbefalt komprimering"
 
 #: src/Widgets/CompressPDF.vala:54
 #, fuzzy
@@ -97,11 +97,11 @@ msgstr "Pakk sammen"
 
 #: src/Widgets/CompressPDF.vala:66
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Mindre kvalitet, høyere komprimering"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Høy kvalitet, mindre komprimering"
 
 #: src/Widgets/CompressPDF.vala:79
 msgid "Compress"
