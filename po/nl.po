@@ -8,236 +8,245 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-22 16:20-0300\n"
-"PO-Revision-Date: 2018-12-24 17:29-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-03-15 21:03+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/pdftricks/"
+"translations/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.6-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
-msgstr ""
+msgstr "Terug"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr ""
+msgstr "Trucjes voor PDF-bestanden"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr ""
+msgstr "PDF comprimeren"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
+"Comprimeer een PDF-bestand om dezelfde kwaliteit te verkrijgen, maar dan met "
+"een kleinere bestandsgrootte."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr ""
+msgstr "PDF splitsen"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
+"Splits een PDF-bestand op paginabereiken of verdeel alle pagina's over "
+"meerdere PDF-bestanden."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr ""
+msgstr "PDF samenvoegen"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr ""
+"Kies meerdere PDF-bestanden of afbeeldingen en voeg ze razendsnel samen."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr ""
+msgstr "PDF converteren"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr ""
+msgstr "Converteer PDF-bestanden naar JPG, PNG en TXT."
 
 #: src/Widgets/CompressPDF.vala:43 src/Widgets/SplitPDF.vala:44
 #: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:69
 #: src/Widgets/MergePDF.vala:230
 msgid "Select the file to compress"
-msgstr ""
+msgstr "Kies het te comprimeren bestand"
 
 #: src/Widgets/CompressPDF.vala:44 src/Widgets/CompressPDF.vala:68
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "Goede kwaliteit, goede compressie"
 
 #: src/Widgets/CompressPDF.vala:50
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Extreme compressie"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Recommended Compression"
-msgstr ""
+msgstr "Aanbevolen compressie"
 
 #: src/Widgets/CompressPDF.vala:54
 msgid "Less Compression"
-msgstr ""
+msgstr "Minder compressie"
 
 #: src/Widgets/CompressPDF.vala:66
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Lagere kwaliteit, hoge compressie"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Hoge kwaliteit, lagere compressie"
 
 #: src/Widgets/CompressPDF.vala:79
 msgid "Compress"
-msgstr ""
+msgstr "Comprimeren"
 
 #: src/Widgets/CompressPDF.vala:99
 msgid "File to Compress:"
-msgstr ""
+msgstr "Te comprimeren bestand:"
 
 #: src/Widgets/CompressPDF.vala:102
 msgid "Compression Level:"
-msgstr ""
+msgstr "Compressieniveau:"
 
 #: src/Widgets/CompressPDF.vala:129 src/Widgets/ConvertPDF.vala:130
 msgid "Select the file to save"
-msgstr ""
+msgstr "Kies het bestand om op te slaan"
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:218
 #: src/Widgets/MergePDF.vala:231 src/Widgets/ConvertPDF.vala:131
 msgid "Save"
-msgstr ""
+msgstr "Opslaan"
 
 #: src/Widgets/CompressPDF.vala:131 src/Widgets/SplitPDF.vala:219
 #: src/Widgets/MergePDF.vala:71 src/Widgets/MergePDF.vala:232
 #: src/Widgets/ConvertPDF.vala:132
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleren"
 
 #: src/Widgets/CompressPDF.vala:144 src/Widgets/SplitPDF.vala:257
 #: src/Widgets/MergePDF.vala:242 src/Widgets/ConvertPDF.vala:145
 msgid "Success."
-msgstr ""
+msgstr "Voltooid."
 
 #: src/Widgets/CompressPDF.vala:144
 msgid "Your file was succefully compressed."
-msgstr ""
+msgstr "Je bestand is gecomprimeerd."
 
 #: src/Widgets/CompressPDF.vala:150 src/Widgets/SplitPDF.vala:263
 #: src/Widgets/MergePDF.vala:248 src/Widgets/ConvertPDF.vala:121
 #: src/Widgets/ConvertPDF.vala:151
 msgid "Failure."
-msgstr ""
+msgstr "Mislukt."
 
 #: src/Widgets/CompressPDF.vala:150
 msgid "There was a problem compressing your file."
-msgstr ""
+msgstr "Je bestand kan niet worden gecomprimeerd."
 
 #: src/Widgets/SplitPDF.vala:50
 msgid "Extract all pages"
-msgstr ""
+msgstr "Alle pagina's extraheren"
 
 #: src/Widgets/SplitPDF.vala:53
 msgid "Select range of pages"
-msgstr ""
+msgstr "Kies het paginabereik"
 
 #: src/Widgets/SplitPDF.vala:56
 msgid "Separate colored pages"
-msgstr ""
+msgstr "Gekleurde pagina's scheiden"
 
 #: src/Widgets/SplitPDF.vala:147
 msgid "Split"
-msgstr ""
+msgstr "Splitsen"
 
 #: src/Widgets/SplitPDF.vala:189
 msgid "File to Split:"
-msgstr ""
+msgstr "Te splitsen bestand:"
 
 #: src/Widgets/SplitPDF.vala:257
 msgid "File split."
-msgstr ""
+msgstr "Bestandssplitsing."
 
 #: src/Widgets/SplitPDF.vala:263
 msgid "Could not split this file."
-msgstr ""
+msgstr "Kan dit bestand niet splitsen."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:44
 msgid "Add File"
-msgstr ""
+msgstr "Bestand toevoegen"
 
 #: src/Widgets/MergePDF.vala:45
 msgid "Remove Selected"
-msgstr ""
+msgstr "Selectie verwijderen"
 
 #: src/Widgets/MergePDF.vala:46
 msgid "Clear All"
-msgstr ""
+msgstr "Alles wissen"
 
 #: src/Widgets/MergePDF.vala:70
 msgid "Open"
-msgstr ""
+msgstr "Openen"
 
 #: src/Widgets/MergePDF.vala:107
 msgid "Files"
-msgstr ""
+msgstr "Bestanden"
 
 #: src/Widgets/MergePDF.vala:108
 msgid "Pages"
-msgstr ""
+msgstr "Pagina's"
 
 #: src/Widgets/MergePDF.vala:121
 msgid "Merge"
-msgstr ""
+msgstr "Samenvoegen"
 
 #: src/Widgets/MergePDF.vala:242
 msgid "Your file was succefully merged."
-msgstr ""
+msgstr "Je bestand is samengevoegd."
 
 #: src/Widgets/MergePDF.vala:248
 msgid "There was a problem merging your file."
-msgstr ""
+msgstr "Je bestand kan niet worden samengevoegd."
 
 #: src/Widgets/MergePDF.vala:274 src/Widgets/ConvertPDF.vala:213
 msgid "ImageMagick Policies"
-msgstr ""
+msgstr "ImageMagick-beleid"
 
 #: src/Widgets/MergePDF.vala:274 src/Widgets/ConvertPDF.vala:213
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
+"Pas het beveiligingsbeleid van ImageMagick aan dat deze handeling tegenhoudt "
+"en probeer het opnieuw."
 
 #: src/Widgets/ConvertPDF.vala:40
 msgid "Select the file to convert"
-msgstr ""
+msgstr "Kies het te converteren bestand"
 
 #: src/Widgets/ConvertPDF.vala:48
 msgid "Convert"
-msgstr ""
+msgstr "Converteren"
 
 #: src/Widgets/ConvertPDF.vala:95
 msgid "File to Convert:"
-msgstr ""
+msgstr "Te converteren bestand:"
 
 #: src/Widgets/ConvertPDF.vala:98
 msgid "Format to Convert:"
-msgstr ""
+msgstr "Converteren naar:"
 
 #: src/Widgets/ConvertPDF.vala:121
 msgid "The input format is the same as the output format."
-msgstr ""
+msgstr "Het invoerformaat is hetzelfde als het uitvoerformaat."
 
 #: src/Widgets/ConvertPDF.vala:145
 msgid "File converted."
-msgstr ""
+msgstr "Bestand is geconverteerd."
 
 #: src/Widgets/ConvertPDF.vala:151
 msgid "Could not convert this file."
-msgstr ""
+msgstr "Kan dit bestand niet converteren."
