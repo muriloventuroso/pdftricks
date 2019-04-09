@@ -219,6 +219,9 @@ namespace pdftricks {
 
                 list_store.get_value (iter, 0, out cell1);
                 var file_pdf = (string) cell1;
+                if(!file_pdf.contains(".pdf")){
+                    file_pdf = convert_to_pdf(file_pdf);
+                }
                 files_pdf = files_pdf + " " + file_pdf.replace(" ", "\\ ");
                 return false;
             });
@@ -254,11 +257,42 @@ namespace pdftricks {
             }
         }
 
+        private string convert_to_pdf(string input_file){
+            string output, stderr, cmd, result_file  = "";
+            int exit_status = 0;
+            result_file = "/tmp/c_" + GLib.Uuid.string_random() + ".pdf";
+            cmd = "convert " + input_file.replace(" ", "\\ ") + " " + result_file;
+            try{
+                Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
+            } catch (Error e) {
+                critical (e.message);
+                return "";
+            }
+            if(output != "" || exit_status != 0 || stderr != ""){
+                if(output.contains("Error")){
+                    return "";
+                }
+                if(stderr.contains("not authorized")){
+                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
+                    message_dialog.set_transient_for(window);
+                    message_dialog.show_all ();
+                    message_dialog.run ();
+                    message_dialog.destroy ();
+                    return "";
+                }
+                if(exit_status != 0){
+                    return "";
+                }
+            }
+            return result_file;
+        }
+
         private bool merge_file(string inputs, string output_file){
             string output, stderr  = "";
             int exit_status = 0;
             try{
-                var cmd = "convert -density 288" + inputs + " " + output_file;
+                var cmd = "gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=" + output_file +" -dBATCH " + inputs;
+                print(cmd);
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
