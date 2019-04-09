@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-22 16:20-0300\n"
+"POT-Creation-Date: 2019-04-09 16:56-0300\n"
 "PO-Revision-Date: 2019-01-23 02:37-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
@@ -72,7 +72,7 @@ msgstr "Convierta archivos PDF en los formatos JPG, PNG y TXT."
 
 #: src/Widgets/CompressPDF.vala:43 src/Widgets/SplitPDF.vala:44
 #: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:69
-#: src/Widgets/MergePDF.vala:230
+#: src/Widgets/MergePDF.vala:233
 msgid "Select the file to compress"
 msgstr "Seleccione el archivo que comprimir"
 
@@ -119,18 +119,18 @@ msgid "Select the file to save"
 msgstr "Seleccione el archivo que guardar"
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:218
-#: src/Widgets/MergePDF.vala:231 src/Widgets/ConvertPDF.vala:131
+#: src/Widgets/MergePDF.vala:234 src/Widgets/ConvertPDF.vala:131
 msgid "Save"
 msgstr "Guardar"
 
 #: src/Widgets/CompressPDF.vala:131 src/Widgets/SplitPDF.vala:219
-#: src/Widgets/MergePDF.vala:71 src/Widgets/MergePDF.vala:232
+#: src/Widgets/MergePDF.vala:71 src/Widgets/MergePDF.vala:235
 #: src/Widgets/ConvertPDF.vala:132
 msgid "Cancel"
 msgstr "Cancelar"
 
 #: src/Widgets/CompressPDF.vala:144 src/Widgets/SplitPDF.vala:257
-#: src/Widgets/MergePDF.vala:242 src/Widgets/ConvertPDF.vala:145
+#: src/Widgets/MergePDF.vala:245 src/Widgets/ConvertPDF.vala:145
 msgid "Success."
 msgstr "Éxito."
 
@@ -139,7 +139,7 @@ msgid "Your file was succefully compressed."
 msgstr "Se comprimió el archivo correctamente."
 
 #: src/Widgets/CompressPDF.vala:150 src/Widgets/SplitPDF.vala:263
-#: src/Widgets/MergePDF.vala:248 src/Widgets/ConvertPDF.vala:121
+#: src/Widgets/MergePDF.vala:251 src/Widgets/ConvertPDF.vala:121
 #: src/Widgets/ConvertPDF.vala:151
 msgid "Failure."
 msgstr "Fallo."
@@ -206,19 +206,21 @@ msgstr "Páginas"
 msgid "Merge"
 msgstr "Combinar"
 
-#: src/Widgets/MergePDF.vala:242
+#: src/Widgets/MergePDF.vala:245
 msgid "Your file was succefully merged."
 msgstr "Se combinó su archivo correctamente."
 
-#: src/Widgets/MergePDF.vala:248
+#: src/Widgets/MergePDF.vala:251
 msgid "There was a problem merging your file."
 msgstr "Se produjo un problema al combinar el archivo."
 
-#: src/Widgets/MergePDF.vala:274 src/Widgets/ConvertPDF.vala:213
+#: src/Widgets/MergePDF.vala:276 src/Widgets/MergePDF.vala:307
+#: src/Widgets/ConvertPDF.vala:213
 msgid "ImageMagick Policies"
 msgstr ""
 
-#: src/Widgets/MergePDF.vala:274 src/Widgets/ConvertPDF.vala:213
+#: src/Widgets/MergePDF.vala:276 src/Widgets/MergePDF.vala:307
+#: src/Widgets/ConvertPDF.vala:213
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
