@@ -292,7 +292,6 @@ namespace pdftricks {
             int exit_status = 0;
             try{
                 var cmd = "gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=" + output_file +" -dBATCH " + inputs;
-                print(cmd);
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
