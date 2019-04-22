@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-09 16:56-0300\n"
+"POT-Creation-Date: 2019-04-22 14:38-0300\n"
 "PO-Revision-Date: 2019-01-23 02:37-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
@@ -71,190 +71,188 @@ msgstr "Converteix un PDF"
 msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Conversió de fitxers PDF als formats JPG, PNG i TXT."
 
-#: src/Widgets/CompressPDF.vala:43 src/Widgets/SplitPDF.vala:44
-#: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:69
-#: src/Widgets/MergePDF.vala:233
+#: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
+#: src/Widgets/SplitPDF.vala:237 src/Widgets/MergePDF.vala:71
+#: src/Widgets/MergePDF.vala:253
 msgid "Select the file to compress"
 msgstr "Seleccioneu el fitxer a comprimir"
 
-#: src/Widgets/CompressPDF.vala:44 src/Widgets/CompressPDF.vala:68
+#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:70
 msgid "Good quality, good compression"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:50
+#: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:52
+#: src/Widgets/CompressPDF.vala:54
 msgid "Recommended Compression"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:54
+#: src/Widgets/CompressPDF.vala:56
 #, fuzzy
 msgid "Less Compression"
 msgstr "Comprimeix"
 
-#: src/Widgets/CompressPDF.vala:66
+#: src/Widgets/CompressPDF.vala:68
 msgid "Less quality, high compression"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:70
+#: src/Widgets/CompressPDF.vala:72
 msgid "High quality, less compression"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:79
+#: src/Widgets/CompressPDF.vala:81
 msgid "Compress"
 msgstr "Comprimeix"
 
-#: src/Widgets/CompressPDF.vala:99
+#: src/Widgets/CompressPDF.vala:101
 msgid "File to Compress:"
 msgstr "Fitxer a comprimir:"
 
-#: src/Widgets/CompressPDF.vala:102
+#: src/Widgets/CompressPDF.vala:104
 #, fuzzy
 msgid "Compression Level:"
 msgstr "Comprimeix"
 
-#: src/Widgets/CompressPDF.vala:129 src/Widgets/ConvertPDF.vala:130
-msgid "Select the file to save"
-msgstr "Seleccioneu el fitxer a desar"
-
-#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:218
-#: src/Widgets/MergePDF.vala:234 src/Widgets/ConvertPDF.vala:131
-msgid "Save"
-msgstr "Desa"
-
-#: src/Widgets/CompressPDF.vala:131 src/Widgets/SplitPDF.vala:219
-#: src/Widgets/MergePDF.vala:71 src/Widgets/MergePDF.vala:235
-#: src/Widgets/ConvertPDF.vala:132
-msgid "Cancel"
-msgstr "Cancel·la"
-
-#: src/Widgets/CompressPDF.vala:144 src/Widgets/SplitPDF.vala:257
-#: src/Widgets/MergePDF.vala:245 src/Widgets/ConvertPDF.vala:145
+#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:214
+#: src/Widgets/MergePDF.vala:151 src/Widgets/ConvertPDF.vala:118
 msgid "Success."
 msgstr "Èxit."
 
-#: src/Widgets/CompressPDF.vala:144
+#: src/Widgets/CompressPDF.vala:124
 msgid "Your file was succefully compressed."
 msgstr "S’ha comprimit el fitxer correctament."
 
-#: src/Widgets/CompressPDF.vala:150 src/Widgets/SplitPDF.vala:263
-#: src/Widgets/MergePDF.vala:251 src/Widgets/ConvertPDF.vala:121
-#: src/Widgets/ConvertPDF.vala:151
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:220
+#: src/Widgets/MergePDF.vala:157 src/Widgets/ConvertPDF.vala:124
+#: src/Widgets/ConvertPDF.vala:141
 msgid "Failure."
 msgstr "Fallada."
 
-#: src/Widgets/CompressPDF.vala:150
+#: src/Widgets/CompressPDF.vala:130
 msgid "There was a problem compressing your file."
 msgstr "S’ha produït un problema en comprimir el fitxer."
 
-#: src/Widgets/SplitPDF.vala:50
+#: src/Widgets/CompressPDF.vala:150 src/Widgets/ConvertPDF.vala:150
+msgid "Select the file to save"
+msgstr "Seleccioneu el fitxer a desar"
+
+#: src/Widgets/CompressPDF.vala:151 src/Widgets/SplitPDF.vala:238
+#: src/Widgets/MergePDF.vala:254 src/Widgets/ConvertPDF.vala:151
+msgid "Save"
+msgstr "Desa"
+
+#: src/Widgets/CompressPDF.vala:152 src/Widgets/SplitPDF.vala:239
+#: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:255
+#: src/Widgets/ConvertPDF.vala:152
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
 msgstr "Extreu totes les pgines"
 
-#: src/Widgets/SplitPDF.vala:53
+#: src/Widgets/SplitPDF.vala:55
 msgid "Select range of pages"
 msgstr "Selecciona un interval de pàgines"
 
-#: src/Widgets/SplitPDF.vala:56
+#: src/Widgets/SplitPDF.vala:58
 msgid "Separate colored pages"
 msgstr "Separa les pàgines de colors"
 
-#: src/Widgets/SplitPDF.vala:147
+#: src/Widgets/SplitPDF.vala:149
 msgid "Split"
 msgstr "Divideix"
 
-#: src/Widgets/SplitPDF.vala:189
+#: src/Widgets/SplitPDF.vala:191
 msgid "File to Split:"
 msgstr "Fitxer a dividir:"
 
-#: src/Widgets/SplitPDF.vala:257
+#: src/Widgets/SplitPDF.vala:214
 #, fuzzy
 msgid "File split."
 msgstr "Fitxer a dividir:"
 
-#: src/Widgets/SplitPDF.vala:263
+#: src/Widgets/SplitPDF.vala:220
 msgid "Could not split this file."
 msgstr ""
 
 #. The Model:
-#: src/Widgets/MergePDF.vala:44
+#: src/Widgets/MergePDF.vala:46
 msgid "Add File"
 msgstr "Afegeix un fitxer"
 
-#: src/Widgets/MergePDF.vala:45
+#: src/Widgets/MergePDF.vala:47
 msgid "Remove Selected"
 msgstr "Treu la selecció"
 
-#: src/Widgets/MergePDF.vala:46
+#: src/Widgets/MergePDF.vala:48
 msgid "Clear All"
 msgstr "Neteja-ho tot"
 
-#: src/Widgets/MergePDF.vala:70
+#: src/Widgets/MergePDF.vala:72
 msgid "Open"
 msgstr "Obre"
 
-#: src/Widgets/MergePDF.vala:107
+#: src/Widgets/MergePDF.vala:109
 msgid "Files"
 msgstr "Fitxers"
 
-#: src/Widgets/MergePDF.vala:108
+#: src/Widgets/MergePDF.vala:110
 msgid "Pages"
 msgstr "Pàgines"
 
-#: src/Widgets/MergePDF.vala:121
+#: src/Widgets/MergePDF.vala:123
 msgid "Merge"
 msgstr "Fusiona"
 
-#: src/Widgets/MergePDF.vala:245
+#: src/Widgets/MergePDF.vala:151
 msgid "Your file was succefully merged."
 msgstr "S’ha fusionat el fitxer correctament."
 
-#: src/Widgets/MergePDF.vala:251
+#: src/Widgets/MergePDF.vala:157
 msgid "There was a problem merging your file."
 msgstr "S’ha produït un problema en fusionar el fitxer."
 
-#: src/Widgets/MergePDF.vala:276 src/Widgets/MergePDF.vala:307
-#: src/Widgets/ConvertPDF.vala:213
+#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
 msgid "ImageMagick Policies"
 msgstr ""
 
-#: src/Widgets/MergePDF.vala:276 src/Widgets/MergePDF.vala:307
-#: src/Widgets/ConvertPDF.vala:213
+#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
 
-#: src/Widgets/ConvertPDF.vala:40
+#: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
 msgstr "Seleccioneu el fitxer a convertir"
 
-#: src/Widgets/ConvertPDF.vala:48
+#: src/Widgets/ConvertPDF.vala:50
 msgid "Convert"
 msgstr "Converteix"
 
-#: src/Widgets/ConvertPDF.vala:95
+#: src/Widgets/ConvertPDF.vala:97
 msgid "File to Convert:"
 msgstr "Fitxer a convertir:"
 
-#: src/Widgets/ConvertPDF.vala:98
+#: src/Widgets/ConvertPDF.vala:100
 msgid "Format to Convert:"
 msgstr "Format a convertir:"
 
-#: src/Widgets/ConvertPDF.vala:121
-msgid "The input format is the same as the output format."
-msgstr "El format d’entrada és el mateix que el de sortida."
-
-#: src/Widgets/ConvertPDF.vala:145
+#: src/Widgets/ConvertPDF.vala:118
 #, fuzzy
 msgid "File converted."
 msgstr "Fitxer a convertir:"
 
-#: src/Widgets/ConvertPDF.vala:151
+#: src/Widgets/ConvertPDF.vala:124
 msgid "Could not convert this file."
 msgstr ""
+
+#: src/Widgets/ConvertPDF.vala:141
+msgid "The input format is the same as the output format."
+msgstr "El format d’entrada és el mateix que el de sortida."
 
 #~ msgid "Low"
 #~ msgstr "Baixa"

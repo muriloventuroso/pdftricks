@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-09 16:56-0300\n"
+"POT-Creation-Date: 2019-04-22 14:38-0300\n"
 "PO-Revision-Date: 2019-04-15 09:05+0000\n"
 "Last-Translator: Andreas Kleinert <Andy.Kleinert@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/pdftricks/"
@@ -71,154 +71,152 @@ msgstr "PDF konvertieren"
 msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Konvertiert PDF-Dateien in die Formate JPG, PNG und TXT."
 
-#: src/Widgets/CompressPDF.vala:43 src/Widgets/SplitPDF.vala:44
-#: src/Widgets/SplitPDF.vala:217 src/Widgets/MergePDF.vala:69
-#: src/Widgets/MergePDF.vala:233
+#: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
+#: src/Widgets/SplitPDF.vala:237 src/Widgets/MergePDF.vala:71
+#: src/Widgets/MergePDF.vala:253
 msgid "Select the file to compress"
 msgstr "Zu komprimierende Datei auswählen"
 
-#: src/Widgets/CompressPDF.vala:44 src/Widgets/CompressPDF.vala:68
+#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:70
 msgid "Good quality, good compression"
 msgstr "Gute Qualität, gute Kompressionsrate"
 
-#: src/Widgets/CompressPDF.vala:50
+#: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
 msgstr "Starke Kompressionsrate"
 
-#: src/Widgets/CompressPDF.vala:52
+#: src/Widgets/CompressPDF.vala:54
 msgid "Recommended Compression"
 msgstr "Empfohlene Kompressionsrate"
 
-#: src/Widgets/CompressPDF.vala:54
+#: src/Widgets/CompressPDF.vala:56
 msgid "Less Compression"
 msgstr "Geringe Kompressionsrate"
 
-#: src/Widgets/CompressPDF.vala:66
+#: src/Widgets/CompressPDF.vala:68
 msgid "Less quality, high compression"
 msgstr "Geringe Qualität, hohe Kompressionsrate"
 
-#: src/Widgets/CompressPDF.vala:70
+#: src/Widgets/CompressPDF.vala:72
 msgid "High quality, less compression"
 msgstr "Hohe Qualität, geringe Kompressionsrate"
 
-#: src/Widgets/CompressPDF.vala:79
+#: src/Widgets/CompressPDF.vala:81
 msgid "Compress"
 msgstr "Komprimieren"
 
-#: src/Widgets/CompressPDF.vala:99
+#: src/Widgets/CompressPDF.vala:101
 msgid "File to Compress:"
 msgstr "Zu komprimierende Datei:"
 
-#: src/Widgets/CompressPDF.vala:102
+#: src/Widgets/CompressPDF.vala:104
 msgid "Compression Level:"
 msgstr "Kompressionsstufe:"
 
-#: src/Widgets/CompressPDF.vala:129 src/Widgets/ConvertPDF.vala:130
-msgid "Select the file to save"
-msgstr "Zu speichernde Datei auswählen"
-
-#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:218
-#: src/Widgets/MergePDF.vala:234 src/Widgets/ConvertPDF.vala:131
-msgid "Save"
-msgstr "Speichern"
-
-#: src/Widgets/CompressPDF.vala:131 src/Widgets/SplitPDF.vala:219
-#: src/Widgets/MergePDF.vala:71 src/Widgets/MergePDF.vala:235
-#: src/Widgets/ConvertPDF.vala:132
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: src/Widgets/CompressPDF.vala:144 src/Widgets/SplitPDF.vala:257
-#: src/Widgets/MergePDF.vala:245 src/Widgets/ConvertPDF.vala:145
+#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:214
+#: src/Widgets/MergePDF.vala:151 src/Widgets/ConvertPDF.vala:118
 msgid "Success."
 msgstr "Erfolgreich"
 
-#: src/Widgets/CompressPDF.vala:144
+#: src/Widgets/CompressPDF.vala:124
 msgid "Your file was succefully compressed."
 msgstr "Datei wurde erfolgreich komprimiert."
 
-#: src/Widgets/CompressPDF.vala:150 src/Widgets/SplitPDF.vala:263
-#: src/Widgets/MergePDF.vala:251 src/Widgets/ConvertPDF.vala:121
-#: src/Widgets/ConvertPDF.vala:151
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:220
+#: src/Widgets/MergePDF.vala:157 src/Widgets/ConvertPDF.vala:124
+#: src/Widgets/ConvertPDF.vala:141
 msgid "Failure."
 msgstr "Fehlgeschlagen"
 
-#: src/Widgets/CompressPDF.vala:150
+#: src/Widgets/CompressPDF.vala:130
 msgid "There was a problem compressing your file."
 msgstr "Komprimieren der Datei fehlgeschlagen"
 
-#: src/Widgets/SplitPDF.vala:50
+#: src/Widgets/CompressPDF.vala:150 src/Widgets/ConvertPDF.vala:150
+msgid "Select the file to save"
+msgstr "Zu speichernde Datei auswählen"
+
+#: src/Widgets/CompressPDF.vala:151 src/Widgets/SplitPDF.vala:238
+#: src/Widgets/MergePDF.vala:254 src/Widgets/ConvertPDF.vala:151
+msgid "Save"
+msgstr "Speichern"
+
+#: src/Widgets/CompressPDF.vala:152 src/Widgets/SplitPDF.vala:239
+#: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:255
+#: src/Widgets/ConvertPDF.vala:152
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
 msgstr "Alle Seiten extrahieren"
 
-#: src/Widgets/SplitPDF.vala:53
+#: src/Widgets/SplitPDF.vala:55
 msgid "Select range of pages"
 msgstr "Seitenbereich auswählen"
 
-#: src/Widgets/SplitPDF.vala:56
+#: src/Widgets/SplitPDF.vala:58
 msgid "Separate colored pages"
 msgstr "Farbige Seiten trennen"
 
-#: src/Widgets/SplitPDF.vala:147
+#: src/Widgets/SplitPDF.vala:149
 msgid "Split"
 msgstr "Teilen"
 
-#: src/Widgets/SplitPDF.vala:189
+#: src/Widgets/SplitPDF.vala:191
 msgid "File to Split:"
 msgstr "Zu teilende Datei:"
 
-#: src/Widgets/SplitPDF.vala:257
+#: src/Widgets/SplitPDF.vala:214
 msgid "File split."
 msgstr "Datei geteilt"
 
-#: src/Widgets/SplitPDF.vala:263
+#: src/Widgets/SplitPDF.vala:220
 msgid "Could not split this file."
 msgstr "Datei konnte nicht geteilt werden."
 
 #. The Model:
-#: src/Widgets/MergePDF.vala:44
+#: src/Widgets/MergePDF.vala:46
 msgid "Add File"
 msgstr "Datei hinzufügen"
 
-#: src/Widgets/MergePDF.vala:45
+#: src/Widgets/MergePDF.vala:47
 msgid "Remove Selected"
 msgstr "Ausgewählte entfernen"
 
-#: src/Widgets/MergePDF.vala:46
+#: src/Widgets/MergePDF.vala:48
 msgid "Clear All"
 msgstr "Alle leeren"
 
-#: src/Widgets/MergePDF.vala:70
+#: src/Widgets/MergePDF.vala:72
 msgid "Open"
 msgstr "Öffnen"
 
-#: src/Widgets/MergePDF.vala:107
+#: src/Widgets/MergePDF.vala:109
 msgid "Files"
 msgstr "Dateien"
 
-#: src/Widgets/MergePDF.vala:108
+#: src/Widgets/MergePDF.vala:110
 msgid "Pages"
 msgstr "Seiten"
 
-#: src/Widgets/MergePDF.vala:121
+#: src/Widgets/MergePDF.vala:123
 msgid "Merge"
 msgstr "Zusammenführen"
 
-#: src/Widgets/MergePDF.vala:245
+#: src/Widgets/MergePDF.vala:151
 msgid "Your file was succefully merged."
 msgstr "Dateien wurde erfolgreich zusammengeführt."
 
-#: src/Widgets/MergePDF.vala:251
+#: src/Widgets/MergePDF.vala:157
 msgid "There was a problem merging your file."
 msgstr "Zusammenführen der Dateien fehlgeschlagen"
 
-#: src/Widgets/MergePDF.vala:276 src/Widgets/MergePDF.vala:307
-#: src/Widgets/ConvertPDF.vala:213
+#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
 msgid "ImageMagick Policies"
 msgstr "ImageMagick Richtlinien"
 
-#: src/Widgets/MergePDF.vala:276 src/Widgets/MergePDF.vala:307
-#: src/Widgets/ConvertPDF.vala:213
+#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
@@ -226,30 +224,30 @@ msgstr ""
 "Ändern Sie die Sicherheitsrichtlinien von ImageMagick, die diesen Vorgang "
 "verhindern, und versuchen Sie es erneut."
 
-#: src/Widgets/ConvertPDF.vala:40
+#: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
 msgstr "Zu konvertierende Datei auswählen"
 
-#: src/Widgets/ConvertPDF.vala:48
+#: src/Widgets/ConvertPDF.vala:50
 msgid "Convert"
 msgstr "Konvertieren"
 
-#: src/Widgets/ConvertPDF.vala:95
+#: src/Widgets/ConvertPDF.vala:97
 msgid "File to Convert:"
 msgstr "Zu konvertierende Datei:"
 
-#: src/Widgets/ConvertPDF.vala:98
+#: src/Widgets/ConvertPDF.vala:100
 msgid "Format to Convert:"
 msgstr "Konvertierungsformat:"
 
-#: src/Widgets/ConvertPDF.vala:121
-msgid "The input format is the same as the output format."
-msgstr "Das Eingabeformat ist identisch zum Ausgabeformat."
-
-#: src/Widgets/ConvertPDF.vala:145
+#: src/Widgets/ConvertPDF.vala:118
 msgid "File converted."
 msgstr "Datei konvertiert."
 
-#: src/Widgets/ConvertPDF.vala:151
+#: src/Widgets/ConvertPDF.vala:124
 msgid "Could not convert this file."
 msgstr "Datei konnte nicht konvertiert werden."
+
+#: src/Widgets/ConvertPDF.vala:141
+msgid "The input format is the same as the output format."
+msgstr "Das Eingabeformat ist identisch zum Ausgabeformat."

@@ -18,6 +18,11 @@
     <p>In recent versions of ImageMagick has been added a security policy that blocks manipulations in PDF files. This affects PDFTricks operations. To correct this change the settings of your ImageMagick installation. Check de homepage for instructions.</p>
   </description>
   <releases>
+    <release version="0.2.5" date="2019-04-22">
+      <description>
+        <p>spinner when processing</p>
+      </description>
+    </release>
     <release version="0.2.4" date="2019-04-09">
       <description>
         <p>Fix unselectable texts after merging</p>
