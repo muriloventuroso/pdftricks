@@ -21,6 +21,8 @@
 
 namespace pdftricks {
     public class CompressPDF : Gtk.Box{
+        public signal void proccess_begin ();
+        public signal void proccess_finished (bool result);
         private Gtk.FileChooserButton filechooser;
         private Gtk.ListStore resolution_store;
         private Gtk.TreeIter iter;
@@ -106,14 +108,33 @@ namespace pdftricks {
 
             grid.attach (compress_button, 0, 3, 2, 2);
             spinner = new Gtk.Spinner();
-            spinner.active = true;
+            spinner.active = false;
 
-            grid.attach (spinner, 0, 4, 2, 2);
+            grid.attach (spinner, 0, 5, 2, 2);
             add(grid);
 
-        }
-        public void hide_spinner(){
-            spinner.hide();
+            proccess_begin.connect (
+                () => {
+                    spinner.active = true;
+                });
+            proccess_finished.connect (
+                (result) => {
+                    spinner.active = false;
+                    if(result){
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully compressed."), "process-completed", Gtk.ButtonsType.CLOSE);
+                        message_dialog.set_transient_for(window);
+                        message_dialog.show_all ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    }else{
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem compressing your file."), "process-stop", Gtk.ButtonsType.CLOSE);
+                        message_dialog.set_transient_for(window);
+                        message_dialog.show_all ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    };
+                });
+
         }
 
         private void confirm_compress(){
@@ -139,46 +160,43 @@ namespace pdftricks {
             }
             chooser_output.destroy();
             if(compress == true){
-                var result_compress = compress_file(file_pdf, output_file, str_resolution);
-                if(result_compress){
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully compressed."), "process-completed", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
-                    message_dialog.destroy ();
-                }else{
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem compressing your file."), "process-stop", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
-                    message_dialog.destroy ();
-                };
+                proccess_begin ();
+                compress_file.begin (file_pdf, output_file, str_resolution,
+                    (obj, res) => {
+                        proccess_finished (compress_file.end (res));
+                    });
             }
         }
 
-        private bool compress_file(string input, string output_file, string resolution){
+        private async bool compress_file(string input, string output_file, string resolution){
+            bool ret = true;
+            SourceFunc callback = compress_file.callback;
+            ThreadFunc<void*> run = () => {
+                string output, stderr  = "";
+                int exit_status = 0;
 
-            string output, stderr  = "";
-            int exit_status = 0;
-
-            spinner.show();
-
-            try{
-                var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/" + resolution + " -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + output_file.replace(" ", "\\ ") + " " + input.replace(" ", "\\ ");
-                Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
-            } catch (Error e) {
-                critical (e.message);
-                spinner.hide();
-                return false;
-            }
-            if(output != ""){
-                if(output.contains("Error")){
-                    spinner.hide();
-                    return false;
+                try{
+                    var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/" + resolution + " -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + output_file.replace(" ", "\\ ") + " " + input.replace(" ", "\\ ");
+                    Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
+                } catch (Error e) {
+                    critical (e.message);
+                    ret = false;
                 }
+                if(output != ""){
+                    if(output.contains("Error")){
+                        ret = false;
+                    }
+                }
+                Idle.add ((owned) callback);
+                return null;
+            };
+            try {
+                new Thread<void*>.try (null, run);
+            } catch (Error e) {
+                warning (e.message);
             }
-            spinner.hide();
-            return true;
+            yield;
+            return ret;
         }
 
 

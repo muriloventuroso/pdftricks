@@ -21,6 +21,8 @@
 
 namespace pdftricks {
     public class ConvertPDF : Gtk.Box{
+        public signal void proccess_begin ();
+        public signal void proccess_finished (bool result);
         private Gtk.FileChooserButton filechooser;
         public Gtk.Window window { get; construct; }
         private Gtk.Grid grid;
@@ -100,16 +102,34 @@ namespace pdftricks {
 
             grid.attach (convert_button, 0, 2, 2, 2);
             spinner = new Gtk.Spinner();
-            spinner.active = true;
+            spinner.active = false;
 
-            grid.attach (spinner, 0, 4, 2, 2);
+            grid.attach (spinner, 0, 5, 2, 2);
             add(grid);
 
-        }
-        public void hide_spinner(){
-            spinner.hide();
-        }
+            proccess_begin.connect (
+                () => {
+                    spinner.active = true;
+                });
+            proccess_finished.connect (
+                (result) => {
+                    spinner.active = false;
+                    if(result){
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File converted."), "process-completed", Gtk.ButtonsType.CLOSE);
+                        message_dialog.set_transient_for(window);
+                        message_dialog.show_all ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    }else{
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not convert this file."), "process-stop", Gtk.ButtonsType.CLOSE);
+                        message_dialog.set_transient_for(window);
+                        message_dialog.show_all ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    };
+                });
 
+        }
         private void confirm_convert(){
             var convert = false;
             var format = format_conversion.get_active_text();
@@ -140,91 +160,88 @@ namespace pdftricks {
             }
             chooser_output.destroy();
             if(convert == true){
-                var result_convert = convert_file(file_pdf, output_file, input_format, format);
-                if(result_convert){
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File converted."), "process-completed", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
-                    message_dialog.destroy ();
-                }else{
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not convert this file."), "process-stop", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
-                    message_dialog.destroy ();
-                };
+                proccess_begin ();
+                convert_file.begin (file_pdf, output_file, input_format, format,
+                    (obj, res) => {
+                        proccess_finished (convert_file.end (res));
+                    });
+
             }
         }
 
-        private bool convert_file(string input, string output_file, string format_input, string format_output){
+        private async bool convert_file(string input, string output_file, string format_input, string format_output){
+            bool ret = true;
+            SourceFunc callback = convert_file.callback;
+            ThreadFunc<void*> run = () => {
+                string output, stderr, cmd  = "";
+                int exit_status = 0;
+                if(format_input == "pdf"){
+                    if(format_output == "jpg"){
+                        var n_output_file = output_file.replace(".jpg", "-%03d.jpg");
+                        cmd = "gs -sDEVICE=jpeg -r144 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
+                    }else if (format_output == "png") {
+                        var n_output_file = output_file.replace(".png", "-%03d.png");
+                        cmd = "gs -sDEVICE=png16m -r144 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
 
-            string output, stderr, cmd  = "";
-            int exit_status = 0;
-            spinner.show();
-            if(format_input == "pdf"){
-                if(format_output == "jpg"){
-                    var n_output_file = output_file.replace(".jpg", "-%03d.jpg");
-                    cmd = "gs -sDEVICE=jpeg -r144 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
-                }else if (format_output == "png") {
-                    var n_output_file = output_file.replace(".png", "-%03d.png");
-                    cmd = "gs -sDEVICE=png16m -r144 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
-
-                }else if(format_output == "txt"){
+                    }else if(format_output == "txt"){
+                        var n_output_file = output_file;
+                        cmd = "gs -ps2ascii -sDEVICE=txtwrite -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
+                    }
+                }else if(format_input == "jpg"){
                     var n_output_file = output_file;
-                    cmd = "gs -ps2ascii -sDEVICE=txtwrite -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
+                    cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+
+                }else if(format_input == "png"){
+                    var n_output_file = output_file;
+                    cmd = "convert -verbose " + input.replace(" ", "\\ ") + " " + n_output_file;
+
+                }else if(format_input == "jpeg"){
+                    var n_output_file = output_file;
+                    cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+
+                }else if(format_input == "svg"){
+                    var n_output_file = output_file;
+                    cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+
+                }else if(format_input == "bmp"){
+                    var n_output_file = output_file;
+                    cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+
                 }
-            }else if(format_input == "jpg"){
-                var n_output_file = output_file;
-                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
-
-            }else if(format_input == "png"){
-                var n_output_file = output_file;
-                cmd = "convert -verbose " + input.replace(" ", "\\ ") + " " + n_output_file;
-
-            }else if(format_input == "jpeg"){
-                var n_output_file = output_file;
-                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
-
-            }else if(format_input == "svg"){
-                var n_output_file = output_file;
-                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
-
-            }else if(format_input == "bmp"){
-                var n_output_file = output_file;
-                cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
-
+                if(cmd != ""){
+                    try{
+                        Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
+                    } catch (Error e) {
+                        critical (e.message);
+                        ret = false;
+                    }
+                    if(output != "" || exit_status != 0 || stderr != ""){
+                        if(output.contains("Error")){
+                            ret = false;
+                        }
+                        if(stderr.contains("not authorized")){
+                            var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
+                            message_dialog.set_transient_for(window);
+                            message_dialog.show_all ();
+                            message_dialog.run ();
+                            message_dialog.destroy ();
+                            ret = false;
+                        }
+                        if(exit_status != 0){
+                            ret = false;
+                        }
+                    }
+                }
+                Idle.add ((owned) callback);
+                return null;
+            };
+            try {
+                new Thread<void*>.try (null, run);
+            } catch (Error e) {
+                warning (e.message);
             }
-            if(cmd != ""){
-                try{
-                    Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
-                } catch (Error e) {
-                    critical (e.message);
-                    spinner.hide();
-                    return false;
-                }
-                if(output != "" || exit_status != 0 || stderr != ""){
-                    if(output.contains("Error")){
-                        spinner.hide();
-                        return false;
-                    }
-                    if(stderr.contains("not authorized")){
-                        spinner.hide();
-                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
-                        message_dialog.set_transient_for(window);
-                        message_dialog.show_all ();
-                        message_dialog.run ();
-                        message_dialog.destroy ();
-                        return false;
-                    }
-                    if(exit_status != 0){
-                        spinner.hide();
-                        return false;
-                    }
-                }
-            }
-            spinner.hide();
-            return true;
+            yield;
+            return ret;
         }
 
     }

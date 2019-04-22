@@ -21,6 +21,8 @@
 
 namespace pdftricks {
     public class SplitPDF : Gtk.Box {
+        public signal void proccess_begin ();
+        public signal void proccess_finished (bool result);
         private Gtk.FileChooserButton filechooser;
         public Gtk.Window window { get; construct; }
         private int page_size;
@@ -196,15 +198,33 @@ namespace pdftricks {
             grid.attach (split_button, 1, 5, 3, 1);
 
             spinner = new Gtk.Spinner();
-            spinner.active = true;
+            spinner.active = false;
 
-            grid.attach (spinner, 1, 6, 2, 1);
+            grid.attach (spinner, 2, 7, 1, 1);
             pack_start(grid, true, true, 0);
 
-        }
+            proccess_begin.connect (
+                () => {
+                    spinner.active = true;
+                });
+            proccess_finished.connect (
+                (result) => {
+                    spinner.active = false;
+                    if(result){
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
+                        message_dialog.set_transient_for(window);
+                        message_dialog.show_all ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    }else{
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not split this file."), "process-stop", Gtk.ButtonsType.CLOSE);
+                        message_dialog.set_transient_for(window);
+                        message_dialog.show_all ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    };
+                });
 
-        public void hide_spinner(){
-            spinner.hide();
         }
 
         private void confirm_split(){
@@ -227,16 +247,19 @@ namespace pdftricks {
             }
             chooser_output.destroy();
             if(split == true){
-                var result_split = false;
                 if(type_split == "all"){
-                    if(split_file_all(file_pdf, output_file)){
-                        result_split = true;
-                    };
+                    proccess_begin ();
+                    split_file_all.begin (file_pdf, output_file,
+                        (obj, res) => {
+                            proccess_finished (split_file_all.end (res));
+                        });
                 }else if (type_split == "range") {
                     var pages = entry_range.get_text();
-                    if(split_file_range(file_pdf, output_file, pages)){
-                        result_split = true;
-                    };
+                    proccess_begin ();
+                    split_file_range.begin (file_pdf, output_file, pages,
+                        (obj, res) => {
+                            proccess_finished (split_file_range.end (res));
+                        });
                 }else if(type_split == "colors"){
                     var pages = get_colors(file_pdf);
                     if(pages != "" && pages != ";"){
@@ -244,28 +267,15 @@ namespace pdftricks {
                         var pages_colored = group_list(pages.split(";")[1]);
                         var output_file_black = output_file.replace(".pdf", "_black.pdf");
                         var output_file_colored = output_file.replace(".pdf", "_colored.pdf");
-                        if(split_file_range(file_pdf, output_file_black, pages_black)){
-                            result_split = true;
-                        };
-                        if(split_file_range(file_pdf, output_file_colored, pages_colored)){
-                            result_split = true;
-                        };
+                        proccess_begin ();
+                        split_file_range.begin (file_pdf, output_file_black, pages_black);
+                        split_file_range.begin (file_pdf, output_file_colored, pages_colored,
+                            (obj, res) => {
+                                proccess_finished (split_file_range.end (res));
+                            });
                     }
                 }
 
-                if(result_split = true){
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
-                    message_dialog.destroy ();
-                }else{
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not split this file."), "process-stop", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
-                    message_dialog.destroy ();
-                };
             }
         }
 
@@ -308,48 +318,68 @@ namespace pdftricks {
             return pages_black + ";" + pages_color;
         }
 
-        private bool split_file_all(string input, string output_file) {
-            for (int a = 1; a <= page_size; a++) {
-                split_page_range(input, output_file, a, a, a.to_string());
+        private async bool split_file_all(string input, string output_file) {
+            bool ret = true;
+            SourceFunc callback = split_file_all.callback;
+            ThreadFunc<void*> run = () => {
+                for (int a = 1; a <= page_size; a++) {
+                    split_page_range(input, output_file, a, a, a.to_string());
+                }
+                Idle.add ((owned) callback);
+                return null;
+            };
+            try {
+                new Thread<void*>.try (null, run);
+            } catch (Error e) {
+                warning (e.message);
             }
-            return true;
+            yield;
+            return ret;
         }
 
-        private bool split_file_range(string input, string output_file, string pages) {
-            var list_pages = pages.split(",");
-            for (int a = 0; a < list_pages.length; a++) {
-                var page = list_pages[a];
-                var start_page = page;
-                var end_page = page;
-                if(page.contains("-") && page.split("-").length == 2){
-                    start_page = page.split("-")[0];
-                    end_page = page.split("-")[1];
+        private async bool split_file_range(string input, string output_file, string pages) {
+            bool ret = true;
+            SourceFunc callback = split_file_range.callback;
+                ThreadFunc<void*> run = () => {
+                var list_pages = pages.split(",");
+                for (int a = 0; a < list_pages.length; a++) {
+                    var page = list_pages[a];
+                    var start_page = page;
+                    var end_page = page;
+                    if(page.contains("-") && page.split("-").length == 2){
+                        start_page = page.split("-")[0];
+                        end_page = page.split("-")[1];
+                    }
+                    split_page_range(input, output_file, int.parse(start_page), int.parse(end_page), page);
                 }
-                split_page_range(input, output_file, int.parse(start_page), int.parse(end_page), page);
+                Idle.add ((owned) callback);
+                return null;
+            };
+            try {
+                new Thread<void*>.try (null, run);
+            } catch (Error e) {
+                warning (e.message);
             }
-            return true;
+            yield;
+            return ret;
         }
 
         private bool split_page_range(string input, string output_file, int page_start, int page_end, string label){
             string output, stderr  = "";
             int exit_status = 0;
             string output_filename = output_file.replace(".pdf", "_" + label + ".pdf");
-            spinner.show();
             try{
                 var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dColorConversionStrategy=/LeaveColorUnchange -dFirstPage=" + page_start.to_string() + " -dLastPage=" + page_end.to_string() + " -sOutputFile=" + output_filename +" " + input.replace(" ", "\\ ");
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
-                spinner.hide();
                 return false;
             }
             if(output != ""){
                 if(output.contains("Error")){
-                    spinner.hide();
                     return false;
                 }
             }
-            spinner.hide();
             return true;
         }
 

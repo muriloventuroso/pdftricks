@@ -21,6 +21,8 @@
 
 namespace pdftricks {
     public class MergePDF : Gtk.Box {
+        public signal void proccess_begin ();
+        public signal void proccess_finished (bool result);
         public Gtk.Window window { get; construct; }
         private Gtk.TreeView view;
         private Gtk.ListStore list_store;
@@ -133,14 +135,32 @@ namespace pdftricks {
             grid.attach (scroll, 0, 1, 5, 6);
             grid.attach (merge_button, 2, 7, 1, 1);
             spinner = new Gtk.Spinner();
-            spinner.active = true;
+            spinner.active = false;
 
-            grid.attach (spinner, 2, 8, 2, 2);
+            grid.attach (spinner, 2, 9, 1, 1);
             pack_start(grid, true, true, 0);
-        }
 
-        public void hide_spinner(){
-            spinner.hide();
+            proccess_begin.connect (
+                () => {
+                    spinner.active = true;
+                });
+            proccess_finished.connect (
+                (result) => {
+                    spinner.active = false;
+                    if(result){
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully merged."), "process-completed", Gtk.ButtonsType.CLOSE);
+                        message_dialog.set_transient_for(window);
+                        message_dialog.show_all ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    }else{
+                        var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem merging your file."), "process-stop", Gtk.ButtonsType.CLOSE);
+                        message_dialog.set_transient_for(window);
+                        message_dialog.show_all ();
+                        message_dialog.run ();
+                        message_dialog.destroy ();
+                    };
+                });
         }
 
         private int get_page_count(string input_file){
@@ -240,20 +260,11 @@ namespace pdftricks {
             }
             chooser_output.destroy();
             if(merge == true){
-
-                if(merge_file(files_pdf, output_file)){
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully merged."), "process-completed", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
-                    message_dialog.destroy ();
-                }else{
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem merging your file."), "process-stop", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
-                    message_dialog.destroy ();
-                };
+                proccess_begin ();
+                merge_file.begin (files_pdf, output_file,
+                    (obj, res) => {
+                        proccess_finished (merge_file.end (res));
+                    });
             }
         }
 
@@ -287,36 +298,37 @@ namespace pdftricks {
             return result_file;
         }
 
-        private bool merge_file(string inputs, string output_file){
-            string output, stderr  = "";
-            int exit_status = 0;
-            try{
-                var cmd = "gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=" + output_file +" -dBATCH " + inputs;
-                Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
+        private async bool merge_file(string inputs, string output_file){
+            bool ret = true;
+            SourceFunc callback = merge_file.callback;
+            ThreadFunc<void*> run = () => {
+                string output, stderr  = "";
+                int exit_status = 0;
+                try{
+                    var cmd = "gs -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=" + output_file +" -dBATCH " + inputs;
+                    Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
+                } catch (Error e) {
+                    critical (e.message);
+                    ret = false;
+                }
+                if(output != "" || exit_status != 0 || stderr != ""){
+                    if(output.contains("Error")){
+                        ret = false;
+                    }
+                    if(exit_status != 0){
+                        ret = false;
+                    }
+                }
+                Idle.add ((owned) callback);
+                return null;
+            };
+            try {
+                new Thread<void*>.try (null, run);
             } catch (Error e) {
-                critical (e.message);
-                return false;
+                warning (e.message);
             }
-            if(output != "" || exit_status != 0 || stderr != ""){
-                if(output.contains("Error")){
-                    spinner.hide();
-                    return false;
-                }
-                if(stderr.contains("not authorized")){
-                    spinner.hide();
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
-                    message_dialog.destroy ();
-                    return false;
-                }
-                if(exit_status != 0){
-                    spinner.hide();
-                    return false;
-                }
-            }
-            return true;
+            yield;
+            return ret;
         }
 
     }
