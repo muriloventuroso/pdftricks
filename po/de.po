@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-22 14:38-0300\n"
-"PO-Revision-Date: 2019-04-15 09:05+0000\n"
+"PO-Revision-Date: 2019-04-30 04:48+0000\n"
 "Last-Translator: Andreas Kleinert <Andy.Kleinert@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/pdftricks/"
 "translations/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6-dev\n"
+"X-Generator: Weblate 3.6.1\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -161,11 +161,11 @@ msgstr "Farbige Seiten trennen"
 
 #: src/Widgets/SplitPDF.vala:149
 msgid "Split"
-msgstr "Teilen"
+msgstr "Aufteilen"
 
 #: src/Widgets/SplitPDF.vala:191
 msgid "File to Split:"
-msgstr "Zu teilende Datei:"
+msgstr "Aufzuteilende Datei:"
 
 #: src/Widgets/SplitPDF.vala:214
 msgid "File split."
