@@ -11,5 +11,6 @@ Icon=com.github.muriloventuroso.pdftricks
 Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=com.github.muriloventuroso.pdftricks
-Keywords=PDF;utilies;
+Keywords=PDF;utilities;
 Keywords[lt]=PDF;paslaugos;
+Keywords[nb_NO]=PDF;verktøy;
