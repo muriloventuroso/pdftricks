@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-22 14:38-0300\n"
-"PO-Revision-Date: 2019-04-30 04:48+0000\n"
-"Last-Translator: Andreas Kleinert <Andy.Kleinert@gmail.com>\n"
+"PO-Revision-Date: 2019-05-07 13:49+0000\n"
+"Last-Translator: CurlingTongs <o11577482@nwytg.net>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/pdftricks/"
 "translations/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -29,7 +29,7 @@ msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr "Tricks für PDF Dateien"
+msgstr "Tricks für PDF-Dateien"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
@@ -126,11 +126,11 @@ msgstr "Datei wurde erfolgreich komprimiert."
 #: src/Widgets/MergePDF.vala:157 src/Widgets/ConvertPDF.vala:124
 #: src/Widgets/ConvertPDF.vala:141
 msgid "Failure."
-msgstr "Fehlgeschlagen"
+msgstr "Fehlgeschlagen."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "There was a problem compressing your file."
-msgstr "Komprimieren der Datei fehlgeschlagen"
+msgstr "Komprimieren der Datei fehlgeschlagen."
 
 #: src/Widgets/CompressPDF.vala:150 src/Widgets/ConvertPDF.vala:150
 msgid "Select the file to save"
@@ -169,11 +169,11 @@ msgstr "Aufzuteilende Datei:"
 
 #: src/Widgets/SplitPDF.vala:214
 msgid "File split."
-msgstr "Datei geteilt"
+msgstr "Datei aufgeteilt"
 
 #: src/Widgets/SplitPDF.vala:220
 msgid "Could not split this file."
-msgstr "Datei konnte nicht geteilt werden."
+msgstr "Datei konnte nicht aufgeteilt werden."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:46
