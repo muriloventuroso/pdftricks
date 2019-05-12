@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-22 14:38-0300\n"
-"PO-Revision-Date: 2019-02-22 18:46+0000\n"
-"Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
+"PO-Revision-Date: 2019-05-13 18:49+0000\n"
+"Last-Translator: Rui Mendes <xz9@protonmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "pdftricks/translations/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -151,7 +151,7 @@ msgstr "Extrair todas as páginas"
 
 #: src/Widgets/SplitPDF.vala:55
 msgid "Select range of pages"
-msgstr "Selecione um intervalo de paginas"
+msgstr "Selecione um intervalo de páginas"
 
 #: src/Widgets/SplitPDF.vala:58
 msgid "Separate colored pages"
@@ -167,7 +167,7 @@ msgstr "Arquivo para Dividir:"
 
 #: src/Widgets/SplitPDF.vala:214
 msgid "File split."
-msgstr "Dividir arquivo."
+msgstr "Arquivo dividido."
 
 #: src/Widgets/SplitPDF.vala:220
 msgid "Could not split this file."
