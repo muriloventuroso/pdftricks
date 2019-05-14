@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-22 14:38-0300\n"
-"PO-Revision-Date: 2019-05-07 13:49+0000\n"
-"Last-Translator: Andreas Kleinert <Andy.Kleinert@gmail.com>\n"
+"PO-Revision-Date: 2019-05-15 07:49+0000\n"
+"Last-Translator: CurlingTongs <o11577482@nwytg.net>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/pdftricks/"
 "translations/de/>\n"
 "Language: de\n"
@@ -38,7 +38,7 @@ msgstr "PDF komprimieren"
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
-"Komprimiert eine PDF-Datei, um die gleiche Qualität bei reduzierter "
+"Eine PDF-Datei komprimieren, um die gleiche Qualität bei reduzierter "
 "Dateigröße zu erhalten."
 
 #: src/Widgets/Welcome.vala:27
@@ -50,8 +50,8 @@ msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
-"Teilt eine PDF-Datei nach Seitenbereichen auf oder extrahiert alle PDF-"
-"Seiten in mehrere PDF-Dateien."
+"Eine PDF-Datei nach Seitenbereichen aufteilen oder alle PDF-Seiten in "
+"mehrere PDF-Dateien extrahieren."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
@@ -60,8 +60,8 @@ msgstr "PDF zusammenführen"
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr ""
-"Wählen Sie mehrere PDF-Dateien oder Bilder aus und führen Sie sie in "
-"Sekundenschnelle zusammen."
+"Mehrere PDF-Dateien oder Bilder auswählen und diese in Sekundenschnelle "
+"zusammenführen."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
@@ -69,7 +69,7 @@ msgstr "PDF konvertieren"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr "Konvertiert PDF-Dateien in die Formate JPG, PNG und TXT."
+msgstr "PDF-Dateien in die Formate JPG, PNG und TXT umwandeln."
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
 #: src/Widgets/SplitPDF.vala:237 src/Widgets/MergePDF.vala:71
@@ -221,8 +221,8 @@ msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
-"Ändern Sie die Sicherheitsrichtlinien von ImageMagick, die diesen Vorgang "
-"verhindern, und versuchen Sie es erneut."
+"Die Sicherheitsrichtlinien für ImageMagick ändern, die diesen Vorgang "
+"verhindern, und erneut versuchen."
 
 #: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
