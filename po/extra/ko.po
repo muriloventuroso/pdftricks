@@ -8,48 +8,50 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 11:13-0200\n"
-"PO-Revision-Date: 2019-01-28 11:13-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-05-17 14:49+0000\n"
+"Last-Translator: Jun Hyung Shin <shmishmi79@gmail.com>\n"
+"Language-Team: Korean <https://hosted.weblate.org/projects/pdftricks/extra/"
+"ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF 요령"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
 msgid "Tricks for PDF Files"
-msgstr ""
+msgstr "PDF파일을 잘 이용하는 요령"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:10
 msgid ""
 "A simple, efficient application for small manipulations in PDF files. "
 "Compress, split, merge and convert PDF Files."
-msgstr ""
+msgstr "PDF를 간단히 수정 할 수 있는 애플리케이션입니다. 압축, 분할, 병합, PDF로 전환하는 기능이 있습니다."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:82
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "Murilo Venturoso(제작자)"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:4
 msgid "Tips & Tricks for PDF files"
-msgstr ""
+msgstr "PDF 파일을 위한 팁과 요령"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
 msgid ""
 "A simple, efficient application for small manipulations in PDF files. "
 "Compress, split, merge and convert PDF."
-msgstr ""
+msgstr "PDF를 간단히 수정 할 수 있는 애플리케이션입니다. 압축, 분할, 병합, PDF로 전환하는 기능이 있습니다."
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:10
 msgid "com.github.muriloventuroso.pdftricks"
-msgstr ""
+msgstr "com.github.muriloventuroso.pdftricks(깃헙)"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:14
 msgid "pdf;utilies;"
-msgstr ""
+msgstr "PDF; 부가기능;"
