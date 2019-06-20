@@ -114,7 +114,7 @@ namespace pdftricks {
                 if(btn_range.get_active() == true){
                     model_thumbs.clear();
                     type_split = "range";
-                    var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
+                    var file_pdf = filechooser.get_filename();
                     view_thumbs.set_columns(page_size);
                     if(create_thumbs(file_pdf)){
                         for (int a = 1; a <= page_size; a++) {
@@ -154,7 +154,7 @@ namespace pdftricks {
             split_button.set_sensitive(false);
 
             filechooser.file_set.connect(() => {
-                var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
+                var file_pdf = filechooser.get_filename();
                 page_size = get_page_count(file_pdf);
                 split_button.set_sensitive (true);
                 btn_all.set_sensitive (true);
@@ -231,7 +231,7 @@ namespace pdftricks {
             var split = false;
 
 
-            var file_pdf = filechooser.get_uri().split(":")[1].replace("///", "/").replace("%20", " ");
+            var file_pdf = filechooser.get_filename();
             var output_file = "";
             Gtk.FileChooserNative chooser_output = new Gtk.FileChooserNative (
                 _("Select the file to compress"), window, Gtk.FileChooserAction.SAVE,
@@ -242,7 +242,7 @@ namespace pdftricks {
             chooser_output.set_current_name(filename);
             chooser_output.do_overwrite_confirmation = false;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-                output_file = chooser_output.get_uri().split(":")[1].replace("///", "/").replace("%20", "\\ ");
+                output_file = chooser_output.get_filename().replace(" ", "\\ ");
                 split = true;
             }
             chooser_output.destroy();
@@ -388,7 +388,7 @@ namespace pdftricks {
             int exit_status = 0;
             int result = 0;
             try{
-                var cmd = "gs -q -dNODISPLAY -c \"(" + input_file + ") (r) file runpdfbegin pdfpagecount = quit\"";
+                var cmd = "gs -q -dNODISPLAY -c \"(" + input_file.replace(" ", "\\ ") + ") (r) file runpdfbegin pdfpagecount = quit\"";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
                 result = int.parse(output);
             } catch (Error e) {
