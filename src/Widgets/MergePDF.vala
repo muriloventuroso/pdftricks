@@ -241,6 +241,10 @@ namespace pdftricks {
                 var file_pdf = (string) cell1;
                 if(!file_pdf.contains(".pdf")){
                     file_pdf = convert_to_pdf(file_pdf);
+                    if (file_pdf == ""){
+                        files_pdf = "";
+                        return true;
+                    }
                 }
                 files_pdf = files_pdf + " " + file_pdf.replace(" ", "\\ ");
                 return false;
@@ -283,7 +287,7 @@ namespace pdftricks {
                 if(output.contains("Error")){
                     return "";
                 }
-                if(stderr.contains("not authorized")){
+                if(stderr.contains("not allowed")){
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for(window);
                     message_dialog.show_all ();
