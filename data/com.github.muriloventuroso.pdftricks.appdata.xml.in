@@ -18,6 +18,14 @@
     <p>In recent versions of ImageMagick has been added a security policy that blocks manipulations in PDF files. This affects PDFTricks operations. To correct this change the settings of your ImageMagick installation. Check de homepage for instructions.</p>
   </description>
   <releases>
+    <release version="0.2.6" date="2019-06-24">
+      <description>
+        <p>Disable button when is processing</p>
+        <p>Fix build with vala 0.44</p>
+        <p>Update Translations</p>
+        <p>Bugfix</p>
+      </description>
+    </release>
     <release version="0.2.5" date="2019-04-22">
       <description>
         <p>spinner when processing</p>
