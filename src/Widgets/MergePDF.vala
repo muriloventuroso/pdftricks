@@ -59,7 +59,7 @@ namespace pdftricks {
             view = new Gtk.TreeView.with_model (list_store);
             view.hexpand = true;
             view.vexpand = true;
-            view.enable_model_drag_source( Gdk.BUTTON1_MASK,
+            view.enable_model_drag_source(Gdk.ModifierType.BUTTON1_MASK,
                                                 targets,
                                                 Gdk.DragAction.MOVE);
             view.enable_model_drag_dest(targets,
