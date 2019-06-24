@@ -143,10 +143,12 @@ namespace pdftricks {
             proccess_begin.connect (
                 () => {
                     spinner.active = true;
+                    merge_button.set_sensitive (false);
                 });
             proccess_finished.connect (
                 (result) => {
                     spinner.active = false;
+                    merge_button.set_sensitive (true);
                     if(result){
                         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully merged."), "process-completed", Gtk.ButtonsType.CLOSE);
                         message_dialog.set_transient_for(window);

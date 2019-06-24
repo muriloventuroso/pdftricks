@@ -206,10 +206,12 @@ namespace pdftricks {
             proccess_begin.connect (
                 () => {
                     spinner.active = true;
+                    split_button.set_sensitive (true);
                 });
             proccess_finished.connect (
                 (result) => {
                     spinner.active = false;
+                    split_button.set_sensitive (false);
                     if(result){
                         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
                         message_dialog.set_transient_for(window);
