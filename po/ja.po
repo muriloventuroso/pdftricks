@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-22 14:38-0300\n"
+"POT-Creation-Date: 2019-06-24 16:42-0300\n"
 "PO-Revision-Date: 2019-04-25 11:48+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/pdftricks/"
@@ -68,8 +68,8 @@ msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "PDF ファイルを JPG、PNG、TXT 形式に変換します。"
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
-#: src/Widgets/SplitPDF.vala:237 src/Widgets/MergePDF.vala:71
-#: src/Widgets/MergePDF.vala:253
+#: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
+#: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
 msgstr "圧縮するファイルを選択"
 
@@ -109,37 +109,37 @@ msgstr "圧縮するファイル:"
 msgid "Compression Level:"
 msgstr "圧縮レベル:"
 
-#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:214
-#: src/Widgets/MergePDF.vala:151 src/Widgets/ConvertPDF.vala:118
+#: src/Widgets/CompressPDF.vala:126 src/Widgets/SplitPDF.vala:216
+#: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
 msgstr "成功しました。"
 
-#: src/Widgets/CompressPDF.vala:124
+#: src/Widgets/CompressPDF.vala:126
 msgid "Your file was succefully compressed."
 msgstr "ファイルを圧縮しました。"
 
-#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:220
-#: src/Widgets/MergePDF.vala:157 src/Widgets/ConvertPDF.vala:124
-#: src/Widgets/ConvertPDF.vala:141
+#: src/Widgets/CompressPDF.vala:132 src/Widgets/SplitPDF.vala:222
+#: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
+#: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
 msgstr "失敗しました。"
 
-#: src/Widgets/CompressPDF.vala:130
+#: src/Widgets/CompressPDF.vala:132
 msgid "There was a problem compressing your file."
 msgstr "ファイルの圧縮時に問題が発生しました。"
 
-#: src/Widgets/CompressPDF.vala:150 src/Widgets/ConvertPDF.vala:150
+#: src/Widgets/CompressPDF.vala:152 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
 msgstr "保存するファイルを選択"
 
-#: src/Widgets/CompressPDF.vala:151 src/Widgets/SplitPDF.vala:238
-#: src/Widgets/MergePDF.vala:254 src/Widgets/ConvertPDF.vala:151
+#: src/Widgets/CompressPDF.vala:153 src/Widgets/SplitPDF.vala:240
+#: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
 msgstr "保存"
 
-#: src/Widgets/CompressPDF.vala:152 src/Widgets/SplitPDF.vala:239
-#: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:255
-#: src/Widgets/ConvertPDF.vala:152
+#: src/Widgets/CompressPDF.vala:154 src/Widgets/SplitPDF.vala:241
+#: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
+#: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
 msgstr "キャンセル"
 
@@ -163,11 +163,11 @@ msgstr "分割"
 msgid "File to Split:"
 msgstr "分割するファイル:"
 
-#: src/Widgets/SplitPDF.vala:214
+#: src/Widgets/SplitPDF.vala:216
 msgid "File split."
 msgstr "ファイルを分割しました。"
 
-#: src/Widgets/SplitPDF.vala:220
+#: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
 msgstr "このファイルを分割できませんでした。"
 
@@ -200,19 +200,19 @@ msgstr "ページ"
 msgid "Merge"
 msgstr "マージ"
 
-#: src/Widgets/MergePDF.vala:151
+#: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
 msgstr "ファイルをマージしました。"
 
-#: src/Widgets/MergePDF.vala:157
+#: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
 msgstr "ファイルのマージ時に問題が発生しました。"
 
-#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
+#: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
 msgstr "ImageMagick ポリシー"
 
-#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
+#: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
@@ -236,14 +236,14 @@ msgstr "変換するファイル:"
 msgid "Format to Convert:"
 msgstr "変換する形式:"
 
-#: src/Widgets/ConvertPDF.vala:118
+#: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
 msgstr "ファイルを変換しました。"
 
-#: src/Widgets/ConvertPDF.vala:124
+#: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
 msgstr "このファイルを変換できませんでした。"
 
-#: src/Widgets/ConvertPDF.vala:141
+#: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
 msgstr "入力形式が出力形式と同じです。"

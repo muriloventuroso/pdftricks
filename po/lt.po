@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-22 14:38-0300\n"
+"POT-Creation-Date: 2019-06-24 16:42-0300\n"
 "PO-Revision-Date: 2019-02-26 17:18+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/pdftricks/"
@@ -72,8 +72,8 @@ msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Konvertuoti PDF failus į JPG, PNG ir TXT formatus."
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
-#: src/Widgets/SplitPDF.vala:237 src/Widgets/MergePDF.vala:71
-#: src/Widgets/MergePDF.vala:253
+#: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
+#: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
 msgstr "Pasirinkite failą, kurį glaudinti"
 
@@ -113,37 +113,37 @@ msgstr "Failas, kurį glaudinti:"
 msgid "Compression Level:"
 msgstr "Glaudinimo lygis:"
 
-#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:214
-#: src/Widgets/MergePDF.vala:151 src/Widgets/ConvertPDF.vala:118
+#: src/Widgets/CompressPDF.vala:126 src/Widgets/SplitPDF.vala:216
+#: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
 msgstr "Pavyko."
 
-#: src/Widgets/CompressPDF.vala:124
+#: src/Widgets/CompressPDF.vala:126
 msgid "Your file was succefully compressed."
 msgstr "Jūsų failas buvo sėkmingai suglaudintas."
 
-#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:220
-#: src/Widgets/MergePDF.vala:157 src/Widgets/ConvertPDF.vala:124
-#: src/Widgets/ConvertPDF.vala:141
+#: src/Widgets/CompressPDF.vala:132 src/Widgets/SplitPDF.vala:222
+#: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
+#: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
 msgstr "Nesėkmė."
 
-#: src/Widgets/CompressPDF.vala:130
+#: src/Widgets/CompressPDF.vala:132
 msgid "There was a problem compressing your file."
 msgstr "Glaudinant jūsų failą, atsirado problemų."
 
-#: src/Widgets/CompressPDF.vala:150 src/Widgets/ConvertPDF.vala:150
+#: src/Widgets/CompressPDF.vala:152 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
 msgstr "Pasirinkite failą į kurį įrašyti"
 
-#: src/Widgets/CompressPDF.vala:151 src/Widgets/SplitPDF.vala:238
-#: src/Widgets/MergePDF.vala:254 src/Widgets/ConvertPDF.vala:151
+#: src/Widgets/CompressPDF.vala:153 src/Widgets/SplitPDF.vala:240
+#: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
 msgstr "Įrašyti"
 
-#: src/Widgets/CompressPDF.vala:152 src/Widgets/SplitPDF.vala:239
-#: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:255
-#: src/Widgets/ConvertPDF.vala:152
+#: src/Widgets/CompressPDF.vala:154 src/Widgets/SplitPDF.vala:241
+#: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
+#: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
 msgstr "Atsisakyti"
 
@@ -167,11 +167,11 @@ msgstr "Padalyti"
 msgid "File to Split:"
 msgstr "Failas, kurį padalyti:"
 
-#: src/Widgets/SplitPDF.vala:214
+#: src/Widgets/SplitPDF.vala:216
 msgid "File split."
 msgstr "Failas padalytas."
 
-#: src/Widgets/SplitPDF.vala:220
+#: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
 msgstr "Nepavyko padalyti šio failo."
 
@@ -204,19 +204,19 @@ msgstr "Puslapių"
 msgid "Merge"
 msgstr "Sulieti"
 
-#: src/Widgets/MergePDF.vala:151
+#: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
 msgstr "Jūsų failas buvo sėkmingai sulietas."
 
-#: src/Widgets/MergePDF.vala:157
+#: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
 msgstr "Suliejant jūsų failą, atsirado problemų."
 
-#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
+#: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
 msgstr "ImageMagick politikos"
 
-#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
+#: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
@@ -240,15 +240,15 @@ msgstr "Failas, kurį konvertuoti:"
 msgid "Format to Convert:"
 msgstr "Formatas į kurį konvertuoti:"
 
-#: src/Widgets/ConvertPDF.vala:118
+#: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
 msgstr "Failas konvertuotas."
 
-#: src/Widgets/ConvertPDF.vala:124
+#: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
 msgstr "Nepavyko konvertuoti šio failo."
 
-#: src/Widgets/ConvertPDF.vala:141
+#: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
 msgstr "Įvesties formatas yra toks pats kaip ir išvesties formatas."
 

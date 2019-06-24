@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-22 14:38-0300\n"
+"POT-Creation-Date: 2019-06-24 16:42-0300\n"
 "PO-Revision-Date: 2019-05-17 14:49+0000\n"
 "Last-Translator: Jun Hyung Shin <shmishmi79@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/pdftricks/"
@@ -47,7 +47,8 @@ msgstr "PDF 분할"
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
-msgstr "페이지 범위로 PDF 파일 분할하기, 또는 모든 PDF 파일을 여러 PDF로 추출하기."
+msgstr ""
+"페이지 범위로 PDF 파일 분할하기, 또는 모든 PDF 파일을 여러 PDF로 추출하기."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
@@ -66,8 +67,8 @@ msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "PDF파일을 JPG, PNG, TXT 포멧으로 변환하기."
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
-#: src/Widgets/SplitPDF.vala:237 src/Widgets/MergePDF.vala:71
-#: src/Widgets/MergePDF.vala:253
+#: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
+#: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
 msgstr "압축할 파일을 선택하세요"
 
@@ -107,37 +108,37 @@ msgstr "압축할 파일 :"
 msgid "Compression Level:"
 msgstr "압축률 :"
 
-#: src/Widgets/CompressPDF.vala:124 src/Widgets/SplitPDF.vala:214
-#: src/Widgets/MergePDF.vala:151 src/Widgets/ConvertPDF.vala:118
+#: src/Widgets/CompressPDF.vala:126 src/Widgets/SplitPDF.vala:216
+#: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
 msgstr "성공."
 
-#: src/Widgets/CompressPDF.vala:124
+#: src/Widgets/CompressPDF.vala:126
 msgid "Your file was succefully compressed."
 msgstr "성공적으로 압축되었습니다."
 
-#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:220
-#: src/Widgets/MergePDF.vala:157 src/Widgets/ConvertPDF.vala:124
-#: src/Widgets/ConvertPDF.vala:141
+#: src/Widgets/CompressPDF.vala:132 src/Widgets/SplitPDF.vala:222
+#: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
+#: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
 msgstr "실패."
 
-#: src/Widgets/CompressPDF.vala:130
+#: src/Widgets/CompressPDF.vala:132
 msgid "There was a problem compressing your file."
 msgstr "파일을 압축하는 동안 파일에 문제가 발생했습니다."
 
-#: src/Widgets/CompressPDF.vala:150 src/Widgets/ConvertPDF.vala:150
+#: src/Widgets/CompressPDF.vala:152 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
 msgstr "저장할 파일을 선택하세요"
 
-#: src/Widgets/CompressPDF.vala:151 src/Widgets/SplitPDF.vala:238
-#: src/Widgets/MergePDF.vala:254 src/Widgets/ConvertPDF.vala:151
+#: src/Widgets/CompressPDF.vala:153 src/Widgets/SplitPDF.vala:240
+#: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
 msgstr "저장하기"
 
-#: src/Widgets/CompressPDF.vala:152 src/Widgets/SplitPDF.vala:239
-#: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:255
-#: src/Widgets/ConvertPDF.vala:152
+#: src/Widgets/CompressPDF.vala:154 src/Widgets/SplitPDF.vala:241
+#: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
+#: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
 msgstr "취소"
 
@@ -161,11 +162,11 @@ msgstr "분할하기"
 msgid "File to Split:"
 msgstr "분할할 파일 :"
 
-#: src/Widgets/SplitPDF.vala:214
+#: src/Widgets/SplitPDF.vala:216
 msgid "File split."
 msgstr "파일 분할하기."
 
-#: src/Widgets/SplitPDF.vala:220
+#: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
 msgstr "이 파일을 분할할 수 없습니다."
 
@@ -198,19 +199,19 @@ msgstr "페이지"
 msgid "Merge"
 msgstr "병합하기"
 
-#: src/Widgets/MergePDF.vala:151
+#: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
 msgstr "파일이 성공적으로 병합되었습니다."
 
-#: src/Widgets/MergePDF.vala:157
+#: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
 msgstr "파일을 병합하는 동안 문제가 발생했습니다."
 
-#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
+#: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
 msgstr "ImageMagick 정책"
 
-#: src/Widgets/MergePDF.vala:287 src/Widgets/ConvertPDF.vala:223
+#: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
@@ -232,14 +233,14 @@ msgstr "변환할 파일 :"
 msgid "Format to Convert:"
 msgstr "변환할 파일 포맷 :"
 
-#: src/Widgets/ConvertPDF.vala:118
+#: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
 msgstr "변환되었습니다."
 
-#: src/Widgets/ConvertPDF.vala:124
+#: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
 msgstr "파일을 변환할 수 없습니다."
 
-#: src/Widgets/ConvertPDF.vala:141
+#: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
 msgstr "입력한 포멧이 변환할 포멧과 같습니다."
