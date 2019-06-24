@@ -369,7 +369,7 @@ namespace pdftricks {
             int exit_status = 0;
             string output_filename = output_file.replace(".pdf", "_" + label + ".pdf");
             try{
-                var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dColorConversionStrategy=/LeaveColorUnchange -dFirstPage=" + page_start.to_string() + " -dLastPage=" + page_end.to_string() + " -sOutputFile=" + output_filename +" " + input.replace(" ", "\\ ");
+                var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dFirstPage=" + page_start.to_string() + " -dLastPage=" + page_end.to_string() + " -sOutputFile=" + output_filename +" " + input.replace(" ", "\\ ");
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
