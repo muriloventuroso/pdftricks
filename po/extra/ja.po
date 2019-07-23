@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2019-02-24 04:40+0000\n"
-"Last-Translator: naofum <naofum@gmail.com>\n"
+"PO-Revision-Date: 2019-08-01 05:14+0000\n"
+"Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/pdftricks/extra/"
 "ja/>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -29,11 +29,8 @@ msgid "Tricks for PDF Files"
 msgstr "PDF ファイルのトリック"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
-#, fuzzy
 msgid "A simple, efficient application for small manipulations in PDF files."
-msgstr ""
-"PDF ファイルを簡単に操作するシンプルで効率的なアプリケーションです。PDF ファ"
-"イルを圧縮、分割、マージ、変換します。"
+msgstr "PDF ファイルを簡単に操作するシンプルで効率的なアプリケーションです。"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
@@ -41,16 +38,16 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr ""
+msgstr "PDF ファイルを分割します (すべてのページを分割するか、ページ範囲を指定して分割できます)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
-msgstr ""
+msgstr "PDF ファイルをマージします"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:16
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:64
 msgid "Convert PDF"
-msgstr ""
+msgstr "PDF ファイルを変換します"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:18
 msgid ""
@@ -59,69 +56,72 @@ msgid ""
 "correct this change the settings of your ImageMagick installation. Check de "
 "homepage for instructions."
 msgstr ""
+"最近のバージョンの ImageMagick に、PDF ファイルの操作をブロックするセキュリティーポリシーが追加されました。これにより、PDF "
+"Tricks の操作に影響が出ています。この影響を修正するには、インストール済みの ImageMagick "
+"の設定を変更してください。変更方法については、ホームページを確認してください。"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
 msgid "Disable button when is processing"
-msgstr ""
+msgstr "処理中はボタンを無効にするように変更"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:24
 msgid "Fix build with vala 0.44"
-msgstr ""
+msgstr "Vala 0.44 でのビルドを修正"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
-msgstr ""
+msgstr "翻訳を更新"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:65
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:70
 msgid "Bugfix"
-msgstr ""
+msgstr "バグ修正"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:31
 msgid "spinner when processing"
-msgstr ""
+msgstr "処理中にスピナーを表示"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:36
 msgid "Fix unselectable texts after merging"
-msgstr ""
+msgstr "マージ後にテキストが選択できない問題を修正"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:41
 msgid "Fix density merge PDF"
-msgstr ""
+msgstr "PDF のマージで記録密度が高くなってしまう問題を修正"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:46
 msgid "Compression levels"
-msgstr ""
+msgstr "圧縮率の向上"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:52
 msgid "Convert PNG, JPG, SVG, BMP to PDF"
-msgstr ""
+msgstr "PNG、JPG、SVG、BMP ファイルを PDF ファイルに変換"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:53
 msgid "Merge image files into PDF"
-msgstr ""
+msgstr "PDF に画像ファイルをマージ"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
 msgid "Convert JPG to PDF"
-msgstr ""
+msgstr "JPG ファイルを PDF ファイルに変換"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:59
 msgid "Split pages by color (Black-White / Colored)"
-msgstr ""
+msgstr "色別でページを分割 (白黒／カラー)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:75
 msgid "Compress File"
-msgstr ""
+msgstr "ファイルの圧縮に対応"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:76
 msgid "Split File"
-msgstr ""
+msgstr "ファイルの分割に対応"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:77
 msgid "Merge File"
-msgstr ""
+msgstr "ファイルのマージに対応"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
 msgid "Murilo Venturoso"
@@ -132,22 +132,18 @@ msgid "Tips & Tricks for PDF files"
 msgstr "PDF ファイルのヒント & コツ"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
-#, fuzzy
 msgid ""
 "A simple, efficient app for small manipulation of PDF files. Compress, "
 "split, merge and convert PDF."
-msgstr ""
-"PDF ファイルを簡単に操作するシンプルで効率的なアプリケーションです。PDF ファ"
-"イルを圧縮、分割、マージ、変換します。"
+msgstr "PDF ファイルを簡単に操作するシンプルで効率的なアプリケーションです。PDF ファイルを圧縮、分割、マージ、変換します。"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
 msgid "com.github.muriloventuroso.pdftricks"
 msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:15
-#, fuzzy
 msgid "PDF;utilities;"
-msgstr "pdf;ユーティリティ;"
+msgstr "PDF;utilities;ユーティリティ;"
 
 #~ msgid ""
 #~ "A simple, efficient application for small manipulations in PDF files. "
