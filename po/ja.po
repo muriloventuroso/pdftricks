@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:22-0300\n"
-"PO-Revision-Date: 2019-04-25 11:48+0000\n"
+"PO-Revision-Date: 2019-08-01 05:14+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/pdftricks/"
 "translations/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7-dev\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr "PDF ファイルをマージ"
+msgstr "PDF ファイルをマージします"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
@@ -61,7 +61,7 @@ msgstr "複数の PDF ファイルや画像を選択して、数秒でマージ�
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr "PDF ファイルを変換"
+msgstr "PDF ファイルを変換します"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
