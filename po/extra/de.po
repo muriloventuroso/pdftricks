@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2019-04-30 04:48+0000\n"
-"Last-Translator: CurlingTongs <o11577482@nwytg.net>\n"
+"PO-Revision-Date: 2019-08-01 05:14+0000\n"
+"Last-Translator: Andreas Kleinert <Andy.Kleinert@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/pdftricks/extra/"
 "de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.8-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -29,7 +29,6 @@ msgid "Tricks for PDF Files"
 msgstr "Tricks für PDF-Dateien"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
-#, fuzzy
 msgid "A simple, efficient application for small manipulations in PDF files."
 msgstr ""
 "Eine einfache, effiziente Anwendung für kleine Änderungen an PDF-Dateien. "
@@ -37,20 +36,20 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
-msgstr ""
+msgstr "PDF komprimieren (mehrere Auflösungen)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr ""
+msgstr "PDF aufteilen (Alle Seiten oder Seitenbereiche)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
-msgstr ""
+msgstr "PDF zusammenführen"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:16
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:64
 msgid "Convert PDF"
-msgstr ""
+msgstr "PDF konvertieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:18
 msgid ""
@@ -59,69 +58,74 @@ msgid ""
 "correct this change the settings of your ImageMagick installation. Check de "
 "homepage for instructions."
 msgstr ""
+"In den neuesten Versionen von ImageMagick wurde eine Sicherheitsrichtlinie "
+"hinzugefügt, die Änderungen in PDF-Dateien verhindert. Dies betrifft den "
+"Betrieb von PDFTricks. Um dies zu beheben, ändern Sie die Einstellungen "
+"Ihrer ImageMagick-Installation. Auf der Homepage finden Sie Anweisungen."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
 msgid "Disable button when is processing"
-msgstr ""
+msgstr "Schaltfläche während der Verarbeitung deaktivieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:24
+#, fuzzy
 msgid "Fix build with vala 0.44"
-msgstr ""
+msgstr "Build mit vala 0.44 behoben"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
-msgstr ""
+msgstr "Übersetzungen aktualisieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:65
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:70
 msgid "Bugfix"
-msgstr ""
+msgstr "Fehlerbehebungen"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:31
 msgid "spinner when processing"
-msgstr ""
+msgstr "Prozessanzeige während der Verarbeitung"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:36
 msgid "Fix unselectable texts after merging"
-msgstr ""
+msgstr "Nicht auswählbare Texte nach dem Zusammenführen korrigieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:41
 msgid "Fix density merge PDF"
-msgstr ""
+msgstr "Schwärzung zusammenführter PDF korrigieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:46
 msgid "Compression levels"
-msgstr ""
+msgstr "Kompressionsstufen"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:52
 msgid "Convert PNG, JPG, SVG, BMP to PDF"
-msgstr ""
+msgstr "PNG, JPG, SVG, BMP nach PDF konvertieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:53
 msgid "Merge image files into PDF"
-msgstr ""
+msgstr "Bilddateien in PDF zusammenführen"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
 msgid "Convert JPG to PDF"
-msgstr ""
+msgstr "JPG in PDF konvertieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:59
 msgid "Split pages by color (Black-White / Colored)"
-msgstr ""
+msgstr "Seiten nach Farbe aufteilen (Schwarz-Weiß/Farbig)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:75
 msgid "Compress File"
-msgstr ""
+msgstr "Datei komprimieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:76
 msgid "Split File"
-msgstr ""
+msgstr "Datei aufteilen"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:77
 msgid "Merge File"
-msgstr ""
+msgstr "Datei zusammenführen"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
 msgid "Murilo Venturoso"
@@ -132,7 +136,6 @@ msgid "Tips & Tricks for PDF files"
 msgstr "Tipps und Tricks für PDF-Dateien"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
-#, fuzzy
 msgid ""
 "A simple, efficient app for small manipulation of PDF files. Compress, "
 "split, merge and convert PDF."
@@ -145,7 +148,6 @@ msgid "com.github.muriloventuroso.pdftricks"
 msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:15
-#, fuzzy
 msgid "PDF;utilities;"
 msgstr "pdf;utilies;"
 
