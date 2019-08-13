@@ -26,7 +26,7 @@ namespace pdftricks {
             welcome.append ("compress-pdf", _("Compress PDF"), _("Compress a PDF file to get the same quality with reduced filesize."));
             welcome.append ("split-pdf", _("Split PDF"), _("Split a PDF file by page ranges, or extract all PDF pages to multiple PDF files."));
             welcome.append ("merge-pdf", _("Merge PDF"), _("Select multiple PDF files or images, and merge them in seconds."));
-            welcome.append ("view-refresh", _("Convert PDF"), _("Convert PDF files to JPG, PNG and TXT formats."));
+            welcome.append ("pdf-convert", _("Convert PDF"), _("Convert PDF files to JPG, PNG and TXT formats."));
             add (welcome);
 
             welcome.get_button_from_index(0).action_name = Application.ACTION_PREFIX + Application.ACTION_COMPRESS_PDF;

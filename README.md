@@ -82,6 +82,8 @@ Run:
 
     flatpak run com.github.muriloventuroso.pdftricks
 
+## Credits
+* [Fatih20](https://github.com/Fatih20)
 
 -----
 

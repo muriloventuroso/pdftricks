@@ -13,32 +13,33 @@
    width="128"
    version="1.1"
    sodipodi:docname="split-pdf.svg"
-   inkscape:version="0.92.4 5da689c313, 2019-01-14">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <sodipodi:namedview
-     pagecolor="#a7a7a7"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:window-width="2560"
-     inkscape:window-height="1386"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
      id="namedview50"
      showgrid="false"
      inkscape:zoom="3.6875001"
-     inkscape:cx="12.91226"
-     inkscape:cy="71.586078"
+     inkscape:cx="6.6003051"
+     inkscape:cy="44.715783"
      inkscape:window-x="0"
-     inkscape:window-y="28"
+     inkscape:window-y="30"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer2"
      inkscape:object-paths="true"
      inkscape:snap-intersection-paths="true"
      inkscape:snap-smooth-nodes="true"
      showguides="false"
-     inkscape:snap-page="true" />
+     inkscape:snap-page="true"
+     inkscape:pagecheckerboard="true" />
   <defs
      id="defs3174">
     <linearGradient
@@ -1248,9 +1249,8 @@
          width="88" />
     </g>
     <g
-       style=""
        id="g1345"
-       transform="translate(-84.338973,-8.9589265)">
+       transform="matrix(1,0,0,0.97294094,-84.338973,-5.4423571)">
       <g
          id="g1127"
          style="display:inline"
