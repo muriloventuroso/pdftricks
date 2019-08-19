@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:22-0300\n"
-"PO-Revision-Date: 2019-01-23 02:37-0600\n"
+"PO-Revision-Date: 2019-08-20 16:24+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
-"Language-Team: \n"
+"Language-Team: Spanish <https://hosted.weblate.org/projects/pdftricks/"
+"translations/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.1\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -35,7 +36,6 @@ msgid "Compress PDF"
 msgstr "Comprimir PDF"
 
 #: src/Widgets/Welcome.vala:26
-#, fuzzy
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr "Comprima un archivo PDF para reducir su tamaño sin perder calidad."
 
@@ -44,7 +44,6 @@ msgid "Split PDF"
 msgstr "Dividir PDF"
 
 #: src/Widgets/Welcome.vala:27
-#, fuzzy
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
@@ -57,16 +56,14 @@ msgid "Merge PDF"
 msgstr "Combinar PDF"
 
 #: src/Widgets/Welcome.vala:28
-#, fuzzy
 msgid "Select multiple PDF files or images, and merge them in seconds."
-msgstr "Seleccione varios archivos PDF y combínelos en segundos."
+msgstr "Seleccione varias imágenes o archivos PDF y combínelos en segundos."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
 msgstr "Convertir PDF"
 
 #: src/Widgets/Welcome.vala:29
-#, fuzzy
 msgid "Convert PDF files to JPG, PNG and TXT formats."
 msgstr "Convierta archivos PDF en los formatos JPG, PNG y TXT."
 
@@ -78,28 +75,27 @@ msgstr "Seleccione el archivo que comprimir"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:70
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "Calidad y compresión buenas"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Compresión extrema"
 
 #: src/Widgets/CompressPDF.vala:54
 msgid "Recommended Compression"
-msgstr ""
+msgstr "Compresión recomendada"
 
 #: src/Widgets/CompressPDF.vala:56
-#, fuzzy
 msgid "Less Compression"
-msgstr "Comprimir"
+msgstr "Menor compresión"
 
 #: src/Widgets/CompressPDF.vala:68
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Menor calidad, mayor compresión"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Mayor calidad, menor compresión"
 
 #: src/Widgets/CompressPDF.vala:81
 msgid "Compress"
@@ -110,9 +106,8 @@ msgid "File to Compress:"
 msgstr "Archivo que comprimir:"
 
 #: src/Widgets/CompressPDF.vala:104
-#, fuzzy
 msgid "Compression Level:"
-msgstr "Comprimir"
+msgstr "Nivel de compresión:"
 
 #: src/Widgets/CompressPDF.vala:126 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
@@ -169,13 +164,12 @@ msgid "File to Split:"
 msgstr "Archivo que dividir:"
 
 #: src/Widgets/SplitPDF.vala:216
-#, fuzzy
 msgid "File split."
-msgstr "Archivo que dividir:"
+msgstr "Se dividió el archivo."
 
 #: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
-msgstr ""
+msgstr "No se pudo dividir este archivo."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:46
@@ -216,13 +210,15 @@ msgstr "Se produjo un problema al combinar el archivo."
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
-msgstr ""
+msgstr "Directivas de ImageMagick"
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
+"Cambie las directivas de seguridad de ImageMagick que previenen esta "
+"operación e inténtela de nuevo."
 
 #: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
@@ -241,13 +237,12 @@ msgid "Format to Convert:"
 msgstr "Formato que convertir:"
 
 #: src/Widgets/ConvertPDF.vala:120
-#, fuzzy
 msgid "File converted."
-msgstr "Archivo que convertir:"
+msgstr "Se convirtió el archivo."
 
 #: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
-msgstr ""
+msgstr "No se pudo convertir este archivo."
 
 #: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
