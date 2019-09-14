@@ -113,8 +113,8 @@ namespace pdftricks {
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.halign = Gtk.Align.CENTER;
             grid.valign = Gtk.Align.CENTER;
-            grid.column_spacing = 12;
-            grid.row_spacing = 6;
+            grid.column_spacing = 16;
+            grid.row_spacing = 8;
             grid.set_column_homogeneous(true);
             grid.set_row_homogeneous(true);
             grid.hexpand = true;
@@ -129,15 +129,14 @@ namespace pdftricks {
             scroll.vexpand = true;
             scroll.hexpand = true;
             scroll.add(view);
-            grid.attach (add_button, 1, 0, 1, 1);
-            grid.attach (del_button, 2, 0, 1, 1);
-            grid.attach (clear_button, 3, 0, 1, 1);
+            grid.attach (add_button, 1, 0);
+            grid.attach (del_button, 2, 0);
+            grid.attach (clear_button, 3, 0);
             grid.attach (scroll, 0, 1, 5, 6);
-            grid.attach (merge_button, 2, 7, 1, 1);
+            grid.attach (merge_button, 1, 7, 3);
             spinner = new Gtk.Spinner();
             spinner.active = false;
-
-            grid.attach (spinner, 2, 9, 1, 1);
+            grid.attach (spinner, 2, 9);
             pack_start(grid, true, true, 0);
 
             proccess_begin.connect (

@@ -182,20 +182,19 @@ namespace pdftricks {
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.halign = Gtk.Align.CENTER;
             grid.valign = Gtk.Align.CENTER;
-            grid.column_spacing = 12;
-            grid.row_spacing = 6;
-            grid.set_column_homogeneous(true);
+            grid.column_spacing = 16;
+            grid.row_spacing = 8;
             grid.hexpand = true;
             grid.vexpand = true;
 
-            grid.attach (new Granite.HeaderLabel (_("File to Split:")), 1, 0, 1, 1);
-            grid.attach (filechooser, 2, 0, 2, 1);
+            grid.attach (new Granite.HeaderLabel (_("File to Split:")), 1, 0);
+            grid.attach (filechooser, 2, 0);
 
-            grid.attach (btn_all, 1, 1, 1, 1);
-            grid.attach (btn_range, 2, 1, 1, 1);
-            grid.attach (btn_colors, 3, 1, 1, 1);
-            grid.attach (revealer, 0, 2, 5, 2);
-            grid.attach (split_button, 1, 5, 3, 1);
+            grid.attach (btn_all, 2, 1);
+            grid.attach (btn_range, 2, 2);
+            grid.attach (btn_colors, 2, 3);
+            grid.attach (revealer, 0, 2, 4, 2);
+            grid.attach (split_button, 1, 5, 2);
 
             spinner = new Gtk.Spinner();
             spinner.active = false;
