@@ -99,8 +99,9 @@ namespace pdftricks {
             grid.orientation = Gtk.Orientation.VERTICAL;
             grid.halign = Gtk.Align.CENTER;
             grid.valign = Gtk.Align.CENTER;
-            grid.column_spacing = 12;
-            grid.row_spacing = 6;
+            grid.column_spacing = 16;
+            grid.row_spacing = 8;
+            grid.set_column_homogeneous(true);
 
             grid.attach (new Granite.HeaderLabel (_("File to Compress:")), 0, 0, 1, 1);
             grid.attach (filechooser, 1, 0, 1, 1);

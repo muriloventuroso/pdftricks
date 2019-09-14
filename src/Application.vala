@@ -72,7 +72,6 @@ namespace pdftricks {
             navigation_button.label = _("Back");
 
             headerbar = new Gtk.HeaderBar ();
-            headerbar.has_subtitle = false;
             headerbar.show_close_button = true;
             headerbar.title = _("PDF Tricks");
             headerbar.pack_start (navigation_button);
@@ -94,7 +93,8 @@ namespace pdftricks {
             main_window.icon_name = "pdftricks";
             main_window.title = _("PDF Tricks");
             main_window.add (stack);
-            main_window.set_size_request (910, 640);
+            main_window.set_size_request (800, 640);
+            main_window.set_resizable (false);
             main_window.set_titlebar (headerbar);
             main_window.insert_action_group ("win", actions);
             main_window.show_all();
