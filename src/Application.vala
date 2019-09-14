@@ -21,7 +21,7 @@
 
 namespace pdftricks {
 
-    public class Application : Granite.Application {
+    public class Application : Gtk.Application {
 
         private Gtk.Window main_window;
         private Gtk.Button navigation_button;
