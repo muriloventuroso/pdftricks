@@ -7,75 +7,81 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2018-12-24 17:29-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2019-07-23 08:22-0300\n"
+"PO-Revision-Date: 2019-08-17 20:24+0000\n"
+"Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/pdftricks/"
+"translations/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8\n"
 
 #: src/Application.vala:72
 msgid "Back"
-msgstr ""
+msgstr "Bakåt"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr ""
+msgstr "Trick för PDF-filer"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr ""
+msgstr "Komprimera PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
+"Komprimera en PDF-fil för att få samma kvalitet med reducerad filstorlek."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr ""
+msgstr "Dela PDF"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
+"Dela en PDF efter sidintervall, eller extrahera alla PDF-sidor till flera "
+"PDF-filer."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr ""
+msgstr "Sammanfoga PDF"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr ""
+"Markera flera PDF-filer eller bilder och sammanfoga dem på några sekunder."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr ""
+msgstr "Konvertera PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr ""
+msgstr "Konvertera PDF-filer till JPG-, PNG- och TXT-format."
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
 #: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
-msgstr ""
+msgstr "Markera filen som ska komprimeras"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "God kvalitet, god kompression"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Extrem kompression"
 
 #: src/Widgets/CompressPDF.vala:54
 msgid "Medium Compression"
@@ -87,11 +93,11 @@ msgstr ""
 
 #: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
-msgstr ""
+msgstr "Mindre kompression"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Mindre kvalitet, hög kompression"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "Good quality, optimized for printing"
@@ -99,153 +105,155 @@ msgstr ""
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Hög kvalitet, mindre kompression"
 
 #: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
-msgstr ""
+msgstr "Komprimera"
 
 #: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
-msgstr ""
+msgstr "Fil att komprimera:"
 
 #: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
-msgstr ""
+msgstr "Kompressionsnivå:"
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
-msgstr ""
+msgstr "Framgångsrikt."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
-msgstr ""
+msgstr "Din fil komprimerades framgångsrikt."
 
 #: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
-msgstr ""
+msgstr "Misslyckande."
 
 #: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
-msgstr ""
+msgstr "Ett problem uppstod vid komprimering av din fil."
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
-msgstr ""
+msgstr "Markera fil att spara"
 
 #: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 #: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
-msgstr ""
+msgstr "Extrahera alla sidor"
 
 #: src/Widgets/SplitPDF.vala:55
 msgid "Select range of pages"
-msgstr ""
+msgstr "Markera intervall av sidor"
 
 #: src/Widgets/SplitPDF.vala:58
 msgid "Separate colored pages"
-msgstr ""
+msgstr "Separera färgade sidor"
 
 #: src/Widgets/SplitPDF.vala:149
 msgid "Split"
-msgstr ""
+msgstr "Dela"
 
 #: src/Widgets/SplitPDF.vala:191
 msgid "File to Split:"
-msgstr ""
+msgstr "Fil att dela:"
 
 #: src/Widgets/SplitPDF.vala:216
 msgid "File split."
-msgstr ""
+msgstr "Fil delad."
 
 #: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
-msgstr ""
+msgstr "Kunde inte dela denna fil."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:46
 msgid "Add File"
-msgstr ""
+msgstr "Lägg till fil"
 
 #: src/Widgets/MergePDF.vala:47
 msgid "Remove Selected"
-msgstr ""
+msgstr "Ta bort markerad"
 
 #: src/Widgets/MergePDF.vala:48
 msgid "Clear All"
-msgstr ""
+msgstr "Rensa alla"
 
 #: src/Widgets/MergePDF.vala:72
 msgid "Open"
-msgstr ""
+msgstr "Öppna"
 
 #: src/Widgets/MergePDF.vala:109
 msgid "Files"
-msgstr ""
+msgstr "Filer"
 
 #: src/Widgets/MergePDF.vala:110
 msgid "Pages"
-msgstr ""
+msgstr "Sidor"
 
 #: src/Widgets/MergePDF.vala:123
 msgid "Merge"
-msgstr ""
+msgstr "Sammanfoga"
 
 #: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
-msgstr ""
+msgstr "Din fil sammanfogades framgångsrikt."
 
 #: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
-msgstr ""
+msgstr "Ett problem uppstod vid sammanfogning av din fil."
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
-msgstr ""
+msgstr "ImageMagick-policier"
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
+"Ändra ImageMagicks säkerhetspolicier som förhindrar denna åtgärd och prova "
+"igen."
 
 #: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
-msgstr ""
+msgstr "Markera filen som ska konverteras"
 
 #: src/Widgets/ConvertPDF.vala:50
 msgid "Convert"
-msgstr ""
+msgstr "Konvertera"
 
 #: src/Widgets/ConvertPDF.vala:97
 msgid "File to Convert:"
-msgstr ""
+msgstr "Fil att konvertera:"
 
 #: src/Widgets/ConvertPDF.vala:100
 msgid "Format to Convert:"
-msgstr ""
+msgstr "Format att konvertera till:"
 
 #: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
-msgstr ""
+msgstr "Fil konverterad."
 
 #: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
-msgstr ""
+msgstr "Kunde inte konvertera denna fil."
 
 #: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
-msgstr ""
+msgstr "Indataformatet är samma som utdataformatet."

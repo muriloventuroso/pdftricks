@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.6-dev\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr "Fusionner PDF"
+msgstr "Fusionner les PDF"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
@@ -64,7 +64,7 @@ msgstr ""
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr "Convertir PDF"
+msgstr "Convertir le PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
