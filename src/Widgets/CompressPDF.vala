@@ -158,6 +158,7 @@ namespace pdftricks {
                 _("Cancel"));
             var split_filename = file_pdf.split("/");
             var filename = split_filename[split_filename.length - 1];
+            chooser_output.set_current_folder(file_pdf);
             chooser_output.set_current_name(filename.split(".")[0] + "_compressed.pdf");
             chooser_output.do_overwrite_confirmation = true;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
