@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-23 08:22-0300\n"
+"POT-Creation-Date: 2019-09-16 17:18-0300\n"
 "PO-Revision-Date: 2019-03-24 13:38+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/pdftricks/"
@@ -76,7 +76,7 @@ msgstr "Convertissez des fichiers PDF aux formats JPG, PNG et TXT."
 msgid "Select the file to compress"
 msgstr "Sélectionnez le fichier à compresser"
 
-#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:70
+#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
 msgstr "Bonne qualité, bonne compression"
 
@@ -85,62 +85,72 @@ msgid "Extreme Compression"
 msgstr "Compression extrême"
 
 #: src/Widgets/CompressPDF.vala:54
+#, fuzzy
+msgid "Medium Compression"
+msgstr "Compression faible"
+
+#: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
 msgstr "Compression recommandée"
 
-#: src/Widgets/CompressPDF.vala:56
+#: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
 msgstr "Compression faible"
 
-#: src/Widgets/CompressPDF.vala:68
+#: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
 msgstr "Faible qualité, haute compression"
 
 #: src/Widgets/CompressPDF.vala:72
+#, fuzzy
+msgid "Good quality, optimized for printing"
+msgstr "Bonne qualité, bonne compression"
+
+#: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
 msgstr "Haute qualité, faible compression"
 
-#: src/Widgets/CompressPDF.vala:81
+#: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
 msgstr "Compresser"
 
-#: src/Widgets/CompressPDF.vala:101
+#: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
 msgstr "Fichier à compresser :"
 
-#: src/Widgets/CompressPDF.vala:104
+#: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
 msgstr "Niveau de compression :"
 
-#: src/Widgets/CompressPDF.vala:126 src/Widgets/SplitPDF.vala:216
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
 msgstr "Succès."
 
-#: src/Widgets/CompressPDF.vala:126
+#: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
 msgstr "Votre fichier a été compressé avec succès."
 
-#: src/Widgets/CompressPDF.vala:132 src/Widgets/SplitPDF.vala:222
+#: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
 msgstr "Échec."
 
-#: src/Widgets/CompressPDF.vala:132
+#: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
 msgstr "Il y a eu un problème lors de la compression de votre fichier."
 
-#: src/Widgets/CompressPDF.vala:152 src/Widgets/ConvertPDF.vala:152
+#: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
 msgstr "Sélectionnez le fichier à enregistrer"
 
-#: src/Widgets/CompressPDF.vala:153 src/Widgets/SplitPDF.vala:240
+#: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
 msgstr "Enregistrer"
 
-#: src/Widgets/CompressPDF.vala:154 src/Widgets/SplitPDF.vala:241
+#: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"

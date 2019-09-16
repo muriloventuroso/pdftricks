@@ -51,6 +51,8 @@ namespace pdftricks {
             resolution_store.append(out iter);
             resolution_store.set (iter, 0, "screen", 1, _("Extreme Compression"));
             resolution_store.append(out iter);
+            resolution_store.set (iter, 0, "ebook", 1, _("Medium Compression"));
+            resolution_store.append(out iter);
             resolution_store.set (iter, 0, "printer", 1, _("Recommended Compression"));
             resolution_store.append(out iter);
             resolution_store.set (iter, 0, "prepress", 1, _("Less Compression"));
@@ -67,6 +69,8 @@ namespace pdftricks {
                 if(str_resolution == "screen"){
                     level_description.label = _("Less quality, high compression");
                 }else if(str_resolution == "printer"){
+                    level_description.label = _("Good quality, optimized for printing");
+                }else if(str_resolution == "ebook"){
                     level_description.label = _("Good quality, good compression");
                 }else if(str_resolution == "prepress"){
                     level_description.label = _("High quality, less compression");
@@ -76,7 +80,7 @@ namespace pdftricks {
             var renderer = new Gtk.CellRendererText ();
             resolution_box.pack_start (renderer, true);
             resolution_box.add_attribute (renderer, "text", 1);
-            resolution_box.active = 1;
+            resolution_box.active = 2;
 
             var compress_button = new Gtk.Button.with_label (_("Compress"));
             compress_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);

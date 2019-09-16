@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-23 08:22-0300\n"
+"POT-Creation-Date: 2019-09-16 17:18-0300\n"
 "PO-Revision-Date: 2019-02-26 17:18+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/pdftricks/"
@@ -77,7 +77,7 @@ msgstr "Konvertuoti PDF failus į JPG, PNG ir TXT formatus."
 msgid "Select the file to compress"
 msgstr "Pasirinkite failą, kurį glaudinti"
 
-#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:70
+#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
 msgstr "Gera kokybė, geras glaudinimas"
 
@@ -86,62 +86,72 @@ msgid "Extreme Compression"
 msgstr "Ekstremalus glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:54
+#, fuzzy
+msgid "Medium Compression"
+msgstr "Mažesnis glaudinimas"
+
+#: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
 msgstr "Rekomenduojamas glaudinimas"
 
-#: src/Widgets/CompressPDF.vala:56
+#: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
 msgstr "Mažesnis glaudinimas"
 
-#: src/Widgets/CompressPDF.vala:68
+#: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
 msgstr "Žemesnė kokybė, didelis glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:72
+#, fuzzy
+msgid "Good quality, optimized for printing"
+msgstr "Gera kokybė, geras glaudinimas"
+
+#: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
 msgstr "Aukšta kokybė, mažesnis glaudinimas"
 
-#: src/Widgets/CompressPDF.vala:81
+#: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
 msgstr "Glaudinti"
 
-#: src/Widgets/CompressPDF.vala:101
+#: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
 msgstr "Failas, kurį glaudinti:"
 
-#: src/Widgets/CompressPDF.vala:104
+#: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
 msgstr "Glaudinimo lygis:"
 
-#: src/Widgets/CompressPDF.vala:126 src/Widgets/SplitPDF.vala:216
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
 msgstr "Pavyko."
 
-#: src/Widgets/CompressPDF.vala:126
+#: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
 msgstr "Jūsų failas buvo sėkmingai suglaudintas."
 
-#: src/Widgets/CompressPDF.vala:132 src/Widgets/SplitPDF.vala:222
+#: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
 msgstr "Nesėkmė."
 
-#: src/Widgets/CompressPDF.vala:132
+#: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
 msgstr "Glaudinant jūsų failą, atsirado problemų."
 
-#: src/Widgets/CompressPDF.vala:152 src/Widgets/ConvertPDF.vala:152
+#: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
 msgstr "Pasirinkite failą į kurį įrašyti"
 
-#: src/Widgets/CompressPDF.vala:153 src/Widgets/SplitPDF.vala:240
+#: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
 msgstr "Įrašyti"
 
-#: src/Widgets/CompressPDF.vala:154 src/Widgets/SplitPDF.vala:241
+#: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"

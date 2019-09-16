@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-23 08:22-0300\n"
+"POT-Creation-Date: 2019-09-16 17:18-0300\n"
 "PO-Revision-Date: 2019-02-25 04:18+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
@@ -78,7 +78,7 @@ msgstr "Konverter PDF-filer til JPG, PNG og TXT-.formater."
 msgid "Select the file to compress"
 msgstr "Velg filen å pakke sammen"
 
-#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:70
+#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
 msgstr "God kvalitet, god plassbesparelse"
 
@@ -87,64 +87,74 @@ msgid "Extreme Compression"
 msgstr "Ekstrem komprimering"
 
 #: src/Widgets/CompressPDF.vala:54
+#, fuzzy
+msgid "Medium Compression"
+msgstr "Pakk sammen"
+
+#: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
 msgstr "Anbefalt komprimering"
 
-#: src/Widgets/CompressPDF.vala:56
+#: src/Widgets/CompressPDF.vala:58
 #, fuzzy
 msgid "Less Compression"
 msgstr "Pakk sammen"
 
-#: src/Widgets/CompressPDF.vala:68
+#: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
 msgstr "Mindre kvalitet, høyere komprimering"
 
 #: src/Widgets/CompressPDF.vala:72
+#, fuzzy
+msgid "Good quality, optimized for printing"
+msgstr "God kvalitet, god plassbesparelse"
+
+#: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
 msgstr "Høy kvalitet, mindre komprimering"
 
-#: src/Widgets/CompressPDF.vala:81
+#: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
 msgstr "Pakk sammen"
 
-#: src/Widgets/CompressPDF.vala:101
+#: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
 msgstr "Filer å pakke sammen:"
 
-#: src/Widgets/CompressPDF.vala:104
+#: src/Widgets/CompressPDF.vala:108
 #, fuzzy
 msgid "Compression Level:"
 msgstr "Pakk sammen"
 
-#: src/Widgets/CompressPDF.vala:126 src/Widgets/SplitPDF.vala:216
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
 msgstr "Vellykket."
 
-#: src/Widgets/CompressPDF.vala:126
+#: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
 msgstr "Fil sammenpakket."
 
-#: src/Widgets/CompressPDF.vala:132 src/Widgets/SplitPDF.vala:222
+#: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
 msgstr "Mislyktes."
 
-#: src/Widgets/CompressPDF.vala:132
+#: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
 msgstr "Kunne ikke pakke sammen filen din."
 
-#: src/Widgets/CompressPDF.vala:152 src/Widgets/ConvertPDF.vala:152
+#: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
 msgstr "Velg filen å lagre"
 
-#: src/Widgets/CompressPDF.vala:153 src/Widgets/SplitPDF.vala:240
+#: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
 msgstr "Lagre"
 
-#: src/Widgets/CompressPDF.vala:154 src/Widgets/SplitPDF.vala:241
+#: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"

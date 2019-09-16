@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-23 08:22-0300\n"
+"POT-Creation-Date: 2019-09-16 17:18-0300\n"
 "PO-Revision-Date: 2019-05-17 14:49+0000\n"
 "Last-Translator: Jun Hyung Shin <shmishmi79@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/pdftricks/"
@@ -72,7 +72,7 @@ msgstr "PDF파일을 JPG, PNG, TXT 포멧으로 변환하기."
 msgid "Select the file to compress"
 msgstr "압축할 파일을 선택하세요"
 
-#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:70
+#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
 msgstr "좋은 질! 좋은 압축"
 
@@ -81,62 +81,72 @@ msgid "Extreme Compression"
 msgstr "극한의 압축"
 
 #: src/Widgets/CompressPDF.vala:54
+#, fuzzy
+msgid "Medium Compression"
+msgstr "덜 압축"
+
+#: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
 msgstr "추천하는 압축"
 
-#: src/Widgets/CompressPDF.vala:56
+#: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
 msgstr "덜 압축"
 
-#: src/Widgets/CompressPDF.vala:68
+#: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
 msgstr "질은 낮지만, 높은 압축률"
 
 #: src/Widgets/CompressPDF.vala:72
+#, fuzzy
+msgid "Good quality, optimized for printing"
+msgstr "좋은 질! 좋은 압축"
+
+#: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
 msgstr "질은 좋지만, 낮은 압축률"
 
-#: src/Widgets/CompressPDF.vala:81
+#: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
 msgstr "압축하기"
 
-#: src/Widgets/CompressPDF.vala:101
+#: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
 msgstr "압축할 파일 :"
 
-#: src/Widgets/CompressPDF.vala:104
+#: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
 msgstr "압축률 :"
 
-#: src/Widgets/CompressPDF.vala:126 src/Widgets/SplitPDF.vala:216
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
 msgstr "성공."
 
-#: src/Widgets/CompressPDF.vala:126
+#: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
 msgstr "성공적으로 압축되었습니다."
 
-#: src/Widgets/CompressPDF.vala:132 src/Widgets/SplitPDF.vala:222
+#: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
 msgstr "실패."
 
-#: src/Widgets/CompressPDF.vala:132
+#: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
 msgstr "파일을 압축하는 동안 파일에 문제가 발생했습니다."
 
-#: src/Widgets/CompressPDF.vala:152 src/Widgets/ConvertPDF.vala:152
+#: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
 msgstr "저장할 파일을 선택하세요"
 
-#: src/Widgets/CompressPDF.vala:153 src/Widgets/SplitPDF.vala:240
+#: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
 msgstr "저장하기"
 
-#: src/Widgets/CompressPDF.vala:154 src/Widgets/SplitPDF.vala:241
+#: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"

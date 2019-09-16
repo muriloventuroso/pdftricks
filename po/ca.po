@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-23 08:22-0300\n"
+"POT-Creation-Date: 2019-09-16 17:18-0300\n"
 "PO-Revision-Date: 2019-01-23 02:37-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
@@ -77,7 +77,7 @@ msgstr "Conversió de fitxers PDF als formats JPG, PNG i TXT."
 msgid "Select the file to compress"
 msgstr "Seleccioneu el fitxer a comprimir"
 
-#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:70
+#: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
 msgstr ""
 
@@ -86,64 +86,73 @@ msgid "Extreme Compression"
 msgstr ""
 
 #: src/Widgets/CompressPDF.vala:54
+#, fuzzy
+msgid "Medium Compression"
+msgstr "Comprimeix"
+
+#: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:56
+#: src/Widgets/CompressPDF.vala:58
 #, fuzzy
 msgid "Less Compression"
 msgstr "Comprimeix"
 
-#: src/Widgets/CompressPDF.vala:68
+#: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
 msgstr ""
 
 #: src/Widgets/CompressPDF.vala:72
+msgid "Good quality, optimized for printing"
+msgstr ""
+
+#: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
 msgstr ""
 
-#: src/Widgets/CompressPDF.vala:81
+#: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
 msgstr "Comprimeix"
 
-#: src/Widgets/CompressPDF.vala:101
+#: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
 msgstr "Fitxer a comprimir:"
 
-#: src/Widgets/CompressPDF.vala:104
+#: src/Widgets/CompressPDF.vala:108
 #, fuzzy
 msgid "Compression Level:"
 msgstr "Comprimeix"
 
-#: src/Widgets/CompressPDF.vala:126 src/Widgets/SplitPDF.vala:216
+#: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
 msgstr "Èxit."
 
-#: src/Widgets/CompressPDF.vala:126
+#: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
 msgstr "S’ha comprimit el fitxer correctament."
 
-#: src/Widgets/CompressPDF.vala:132 src/Widgets/SplitPDF.vala:222
+#: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
 msgstr "Fallada."
 
-#: src/Widgets/CompressPDF.vala:132
+#: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
 msgstr "S’ha produït un problema en comprimir el fitxer."
 
-#: src/Widgets/CompressPDF.vala:152 src/Widgets/ConvertPDF.vala:152
+#: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
 msgstr "Seleccioneu el fitxer a desar"
 
-#: src/Widgets/CompressPDF.vala:153 src/Widgets/SplitPDF.vala:240
+#: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
 msgstr "Desa"
 
-#: src/Widgets/CompressPDF.vala:154 src/Widgets/SplitPDF.vala:241
+#: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
