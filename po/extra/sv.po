@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2019-08-17 20:24+0000\n"
-"Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
+"PO-Revision-Date: 2019-10-18 15:53+0000\n"
+"Last-Translator: Mattias Münster <mattiasmun@gmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/pdftricks/extra/"
 "sv/>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.9.1-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -125,7 +125,6 @@ msgid "Merge File"
 msgstr "Sammanfoga fil"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
-#, fuzzy
 msgid "Murilo Venturoso"
 msgstr "Murilo Venturoso"
 
@@ -142,7 +141,6 @@ msgstr ""
 "dela, sammanfoga och konvertera PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
-#, fuzzy
 msgid "com.github.muriloventuroso.pdftricks"
 msgstr "com.github.muriloventuroso.pdftricks"
 
