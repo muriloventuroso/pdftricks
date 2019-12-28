@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2019-12-28 11:08+0000\n"
+"PO-Revision-Date: 2019-12-28 14:39+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/pdftricks/"
 "translations/hr/>\n"
@@ -128,7 +128,7 @@ msgstr "Uspjeh."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
-msgstr "Tvoja datoteka je uspješno komprimirana."
+msgstr "Tvoja je datoteka uspješno komprimirana."
 
 #: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
@@ -218,7 +218,7 @@ msgstr "Tvoja je datoteka uspješno sjedinjena."
 
 #: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
-msgstr "Došlo je do problema u sjedinjavanju tvoje datoteke."
+msgstr "Došlo je do problema tijekom sjedinjavanja tvoje datoteke."
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
