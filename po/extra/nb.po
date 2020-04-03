@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2019-02-02 14:10+0000\n"
+"PO-Revision-Date: 2020-04-04 02:46+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "pdftricks/extra/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -45,12 +45,12 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
-msgstr ""
+msgstr "Flett PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:16
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:64
 msgid "Convert PDF"
-msgstr ""
+msgstr "Konverter PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:18
 msgid ""
