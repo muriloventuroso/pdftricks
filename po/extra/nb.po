@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2020-04-04 02:46+0000\n"
+"PO-Revision-Date: 2020-04-04 15:24+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "pdftricks/extra/nb_NO/>\n"
@@ -37,11 +37,11 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
-msgstr ""
+msgstr "Komprimer PDF (flere oppløsninger)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr ""
+msgstr "Del opp PDF (alle sider eller inndelinger)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
@@ -70,14 +70,14 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
-msgstr ""
+msgstr "Oppdater oversettelser"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:65
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:70
 msgid "Bugfix"
-msgstr ""
+msgstr "Feilretting"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:31
 msgid "spinner when processing"
@@ -97,31 +97,32 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:52
 msgid "Convert PNG, JPG, SVG, BMP to PDF"
-msgstr ""
+msgstr "Konverter PNG, JPG, SVG, og BMP til PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:53
+#, fuzzy
 msgid "Merge image files into PDF"
-msgstr ""
+msgstr "Flett bildefiler inn i PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
 msgid "Convert JPG to PDF"
-msgstr ""
+msgstr "Konverter JPG til PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:59
 msgid "Split pages by color (Black-White / Colored)"
-msgstr ""
+msgstr "Del sider etter farge (Svart-hvitt/farget)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:75
 msgid "Compress File"
-msgstr ""
+msgstr "Komprimer fil"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:76
 msgid "Split File"
-msgstr ""
+msgstr "Del opp fil"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:77
 msgid "Merge File"
-msgstr ""
+msgstr "Flett fil"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
 msgid "Murilo Venturoso"
