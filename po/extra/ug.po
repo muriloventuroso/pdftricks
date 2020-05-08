@@ -8,43 +8,47 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2019-01-28 11:13-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-05-09 13:13+0000\n"
+"Last-Translator: Abdusalam <1810010207@s.upc.edu.cn>\n"
+"Language-Team: Uyghur <https://hosted.weblate.org/projects/pdftricks/extra/"
+"ug/>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF چارىسى"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
 msgid "Tricks for PDF Files"
-msgstr ""
+msgstr "PDF ھۆججەتلىرىنىڭ چارىلىرى"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
 msgid "A simple, efficient application for small manipulations in PDF files."
 msgstr ""
+"PDF ھۆججىتىدىكى كىچىك مەشغۇلاتلارغا ئاددىي ، ئۈنۈملۈك قوللىنىشچان پروگرامما."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
-msgstr ""
+msgstr "PDF نى پىرىسلاش (كۆپ ئېنىقلىق)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr ""
+msgstr "PDF نى پارچىلاش (بارلىق بەت ياكى بەت دائىرىسى)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
-msgstr ""
+msgstr "PDF نى بىرلەشتۈرۈش"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:16
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:64
 msgid "Convert PDF"
-msgstr ""
+msgstr "PDF نى ئۆزگەرتىش"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:18
 msgid ""
@@ -53,88 +57,94 @@ msgid ""
 "correct this change the settings of your ImageMagick installation. Check de "
 "homepage for instructions."
 msgstr ""
+"ImageMagick نىڭ يېقىنقى نەشرىدە PDF ھۆججىتىدىكى كونترول قىلىشنى چەكلەيدىغان "
+"بىخەتەرلىك سىياسىتى قوشۇلدى. بۇ PDFTricks مەشغۇلاتىغا تەسىر كۆرسىتىدۇ. بۇنى "
+"تۈزىتىش ئۈچۈن ImageMagick قاچىلاش تەڭشىكىڭىزنى ئۆزگەرتىڭ. كۆرسەتمە ئۈچۈن باش "
+"بەتنى تەكشۈرۈڭ."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
 msgid "Disable button when is processing"
-msgstr ""
+msgstr "بىر تەرەپ قىلغاندا كۇنۇپكىنى چەكلەڭ"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:24
 msgid "Fix build with vala 0.44"
-msgstr ""
+msgstr "Vala 0.44 بىلەن قۇرۇلۇشنى ئوڭشاڭ"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
-msgstr ""
+msgstr "تەرجىمىلەرنى يېڭىلاش"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:65
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:70
 msgid "Bugfix"
-msgstr ""
+msgstr "Bugfix"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:31
 msgid "spinner when processing"
-msgstr ""
+msgstr "پىششىقلاپ ئىشلەش"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:36
 msgid "Fix unselectable texts after merging"
-msgstr ""
+msgstr "بىرلەشتۈرۈلگەندىن كېيىن تاللىغىلى بولمايدىغان تېكىستلەرنى ئوڭشاڭ"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:41
 msgid "Fix density merge PDF"
-msgstr ""
+msgstr "زىچلىق بىرلەشتۈرۈلگەن PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:46
 msgid "Compression levels"
-msgstr ""
+msgstr "پىرىسلاش دەرىجىسى"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:52
 msgid "Convert PNG, JPG, SVG, BMP to PDF"
-msgstr ""
+msgstr "PNG ، JPG ، SVG ، BMP نى PDF غا ئۆزگەرتىڭ"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:53
 msgid "Merge image files into PDF"
-msgstr ""
+msgstr "رەسىم ھۆججىتىنى PDF غا بىرلەشتۈرۈڭ"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
 msgid "Convert JPG to PDF"
-msgstr ""
+msgstr "JPG نى PDF غا ئۆزگەرتىڭ"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:59
 msgid "Split pages by color (Black-White / Colored)"
-msgstr ""
+msgstr "بەتلەرنى رەڭگە بۆلۈڭ (قارا-ئاق / رەڭلىك)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:75
 msgid "Compress File"
-msgstr ""
+msgstr "ھۆججەتنى پىرىسلاش"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:76
 msgid "Split File"
-msgstr ""
+msgstr "ھۆججەتنى پارچىلاش"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:77
 msgid "Merge File"
-msgstr ""
+msgstr "ھۆججەتنى بىرلەشتۈرۈش"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "Murilo Venturoso"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:4
 msgid "Tips & Tricks for PDF files"
-msgstr ""
+msgstr "PDF ھۆججىتىنىڭ كۆرسەتمىلىرى ۋە ئۇسۇللىرى"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
 msgid ""
 "A simple, efficient app for small manipulation of PDF files. Compress, "
 "split, merge and convert PDF."
 msgstr ""
+"PDF ھۆججىتىنى كىچىك كونترول قىلىش ئۈچۈن ئاددىي ، ئۈنۈملۈك ئەپ. PDF نى "
+"پىرىسلاش ، بۆلۈش ، بىرلەشتۈرۈش ۋە ئۆزگەرتىش."
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
 msgid "com.github.muriloventuroso.pdftricks"
-msgstr ""
+msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:15
 msgid "PDF;utilities;"
-msgstr ""
+msgstr "PDF; utilities;"
