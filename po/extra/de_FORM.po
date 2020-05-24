@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-23 08:26-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: de_FORM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:3
+msgid "PDF Tricks"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
+msgid "Tricks for PDF Files"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
+msgid "A simple, efficient application for small manipulations in PDF files."
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
+msgid "Compress PDF (multiple resolutions)"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
+msgid "Split PDF (All pages or page ranges)"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
+msgid "Merge PDF"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:16
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:64
+msgid "Convert PDF"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:18
+msgid ""
+"In recent versions of ImageMagick has been added a security policy that "
+"blocks manipulations in PDF files. This affects PDFTricks operations. To "
+"correct this change the settings of your ImageMagick installation. Check de "
+"homepage for instructions."
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
+msgid "Disable button when is processing"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:24
+msgid "Fix build with vala 0.44"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
+msgid "Update Translations"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:65
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:70
+msgid "Bugfix"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:31
+msgid "spinner when processing"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:36
+msgid "Fix unselectable texts after merging"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:41
+msgid "Fix density merge PDF"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:46
+msgid "Compression levels"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:52
+msgid "Convert PNG, JPG, SVG, BMP to PDF"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:53
+msgid "Merge image files into PDF"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
+msgid "Convert JPG to PDF"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:59
+msgid "Split pages by color (Black-White / Colored)"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:75
+msgid "Compress File"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:76
+msgid "Split File"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:77
+msgid "Merge File"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
+msgid "Murilo Venturoso"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:4
+msgid "Tips & Tricks for PDF files"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:6
+msgid ""
+"A simple, efficient app for small manipulation of PDF files. Compress, "
+"split, merge and convert PDF."
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:11
+msgid "com.github.muriloventuroso.pdftricks"
+msgstr ""
+
+#: data/com.github.muriloventuroso.pdftricks.desktop.in:15
+msgid "PDF;utilities;"
+msgstr ""
