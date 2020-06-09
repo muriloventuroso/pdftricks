@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2020-05-09 13:12+0000\n"
-"Last-Translator: Szylu <chipolade@gmail.com>\n"
+"PO-Revision-Date: 2020-06-10 18:41+0000\n"
+"Last-Translator: Michal Biesiada <blade-14@o2.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/pdftricks/"
 "translations/pl/>\n"
 "Language: pl\n"
@@ -34,7 +34,7 @@ msgstr "Triki dla plików PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr "Skompresuj plik PDF"
+msgstr "Kompresuj PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
