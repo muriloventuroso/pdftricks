@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
 "PO-Revision-Date: 2020-06-10 18:41+0000\n"
-"Last-Translator: Michal Biesiada <blade-14@o2.pl>\n"
+"Last-Translator: Szylu <chipolade@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/pdftricks/extra/"
 "pl/>\n"
 "Language: pl\n"
@@ -68,7 +68,7 @@ msgstr "Wyłącz przycisk podczas przetwarzania"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:24
 msgid "Fix build with vala 0.44"
-msgstr ""
+msgstr "Fix build z Valą 0.44"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
