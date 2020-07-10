@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2019-02-26 17:18+0000\n"
+"PO-Revision-Date: 2019-09-28 09:55+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/pdftricks/"
 "translations/lt/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -86,9 +86,8 @@ msgid "Extreme Compression"
 msgstr "Ekstremalus glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:54
-#, fuzzy
 msgid "Medium Compression"
-msgstr "Mažesnis glaudinimas"
+msgstr "Vidutinis glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
@@ -103,9 +102,8 @@ msgid "Less quality, high compression"
 msgstr "Žemesnė kokybė, didelis glaudinimas"
 
 #: src/Widgets/CompressPDF.vala:72
-#, fuzzy
 msgid "Good quality, optimized for printing"
-msgstr "Gera kokybė, geras glaudinimas"
+msgstr "Gera kokybė, optimizuota spausdinimui"
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"

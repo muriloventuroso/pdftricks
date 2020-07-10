@@ -8,45 +8,47 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2019-01-28 11:13-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-10-02 12:56+0000\n"
+"Last-Translator: Eduard Pintilie <eduard.pintilie@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/pdftricks/extra/"
+"ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
 msgid "PDF Tricks"
-msgstr ""
+msgstr "Trucuri PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
 msgid "Tricks for PDF Files"
-msgstr ""
+msgstr "Trucuri pentru fișiere PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
 msgid "A simple, efficient application for small manipulations in PDF files."
-msgstr ""
+msgstr "O aplicație simplă și eficientă pentru mici manipulări de fișiere PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
-msgstr ""
+msgstr "Compresare PDF (mai multe rezoluții)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr ""
+msgstr "Despărțire PDF (toate paginile sau intervale de pagini)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
-msgstr ""
+msgstr "Uniți PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:16
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:64
 msgid "Convert PDF"
-msgstr ""
+msgstr "Convertiți PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:18
 msgid ""
@@ -55,88 +57,96 @@ msgid ""
 "correct this change the settings of your ImageMagick installation. Check de "
 "homepage for instructions."
 msgstr ""
+"În versiunile recente ale ImageMagick s-a adăugat o politică de securitate "
+"care blochează manipulările în fișiere PDF. Acest lucru afectează "
+"operațiunile PDFTricks. Pentru a corecta acest lucru, modificați setările de "
+"instalare ImageMagick. Verificați pagina de pornire pentru instrucțiuni."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
 msgid "Disable button when is processing"
-msgstr ""
+msgstr "Dezactivați butonul când se procesează"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:24
 msgid "Fix build with vala 0.44"
-msgstr ""
+msgstr "Reparare realizată cu vala 0.44"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
-msgstr ""
+msgstr "Actualizați traducerea"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:65
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:70
 msgid "Bugfix"
-msgstr ""
+msgstr "Reparare probleme"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:31
 msgid "spinner when processing"
-msgstr ""
+msgstr "rotire în timpul procesării"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:36
 msgid "Fix unselectable texts after merging"
-msgstr ""
+msgstr "Remediați textele neselectabile după unire"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:41
 msgid "Fix density merge PDF"
-msgstr ""
+msgstr "Fixați densitatea PDF la îmbinare"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:46
 msgid "Compression levels"
-msgstr ""
+msgstr "Niveluri de compresie"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:52
 msgid "Convert PNG, JPG, SVG, BMP to PDF"
-msgstr ""
+msgstr "Convertiți fișiere PNG, JPG, SVG, BMP în PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:53
 msgid "Merge image files into PDF"
-msgstr ""
+msgstr "Uniți fișiere imagine în PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
 msgid "Convert JPG to PDF"
-msgstr ""
+msgstr "Convertire JPG în PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:59
 msgid "Split pages by color (Black-White / Colored)"
-msgstr ""
+msgstr "Despărțiți paginile după culoare (negru-alb / colorate)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:75
 msgid "Compress File"
-msgstr ""
+msgstr "Compresare fișier"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:76
 msgid "Split File"
-msgstr ""
+msgstr "Despărțire fișier"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:77
 msgid "Merge File"
-msgstr ""
+msgstr "Unire fișier"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
+#, fuzzy
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "Murilo Venturoso"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:4
 msgid "Tips & Tricks for PDF files"
-msgstr ""
+msgstr "Sfaturi & trucuri pentru fișiere PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
 msgid ""
 "A simple, efficient app for small manipulation of PDF files. Compress, "
 "split, merge and convert PDF."
 msgstr ""
+"O aplicație simplă și eficientă pentru manipularea redusă a fișierelor PDF. "
+"Comprimați, despărțiți, uniți și convertiți PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
+#, fuzzy
 msgid "com.github.muriloventuroso.pdftricks"
-msgstr ""
+msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:15
 msgid "PDF;utilities;"
-msgstr ""
+msgstr "PDF;utilitare;"

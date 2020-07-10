@@ -8,244 +8,254 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2018-12-24 17:29-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-10-23 01:53+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/pdftricks/"
+"translations/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
-msgstr ""
+msgstr "Geri"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr ""
+msgstr "PDF dosyaları için kimi hızlı araçlar"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr ""
+msgstr "PDF Sıkıştır"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
+"Azaltılmış dosya boyutuyla aynı kaliteyi elde etmek için PDF dosyasını "
+"sıkıştır."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr ""
+msgstr "PDF Böl"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
+"PDF dosyasını sayfa erimine göre böl veya tüm PDF sayfalarını birden fazla "
+"PDF dosyasına çıkart."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr ""
+msgstr "PDF Birleştir"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr ""
+"Birden fazla PDF dosyası veya resim seç ve bunları saniyeler içinde "
+"birleştir."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr ""
+msgstr "PDF Dönüştür"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr ""
+msgstr "PDF dosyalarını JPG, PNG ve TXT biçimlerine dönüştür."
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
 #: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
-msgstr ""
+msgstr "Sıkıştırılacak dosyası seç"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "İyi kalite, iyi sıkıştırma"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Aşırı Sıkıştırma"
 
 #: src/Widgets/CompressPDF.vala:54
 msgid "Medium Compression"
-msgstr ""
+msgstr "Orta Sıkıştırma"
 
 #: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
-msgstr ""
+msgstr "Tavsiye Edilen Sıkıştırma"
 
 #: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
-msgstr ""
+msgstr "Daha Az Sıkıştırma"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Daha az kalite, yüksek sıkıştırma"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "Good quality, optimized for printing"
-msgstr ""
+msgstr "Güzel kalite, baskı için eniyilenmiş"
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Yüksek kalite, daha az sıkıştırma"
 
 #: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
-msgstr ""
+msgstr "Sıkıştır"
 
 #: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
-msgstr ""
+msgstr "Sıkıştırılacak Dosya:"
 
 #: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
-msgstr ""
+msgstr "Sıkıştırma Düzeyi:"
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
-msgstr ""
+msgstr "Başarılı."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
-msgstr ""
+msgstr "Dosyanız sıkıştırıldı."
 
 #: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
-msgstr ""
+msgstr "Başarısız."
 
 #: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
-msgstr ""
+msgstr "Dosyanız sakıştırılırken hata oluştu."
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
-msgstr ""
+msgstr "Kaydetmek için dosyayı seç"
 
 #: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
-msgstr ""
+msgstr "İptal Et"
 
 #: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
-msgstr ""
+msgstr "Tüm sayfaları çıkart"
 
 #: src/Widgets/SplitPDF.vala:55
 msgid "Select range of pages"
-msgstr ""
+msgstr "Sayfa erimini seç"
 
 #: src/Widgets/SplitPDF.vala:58
 msgid "Separate colored pages"
-msgstr ""
+msgstr "Renkli sayfaları ayır"
 
 #: src/Widgets/SplitPDF.vala:149
 msgid "Split"
-msgstr ""
+msgstr "Böl"
 
 #: src/Widgets/SplitPDF.vala:191
 msgid "File to Split:"
-msgstr ""
+msgstr "Bölünecek Dosya:"
 
 #: src/Widgets/SplitPDF.vala:216
 msgid "File split."
-msgstr ""
+msgstr "Dosya bölündü."
 
 #: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
-msgstr ""
+msgstr "Bu dosya bölünemedi."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:46
 msgid "Add File"
-msgstr ""
+msgstr "Dosya Ekle"
 
 #: src/Widgets/MergePDF.vala:47
 msgid "Remove Selected"
-msgstr ""
+msgstr "Seçileni Kaldır"
 
 #: src/Widgets/MergePDF.vala:48
 msgid "Clear All"
-msgstr ""
+msgstr "Tümünü Temizle"
 
 #: src/Widgets/MergePDF.vala:72
 msgid "Open"
-msgstr ""
+msgstr "Aç"
 
 #: src/Widgets/MergePDF.vala:109
 msgid "Files"
-msgstr ""
+msgstr "Dosyalar"
 
 #: src/Widgets/MergePDF.vala:110
 msgid "Pages"
-msgstr ""
+msgstr "Sayfalar"
 
 #: src/Widgets/MergePDF.vala:123
 msgid "Merge"
-msgstr ""
+msgstr "Birleştir"
 
 #: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
-msgstr ""
+msgstr "Dosyanız birleştirildi."
 
 #: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
-msgstr ""
+msgstr "Dosyanız birleştirilirken hata oluştu."
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
-msgstr ""
+msgstr "ImageMagick Politikaları"
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
+"Bu işlemi önleyen ImageMagick güvenlik politikalarını değiştirip tekrar "
+"deneyin."
 
 #: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
-msgstr ""
+msgstr "Dönüştürülecek dosyası seç"
 
 #: src/Widgets/ConvertPDF.vala:50
 msgid "Convert"
-msgstr ""
+msgstr "Dönüştür"
 
 #: src/Widgets/ConvertPDF.vala:97
 msgid "File to Convert:"
-msgstr ""
+msgstr "Dönüştürlecek Dosya:"
 
 #: src/Widgets/ConvertPDF.vala:100
 msgid "Format to Convert:"
-msgstr ""
+msgstr "Dönüştürme Biçimi:"
 
 #: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
-msgstr ""
+msgstr "Dosya dönüştürüldü."
 
 #: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
-msgstr ""
+msgstr "Bu dosya dönüştürülemedi."
 
 #: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
-msgstr ""
+msgstr "Girdi biçimi ile çıktı biçimi aynı."

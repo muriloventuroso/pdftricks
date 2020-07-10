@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2019-08-10 07:24+0000\n"
+"PO-Revision-Date: 2020-05-25 05:41+0000\n"
 "Last-Translator: CurlingTongs <jobiwaff@googlemail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/pdftricks/extra/"
 "de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8-dev\n"
+"X-Generator: Weblate 4.1-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -59,22 +59,22 @@ msgid ""
 "homepage for instructions."
 msgstr ""
 "In den neuesten Versionen von ImageMagick wurde eine Sicherheitsrichtlinie "
-"hinzugefügt, die Änderungen in PDF-Dateien verhindert. Dies betrifft den "
-"Betrieb von PDFTricks. Um dies zu beheben, ändern Sie die Einstellungen "
-"Ihrer ImageMagick-Installation. Auf der Homepage finden Sie Anweisungen."
+"hinzugefügt, die Änderungen in PDF-Dateien verhindert. Dies betrifft "
+"PDFTricks-Arbeitsabläufe. Um dies zu beheben, die Einstellungen der "
+"ImageMagick-Installation ändern. Auf der Homepage finden sich dazu "
+"Anweisungen."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
 msgid "Disable button when is processing"
 msgstr "Schaltfläche während der Verarbeitung deaktivieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:24
-#, fuzzy
 msgid "Fix build with vala 0.44"
-msgstr "Build mit vala 0.44 behoben"
+msgstr "Build mit Vala 0.44 behoben"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
-msgstr "Übersetzungen aktualisieren"
+msgstr "Übersetzungen aktualisiert"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
@@ -93,7 +93,7 @@ msgstr "Nicht auswählbare Texte nach dem Zusammenführen korrigieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:41
 msgid "Fix density merge PDF"
-msgstr "Schwärzung zusammenführter PDF korrigieren"
+msgstr "Schwärzung zusammengeführter PDF korrigieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:46
 msgid "Compression levels"
@@ -109,7 +109,7 @@ msgstr "Bilddateien in PDF zusammenführen"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
 msgid "Convert JPG to PDF"
-msgstr "JPG in PDF konvertieren"
+msgstr "JPG nach PDF konvertieren"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:59
 msgid "Split pages by color (Black-White / Colored)"
