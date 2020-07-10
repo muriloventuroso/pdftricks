@@ -18,7 +18,7 @@
     <p>In recent versions of ImageMagick has been added a security policy that blocks manipulations in PDF files. This affects PDFTricks operations. To correct this change the settings of your ImageMagick installation. Check the homepage for instructions.</p>
   </description>
   <releases>
-    <release version="0.2.9" date="2020-07-10">
+    <release version="0.3.0" date="2020-07-10">
       <description>
         <p>Bugfix</p>
         <p>Update Translations</p>

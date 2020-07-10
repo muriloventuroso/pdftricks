@@ -56,7 +56,7 @@ msgstr ""
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr "Połącz pliki PDF\n"
+msgstr "Połącz pliki PDF"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
