@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2019-02-25 04:18+0000\n"
-"Last-Translator: ezjerry liao <ezjerry@gmail.com>\n"
+"PO-Revision-Date: 2020-08-19 11:32+0000\n"
+"Last-Translator: marklin0913da248e4cdada422a <marklin0913@protonmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "pdftricks/translations/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -77,11 +77,11 @@ msgstr ""
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
-msgstr ""
+msgstr "高度壓縮"
 
 #: src/Widgets/CompressPDF.vala:54
 msgid "Medium Compression"
-msgstr ""
+msgstr "中等壓縮"
 
 #: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
@@ -89,7 +89,7 @@ msgstr ""
 
 #: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
-msgstr ""
+msgstr "低度壓縮"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
@@ -105,7 +105,7 @@ msgstr ""
 
 #: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
-msgstr ""
+msgstr "壓縮"
 
 #: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
@@ -113,26 +113,26 @@ msgstr ""
 
 #: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
-msgstr ""
+msgstr "壓縮程度："
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
-msgstr ""
+msgstr "成功。"
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
-msgstr ""
+msgstr "您的檔案以成功壓縮。"
 
 #: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
-msgstr ""
+msgstr "失敗。"
 
 #: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
-msgstr ""
+msgstr "壓縮檔案過程中出現了問題。"
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
@@ -141,13 +141,13 @@ msgstr ""
 #: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
-msgstr ""
+msgstr "儲存"
 
 #: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
@@ -188,15 +188,15 @@ msgstr ""
 
 #: src/Widgets/MergePDF.vala:48
 msgid "Clear All"
-msgstr ""
+msgstr "清除全部"
 
 #: src/Widgets/MergePDF.vala:72
 msgid "Open"
-msgstr ""
+msgstr "開啟"
 
 #: src/Widgets/MergePDF.vala:109
 msgid "Files"
-msgstr ""
+msgstr "檔案"
 
 #: src/Widgets/MergePDF.vala:110
 msgid "Pages"
@@ -204,15 +204,15 @@ msgstr ""
 
 #: src/Widgets/MergePDF.vala:123
 msgid "Merge"
-msgstr ""
+msgstr "合併"
 
 #: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
-msgstr ""
+msgstr "您的檔案已成功合併。"
 
 #: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
-msgstr ""
+msgstr "合併檔案過程中出了問題。"
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
@@ -230,7 +230,7 @@ msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:50
 msgid "Convert"
-msgstr ""
+msgstr "轉換"
 
 #: src/Widgets/ConvertPDF.vala:97
 msgid "File to Convert:"
@@ -238,15 +238,15 @@ msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:100
 msgid "Format to Convert:"
-msgstr ""
+msgstr "轉換格式："
 
 #: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
-msgstr ""
+msgstr "檔案以轉換。"
 
 #: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
-msgstr ""
+msgstr "無法轉換這個檔案。"
 
 #: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
