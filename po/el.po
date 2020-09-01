@@ -8,244 +8,252 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2018-12-24 17:29-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2020-09-02 22:36+0000\n"
+"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
+"Language-Team: Greek <https://hosted.weblate.org/projects/pdftricks/"
+"translations/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
-msgstr ""
+msgstr "Πίσω"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr ""
+msgstr "Κόλπα PDF"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr ""
+msgstr "Κόλπα για αρχεία PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr ""
+msgstr "Συμπίεση PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
+"Συμπιέστε ένα αρχείο PDF για να αποκτήσετε την ίδια ποιότητα με μειωμένο "
+"μέγεθος αρχείου."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr ""
+msgstr "Διαχωρισμός PDF"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
+"Διαχωρίστε ένα αρχείο PDF κατά εύρος σελίδων ή εξαγάγετε όλες τις σελίδες "
+"PDF σε πολλά αρχεία PDF."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr ""
+msgstr "Συγχώνευση PDF"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
-msgstr ""
+msgstr "Επιλέξτε πολλά αρχεία PDF ή εικόνες και συγχωνεύστε τα σε δευτερόλεπτα."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr ""
+msgstr "Μετατροπή PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr ""
+msgstr "Μετατροπή αρχείων PDF σε μορφές JPG, PNG και ΤΧΤ."
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
 #: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
-msgstr ""
+msgstr "Επιλογή αρχείου προς συμπίεση"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "Καλή ποιότητα, καλή συμπίεση"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Ακραία συμπίεση"
 
 #: src/Widgets/CompressPDF.vala:54
 msgid "Medium Compression"
-msgstr ""
+msgstr "Μεσαία συμπίεση"
 
 #: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
-msgstr ""
+msgstr "Συνιστώμενη συμπίεση"
 
 #: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
-msgstr ""
+msgstr "Χαμηλή συμπίεση"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Χαμηλή ποιότητα, υψηλή συμπίεση"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "Good quality, optimized for printing"
-msgstr ""
+msgstr "Καλή ποιότητα, βελτιστοποιημένη για εκτύπωση"
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Υψηλή ποιότητα, χαμηλή συμπίεση"
 
 #: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
-msgstr ""
+msgstr "Συμπίεση"
 
 #: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
-msgstr ""
+msgstr "Αρχείο προς συμπίεση:"
 
 #: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
-msgstr ""
+msgstr "Επίπεδο συμπίεσης:"
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
-msgstr ""
+msgstr "Επιτυχία."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
-msgstr ""
+msgstr "Το αρχείο συμπιέστηκε επιτυχώς."
 
 #: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
-msgstr ""
+msgstr "Αποτυχία."
 
 #: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
-msgstr ""
+msgstr "Υπήρξε πρόβλημα κατά την συμπίεση του αρχείου σας."
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
-msgstr ""
+msgstr "Επιλογή αρχείου προς αποθήκευση"
 
 #: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
-msgstr ""
+msgstr "Αποθήκευση"
 
 #: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
-msgstr ""
+msgstr "Ακύρωση"
 
 #: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
-msgstr ""
+msgstr "Εξαγωγή όλων των σελίδων"
 
 #: src/Widgets/SplitPDF.vala:55
 msgid "Select range of pages"
-msgstr ""
+msgstr "Επιλέξτε εύρος σελίδων"
 
 #: src/Widgets/SplitPDF.vala:58
 msgid "Separate colored pages"
-msgstr ""
+msgstr "Ξεχωρίστε τις χρωματιστές σελίδες"
 
 #: src/Widgets/SplitPDF.vala:149
 msgid "Split"
-msgstr ""
+msgstr "Διαχωρισμός"
 
 #: src/Widgets/SplitPDF.vala:191
 msgid "File to Split:"
-msgstr ""
+msgstr "Αρχείο προς διαχωρισμό:"
 
 #: src/Widgets/SplitPDF.vala:216
 msgid "File split."
-msgstr ""
+msgstr "Διαχωρισμός αρχείων."
 
 #: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
-msgstr ""
+msgstr "Αδυναμία διαχωρισμού αυτού του αρχείου."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:46
 msgid "Add File"
-msgstr ""
+msgstr "Προσθήκη αρχείου"
 
 #: src/Widgets/MergePDF.vala:47
 msgid "Remove Selected"
-msgstr ""
+msgstr "Αφαίρεση επιλεγμένων"
 
 #: src/Widgets/MergePDF.vala:48
 msgid "Clear All"
-msgstr ""
+msgstr "Εκκαθάριση όλων"
 
 #: src/Widgets/MergePDF.vala:72
 msgid "Open"
-msgstr ""
+msgstr "Άνοιγμα"
 
 #: src/Widgets/MergePDF.vala:109
 msgid "Files"
-msgstr ""
+msgstr "Αρχεία"
 
 #: src/Widgets/MergePDF.vala:110
 msgid "Pages"
-msgstr ""
+msgstr "Σελίδες"
 
 #: src/Widgets/MergePDF.vala:123
 msgid "Merge"
-msgstr ""
+msgstr "Συγχώνευση"
 
 #: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
-msgstr ""
+msgstr "Το αρχείο συγχωνεύτηκε επιτυχώς."
 
 #: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
-msgstr ""
+msgstr "Υπήρξε πρόβλημα κατά τη συγχώνευση του αρχείου σας."
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
-msgstr ""
+msgstr "Πολιτικές ImageMagick"
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
+"Αλλάξτε τις πολιτικές ασφαλείας του ImageMagick που εμποδίζουν αυτήν τη "
+"λειτουργία και δοκιμάστε ξανά."
 
 #: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
-msgstr ""
+msgstr "Επιλογή αρχείου προς μετατροπή"
 
 #: src/Widgets/ConvertPDF.vala:50
 msgid "Convert"
-msgstr ""
+msgstr "Μετατροπή"
 
 #: src/Widgets/ConvertPDF.vala:97
 msgid "File to Convert:"
-msgstr ""
+msgstr "Αρχείο προς μετατροπή:"
 
 #: src/Widgets/ConvertPDF.vala:100
 msgid "Format to Convert:"
-msgstr ""
+msgstr "Μορφή προς μετατροπή:"
 
 #: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
-msgstr ""
+msgstr "Το αρχείο μετατράπηκε."
 
 #: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
-msgstr ""
+msgstr "Αδυναμία μετατροπής αυτού του αρχείου."
 
 #: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
-msgstr ""
+msgstr "Η μορφή εισαγωγής είναι η ίδια με τη μορφή εξόδου."
