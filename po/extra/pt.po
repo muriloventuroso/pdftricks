@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2020-01-05 20:21+0000\n"
+"PO-Revision-Date: 2020-10-01 11:41+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/pdftricks/"
 "extra/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -132,13 +132,12 @@ msgid "Tips & Tricks for PDF files"
 msgstr "Dicas e truques para ficheiros PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
-#, fuzzy
 msgid ""
 "A simple, efficient app for small manipulation of PDF files. Compress, "
 "split, merge and convert PDF."
 msgstr ""
-"Uma aplicação simples e eficiente para pequenas manipulações em ficheiros "
-"PDF. Permite comprimir, dividir, unir e converter ficheiros PDF."
+"Uma app simples e eficiente para pequenas manipulações em ficheiros PDF. "
+"Permite comprimir, dividir, unir e converter ficheiros PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
 msgid "com.github.muriloventuroso.pdftricks"
