@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2020-08-19 11:32+0000\n"
+"PO-Revision-Date: 2020-10-18 12:26+0000\n"
 "Last-Translator: marklin0913da248e4cdada422a <marklin0913@protonmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://hosted.weblate.org/projects/"
 "pdftricks/translations/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.2-dev\n"
+"X-Generator: Weblate 4.3.1-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -51,7 +51,7 @@ msgstr "按頁面範圍拆分 PDF 檔案，或將所有 PDF 頁面取為多個 P
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr "合併 PDF"
+msgstr "合併PDF"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
@@ -59,7 +59,7 @@ msgstr ""
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr ""
+msgstr "轉換PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
@@ -69,11 +69,11 @@ msgstr ""
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
 #: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
-msgstr ""
+msgstr "選擇要壓縮的檔案"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "良好品質，良好壓縮"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
@@ -85,7 +85,7 @@ msgstr "中等壓縮"
 
 #: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
-msgstr ""
+msgstr "建議壓縮量"
 
 #: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
@@ -93,7 +93,7 @@ msgstr "低度壓縮"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "低品質，高壓縮"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "Good quality, optimized for printing"
@@ -101,7 +101,7 @@ msgstr ""
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
-msgstr ""
+msgstr "高品質，低壓縮"
 
 #: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
@@ -136,7 +136,7 @@ msgstr "壓縮檔案過程中出現了問題。"
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
-msgstr ""
+msgstr "選擇要儲存的檔案"
 
 #: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
