@@ -7,10 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
-
 "POT-Creation-Date: 2019-07-23 08:22-0300\n"
-"PO-Revision-Date: 2019-09-15 03:23+0000\n"
-"Last-Translator: Alejandro Elí <oner.waa@gmail.com>\n"
+"PO-Revision-Date: 2020-11-02 22:26+0000\n"
+"Last-Translator: Bruno <bruno199723@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/pdftricks/"
 "translations/es/>\n"
 "Language: es\n"
@@ -18,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 4.3.2-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -83,9 +82,8 @@ msgid "Extreme Compression"
 msgstr "Compresión extrema"
 
 #: src/Widgets/CompressPDF.vala:54
-#, fuzzy
 msgid "Medium Compression"
-msgstr "Comprimir"
+msgstr "Compresión Media"
 
 #: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
@@ -101,7 +99,7 @@ msgstr "Menor calidad, mayor compresión"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "Good quality, optimized for printing"
-msgstr ""
+msgstr "Calidad buena, optimizado para imprimir"
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
