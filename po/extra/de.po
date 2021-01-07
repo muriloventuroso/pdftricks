@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2020-05-25 05:41+0000\n"
-"Last-Translator: CurlingTongs <jobiwaff@googlemail.com>\n"
+"PO-Revision-Date: 2021-01-08 12:32+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/pdftricks/extra/"
 "de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -30,9 +30,7 @@ msgstr "Tricks für PDF-Dateien"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
 msgid "A simple, efficient application for small manipulations in PDF files."
-msgstr ""
-"Eine einfache, effiziente Anwendung für kleine Änderungen an PDF-Dateien. "
-"Komprimieren, Aufteilen, Zusammenführen und Konvertieren von PDF-Dateien."
+msgstr "Einfache und effiziente Anwendung für kleine Änderungen an PDF-Dateien."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
@@ -140,7 +138,7 @@ msgid ""
 "A simple, efficient app for small manipulation of PDF files. Compress, "
 "split, merge and convert PDF."
 msgstr ""
-"Eine einfache, effiziente Anwendung für kleine Änderungen an PDF-Dateien. "
+"Eine einfache und effiziente Anwendung für kleine Änderungen an PDF-Dateien. "
 "Komprimieren, Aufteilen, Zusammenführen und Konvertieren von PDF-Dateien."
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
