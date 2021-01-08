@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2020-12-29 15:29+0000\n"
+"PO-Revision-Date: 2021-01-08 12:32+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/pdftricks/"
 "translations/hr/>\n"
@@ -79,27 +79,27 @@ msgstr "Odaberi datoteku za komprimiranje"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
-msgstr "Dobra kvaliteta, dobra kompresija"
+msgstr "Dobra kvaliteta, dobra razina komprimiranja"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
-msgstr "Jaka kompresija"
+msgstr "Najviša razina komprimiranja"
 
 #: src/Widgets/CompressPDF.vala:54
 msgid "Medium Compression"
-msgstr "Srednja kompresija"
+msgstr "Srednja razina komprimiranja"
 
 #: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
-msgstr "Preporučena kompresija"
+msgstr "Preporučena razina komprimiranja"
 
 #: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
-msgstr "Niži stupanj kompresije"
+msgstr "Niska razina komprimiranja"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
-msgstr "Manja kvaliteta, visoka kompresija"
+msgstr "Niska kvaliteta, visoka razina komprimiranja"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "Good quality, optimized for printing"
@@ -107,7 +107,7 @@ msgstr "Dobra kvaliteta, optimirano za ispis"
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
-msgstr "Visoka kvaliteta, manja kompresija"
+msgstr "Visoka kvaliteta, niska razina komprimiranja"
 
 #: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
@@ -119,7 +119,7 @@ msgstr "Datoteka za komprimiranje:"
 
 #: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
-msgstr "Razina kompresije:"
+msgstr "Razina komprimiranja:"
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
@@ -128,7 +128,7 @@ msgstr "Uspjeh."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
-msgstr "Tvoja je datoteka uspješno komprimirana."
+msgstr "Datoteka je uspješno komprimirana."
 
 #: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
@@ -138,7 +138,7 @@ msgstr "Neuspjeh."
 
 #: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
-msgstr "Došlo je do problema tijekom komprimiranja tvoje datoteke."
+msgstr "Došlo je do problema tijekom komprimiranja datoteke."
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
@@ -177,7 +177,7 @@ msgstr "Datoteka za rastavljanje:"
 
 #: src/Widgets/SplitPDF.vala:216
 msgid "File split."
-msgstr "Datoteka rastavljena."
+msgstr "Datoteka je rastavljena."
 
 #: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
@@ -214,11 +214,11 @@ msgstr "Sjedini"
 
 #: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
-msgstr "Tvoja je datoteka uspješno sjedinjena."
+msgstr "Datoteka je uspješno sjedinjena."
 
 #: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
-msgstr "Došlo je do problema tijekom sjedinjavanja tvoje datoteke."
+msgstr "Došlo je do problema tijekom sjedinjavanja datoteke."
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
@@ -250,7 +250,7 @@ msgstr "Format za pretvaranje:"
 
 #: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
-msgstr "Datoteka pretvorena."
+msgstr "Datoteka je pretvorena."
 
 #: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
