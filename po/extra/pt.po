@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2020-10-01 11:41+0000\n"
+"PO-Revision-Date: 2021-03-29 18:26+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/pdftricks/"
 "extra/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3-dev\n"
+"X-Generator: Weblate 4.6-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -29,19 +29,18 @@ msgid "Tricks for PDF Files"
 msgstr "Truques em ficheiros PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
-#, fuzzy
 msgid "A simple, efficient application for small manipulations in PDF files."
 msgstr ""
 "Uma aplicação simples e eficiente para pequenas manipulações em ficheiros "
-"PDF. Permite comprimir, dividir, unir e converter ficheiros PDF."
+"PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
-msgstr ""
+msgstr "Comprimir PDF (múltiplas resoluções)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr ""
+msgstr "Dividir PDF (Todas as páginas ou intervalos)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
@@ -59,6 +58,10 @@ msgid ""
 "correct this change the settings of your ImageMagick installation. Check de "
 "homepage for instructions."
 msgstr ""
+"Em versões recentes do ImageMagick uma política de segurança foi adicionada "
+"que bloqueia manipulações em ficheiros PDF. Isto afeta as operações em "
+"PDFTricks. Para corrigir isso, altere as configurações da sua instalação do "
+"ImageMagick. Consulte a página inicial para obter instruções."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
 msgid "Disable button when is processing"
@@ -70,14 +73,14 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
-msgstr ""
+msgstr "Atualizar traduções"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:65
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:70
 msgid "Bugfix"
-msgstr ""
+msgstr "Correção de erros"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:31
 msgid "spinner when processing"
