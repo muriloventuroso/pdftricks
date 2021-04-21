@@ -90,7 +90,7 @@ namespace pdftricks {
             stack.add_named (convert_pdf, "convert_pdf");
 
             main_window.application = this;
-            main_window.icon_name = "pdftricks";
+            main_window.icon_name = "com.github.muriloventuroso.pdftricks";
             main_window.title = _("PDF Tricks");
             main_window.add (stack);
             main_window.set_size_request (800, 640);
