@@ -58,6 +58,9 @@ namespace pdftricks {
             Gtk.RadioButton btn_colors = new Gtk.RadioButton.with_label_from_widget (btn_all, _("Separate colored pages"));
             btn_colors.set_sensitive (false);
 
+            Gtk.CheckButton with_thumbs = new Gtk.CheckButton.with_label (_("Show Thumbnails"));
+            with_thumbs.set_active(true);
+
             var revealer = new Gtk.Revealer();
 
             Gtk.ListStore model_thumbs = new Gtk.ListStore (2, typeof (Gdk.Pixbuf), typeof (string));
@@ -115,16 +118,18 @@ namespace pdftricks {
                     model_thumbs.clear();
                     type_split = "range";
                     var file_pdf = filechooser.get_filename();
-                    view_thumbs.set_columns(page_size);
-                    if(create_thumbs(file_pdf)){
-                        for (int a = 1; a <= page_size; a++) {
-                            try {
-                                model_thumbs.append (out iter);
-                                Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("/tmp/h" + a.to_string() + ".jpg");
-                                model_thumbs.set (iter, 0, pixbuf, 1, a.to_string());
+                    if(with_thumbs.get_active() == true){
+                        if(create_thumbs(file_pdf)){
+                            view_thumbs.set_columns(page_size);
+                            for (int a = 1; a <= page_size; a++) {
+                                try {
+                                    model_thumbs.append (out iter);
+                                    Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("/tmp/h" + a.to_string() + ".jpg");
+                                    model_thumbs.set (iter, 0, pixbuf, 1, a.to_string());
 
-                            } catch (Error e) {
-                                print("erro");
+                                } catch (Error e) {
+                                    print("erro");
+                                }
                             }
                         }
                     }
@@ -162,19 +167,22 @@ namespace pdftricks {
                 btn_colors.set_sensitive (true);
                 model_thumbs.clear();
                 if(btn_range.get_active() == true){
-                    view_thumbs.set_columns(page_size);
-                    if(create_thumbs(file_pdf)){
-                        for (int a = 1; a <= page_size; a++) {
-                            try {
-                                model_thumbs.append (out iter);
-                                Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("/tmp/h" + a.to_string() + ".jpg");
-                                model_thumbs.set (iter, 0, pixbuf, 1, a.to_string());
+                    if(with_thumbs.get_active() == true){
+                        view_thumbs.set_columns(page_size);
+                        if(create_thumbs(file_pdf)){
+                            for (int a = 1; a <= page_size; a++) {
+                                try {
+                                    model_thumbs.append (out iter);
+                                    Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("/tmp/h" + a.to_string() + ".jpg");
+                                    model_thumbs.set (iter, 0, pixbuf, 1, a.to_string());
 
-                            } catch (Error e) {
-                                print("erro");
+                                } catch (Error e) {
+                                    print("erro");
+                                }
                             }
                         }
                     }
+                    revealer.set_reveal_child(true);
                 }
             });
 
@@ -193,8 +201,9 @@ namespace pdftricks {
             grid.attach (btn_all, 2, 1);
             grid.attach (btn_range, 2, 2);
             grid.attach (btn_colors, 2, 3);
-            grid.attach (revealer, 0, 2, 4, 2);
+            grid.attach (with_thumbs, 2, 4);
             grid.attach (split_button, 1, 5, 2);
+            grid.attach (revealer, 1, 6, 2);
 
             spinner = new Gtk.Spinner();
             spinner.active = false;
@@ -407,20 +416,24 @@ namespace pdftricks {
         }
 
         private bool create_thumbs(string input_file) {
+            spinner.active = true;
             string output, stderr  = "";
             int exit_status = 0;
             try{
                 var cmd = "gs -dNumRenderingThreads=4 -dNOPAUSE -sDEVICE=jpeg -g125x175 -dPDFFitPage -sOutputFile=/tmp/h%d.jpg -dJPEGQ=100 -r300 -q " + input_file.replace(" ", "\\ ") +" -c quit";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
-                critical (e.message);
+                print (e.message);
+                spinner.active = false;
                 return false;
             }
             if(output != ""){
                 if(output.contains("Error")){
+                    spinner.active = false;
                     return false;
                 }
             }
+            spinner.active = false;
             return true;
         }
 
