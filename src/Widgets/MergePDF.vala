@@ -174,7 +174,7 @@ namespace pdftricks {
                 return 1;
             }
             try{
-                var cmd = "gs -q -dNODISPLAY -c \"(" + input_file.replace(" ", "\\ ") + ") (r) file runpdfbegin pdfpagecount = quit\"";
+                var cmd = "gs -q -dNODISPLAY -c \"(\"" + input_file + "\") (r) file runpdfbegin pdfpagecount = quit\"";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
                 result = int.parse(output);
             } catch (Error e) {
@@ -247,7 +247,7 @@ namespace pdftricks {
                         return true;
                     }
                 }
-                files_pdf = files_pdf + " " + file_pdf.replace(" ", "\\ ");
+                files_pdf = files_pdf + " " + file_pdf.replace(" ", "\\ ").replace("'", "\\'");
                 return false;
             });
             if(files_pdf == ""){
@@ -277,7 +277,7 @@ namespace pdftricks {
             string output, stderr, cmd, result_file  = "";
             int exit_status = 0;
             result_file = "/tmp/c_" + GLib.Uuid.string_random() + ".pdf";
-            cmd = "convert " + input_file.replace(" ", "\\ ") + " " + result_file;
+            cmd = "convert \"" + input_file + "\" \"" + result_file + "\"";
             try{
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {

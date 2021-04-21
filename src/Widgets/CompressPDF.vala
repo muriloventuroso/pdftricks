@@ -184,7 +184,7 @@ namespace pdftricks {
                 int exit_status = 0;
 
                 try{
-                    var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/" + resolution + " -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + output_file.replace(" ", "\\ ") + " " + input.replace(" ", "\\ ");
+                    var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/" + resolution + " -dNOPAUSE -dQUIET -dBATCH -sOutputFile=\"" + output_file + "\" \"" + input + "\"";
                     Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
                 } catch (Error e) {
                     critical (e.message);

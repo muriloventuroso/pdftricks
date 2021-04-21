@@ -23,6 +23,8 @@ namespace pdftricks {
     public class SplitPDF : Gtk.Box {
         public signal void proccess_begin ();
         public signal void proccess_finished (bool result);
+        public signal void create_thumb_begin ();
+        public signal void create_thumb_finished (bool result);
         private Gtk.FileChooserButton filechooser;
         public Gtk.Window window { get; construct; }
         private int page_size;
@@ -91,6 +93,8 @@ namespace pdftricks {
             range_box.pack_start (entry_range, false, false, 0);
             revealer.add(range_box);
 
+            var split_button = new Gtk.Button.with_label (_("Split"));
+
             view_thumbs.selection_changed.connect(() => {
                 List<Gtk.TreePath> paths = view_thumbs.get_selected_items ();
                 Value title;
@@ -113,27 +117,39 @@ namespace pdftricks {
                 }
 
             });
+            create_thumb_begin.connect (
+                () => {
+                    spinner.active = true;
+                    split_button.set_sensitive (false);
+                });
+            create_thumb_finished.connect (
+                (result) => {
+                    spinner.active = false;
+                    split_button.set_sensitive (true);
+                    if(result){
+                        view_thumbs.set_columns(page_size);
+                        for (int a = 1; a <= page_size; a++) {
+                            try {
+                                model_thumbs.append (out iter);
+                                Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("/tmp/h" + a.to_string() + ".jpg");
+                                model_thumbs.set (iter, 0, pixbuf, 1, a.to_string());
+
+                            } catch (Error e) {
+                                print("erro");
+                            }
+                        }
+                    };
+                });
             btn_range.toggled.connect(() => {
                 if(btn_range.get_active() == true){
                     model_thumbs.clear();
                     type_split = "range";
                     var file_pdf = filechooser.get_filename();
                     if(with_thumbs.get_active() == true){
-                        if(create_thumbs(file_pdf)){
-                            view_thumbs.set_columns(page_size);
-                            for (int a = 1; a <= page_size; a++) {
-                                try {
-                                    model_thumbs.append (out iter);
-                                    Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("/tmp/h" + a.to_string() + ".jpg");
-                                    model_thumbs.set (iter, 0, pixbuf, 1, a.to_string());
-
-                                } catch (Error e) {
-                                    print("erro");
-                                }
-                            }
-                        }
+                        create_thumbs.begin(file_pdf, (obj, res) => {
+                            create_thumb_finished (create_thumbs.end (res));
+                        });
                     }
-
                     revealer.set_reveal_child(true);
                 }
 
@@ -151,7 +167,6 @@ namespace pdftricks {
                     revealer.set_reveal_child(false);
                 }
             });
-            var split_button = new Gtk.Button.with_label (_("Split"));
             split_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
             split_button.can_default = true;
             split_button.vexpand = true;
@@ -169,18 +184,9 @@ namespace pdftricks {
                 if(btn_range.get_active() == true){
                     if(with_thumbs.get_active() == true){
                         view_thumbs.set_columns(page_size);
-                        if(create_thumbs(file_pdf)){
-                            for (int a = 1; a <= page_size; a++) {
-                                try {
-                                    model_thumbs.append (out iter);
-                                    Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("/tmp/h" + a.to_string() + ".jpg");
-                                    model_thumbs.set (iter, 0, pixbuf, 1, a.to_string());
-
-                                } catch (Error e) {
-                                    print("erro");
-                                }
-                            }
-                        }
+                        create_thumbs.begin(file_pdf, (obj, res) => {
+                            create_thumb_finished (create_thumbs.end (res));
+                        });
                     }
                     revealer.set_reveal_child(true);
                 }
@@ -253,7 +259,7 @@ namespace pdftricks {
             chooser_output.set_current_name(filename);
             chooser_output.do_overwrite_confirmation = false;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-                output_file = chooser_output.get_filename().replace(" ", "\\ ");
+                output_file = chooser_output.get_filename();
                 split = true;
             }
             chooser_output.destroy();
@@ -291,11 +297,12 @@ namespace pdftricks {
         }
 
         private string get_colors(string input){
+            string file_pdf = input;
             string output, stderr  = "";
             int exit_status = 0;
             spinner.show();
             try{
-                var cmd = "gs -dNOPAUSE -dQUIET -dBATCH -q  -o - -sDEVICE=inkcov " + input.replace(" ", "\\ ") + " -c quit  | grep -v Page";
+                var cmd = "gs -dNOPAUSE -dQUIET -dBATCH -q  -o - -sDEVICE=inkcov \"" + file_pdf + "\" -c quit  | grep -v Page";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
@@ -376,11 +383,13 @@ namespace pdftricks {
         }
 
         private bool split_page_range(string input, string output_file, int page_start, int page_end, string label){
+            string file_pdf = input;
             string output, stderr  = "";
             int exit_status = 0;
             string output_filename = output_file.replace(".pdf", "_" + label + ".pdf");
             try{
-                var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dFirstPage=" + page_start.to_string() + " -dLastPage=" + page_end.to_string() + " -sOutputFile=" + output_filename +" " + input.replace(" ", "\\ ");
+                var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dFirstPage=" + page_start.to_string() + " -dLastPage=" + page_end.to_string() + " -sOutputFile=\"" + output_filename +"\" \"" + file_pdf + "\"";
+                print(cmd);
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
@@ -395,11 +404,12 @@ namespace pdftricks {
         }
 
         private int get_page_count(string input_file){
+            string file_pdf = input_file;
             string output, stderr  = "";
             int exit_status = 0;
             int result = 0;
             try{
-                var cmd = "gs -q -dNODISPLAY -c \"(" + input_file.replace(" ", "\\ ") + ") (r) file runpdfbegin pdfpagecount = quit\"";
+                var cmd = "gs -q -dNODISPLAY -c \"(\"" + file_pdf + "\") (r) file runpdfbegin pdfpagecount = quit\"";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
                 result = int.parse(output);
             } catch (Error e) {
@@ -415,26 +425,39 @@ namespace pdftricks {
 
         }
 
-        private bool create_thumbs(string input_file) {
-            spinner.active = true;
-            string output, stderr  = "";
-            int exit_status = 0;
-            try{
-                var cmd = "gs -dNumRenderingThreads=4 -dNOPAUSE -sDEVICE=jpeg -g125x175 -dPDFFitPage -sOutputFile=/tmp/h%d.jpg -dJPEGQ=100 -r300 -q " + input_file.replace(" ", "\\ ") +" -c quit";
-                Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
-            } catch (Error e) {
-                print (e.message);
-                spinner.active = false;
-                return false;
-            }
-            if(output != ""){
-                if(output.contains("Error")){
+        private async bool create_thumbs(string input_file) {
+            string file_pdf = input_file;
+            bool ret = true;
+
+            SourceFunc callback = create_thumbs.callback;
+            ThreadFunc<void*> run = () => {
+                string output, stderr  = "";
+                int exit_status = 0;
+                try{
+                    var cmd = "gs -dNumRenderingThreads=4 -dNOPAUSE -sDEVICE=jpeg -g125x175 -dPDFFitPage -sOutputFile=/tmp/h%d.jpg -dJPEGQ=100 -r300 -q \"" + file_pdf +"\" -c quit";
+                    Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
+                } catch (Error e) {
+                    print (e.message);
                     spinner.active = false;
-                    return false;
+                    ret = false;
                 }
+                if(output != ""){
+                    if(output.contains("Error")){
+                        spinner.active = false;
+                        ret = false;
+                    }
+                }
+                Idle.add ((owned) callback);
+                return null;
+            };
+            try {
+                new Thread<void*>.try (null, run);
+            } catch (Error e) {
+                warning (e.message);
             }
-            spinner.active = false;
-            return true;
+            yield;
+            return ret;
+
         }
 
         private string group_list(string result){

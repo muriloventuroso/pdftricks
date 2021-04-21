@@ -159,7 +159,7 @@ namespace pdftricks {
             chooser_output.set_current_name(filename.split(".")[0] + "." + format);
             chooser_output.do_overwrite_confirmation = true;
             if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-                output_file = chooser_output.get_filename().replace(" ", "\\ ");
+                output_file = chooser_output.get_filename();
                 convert = true;
             }
             chooser_output.destroy();
@@ -182,34 +182,34 @@ namespace pdftricks {
                 if(format_input == "pdf"){
                     if(format_output == "jpg"){
                         var n_output_file = output_file.replace(".jpg", "-%03d.jpg");
-                        cmd = "gs -sDEVICE=jpeg -r144 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
+                        cmd = "gs -sDEVICE=jpeg -r144 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=\"" + n_output_file + "\" \"" + input + "\"";
                     }else if (format_output == "png") {
                         var n_output_file = output_file.replace(".png", "-%03d.png");
-                        cmd = "gs -sDEVICE=png16m -r144 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
+                        cmd = "gs -sDEVICE=png16m -r144 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=\"" + n_output_file + "\" \""+ input + "\"";
 
                     }else if(format_output == "txt"){
                         var n_output_file = output_file;
-                        cmd = "gs -ps2ascii -sDEVICE=txtwrite -dNOPAUSE -dQUIET -dBATCH -sOutputFile=" + n_output_file + " " + input.replace(" ", "\\ ");
+                        cmd = "gs -ps2ascii -sDEVICE=txtwrite -dNOPAUSE -dQUIET -dBATCH -sOutputFile=\"" + n_output_file + "\" \"" + input + "\"";
                     }
                 }else if(format_input == "jpg"){
                     var n_output_file = output_file;
-                    cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+                    cmd = "convert \"" + input + "\" \"" + n_output_file + "\"";
 
                 }else if(format_input == "png"){
                     var n_output_file = output_file;
-                    cmd = "convert -verbose " + input.replace(" ", "\\ ") + " " + n_output_file;
+                    cmd = "convert -verbose \"" + input + "\" \"" + n_output_file + "\"";
 
                 }else if(format_input == "jpeg"){
                     var n_output_file = output_file;
-                    cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+                    cmd = "convert \"" + input + "\" \"" + n_output_file + "\"";
 
                 }else if(format_input == "svg"){
                     var n_output_file = output_file;
-                    cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+                    cmd = "convert \"" + input + "\" \"" + n_output_file + "\"";
 
                 }else if(format_input == "bmp"){
                     var n_output_file = output_file;
-                    cmd = "convert " + input.replace(" ", "\\ ") + " " + n_output_file;
+                    cmd = "convert \"" + input + "\" \"" + n_output_file + "\"";
 
                 }
                 if(cmd != ""){
