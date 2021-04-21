@@ -84,6 +84,7 @@ Run:
 
 ## Credits
 * [Fatih20](https://github.com/Fatih20)
+* [FreaxMATE](https://github.com/FreaxMATE)
 
 -----
 
