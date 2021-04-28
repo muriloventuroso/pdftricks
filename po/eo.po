@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2021-03-18 10:18+0000\n"
+"PO-Revision-Date: 2021-04-29 01:32+0000\n"
 "Last-Translator: phlostically <phlostically@mailinator.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/pdftricks/"
 "translations/eo/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.2-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -25,11 +25,11 @@ msgstr "Reen"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF-Trukoj"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr ""
+msgstr "Trukoj pri PDF-dosieroj"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
@@ -37,25 +37,27 @@ msgstr "Densigi PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
-msgstr ""
+msgstr "Densigi PDF-dosieron por malpliigi la grandon sen perdo de kvalito."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr ""
+msgstr "Disigi PDF"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
+"Disigi PDF-dosieron laŭ intervaloj de paĝoj, aŭ ĉerpi ĉiujn PDF-paĝojn al "
+"pluraj PDF-dosieroj."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr ""
+msgstr "Kunigi en formon PDF"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
-msgstr ""
+msgstr "Elekti plurajn PDF-dosierojn aŭ bildojn, kaj kunigi ilin rapide."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
@@ -63,45 +65,45 @@ msgstr "Konverti PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr ""
+msgstr "Konverti PDF-dosierojn en formojn JPG, PNG aŭ TXT."
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
 #: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
-msgstr ""
+msgstr "Elektu densigotan dosieron"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "Bona kvalito, bona densigo"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Ekstrema Densigo"
 
 #: src/Widgets/CompressPDF.vala:54
 msgid "Medium Compression"
-msgstr ""
+msgstr "Meza Densigo"
 
 #: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
-msgstr ""
+msgstr "Rekomendata Densigo"
 
 #: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
-msgstr ""
+msgstr "Malplia Densigo"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Malpli da kvalito, pli da densigo"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "Good quality, optimized for printing"
-msgstr ""
+msgstr "Bona kvalito, optimuma por presado"
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Pli da kvalito, malpli da densigo"
 
 #: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
@@ -122,7 +124,7 @@ msgstr "Sukcesis."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
-msgstr ""
+msgstr "Sukcesis densigo de via dosiero."
 
 #: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
@@ -132,7 +134,7 @@ msgstr "Malsukcesis."
 
 #: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
-msgstr ""
+msgstr "Malsukcesis densigo de via dosiero."
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
@@ -151,31 +153,31 @@ msgstr "Nuligi"
 
 #: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
-msgstr ""
+msgstr "Ĉerpi ĉiujn paĝojn"
 
 #: src/Widgets/SplitPDF.vala:55
 msgid "Select range of pages"
-msgstr ""
+msgstr "Elekti intervalon de paĝoj"
 
 #: src/Widgets/SplitPDF.vala:58
 msgid "Separate colored pages"
-msgstr ""
+msgstr "Apartigi kolorajn paĝojn"
 
 #: src/Widgets/SplitPDF.vala:149
 msgid "Split"
-msgstr ""
+msgstr "Disigi"
 
 #: src/Widgets/SplitPDF.vala:191
 msgid "File to Split:"
-msgstr ""
+msgstr "Disigota Dosiero:"
 
 #: src/Widgets/SplitPDF.vala:216
 msgid "File split."
-msgstr ""
+msgstr "Sukcesis disigi dosieron."
 
 #: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
-msgstr ""
+msgstr "Malsukcesis disigi dosieron."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:46
@@ -184,7 +186,7 @@ msgstr "Aldoni Dosieron"
 
 #: src/Widgets/MergePDF.vala:47
 msgid "Remove Selected"
-msgstr ""
+msgstr "Forigi Elektitajn"
 
 #: src/Widgets/MergePDF.vala:48
 msgid "Clear All"
@@ -204,25 +206,27 @@ msgstr "Paĝoj"
 
 #: src/Widgets/MergePDF.vala:123
 msgid "Merge"
-msgstr ""
+msgstr "Kunigi"
 
 #: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
-msgstr ""
+msgstr "Sukcesis kunigi vian dosieron."
 
 #: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
-msgstr ""
+msgstr "Malsukcesis kunigi vian dosieron."
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
-msgstr ""
+msgstr "Reguloj pri ImageMagick"
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
+"Ŝanĝu tiujn regulojn pri sekureco de ImageMagick, kiuj malebligas ĉi tiun "
+"operacion, kaj reprovu."
 
 #: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
@@ -238,7 +242,7 @@ msgstr "Konvertota Dosiero:"
 
 #: src/Widgets/ConvertPDF.vala:100
 msgid "Format to Convert:"
-msgstr ""
+msgstr "Cela Formo:"
 
 #: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
@@ -246,8 +250,8 @@ msgstr "Dosiero konvertiĝis."
 
 #: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
-msgstr ""
+msgstr "Ne eblis konverti ĉi tiun dosieron."
 
 #: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
-msgstr ""
+msgstr "La eniga formo estas la sama kiel la eliga formo."
