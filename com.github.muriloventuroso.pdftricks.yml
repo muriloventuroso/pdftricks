@@ -1,0 +1,101 @@
+app-id: com.github.muriloventuroso.pdftricks
+
+runtime: io.elementary.Platform
+runtime-version: '6'
+sdk: io.elementary.Sdk
+
+command: com.github.muriloventuroso.pdftricks
+
+finish-args:
+  - '--share=ipc'
+  - '--socket=fallback-x11'
+  - '--socket=wayland'
+  # TODO: uncomment this when implementing dark style support
+  # - '--system-talk-name=org.freedesktop.Accounts'
+
+modules:
+  - name: libpng
+    config-opts:
+      - '--disable-static'
+    cleanup:
+      - /bin
+      - /include
+      - /lib/pkgconfig
+      - /share
+    sources:
+      - __comment: Must be version 1.2.x
+        type: archive
+        url: https://downloads.sourceforge.net/project/libpng/libpng12/1.2.59/libpng-1.2.59.tar.xz
+        sha256: b4635f15b8adccc8ad0934eea485ef59cc4cae24d0f0300a9a941e51974ffcc7
+
+  - name: ghostscript
+    config-opts:
+      - '--disable-cups'
+    build-options:
+      arch:
+        aarch64:
+          cppflags: '-DPNG_ARM_NEON_OPT=0'
+    make-args:
+      - so
+    make-install-args:
+      - soinstall
+    cleanup:
+      - /share/ghostscript/9.26/doc/
+      - /share/ghostscript/9.26/examples
+      - /share/man/
+      - /bin/dvipdf
+      - /bin/font2c
+      - /bin/gsbj
+      - /bin/gsdj500
+      - /bin/gslp
+      - /bin/lprsetup.sh
+      - /bin/pdf2ps
+      - /bin/pf2afm
+      - /bin/printafm
+      - /bin/ps2epsi
+      - /bin/ps2pdfwr
+      - /bin/ps2pdf13
+      - /bin/wftopfa
+      - /bin/eps2eps
+      - /bin/gsdj
+      - /bin/gslj
+      - /bin/gsnd
+      - /bin/pdf2dsc
+      - /bin/pfbtopfa
+      - /bin/pphs
+      - /bin/ps2ascii
+      - /bin/ps2pdf
+      - /bin/ps2pdf12
+      - /bin/ps2pdf14
+      - /bin/ps2ps2
+      - /bin/unix-lpr.sh
+    sources:
+      - type: archive
+        url: https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9540/ghostscript-9.54.0.tar.xz
+        sha256: c2b7b43cde600f4e70efb2cd95865f6d884a67315c3de235914697d8ccde6e3b
+      - type: shell
+        commands:
+          - rm -rf libpng/pngread.c
+
+  - name: imagemagick
+    config-opts:
+      - '--enable-static=yes'
+      - '--disable-docs'
+      - '--with-png'
+      - '--with-jpeg'
+      - '--with-zlib'
+      - '--enable-zero-configuration'
+    sources:
+      - type: archive
+        url: https://download.imagemagick.org/ImageMagick/download/ImageMagick-7.1.0-4.tar.xz
+        sha256: 1a54bd46947f16fb29cf083be3614a14135f2fe9d1aa20665a85a8940bf6dc65
+      - type: shell
+        commands:
+          - sed -i '32a <policy domain=\\"coder\\" rights=\\"read | write\\"
+            pattern=\\"PDF\\"/> \\' MagickCore/policy-private.h
+
+  - name: pdftricks
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
