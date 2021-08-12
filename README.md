@@ -30,7 +30,7 @@ A simple, efficient application for small manipulations in PDF files.
 
 ## Developing and Building
 
-If you want to hack on and build EasySSH yourself, you'll need the following dependencies:
+If you want to hack on and build PDF Tricks yourself, you'll need the following dependencies:
 
 * libgtk-3-dev
 * libgranite-dev
