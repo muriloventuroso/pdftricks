@@ -167,7 +167,7 @@ namespace pdftricks {
                 compress = true;
             }
             chooser_output.destroy();
-            if(compress == true){
+            if(compress == true && output_file != ""){
                 proccess_begin ();
                 compress_file.begin (file_pdf, output_file, str_resolution,
                     (obj, res) => {

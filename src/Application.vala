@@ -56,6 +56,9 @@ namespace pdftricks {
 
         construct {
             Intl.setlocale (LocaleCategory.ALL, "");
+            Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
+            Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
+            Intl.textdomain (Constants.GETTEXT_PACKAGE);
         }
 
         public override void activate () {

@@ -10,8 +10,9 @@ finish-args:
   - '--share=ipc'
   - '--socket=fallback-x11'
   - '--socket=wayland'
-  # TODO: uncomment this when implementing dark style support
-  # - '--system-talk-name=org.freedesktop.Accounts'
+  - '--system-talk-name=org.freedesktop.Accounts'
+  - '--filesystem=/tmp'
+  - '--filesystem=host'
 
 modules:
   - name: libpng
