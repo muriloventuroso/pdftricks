@@ -24,6 +24,12 @@ A simple, efficient application for small manipulations in PDF files.
 
 ![Screenshot](data/screenshot2.png)
 
+![Screenshot](data/screenshot3.png)
+
+![Screenshot](data/screenshot4.png)
+
+![Screenshot](data/screenshot5.png)
+
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.muriloventuroso.pdftricks)
 

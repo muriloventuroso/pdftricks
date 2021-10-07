@@ -61,7 +61,7 @@ namespace pdftricks {
             btn_colors.set_sensitive (false);
 
             Gtk.CheckButton with_thumbs = new Gtk.CheckButton.with_label (_("Show Thumbnails"));
-            with_thumbs.set_active(true);
+            with_thumbs.set_active(false);
 
             var revealer = new Gtk.Revealer();
 
@@ -144,20 +144,27 @@ namespace pdftricks {
                 if(btn_range.get_active() == true){
                     model_thumbs.clear();
                     type_split = "range";
-                    var file_pdf = filechooser.get_filename();
-                    if(with_thumbs.get_active() == true){
-                        create_thumbs.begin(file_pdf, (obj, res) => {
-                            create_thumb_finished (create_thumbs.end (res));
-                        });
-                    }
-                    revealer.set_reveal_child(true);
+                    //var file_pdf = filechooser.get_filename();
+                    //  if(with_thumbs.get_active() == true){
+                    //      create_thumbs.begin(file_pdf, (obj, res) => {
+                    //          create_thumb_finished (create_thumbs.end (res));
+                    //      });
+                    //  }
+                    //revealer.set_reveal_child(true);
                 }
-
+                var file_pdf = filechooser.get_filename();
+                if(file_pdf != null && file_pdf != ""){
+                    split_button.set_sensitive (true);
+                }
             });
             btn_all.toggled.connect(() => {
                 if(btn_all.get_active() == true){
                     type_split = "all";
                     revealer.set_reveal_child(false);
+                }
+                var file_pdf = filechooser.get_filename();
+                if(file_pdf != null && file_pdf != ""){
+                    split_button.set_sensitive (true);
                 }
             });
 
@@ -165,6 +172,10 @@ namespace pdftricks {
                 if(btn_colors.get_active() == true){
                     type_split = "colors";
                     revealer.set_reveal_child(false);
+                }
+                var file_pdf = filechooser.get_filename();
+                if(file_pdf != null && file_pdf != ""){
+                    split_button.set_sensitive (true);
                 }
             });
             split_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
@@ -181,15 +192,15 @@ namespace pdftricks {
                 btn_range.set_sensitive (true);
                 btn_colors.set_sensitive (true);
                 model_thumbs.clear();
-                if(btn_range.get_active() == true){
-                    if(with_thumbs.get_active() == true){
-                        view_thumbs.set_columns(page_size);
-                        create_thumbs.begin(file_pdf, (obj, res) => {
-                            create_thumb_finished (create_thumbs.end (res));
-                        });
-                    }
-                    revealer.set_reveal_child(true);
-                }
+                //  if(btn_range.get_active() == true){
+                //      if(with_thumbs.get_active() == true){
+                //          view_thumbs.set_columns(page_size);
+                //          create_thumbs.begin(file_pdf, (obj, res) => {
+                //              create_thumb_finished (create_thumbs.end (res));
+                //          });
+                //      }
+                //      revealer.set_reveal_child(true);
+                //  }
             });
 
             var grid = new Gtk.Grid ();
@@ -207,7 +218,7 @@ namespace pdftricks {
             grid.attach (btn_all, 2, 1);
             grid.attach (btn_range, 2, 2);
             grid.attach (btn_colors, 2, 3);
-            grid.attach (with_thumbs, 2, 4);
+            //grid.attach (with_thumbs, 2, 4);
             grid.attach (split_button, 1, 5, 2);
             grid.attach (revealer, 1, 6, 2);
 
@@ -225,7 +236,7 @@ namespace pdftricks {
             proccess_finished.connect (
                 (result) => {
                     spinner.active = false;
-                    split_button.set_sensitive (false);
+                    split_button.set_sensitive (true);
                     if(result){
                         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
                         message_dialog.set_transient_for(window);
@@ -389,7 +400,6 @@ namespace pdftricks {
             string output_filename = output_file.replace(".pdf", "_" + label + ".pdf");
             try{
                 var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dFirstPage=" + page_start.to_string() + " -dLastPage=" + page_end.to_string() + " -sOutputFile=\"" + output_filename +"\" \"" + file_pdf + "\"";
-                print(cmd);
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 critical (e.message);
@@ -446,6 +456,10 @@ namespace pdftricks {
                         spinner.active = false;
                         ret = false;
                     }
+                }
+                if(stderr != ""){
+                    spinner.active = false;
+                    ret = false;
                 }
                 Idle.add ((owned) callback);
                 return null;

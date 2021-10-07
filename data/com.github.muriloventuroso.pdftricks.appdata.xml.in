@@ -111,6 +111,15 @@
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/muriloventuroso/pdftricks/master/data/screenshot2.png</image>
     </screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/muriloventuroso/pdftricks/master/data/screenshot3.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/muriloventuroso/pdftricks/master/data/screenshot4.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/muriloventuroso/pdftricks/master/data/screenshot5.png</image>
+    </screenshot>
   </screenshots>
   <provides>
     <binary>com.github.muriloventuroso.pdftricks</binary>
