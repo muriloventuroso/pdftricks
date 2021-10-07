@@ -5,6 +5,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_group>MuriloVenturoso</project_group>
   <project_license>GPL-3.0+</project_license>
+  <value key="x-appcenter-suggested-price">1</value>
   <value key="x-appcenter-stripe">pk_live_8nDudUPTmiwzRlzvKulsBlVm</value>
   <name>PDF Tricks</name>
   <summary>Tricks for PDF Files</summary>
@@ -19,6 +20,12 @@
     <p>In recent versions of ImageMagick has been added a security policy that blocks manipulations in PDF files. This affects PDFTricks operations. To correct this change the settings of your ImageMagick installation. Check the homepage for instructions.</p>
   </description>
   <releases>
+    <release version="0.4.0" date="2021-08-19">
+      <description>
+        <p>Bugfix</p>
+        <p>Update Translations</p>
+      </description>
+    </release>
     <release version="0.3.1" date="2021-04-21">
       <description>
         <p>Default save location of compressed pdf to same as the original</p>
