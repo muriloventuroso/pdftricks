@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
 "PO-Revision-Date: 2021-10-10 05:05+0000\n"
-"Last-Translator: Frank.wu <me@wuzhiping.top>\n"
+"Last-Translator: Eric <spice2wolf@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "pdftricks/extra/zh_Hans/>\n"
 "Language: zh\n"
@@ -29,11 +29,8 @@ msgid "Tricks for PDF Files"
 msgstr "PDF 文件使用技巧"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
-#, fuzzy
 msgid "A simple, efficient application for small manipulations in PDF files."
-msgstr ""
-"一个让您了解简单、高效的 PDF 文件小技巧的应用。压缩、拆分、合并和转换PDF文"
-"件。"
+msgstr "一个简单、高效的应用程序，用于 PDF 文件的小操作。"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
@@ -132,20 +129,16 @@ msgid "Tips & Tricks for PDF files"
 msgstr "PDF文件的小提示和小技巧"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
-#, fuzzy
 msgid ""
 "A simple, efficient app for small manipulation of PDF files. Compress, "
 "split, merge and convert PDF."
-msgstr ""
-"一个让您了解简单、高效的 PDF 文件小技巧的应用。压缩、拆分、合并和转换PDF文"
-"件。"
+msgstr "一个用于PDF文件小操作的简单、高效的应用程序。压缩、分割、合并和转换 PDF。"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
 msgid "com.github.muriloventuroso.pdftricks"
 msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:15
-#, fuzzy
 msgid "PDF;utilities;"
 msgstr "PDF;utilies;"
 
