@@ -88,8 +88,8 @@ modules:
       - '--enable-zero-configuration'
     sources:
       - type: archive
-        url: https://download.imagemagick.org/ImageMagick/download/ImageMagick-7.1.0-4.tar.xz
-        sha256: 1a54bd46947f16fb29cf083be3614a14135f2fe9d1aa20665a85a8940bf6dc65
+        url: https://download.imagemagick.org/ImageMagick/download/ImageMagick-7.1.0-10.tar.xz
+        sha256: b6b242e89ed7b2f681a2e83340d95a0cc97c1077f189dc1b675ec93f7e05ac7d
       - type: shell
         commands:
           - sed -i '32a <policy domain=\\"coder\\" rights=\\"read | write\\"
