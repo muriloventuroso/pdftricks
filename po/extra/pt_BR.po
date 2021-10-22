@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2019-08-01 05:14+0000\n"
-"Last-Translator: André Marcelo Alvarenga <andrealvarenga@gmx.net>\n"
+"PO-Revision-Date: 2021-10-23 23:33+0000\n"
+"Last-Translator: SC <lalocas@protonmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "pdftricks/extra/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.8-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -39,7 +39,7 @@ msgstr "Comprimir PDF (múltiplas resoluções)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr "Dividir PDF (Todas as páginas ou intervalos)"
+msgstr "Dividir PDF (todas as páginas ou intervalos)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
@@ -57,69 +57,73 @@ msgid ""
 "correct this change the settings of your ImageMagick installation. Check de "
 "homepage for instructions."
 msgstr ""
+"Em versões recentes do ImageMagick foi adicionada uma política de segurança "
+"que bloqueia manipulações em arquivos PDF. Isso afeta as operações do "
+"PDFTricks. Para corrigir isso, altere as configurações da instalação do "
+"ImageMagick. Verifique a página inicial para obter instruções."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
 msgid "Disable button when is processing"
-msgstr ""
+msgstr "Desativar botão quando estiver processando"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:24
 msgid "Fix build with vala 0.44"
-msgstr ""
+msgstr "Corrigir compilação com vala 0,44"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
-msgstr ""
+msgstr "Atualizar traduções"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:65
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:70
 msgid "Bugfix"
-msgstr ""
+msgstr "Correção de erros"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:31
 msgid "spinner when processing"
-msgstr ""
+msgstr "ícone rotativo durante processamento"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:36
 msgid "Fix unselectable texts after merging"
-msgstr ""
+msgstr "Corrigir textos não selecionáveis após a fusão"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:41
 msgid "Fix density merge PDF"
-msgstr ""
+msgstr "Corrigir PDF de mesclagem de densidade"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:46
 msgid "Compression levels"
-msgstr ""
+msgstr "Níveis de compressão"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:52
 msgid "Convert PNG, JPG, SVG, BMP to PDF"
-msgstr ""
+msgstr "Converter PNG, JPG, SVG, BMP para PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:53
 msgid "Merge image files into PDF"
-msgstr ""
+msgstr "Mesclar arquivos de imagem em PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
 msgid "Convert JPG to PDF"
-msgstr ""
+msgstr "Converter JPG para PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:59
 msgid "Split pages by color (Black-White / Colored)"
-msgstr ""
+msgstr "Dividir as páginas por cor (branco-preto / colorido)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:75
 msgid "Compress File"
-msgstr ""
+msgstr "Compactar arquivo"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:76
 msgid "Split File"
-msgstr ""
+msgstr "Dividir arquivo"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:77
 msgid "Merge File"
-msgstr ""
+msgstr "Mesclar arquivo"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
 msgid "Murilo Venturoso"
@@ -130,22 +134,20 @@ msgid "Tips & Tricks for PDF files"
 msgstr "Dicas e Truques para Arquivos PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
-#, fuzzy
 msgid ""
 "A simple, efficient app for small manipulation of PDF files. Compress, "
 "split, merge and convert PDF."
 msgstr ""
-"Uma aplicação simples e eficiente para pequenas manipulações em arquivos "
-"PDF. Comprima, divida, mescle e converta arquivos PDF."
+"Um aplicativo simples e eficiente para pequena manipulação de arquivos PDF. "
+"Comprimir, dividir, mesclar e converter PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
 msgid "com.github.muriloventuroso.pdftricks"
 msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:15
-#, fuzzy
 msgid "PDF;utilities;"
-msgstr "pdf;utilitarios;"
+msgstr "pdf;utilitários;"
 
 #~ msgid ""
 #~ "A simple, efficient application for small manipulations in PDF files. "
