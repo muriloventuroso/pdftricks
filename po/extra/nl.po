@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2020-01-16 19:21+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"PO-Revision-Date: 2023-01-26 17:49+0000\n"
+"Last-Translator: Philip Goto <philip.goto@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/pdftricks/extra/nl/"
 ">\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10.2-dev\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -31,8 +31,8 @@ msgstr "Trucjes voor PDF-bestanden"
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
 msgid "A simple, efficient application for small manipulations in PDF files."
 msgstr ""
-"Een eenvoudige, efficiënte toepassing voor het uitvoeren van kleine "
-"bewerkingen op PDF-bestanden."
+"Een eenvoudige, efficiënte app voor het uitvoeren van kleine bewerkingen op "
+"PDF-bestanden."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
