@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2023-10-14 02:02+0000\n"
+"PO-Revision-Date: 2024-01-07 23:06+0000\n"
 "Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/pdftricks/"
 "extra/id/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -38,7 +38,7 @@ msgstr "Kompres PDF (beberapa resolusi)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr ""
+msgstr "Pisahkan PDF (Semua halaman atau rentang halaman)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
@@ -56,88 +56,94 @@ msgid ""
 "correct this change the settings of your ImageMagick installation. Check de "
 "homepage for instructions."
 msgstr ""
+"Pada versi terbaru ImageMagick telah ditambahkan kebijakan keamanan yang "
+"memblokir manipulasi pada file PDF. Hal ini mempengaruhi operasi PDFTricks. "
+"Untuk memperbaikinya, ubahlah pengaturan instalasi ImageMagick Anda. Periksa "
+"di beranda untuk instruksi."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
 msgid "Disable button when is processing"
-msgstr ""
+msgstr "Tombol Nonaktifkan saat memproses"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:24
 msgid "Fix build with vala 0.44"
-msgstr ""
+msgstr "Perbaikan build dengan vala 0.44"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:25
 msgid "Update Translations"
-msgstr ""
+msgstr "Pembaruan Terjemahan"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:26
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:47
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:65
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:70
 msgid "Bugfix"
-msgstr ""
+msgstr "Perbaikan bug"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:31
 msgid "spinner when processing"
-msgstr ""
+msgstr "pemintal saat memproses"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:36
 msgid "Fix unselectable texts after merging"
-msgstr ""
+msgstr "Memperbaiki teks yang tidak dapat dipilih setelah penggabungan"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:41
 msgid "Fix density merge PDF"
-msgstr ""
+msgstr "Perbaiki kepadatan menggabungkan PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:46
 msgid "Compression levels"
-msgstr ""
+msgstr "Tingkat kompresi"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:52
 msgid "Convert PNG, JPG, SVG, BMP to PDF"
-msgstr ""
+msgstr "Ubah PNG, JPG, SVG, BMP ke PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:53
 msgid "Merge image files into PDF"
-msgstr ""
+msgstr "Gabungkan file gambar ke dalam PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
 msgid "Convert JPG to PDF"
-msgstr ""
+msgstr "Konversi JPG ke PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:59
 msgid "Split pages by color (Black-White / Colored)"
-msgstr ""
+msgstr "Pisahkan halaman berdasarkan warna (Hitam-Putih/Berwarna)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:75
 msgid "Compress File"
-msgstr ""
+msgstr "Kompres File"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:76
 msgid "Split File"
-msgstr ""
+msgstr "Pisahkan File"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:77
 msgid "Merge File"
-msgstr ""
+msgstr "Gabungkan File"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "Murilo Venturoso"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:4
 msgid "Tips & Tricks for PDF files"
-msgstr ""
+msgstr "Kiat & Trik untuk file PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
 msgid ""
 "A simple, efficient app for small manipulation of PDF files. Compress, "
 "split, merge and convert PDF."
 msgstr ""
+"Aplikasi sederhana dan efisien untuk manipulasi kecil file PDF. Kompres, "
+"pisahkan, gabungkan, dan konversikan PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
 msgid "com.github.muriloventuroso.pdftricks"
-msgstr ""
+msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:15
 msgid "PDF;utilities;"
-msgstr ""
+msgstr "PDF;utilitas;"
