@@ -8,21 +8,24 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2018-12-24 17:29-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-01-29 06:24+0000\n"
+"Last-Translator: Software In Interlingua <softinterlingua@gmail.com>\n"
+"Language-Team: Interlingua <https://hosted.weblate.org/projects/pdftricks/"
+"translations/ia/>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
-msgstr ""
+msgstr "Retro"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
@@ -115,7 +118,7 @@ msgstr ""
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
-msgstr ""
+msgstr "Successo."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
@@ -125,7 +128,7 @@ msgstr ""
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
-msgstr ""
+msgstr "Fallimento."
 
 #: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
@@ -133,18 +136,18 @@ msgstr ""
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
-msgstr ""
+msgstr "Selige le file a salveguardar"
 
 #: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
-msgstr ""
+msgstr "Salveguardar"
 
 #: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
-msgstr ""
+msgstr "Cancellar"
 
 #: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
@@ -177,7 +180,7 @@ msgstr ""
 #. The Model:
 #: src/Widgets/MergePDF.vala:46
 msgid "Add File"
-msgstr ""
+msgstr "Adder un file"
 
 #: src/Widgets/MergePDF.vala:47
 msgid "Remove Selected"
