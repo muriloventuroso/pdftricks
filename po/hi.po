@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2024-02-07 03:38+0000\n"
+"PO-Revision-Date: 2024-02-07 13:25+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/pdftricks/"
 "translations/hi/>\n"
@@ -25,50 +25,50 @@ msgstr "वापस"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr "पीडीएफ ट्रिक्स"
+msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr "पीडीएफ फाइलों के लिए ट्रिक्स"
+msgstr "PDF फाइलों के लिए ट्रिक्स"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr "पीडीएफ को संपीड़ित करें"
+msgstr "PDF को संपीड़ित करें"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
-"कम फ़ाइल आकार के साथ समान गुणवत्ता प्राप्त करने के लिए पीडीएफ फ़ाइल को "
-"संपीड़ित करें।"
+"कम फ़ाइल आकार के साथ समान गुणवत्ता प्राप्त करने के लिए PDF फ़ाइल को संपीड़ित "
+"करें।"
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr "पीडीएफ को विभाजित करें"
+msgstr "PDF को विभाजित करें"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
-"एक पीडीएफ फाइल को पेज रेंज के अनुसार विभाजित करें, या सभी पीडीएफ पेजों को कई "
-"पीडीएफ फाइलों में निकालें।"
+"एक PDF फाइल को पेज रेंज के अनुसार विभाजित करें, या सभी PDF पेजों को कई PDF "
+"फाइलों में निकालें।"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr "पीडीएफ विलय"
+msgstr "PDF विलय"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr ""
-"एकाधिक पीडीएफ फाइलों या छवियों का चयन करें, और उन्हें सेकंडों में मर्ज करें।"
+"एकाधिक PDF फाइलों या छवियों का चयन करें, और उन्हें सेकंडों में मर्ज करें।"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr "पीडीएफ कन्वर्ट करें"
+msgstr "PDF कन्वर्ट करें"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr "पीडीएफ फाइलों को जेपीजी, पीएनजी और टीएक्सटी फॉर्मेट में बदलें।"
+msgstr "PDF फाइलों को JPG, PNG और TXT फॉर्मेट में बदलें।"
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
@@ -221,14 +221,14 @@ msgstr "आपकी फ़ाइल को मर्ज करने में 
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
-msgstr "इमेजमैजिक नीतियां"
+msgstr "ImageMagick नीतियां"
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
-"इस ऑपरेशन को रोकने वाली इमेजमैजिक सुरक्षा नीतियों को बदलें और पुनः प्रयास "
+"इस ऑपरेशन को रोकने वाली ImageMagick सुरक्षा नीतियों को बदलें और पुनः प्रयास "
 "करें।"
 
 #: src/Widgets/ConvertPDF.vala:42
