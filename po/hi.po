@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2024-02-07 13:25+0000\n"
-"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
+"PO-Revision-Date: 2024-02-12 19:02+0000\n"
+"Last-Translator: Nitin Khalia <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/pdftricks/"
 "translations/hi/>\n"
 "Language: hi\n"
@@ -38,19 +38,19 @@ msgstr "PDF को संपीड़ित करें"
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
-"कम फ़ाइल आकार के साथ समान गुणवत्ता प्राप्त करने के लिए PDF फ़ाइल को संपीड़ित "
+"कम फाइल आकार के साथ समान गुणवत्ता प्राप्त करने के लिए PDF फाइल को संपीड़ित "
 "करें।"
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr "PDF को विभाजित करें"
+msgstr "PDF विभाजित करें"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
 msgstr ""
-"एक PDF फाइल को पेज रेंज के अनुसार विभाजित करें, या सभी PDF पेजों को कई PDF "
+"एक PDF फाइल को पेज रेंज के अनुसार विभाजित करें, या सभी PDF पन्नो को कई PDF "
 "फाइलों में निकालें।"
 
 #: src/Widgets/Welcome.vala:28
@@ -74,7 +74,7 @@ msgstr "PDF फाइलों को JPG, PNG और TXT फॉर्मेट 
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
 #: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
-msgstr "संपीड़ित करने के लिए फ़ाइल का चयन करें"
+msgstr "संपीड़ित करने के लिए फाइल का चयन करें"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
@@ -114,7 +114,7 @@ msgstr "संपीड़ित करें"
 
 #: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
-msgstr "संपीड़ित करने के लिए फ़ाइल:"
+msgstr "संपीड़ित करने के लिए फाइल:"
 
 #: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
@@ -127,7 +127,7 @@ msgstr "सफलता।"
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
-msgstr "आपकी फ़ाइल सफलतापूर्वक संपीड़ित हो गई थी।"
+msgstr "आपकी फाइल सफलतापूर्वक संपीड़ित हो गई थी।"
 
 #: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
@@ -137,11 +137,11 @@ msgstr "असफलता।"
 
 #: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
-msgstr "आपकी फ़ाइल को संपीड़ित करने में कोई समस्या थी।"
+msgstr "आपकी फाइल को संपीड़ित करने में कोई समस्या थी।"
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
-msgstr "सहेजने के लिए फ़ाइल का चयन करें"
+msgstr "सहेजने के लिए फाइल का चयन करें"
 
 #: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
@@ -156,11 +156,11 @@ msgstr "रद्द करें"
 
 #: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
-msgstr "सभी पृष्ठ निकालें"
+msgstr "सभी पन्ने निकालें"
 
 #: src/Widgets/SplitPDF.vala:55
 msgid "Select range of pages"
-msgstr "पृष्ठों की श्रेणी का चयन करें"
+msgstr "पन्नो की श्रेणी का चयन करें"
 
 #: src/Widgets/SplitPDF.vala:58
 msgid "Separate colored pages"
@@ -172,20 +172,20 @@ msgstr "विभाजित करें"
 
 #: src/Widgets/SplitPDF.vala:191
 msgid "File to Split:"
-msgstr "विभाजित करने के लिए फ़ाइल:"
+msgstr "विभाजित करने के लिए फाइल:"
 
 #: src/Widgets/SplitPDF.vala:216
 msgid "File split."
-msgstr "फ़ाइल विभाजन।"
+msgstr "फाइल विभाजन।"
 
 #: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
-msgstr "इस फ़ाइल को विभाजित नहीं किया जा सका।"
+msgstr "इस फाइल को विभाजित नहीं किया जा सका।"
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:46
 msgid "Add File"
-msgstr "फ़ाइल जोड़ें"
+msgstr "फाइल जोड़ें"
 
 #: src/Widgets/MergePDF.vala:47
 msgid "Remove Selected"
@@ -201,11 +201,11 @@ msgstr "खोलें"
 
 #: src/Widgets/MergePDF.vala:109
 msgid "Files"
-msgstr "फ़ाइलें"
+msgstr "फाइलें"
 
 #: src/Widgets/MergePDF.vala:110
 msgid "Pages"
-msgstr "पृष्ठों"
+msgstr "पन्ने"
 
 #: src/Widgets/MergePDF.vala:123
 msgid "Merge"
@@ -213,11 +213,11 @@ msgstr "मर्ज"
 
 #: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
-msgstr "आपकी फ़ाइल सफलतापूर्वक मर्ज कर दी गई।"
+msgstr "आपकी फाइल सफलतापूर्वक मर्ज कर दी गई।"
 
 #: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
-msgstr "आपकी फ़ाइल को मर्ज करने में एक समस्या थी।"
+msgstr "आपकी फाइल को मर्ज करने में एक समस्या थी।"
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
@@ -233,7 +233,7 @@ msgstr ""
 
 #: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
-msgstr "परिवर्तित करने के लिए फ़ाइल का चयन करें"
+msgstr "परिवर्तित करने के लिए फाइल का चयन करें"
 
 #: src/Widgets/ConvertPDF.vala:50
 msgid "Convert"
@@ -241,7 +241,7 @@ msgstr "परिवर्तित करें"
 
 #: src/Widgets/ConvertPDF.vala:97
 msgid "File to Convert:"
-msgstr "परिवर्तित करने के लिए फ़ाइल:"
+msgstr "परिवर्तित करने के लिए फाइल:"
 
 #: src/Widgets/ConvertPDF.vala:100
 msgid "Format to Convert:"
@@ -249,11 +249,11 @@ msgstr "परिवर्तित करने का प्रारूप:"
 
 #: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
-msgstr "फ़ाइल परिवर्तित।"
+msgstr "फाइल परिवर्तित।"
 
 #: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
-msgstr "इस फ़ाइल को परिवर्तित नहीं किया जा सका।"
+msgstr "इस फाइल को परिवर्तित नहीं किया जा सका।"
 
 #: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
