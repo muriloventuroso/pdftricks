@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2024-03-28 21:01+0000\n"
+"PO-Revision-Date: 2024-07-07 16:09+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/pdftricks/"
 "translations/hi/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -25,11 +25,11 @@ msgstr "पीछे"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr "PDF Tricks"
+msgstr "PDF ट्रिक्स"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr "PDF फाइलों के लिए युक्तियाँ"
+msgstr "PDF फाइलों के लिए युक्तियां"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
@@ -68,7 +68,7 @@ msgstr "PDF परिवर्तन"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr "PDF फाइलों को JPG, PNG और TXT फॉर्मेट में बदलें।"
+msgstr "PDF फाइलों को JPG, PNG और TXT प्रारूप में बदलें।"
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
@@ -152,7 +152,7 @@ msgstr "सहेजें"
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
-msgstr "रद्द"
+msgstr "रद्द करें"
 
 #: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
@@ -257,4 +257,4 @@ msgstr "इस फाइल को परिवर्तित नहीं क�
 
 #: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
-msgstr "इनपुट फॉर्मेट आउटपुट फॉर्मेट के समान है।"
+msgstr "इनपुट प्रारूप आउटपुट प्रारूप के समान है।"
