@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2024-03-28 21:01+0000\n"
+"PO-Revision-Date: 2024-07-07 16:09+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/pdftricks/extra/hi/"
 ">\n"
@@ -17,20 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.7-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
 msgid "PDF Tricks"
-msgstr "PDF Tricks"
+msgstr "PDF ट्रिक्स"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
 msgid "Tricks for PDF Files"
-msgstr "PDF फाइलों के लिए ट्रिक्स"
+msgstr "PDF फाइलों के लिए युक्तियां"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
 msgid "A simple, efficient application for small manipulations in PDF files."
-msgstr "PDF फाइलों में छोटे हेरफेर के लिए एक सरल, कुशल एप्लिकेशन।"
+msgstr "PDF फाइलों में छोटे हेरफेर के लिए एक सरल, कुशल अनुप्रयोग।"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
@@ -38,7 +38,7 @@ msgstr "PDF को संपीड़ित करें (एकाधिक र
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr "विभाजित PDF (सभी पृष्ठ या पृष्ठ श्रेणियाँ)"
+msgstr "विभाजित PDF (सभी पृष्ठ या पृष्ठ श्रेणियां)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
@@ -58,8 +58,8 @@ msgid ""
 msgstr ""
 "ImageMagick के हाल के संस्करणों में एक सुरक्षा नीति जोड़ी गई है जो PDF फाइलों"
 " में हेरफेर को रोकती है। यह PDFTricks संचालन को प्रभावित करता है। इसे ठीक "
-"करने के लिए अपने ImageMagick इंस्टॉलेशन की सेटिंग्स बदलें। निर्देशों के लिए "
-"होमपेज देखें।"
+"करने के लिए अपने ImageMagick स्थापना की सेटिंग्स बदलें। निर्देशों के लिए "
+"मुखपृष्ठ देखें।"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:23
 msgid "Disable button when is processing"
@@ -102,7 +102,7 @@ msgstr "PNG, JPG, SVG, BMP को PDF में बदलें"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:53
 msgid "Merge image files into PDF"
-msgstr "छवि फ़ाइलों को PDF में मर्ज करें"
+msgstr "छवि फाइलों को PDF में मर्ज करें"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:58
 msgid "Convert JPG to PDF"
@@ -114,15 +114,15 @@ msgstr "पृष्ठों को रंग के आधार पर वि
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:75
 msgid "Compress File"
-msgstr "फ़ाइल को संपीड़ित करें"
+msgstr "फाइल को संपीड़ित करें"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:76
 msgid "Split File"
-msgstr "विभाजित फ़ाइल"
+msgstr "विभाजित फाइल"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:77
 msgid "Merge File"
-msgstr "फ़ाइल मर्ज करें"
+msgstr "फाइल मर्ज करें"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:126
 msgid "Murilo Venturoso"
@@ -130,7 +130,7 @@ msgstr "मुरिलो वेंटुरोसो"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:4
 msgid "Tips & Tricks for PDF files"
-msgstr "PDF फाइलों के लिए टिप्स और ट्रिक्स"
+msgstr "PDF फाइलों के लिए सुझाव और युक्तियां"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:6
 msgid ""
@@ -138,7 +138,7 @@ msgid ""
 "split, merge and convert PDF."
 msgstr ""
 "PDF फाइलों में छोटे हेरफेर के लिए एक सरल, कुशल ऐप। PDF को संपीड़ित करें, "
-"विभाजित करें, मर्ज करें और कनवर्ट करें।"
+"विभाजित करें, मर्ज करें और परिवर्तित करें।"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:11
 msgid "com.github.muriloventuroso.pdftricks"
@@ -146,4 +146,4 @@ msgstr "com.github.muriloventuroso.pdftricks"
 
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:15
 msgid "PDF;utilities;"
-msgstr "PDF; उपयोगिताएँ;"
+msgstr "PDF;उपयोगिताएं;"
