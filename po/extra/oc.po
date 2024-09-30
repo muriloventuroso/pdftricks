@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2023-10-01 16:48+0000\n"
+"PO-Revision-Date: 2024-10-01 14:16+0000\n"
 "Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan <https://hosted.weblate.org/projects/pdftricks/extra/"
 "oc/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.1-dev\n"
+"X-Generator: Weblate 5.8-dev\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
@@ -26,15 +26,15 @@ msgstr "Astúcias PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
 msgid "Tricks for PDF Files"
-msgstr ""
+msgstr "Trucs pels fichièrs PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
 msgid "A simple, efficient application for small manipulations in PDF files."
-msgstr ""
+msgstr "Una aplicacion simpla e eficaça de manipulacion de fichièrs PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
-msgstr ""
+msgstr "Compressa un PDF (multiplas resolucions)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
