@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2024-11-20 00:39+0000\n"
+"PO-Revision-Date: 2024-11-20 18:49+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/pdftricks/"
 "translations/et/>\n"
@@ -25,51 +25,53 @@ msgstr "Tagasi"
 
 #: src/Application.vala:77 src/Application.vala:95
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
-msgstr ""
+msgstr "Trikid pdf-failide jaoks"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr ""
+msgstr "Paki pdf-fail kokku"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
+"Pdf-faili kokkupakkimise tulemuseks on sarnase kvaliteediga, kuid väiksem "
+"fail."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr ""
+msgstr "Jaga pdf-fail tükkideks"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
 "Split a PDF file by page ranges, or extract all PDF pages to multiple PDF "
 "files."
-msgstr ""
+msgstr "Jaga pdf-fail lehevahemike kaupa või tee igast lehest omaette pdf-fail."
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr ""
+msgstr "Liida pdf-failid"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
-msgstr ""
+msgstr "Vali mitu pdf-faili või pilti ja mõne hetkega loo neist uus fail."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr ""
+msgstr "Konverteeri pdf-fail teise vormingusse"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr ""
+msgstr "Konverteeri pdf-fail jpg-, png- või tekstivormingusse."
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
 #: src/Widgets/MergePDF.vala:259
 msgid "Select the file to compress"
-msgstr ""
+msgstr "Vali kokkupakitav fail"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
