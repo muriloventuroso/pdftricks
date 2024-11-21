@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2024-11-20 18:49+0000\n"
+"PO-Revision-Date: 2024-11-21 19:41+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/pdftricks/"
 "translations/et/>\n"
@@ -75,181 +75,183 @@ msgstr "Vali kokkupakitav fail"
 
 #: src/Widgets/CompressPDF.vala:46 src/Widgets/CompressPDF.vala:74
 msgid "Good quality, good compression"
-msgstr ""
+msgstr "Hea kvaliteet, tihe pakkimine"
 
 #: src/Widgets/CompressPDF.vala:52
 msgid "Extreme Compression"
-msgstr ""
+msgstr "Väga tihe pakkimine"
 
 #: src/Widgets/CompressPDF.vala:54
 msgid "Medium Compression"
-msgstr ""
+msgstr "Keskmiselt tihe pakkimine"
 
 #: src/Widgets/CompressPDF.vala:56
 msgid "Recommended Compression"
-msgstr ""
+msgstr "Soovituslik pakkimise tihedus"
 
 #: src/Widgets/CompressPDF.vala:58
 msgid "Less Compression"
-msgstr ""
+msgstr "Vähetihe pakkimine"
 
 #: src/Widgets/CompressPDF.vala:70
 msgid "Less quality, high compression"
-msgstr ""
+msgstr "Väiksem kvaliteet, tihe pakkimine"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "Good quality, optimized for printing"
-msgstr ""
+msgstr "Hea kvaliteet, sobib trükkimiseks"
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
-msgstr ""
+msgstr "Hea kvaliteet, vähetihe pakkimine"
 
 #: src/Widgets/CompressPDF.vala:85
 msgid "Compress"
-msgstr ""
+msgstr "Paki"
 
 #: src/Widgets/CompressPDF.vala:105
 msgid "File to Compress:"
-msgstr ""
+msgstr "Pakitav fail:"
 
 #: src/Widgets/CompressPDF.vala:108
 msgid "Compression Level:"
-msgstr ""
+msgstr "Pakkimise tase:"
 
 #: src/Widgets/CompressPDF.vala:130 src/Widgets/SplitPDF.vala:216
 #: src/Widgets/MergePDF.vala:153 src/Widgets/ConvertPDF.vala:120
 msgid "Success."
-msgstr ""
+msgstr "Valmis."
 
 #: src/Widgets/CompressPDF.vala:130
 msgid "Your file was succefully compressed."
-msgstr ""
+msgstr "Sinu faili kokkupakkimine õnnestus."
 
 #: src/Widgets/CompressPDF.vala:136 src/Widgets/SplitPDF.vala:222
 #: src/Widgets/MergePDF.vala:159 src/Widgets/ConvertPDF.vala:126
 #: src/Widgets/ConvertPDF.vala:143
 msgid "Failure."
-msgstr ""
+msgstr "Pole valmis."
 
 #: src/Widgets/CompressPDF.vala:136
 msgid "There was a problem compressing your file."
-msgstr ""
+msgstr "Sinu faili kokkupakkimisel tekkis viga."
 
 #: src/Widgets/CompressPDF.vala:156 src/Widgets/ConvertPDF.vala:152
 msgid "Select the file to save"
-msgstr ""
+msgstr "Vali salvestatav fail"
 
 #: src/Widgets/CompressPDF.vala:157 src/Widgets/SplitPDF.vala:240
 #: src/Widgets/MergePDF.vala:260 src/Widgets/ConvertPDF.vala:153
 msgid "Save"
-msgstr ""
+msgstr "Salvesta"
 
 #: src/Widgets/CompressPDF.vala:158 src/Widgets/SplitPDF.vala:241
 #: src/Widgets/MergePDF.vala:73 src/Widgets/MergePDF.vala:261
 #: src/Widgets/ConvertPDF.vala:154
 msgid "Cancel"
-msgstr ""
+msgstr "Katkesta"
 
 #: src/Widgets/SplitPDF.vala:52
 msgid "Extract all pages"
-msgstr ""
+msgstr "Tee igast lehest omaette pdf-fail"
 
 #: src/Widgets/SplitPDF.vala:55
 msgid "Select range of pages"
-msgstr ""
+msgstr "Tee pdf-failid valitud lehevahemike kaupa"
 
 #: src/Widgets/SplitPDF.vala:58
 msgid "Separate colored pages"
-msgstr ""
+msgstr "Eralda värvilised lehed"
 
 #: src/Widgets/SplitPDF.vala:149
 msgid "Split"
-msgstr ""
+msgstr "Jaga fail"
 
 #: src/Widgets/SplitPDF.vala:191
 msgid "File to Split:"
-msgstr ""
+msgstr "Jagatav fail:"
 
 #: src/Widgets/SplitPDF.vala:216
 msgid "File split."
-msgstr ""
+msgstr "Fail on jagatud."
 
 #: src/Widgets/SplitPDF.vala:222
 msgid "Could not split this file."
-msgstr ""
+msgstr "Faili jagamine ei õnnestunud."
 
 #. The Model:
 #: src/Widgets/MergePDF.vala:46
 msgid "Add File"
-msgstr ""
+msgstr "Lisa fail"
 
 #: src/Widgets/MergePDF.vala:47
 msgid "Remove Selected"
-msgstr ""
+msgstr "Eemalda valitud"
 
 #: src/Widgets/MergePDF.vala:48
 msgid "Clear All"
-msgstr ""
+msgstr "Tühjenda kõik"
 
 #: src/Widgets/MergePDF.vala:72
 msgid "Open"
-msgstr ""
+msgstr "Ava"
 
 #: src/Widgets/MergePDF.vala:109
 msgid "Files"
-msgstr ""
+msgstr "Failid"
 
 #: src/Widgets/MergePDF.vala:110
 msgid "Pages"
-msgstr ""
+msgstr "Lehed"
 
 #: src/Widgets/MergePDF.vala:123
 msgid "Merge"
-msgstr ""
+msgstr "Mesti"
 
 #: src/Widgets/MergePDF.vala:153
 msgid "Your file was succefully merged."
-msgstr ""
+msgstr "Sinu faili mestimine õnnestus."
 
 #: src/Widgets/MergePDF.vala:159
 msgid "There was a problem merging your file."
-msgstr ""
+msgstr "Sinu faili mestimisel tekkis viga."
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid "ImageMagick Policies"
-msgstr ""
+msgstr "ImageMagicku reeglistik"
 
 #: src/Widgets/MergePDF.vala:293 src/Widgets/ConvertPDF.vala:225
 msgid ""
 "Change the ImageMagick security policies that prevent this operation and try "
 "again."
 msgstr ""
+"ImageMagicku reeglistik keelab selle tegevuse, palun muuda neid ja proovi "
+"uuesti."
 
 #: src/Widgets/ConvertPDF.vala:42
 msgid "Select the file to convert"
-msgstr ""
+msgstr "Vali konverteeritav fail"
 
 #: src/Widgets/ConvertPDF.vala:50
 msgid "Convert"
-msgstr ""
+msgstr "Konverteeri"
 
 #: src/Widgets/ConvertPDF.vala:97
 msgid "File to Convert:"
-msgstr ""
+msgstr "Konverteeritav fail:"
 
 #: src/Widgets/ConvertPDF.vala:100
 msgid "Format to Convert:"
-msgstr ""
+msgstr "Vorming, millesse soovid konverteerida:"
 
 #: src/Widgets/ConvertPDF.vala:120
 msgid "File converted."
-msgstr ""
+msgstr "Faili konverteerimine õnnestus."
 
 #: src/Widgets/ConvertPDF.vala:126
 msgid "Could not convert this file."
-msgstr ""
+msgstr "Faili konverteerimine ei õnnestunud."
 
 #: src/Widgets/ConvertPDF.vala:143
 msgid "The input format is the same as the output format."
-msgstr ""
+msgstr "Sisendvorming ja väljundvorming on samad ja nii konverteerida ei saa."
