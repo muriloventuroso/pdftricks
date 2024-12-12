@@ -8,19 +8,21 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2019-01-28 11:13-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-12-13 19:00+0000\n"
+"Last-Translator: Jiří Podhorecký <j.podhorecky@volny.cz>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/pdftricks/extra/cs/"
+">\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.9-rc\n"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:8
 #: data/com.github.muriloventuroso.pdftricks.desktop.in:3
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Triky"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:9
 msgid "Tricks for PDF Files"
@@ -28,15 +30,15 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:11
 msgid "A simple, efficient application for small manipulations in PDF files."
-msgstr ""
+msgstr "Jednoduchá a efektivní aplikace pro drobnou manipulaci se soubory PDF."
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:13
 msgid "Compress PDF (multiple resolutions)"
-msgstr ""
+msgstr "Komprese PDF (více rozlišení)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:14
 msgid "Split PDF (All pages or page ranges)"
-msgstr ""
+msgstr "Rozdělení PDF (všechny stránky nebo rozsahy stránek)"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
