@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 08:26-0300\n"
-"PO-Revision-Date: 2025-01-20 12:34+0000\n"
+"PO-Revision-Date: 2025-01-20 12:35+0000\n"
 "Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/pdftricks/extra/"
 "fi/>\n"
@@ -42,7 +42,7 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:15
 msgid "Merge PDF"
-msgstr ""
+msgstr "Yhdistä PDF"
 
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:16
 #: data/com.github.muriloventuroso.pdftricks.appdata.xml.in:64
