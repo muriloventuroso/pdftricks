@@ -54,11 +54,12 @@ msgstr ""
 
 #: src/Widgets/Welcome.vala:28
 msgid "Merge PDF"
-msgstr ""
+msgstr "PDF ஐ ஒன்றிணைக்கவும்"
 
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr ""
+"பல PDF கோப்புகள் அல்லது படங்களைத் தேர்ந்தெடுத்து, அவற்றை நொடிகளில் ஒன்றிணைக்கவும்."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
