@@ -8,21 +8,25 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2018-12-24 17:29-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-02-25 20:42+0000\n"
+"Last-Translator: Víctor Quirós <vitorquiroso@gmail.com>\n"
+"Language-Team: Asturian <https://hosted.weblate.org/projects/pdftricks/"
+"translations/ast/>\n"
 "Language: ast\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.2-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: src/Application.vala:77 src/Application.vala:95
+#, fuzzy
 msgid "PDF Tricks"
-msgstr ""
+msgstr "PDF Tricks"
 
 #: src/Widgets/Welcome.vala:25
 msgid "Tricks for PDF files"
@@ -30,15 +34,18 @@ msgstr ""
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr ""
+msgstr "Comprimir PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
+"Comprima un archivu PDF para llograr la mesma calidá con un tamañu d'archivu "
+"amenorgáu."
 
 #: src/Widgets/Welcome.vala:27
+#, fuzzy
 msgid "Split PDF"
-msgstr ""
+msgstr "Dividir PDF"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
@@ -56,7 +63,7 @@ msgstr ""
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
-msgstr ""
+msgstr "Convertir PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
