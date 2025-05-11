@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
 "PO-Revision-Date: 2025-05-12 18:01+0000\n"
-"Last-Translator: nomen_niesco <bugg.y1vob@aleeas.com>\n"
+"Last-Translator: Dream X <nodem49316@daupload.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/pdftricks/"
 "translations/fr/>\n"
 "Language: fr\n"
@@ -60,7 +60,7 @@ msgstr "Fusionner les PDF"
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr ""
-"Sélectionner plusieurs fichiers PDF ou images et fusionnez-les en quelques "
+"Sélectionnez plusieurs fichiers PDF ou images et fusionnez-les en quelques "
 "secondes."
 
 #: src/Widgets/Welcome.vala:29
