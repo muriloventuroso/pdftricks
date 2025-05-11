@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2020-04-18 06:11+0000\n"
-"Last-Translator: Jeannette L <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2025-05-11 17:17+0000\n"
+"Last-Translator: nomen_niesco <bugg.y1vob@aleeas.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/pdftricks/"
 "translations/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0.2-dev\n"
+"X-Generator: Weblate 5.12-dev\n"
 
 #: src/Application.vala:72
 msgid "Back"
@@ -38,12 +38,12 @@ msgstr "Compresser PDF"
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
 msgstr ""
-"Compressez le fichier PDF pour obtenir la même qualité PDF en réduisant la "
-"taille du fichier."
+"Compresser un fichier PDF pour réduire la taille du fichier tout en "
+"préservant sa qualité."
 
 #: src/Widgets/Welcome.vala:27
 msgid "Split PDF"
-msgstr "Diviser PDF"
+msgstr "Diviser un PDF"
 
 #: src/Widgets/Welcome.vala:27
 msgid ""
@@ -60,7 +60,8 @@ msgstr "Fusionner les PDF"
 #: src/Widgets/Welcome.vala:28
 msgid "Select multiple PDF files or images, and merge them in seconds."
 msgstr ""
-"Sélectionnez plusieurs fichiers PDF et fusionnez-les en quelques secondes."
+"Sélectionner plusieurs fichiers PDF ou images et fusionnez-les en quelques "
+"secondes."
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF"
