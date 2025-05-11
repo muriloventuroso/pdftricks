@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
 "PO-Revision-Date: 2025-05-11 17:17+0000\n"
-"Last-Translator: nomen_niesco <bugg.y1vob@aleeas.com>\n"
+"Last-Translator: Dream X <nodem49316@daupload.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/pdftricks/"
 "translations/fr/>\n"
 "Language: fr\n"
@@ -33,7 +33,7 @@ msgstr "Astuces pour fichiers PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress PDF"
-msgstr "Compresser PDF"
+msgstr "Compresser un PDF"
 
 #: src/Widgets/Welcome.vala:26
 msgid "Compress a PDF file to get the same quality with reduced filesize."
