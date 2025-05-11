@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.pdftricks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 17:18-0300\n"
-"PO-Revision-Date: 2025-05-11 17:17+0000\n"
-"Last-Translator: Dream X <nodem49316@daupload.com>\n"
+"PO-Revision-Date: 2025-05-12 18:01+0000\n"
+"Last-Translator: nomen_niesco <bugg.y1vob@aleeas.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/pdftricks/"
 "translations/fr/>\n"
 "Language: fr\n"
@@ -69,7 +69,7 @@ msgstr "Convertir le PDF"
 
 #: src/Widgets/Welcome.vala:29
 msgid "Convert PDF files to JPG, PNG and TXT formats."
-msgstr "Convertissez des fichiers PDF aux formats JPG, PNG et TXT."
+msgstr "Convertir des fichiers PDF vers des formats JPG, PNG ou TXT."
 
 #: src/Widgets/CompressPDF.vala:45 src/Widgets/SplitPDF.vala:46
 #: src/Widgets/SplitPDF.vala:239 src/Widgets/MergePDF.vala:71
@@ -103,7 +103,7 @@ msgstr "Faible qualité, haute compression"
 
 #: src/Widgets/CompressPDF.vala:72
 msgid "Good quality, optimized for printing"
-msgstr "Bonne qualité, optimisé pour l'impression"
+msgstr "Bonne qualité, optimisée pour l'impression"
 
 #: src/Widgets/CompressPDF.vala:76
 msgid "High quality, less compression"
