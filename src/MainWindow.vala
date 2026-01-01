@@ -1,0 +1,140 @@
+/*
+* Copyright (c) 2018 Murilo Venturoso
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public
+* License as published by the Free Software Foundation; either
+* version 3 of the License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
+*
+* You should have received a copy of the GNU General Public
+* License along with this program; if not, write to the
+* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+* Boston, MA 02110-1301 USA
+*
+* Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
+*/
+
+public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
+
+    private Gtk.Button navigation_button;
+    private Gtk.HeaderBar headerbar;
+    private Welcome welcome;
+    private CompressPDF compress_pdf;
+    private SplitPDF split_pdf;
+    private MergePDF merge_pdf;
+    private ConvertPDF convert_pdf;
+    private Gtk.Stack stack;
+
+    public const string ACTION_PREFIX = "win.";
+    public const string ACTION_COMPRESS_PDF = "action_compress_pdf";
+    public const string ACTION_SPLIT_PDF = "action_split_pdf";
+    public const string ACTION_MERGE_PDF = "action_merge_pdf";
+    public const string ACTION_CONVERT_PDF = "action_convert_pdf";
+
+    public SimpleActionGroup actions;
+    public Gtk.ActionGroup main_actions;
+
+    private const ActionEntry[] ACTION_ENTRIES = {
+        { ACTION_COMPRESS_PDF, action_compress_pdf },
+        { ACTION_SPLIT_PDF, action_split_pdf },
+        { ACTION_MERGE_PDF, action_merge_pdf },
+        { ACTION_CONVERT_PDF, action_convert_pdf }
+    };
+
+    public MainWindow (Application application) {
+        Object (application: application);
+    }
+
+    construct {
+        Intl.setlocale ();
+
+        var actions = new SimpleActionGroup ();
+        actions.add_action_entries (ACTION_ENTRIES, this);
+        insert_action_group ("win", actions);
+
+        navigation_button = new Gtk.Button ();
+        navigation_button.action_name = "app.back";
+        navigation_button.get_style_context ().add_class ("back-button");
+        navigation_button.label = _("Back");
+
+        headerbar = new Gtk.HeaderBar ();
+        headerbar.show_close_button = true;
+        headerbar.title = _("PDF Tricks");
+        headerbar.pack_start (navigation_button);
+
+        welcome = new Welcome ();
+        compress_pdf = new CompressPDF (main_window);
+        split_pdf = new SplitPDF (main_window);
+        merge_pdf = new MergePDF (main_window);
+        convert_pdf = new ConvertPDF (main_window);
+
+        stack = new Gtk.Stack ();
+        stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
+        stack.add_named (welcome, "welcome");
+        stack.add_named (compress_pdf, "compress_pdf");
+        stack.add_named (split_pdf, "split_pdf");
+        stack.add_named (merge_pdf, "merge_pdf");
+        stack.add_named (convert_pdf, "convert_pdf");
+
+        icon_name = "com.github.muriloventuroso.pdftricks";
+        title = _("PDF Tricks");
+        add (stack);
+        set_size_request (800, 640);
+        set_resizable (false);
+        set_titlebar (headerbar);
+        insert_action_group ("win", actions);
+        show_all ();
+        hide ();
+
+        add_window (main_window);
+
+        var quit_action = new SimpleAction ("quit", null);
+        var back_action = new SimpleAction ("back", null);
+
+        add_action (back_action);
+
+        add_action (quit_action);
+
+        quit_action.activate.connect (() => {
+            if (main_window != null) {
+                main_window.destroy ();
+            }
+        });
+
+        back_action.activate.connect (() => {
+            handle_navigation_button_clicked ();
+        });
+
+        set_accels_for_action ("app.back", {"<Alt>Left", "Back"});
+    }
+
+    public void handle_navigation_button_clicked () {
+        navigation_button.hide ();
+        stack.set_visible_child (welcome);
+    }
+
+    public void action_compress_pdf () {
+        stack.set_visible_child (compress_pdf);
+        navigation_button.show ();
+    }
+
+    public void action_split_pdf () {
+        stack.set_visible_child (split_pdf);
+        navigation_button.show ();
+    }
+
+    public void action_merge_pdf () {
+        stack.set_visible_child (merge_pdf);
+        navigation_button.show ();
+    }
+
+    public void action_convert_pdf () {
+        stack.set_visible_child (convert_pdf);
+        navigation_button.show ();
+    }
+}
