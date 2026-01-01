@@ -28,22 +28,23 @@ foreach i : icon_sizes
 
 endforeach
 
-i18n.merge_file (
-    'desktop',
-    input: meson.project_name() + '.desktop.in',
+#======== Internationalization ========
+#Translate and install our .desktop file
+i18n.merge_file(
+    input: 'pdftricks.desktop.in',
     output: meson.project_name() + '.desktop',
+    po_dir: meson.project_source_root() / 'po' / 'extra',
+    type: 'desktop',
     install: true,
-    install_dir: join_paths(get_option('datadir'), 'applications'),
-    po_dir: join_paths(meson.source_root (), 'po'),
-    type: 'desktop'
+    install_dir: get_option('datadir') / 'applications'
 )
 
-
-i18n.merge_file (
-    'appdata',
-    input: meson.project_name() + '.appdata.xml.in',
-    output: meson.project_name() + '.appdata.xml',
+#======== Metainfo ========
+#Translate and install our .metainfo file
+i18n.merge_file(
+    input: 'pdftricks.metainfo.xml.in',
+    output: meson.project_name() + '.metainfo.xml',
+    po_dir: meson.project_source_root() / 'po' / 'extra',
     install: true,
-    install_dir: join_paths(get_option('datadir'), 'metainfo'),
-    po_dir: join_paths(meson.source_root (), 'po')
+    install_dir: get_option('datadir') / 'metainfo'
 )
