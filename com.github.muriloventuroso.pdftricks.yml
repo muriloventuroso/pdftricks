@@ -1,13 +1,12 @@
-app-id: com.github.muriloventuroso.pdftricks
-
+id: com.github.muriloventuroso.pdftricks
 runtime: io.elementary.Platform
-runtime-version: '6'
+runtime-version: '8.2'
 sdk: io.elementary.Sdk
-
 command: com.github.muriloventuroso.pdftricks
 
 finish-args:
   - '--share=ipc'
+  - '--device=dri'
   - '--socket=fallback-x11'
   - '--socket=wayland'
   - '--system-talk-name=org.freedesktop.Accounts'
@@ -87,9 +86,10 @@ modules:
       - '--with-zlib'
       - '--enable-zero-configuration'
     sources:
-      - type: archive
-        url: https://download.imagemagick.org/ImageMagick/download/ImageMagick-7.1.0-10.tar.xz
-        sha256: b6b242e89ed7b2f681a2e83340d95a0cc97c1077f189dc1b675ec93f7e05ac7d
+      - type: git
+        url: https://github.com/ImageMagick/ImageMagick.git
+        tag: 7.1.0-10
+        commit: 32bf14aa2ddb63cc919cf2fcb88a47998622cb69
       - type: shell
         commands:
           - sed -i '32a <policy domain=\\"coder\\" rights=\\"read | write\\"
