@@ -1,10 +1,9 @@
 # project name and programming language
-project('com.github.muriloventuroso.pdftricks', 'vala', 'c', version: '0.2.3')
-
-message ('project name and programming language')
-
-# Adds project arguments
-message ('Adds project arguments')
+project(
+    'com.github.muriloventuroso.pdftricks',
+    'vala',
+    'c',
+    version: '0.2.3')
 
 add_project_arguments([
         '-DGETTEXT_PACKAGE=\"@0@\"'.format(meson.project_name())
@@ -12,18 +11,8 @@ add_project_arguments([
     language: 'c',
 )
 
-# Include the translations module
-message('Include the translations module')
-
 i18n = import('i18n')
-
-# Set our translation domain
-message ('Set our translation domain')
-
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()), language:'c')
-
-# Adding deps
-message ('Listing dependencies')
 
 dependencies = [
     dependency('gio-unix-2.0', version: '>=2.20'),
@@ -33,8 +22,7 @@ dependencies = [
 config_data = configuration_data()
 config_data.set('EXEC_NAME', meson.project_name())
 
-# Src build
-message ('Src build')
+
 
 conf_data = configuration_data()
 conf_data.set_quoted('PROJECT_NAME', meson.project_name())
