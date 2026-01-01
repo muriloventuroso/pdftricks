@@ -19,8 +19,7 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-namespace pdftricks {
-    public class Welcome : Gtk.Grid {
+public class PDFTricks.Welcome : Gtk.Grid {
         construct {
             var welcome = new Granite.Widgets.Welcome ("PDF Tricks", _("Tricks for PDF files"));
             welcome.append ("compress-pdf", _("Compress PDF"), _("Compress a PDF file to get the same quality with reduced filesize."));
@@ -34,5 +33,4 @@ namespace pdftricks {
             welcome.get_button_from_index(2).action_name = Application.ACTION_PREFIX + Application.ACTION_MERGE_PDF;
             welcome.get_button_from_index(3).action_name = Application.ACTION_PREFIX + Application.ACTION_CONVERT_PDF;
         }
-    }
 }

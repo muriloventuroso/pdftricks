@@ -19,8 +19,7 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-namespace pdftricks {
-    public class MergePDF : Gtk.Box {
+public class PDFTricks.MergePDF : Gtk.Box {
         public signal void proccess_begin ();
         public signal void proccess_finished (bool result);
         public Gtk.Window window { get; construct; }
@@ -335,6 +334,4 @@ namespace pdftricks {
             yield;
             return ret;
         }
-
-    }
 }

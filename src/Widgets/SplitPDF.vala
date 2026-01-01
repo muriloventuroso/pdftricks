@@ -19,8 +19,7 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-namespace pdftricks {
-    public class SplitPDF : Gtk.Box {
+public class PDFTricks.SplitPDF : Gtk.Box {
         public signal void proccess_begin ();
         public signal void proccess_finished (bool result);
         public signal void create_thumb_begin ();
@@ -521,7 +520,4 @@ namespace pdftricks {
 
             return result_grouped;
         }
-
-
-    }
 }

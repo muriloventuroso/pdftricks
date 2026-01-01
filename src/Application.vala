@@ -19,9 +19,7 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-namespace pdftricks {
-
-    public class Application : Gtk.Application {
+public class PDFTricks.Application : Gtk.Application {
 
         private Gtk.Window main_window;
         private Gtk.Button navigation_button;
@@ -156,5 +154,4 @@ namespace pdftricks {
             var app = new Application ();
             return app.run (args);
         }
-    }
 }

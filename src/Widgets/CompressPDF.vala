@@ -19,8 +19,7 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-namespace pdftricks {
-    public class CompressPDF : Gtk.Box{
+public class PDFTricks.CompressPDF : Gtk.Box{
         public signal void proccess_begin ();
         public signal void proccess_finished (bool result);
         private Gtk.FileChooserButton filechooser;
@@ -206,7 +205,4 @@ namespace pdftricks {
             yield;
             return ret;
         }
-
-
-    }
 }
