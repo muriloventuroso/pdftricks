@@ -40,7 +40,7 @@ public class PDFTricks.Application : Gtk.Application {
         public SimpleActionGroup actions;
         public Gtk.ActionGroup main_actions;
 
-        private const ActionEntry[] action_entries = {
+        private const ActionEntry[] ACTION_ENTRIES = {
             { ACTION_COMPRESS_PDF, action_compress_pdf },
             { ACTION_SPLIT_PDF, action_split_pdf },
             { ACTION_MERGE_PDF, action_merge_pdf },
@@ -65,8 +65,8 @@ public class PDFTricks.Application : Gtk.Application {
                 return;
             }
             actions = new SimpleActionGroup ();
-            actions.add_action_entries (action_entries, this);
-            main_window = new Gtk.Window();
+            actions.add_action_entries (ACTION_ENTRIES, this);
+            main_window = new Gtk.Window ();
             navigation_button = new Gtk.Button ();
             navigation_button.action_name = "app.back";
             navigation_button.get_style_context ().add_class ("back-button");
@@ -77,11 +77,11 @@ public class PDFTricks.Application : Gtk.Application {
             headerbar.title = _("PDF Tricks");
             headerbar.pack_start (navigation_button);
 
-            welcome = new Welcome();
-            compress_pdf = new CompressPDF(main_window);
-            split_pdf = new SplitPDF(main_window);
-            merge_pdf = new MergePDF(main_window);
-            convert_pdf = new ConvertPDF(main_window);
+            welcome = new Welcome ();
+            compress_pdf = new CompressPDF (main_window);
+            split_pdf = new SplitPDF (main_window);
+            merge_pdf = new MergePDF (main_window);
+            convert_pdf = new ConvertPDF (main_window);
             stack = new Gtk.Stack ();
             stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
             stack.add_named (welcome, "main");
@@ -98,8 +98,8 @@ public class PDFTricks.Application : Gtk.Application {
             main_window.set_resizable (false);
             main_window.set_titlebar (headerbar);
             main_window.insert_action_group ("win", actions);
-            main_window.show_all();
-            navigation_button.hide();
+            main_window.show_all ();
+            navigation_button.hide ();
 
             add_window (main_window);
 
@@ -124,28 +124,28 @@ public class PDFTricks.Application : Gtk.Application {
         }
 
         private void handle_navigation_button_clicked () {
-            navigation_button.hide();
+            navigation_button.hide ();
             stack.set_visible_child_name ("main");
         }
 
-        private void action_compress_pdf() {
+        private void action_compress_pdf () {
             stack.set_visible_child_name ("compress_pdf");
-            navigation_button.show();
+            navigation_button.show ();
         }
 
-        private void action_split_pdf() {
+        private void action_split_pdf () {
             stack.set_visible_child_name ("split_pdf");
-            navigation_button.show();
+            navigation_button.show ();
         }
 
-        private void action_merge_pdf() {
+        private void action_merge_pdf () {
             stack.set_visible_child_name ("merge_pdf");
-            navigation_button.show();
+            navigation_button.show ();
         }
 
-        private void action_convert_pdf() {
+        private void action_convert_pdf () {
             stack.set_visible_child_name ("convert_pdf");
-            navigation_button.show();
+            navigation_button.show ();
         }
 
         private static int main (string[] args) {
