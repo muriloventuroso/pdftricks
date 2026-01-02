@@ -21,7 +21,7 @@
 
 public class PDFTricks.Application : Gtk.Application {
 
-        private PDFTricks.MainWindow main_window;
+        public static PDFTricks.MainWindow main_window;
 
         public const string ACTION_PREFIX = "app.";
         public const string ACTION_QUIT = "quit";
