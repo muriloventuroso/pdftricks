@@ -23,6 +23,8 @@ public enum PDFTricks.Format {
     PDF,
     JPG,
     PNG,
+    SVG,
+    BMP,
     TXT,
     UNKNOWN;
 
@@ -46,7 +48,9 @@ public enum PDFTricks.Format {
             case "application/pdf": return Format.PDF;
             case "image/jpeg": return Format.JPG;
             case "image/png": return Format.PNG;
-            case "text/plain": return Format.PNG;
+            case "image/svg+xml": return Format.SVG;
+            case "image/bmp": return Format.BMP;
+            case "text/plain": return Format.TXT;
             default: return Format.UNKNOWN;
         }
     }
