@@ -35,6 +35,8 @@ public class PDFTricks.FileChooserButton : Gtk.Button {
         }
     }
 
+    private Gtk.FileFilter pdf_files_filter;
+    public ListStore filter_model;
     private new Gtk.Label label;
     private string open_title;
 
@@ -58,24 +60,25 @@ public class PDFTricks.FileChooserButton : Gtk.Button {
 
         child = box;
 
-        clicked.connect (on_clicked);
-    }
 
-    private void on_clicked () {
         var all_files_filter = new Gtk.FileFilter () {
             name = _("All files"),
         };
         all_files_filter.add_pattern ("*");
 
-        var pdf_files_filter = new Gtk.FileFilter () {
+        pdf_files_filter = new Gtk.FileFilter () {
             name = _("PDF Files"),
         };
         pdf_files_filter.add_mime_type ("application/pdf");
 
-        var filter_model = new ListStore (typeof (Gtk.FileFilter));
+        filter_model = new ListStore (typeof (Gtk.FileFilter));
         filter_model.append (all_files_filter);
         filter_model.append (pdf_files_filter);
 
+        clicked.connect (on_clicked);
+    }
+
+    private void on_clicked () {
         var open_dialog = new Gtk.FileDialog () {
             default_filter = pdf_files_filter,
             filters = filter_model,

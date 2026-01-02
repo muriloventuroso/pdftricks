@@ -41,6 +41,27 @@ public class PDFTricks.ConvertPDF : Gtk.Grid {
     construct {
         filechooser = new PDFTricks.FileChooserButton (_("Select the file to convert"));
 
+        var jpg_filter = new Gtk.FileFilter () {name = Format.JPG.to_friendly_string ()};
+        jpg_filter.add_mime_type ("image/jpeg");
+
+        var png_filter = new Gtk.FileFilter () {name = Format.PNG.to_friendly_string ()};
+        png_filter.add_mime_type ("image/png");
+
+        var svg_filter = new Gtk.FileFilter () {name = Format.SVG.to_friendly_string ()};
+        svg_filter.add_mime_type ("image/svg+xml");
+
+        var bmp_filter = new Gtk.FileFilter () {name = Format.BMP.to_friendly_string ()};
+        bmp_filter.add_mime_type ("image/bmp");
+
+        var txt_filter = new Gtk.FileFilter () {name = Format.TXT.to_friendly_string ()};
+        txt_filter.add_mime_type ("text/plain");
+
+        filechooser.filter_model.append (jpg_filter);
+        filechooser.filter_model.append (png_filter);
+        filechooser.filter_model.append (svg_filter);
+        filechooser.filter_model.append (bmp_filter);
+        filechooser.filter_model.append (txt_filter);
+
         format_conversion = new Gtk.DropDown.from_strings ({
                 Format.PDF.to_friendly_string (),
                 Format.JPG.to_friendly_string (),
