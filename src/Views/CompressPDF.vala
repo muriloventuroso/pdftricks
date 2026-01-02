@@ -122,12 +122,14 @@ public class PDFTricks.CompressPDF : Gtk.Grid {
     }
 
     private void confirm_compress () {
-
         var file_pdf = filechooser.selected_file;
+        var new_name = file_pdf.get_basename ();
+        new_name = new_name.substring (0, new_name.length - 4);
+        new_name = new_name + "_" + _("compressed") + ".pdf";
 
         var chooser_output = new Gtk.FileDialog () {
             title = _("Select the file to save"),
-            initial_name = file_pdf.get_basename () + "_" + _("compressed") + ".pdf"
+            initial_name = new_name
         };
 
         chooser_output.save.begin (window, null, (obj, res) => {
@@ -147,9 +149,6 @@ public class PDFTricks.CompressPDF : Gtk.Grid {
             } catch (Error e) {
                 critical (e.message);
             }
-
-
-
         });
     }
 
