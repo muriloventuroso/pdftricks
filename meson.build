@@ -16,7 +16,7 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()), lan
 
 dependencies = [
     dependency('gio-unix-2.0', version: '>=2.20'),
-    dependency('granite'),
+    dependency('granite-7'),
 ]
 
 config_data = configuration_data()
