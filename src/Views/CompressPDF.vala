@@ -19,17 +19,19 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-public class PDFTricks.CompressPDF : Gtk.Box {
-    public signal void proccess_begin ();
-    public signal void proccess_finished (bool result);
-    private Gtk.FileChooserButton filechooser;
-    private Gtk.ListStore resolution_store;
-    private Gtk.TreeIter iter;
-    private Gtk.ComboBox resolution_box;
+public class PDFTricks.CompressPDF : Gtk.Grid {
+    public signal void process_begin ();
+    public signal void process_finished (bool result);
+
+
+    private PDFTricks.FileChooserButton filechooser;
+    private Gtk.DropDown dropdown;
+
     public Gtk.Window window { get; construct; }
-    private Gtk.Grid grid;
+
     private Gtk.Spinner spinner;
     private Gtk.Label level_description;
+    private Gtk.Button compress_button;
 
     public CompressPDF (Gtk.Window window) {
         Object (
@@ -41,87 +43,66 @@ public class PDFTricks.CompressPDF : Gtk.Box {
         );
     }
     construct {
-        filechooser = new Gtk.FileChooserButton (_("Select the file to compress"), Gtk.FileChooserAction.OPEN);
+        orientation = Gtk.Orientation.VERTICAL;
+        halign = Gtk.Align.CENTER;
+        valign = Gtk.Align.CENTER;
+        column_spacing = 16;
+        row_spacing = 8;
+        column_homogeneous = true;
+
+
+        filechooser = new PDFTricks.FileChooserButton (_("Select the file to compress"));
+
         level_description = new Gtk.Label (_("Good quality, good compression"));
-        Gtk.FileFilter filter = new Gtk.FileFilter ();
-        filter.add_mime_type ("application/pdf");
-        filechooser.set_filter (filter);
-        resolution_store = new Gtk.ListStore (2, typeof (string), typeof (string));
-        resolution_store.append (out iter);
-        resolution_store.set (iter, 0, "screen", 1, _("Extreme Compression"));
-        resolution_store.append (out iter);
-        resolution_store.set (iter, 0, "ebook", 1, _("Medium Compression"));
-        resolution_store.append (out iter);
-        resolution_store.set (iter, 0, "printer", 1, _("Recommended Compression"));
-        resolution_store.append (out iter);
-        resolution_store.set (iter, 0, "prepress", 1, _("Less Compression"));
 
-        resolution_box = new Gtk.ComboBox.with_model (resolution_store);
-        resolution_box.set_sensitive (false);
+        dropdown = new Gtk.DropDown.from_strings (Compression.choices ()) {
+            sensitive = false
+        };
+        dropdown.selected = Compression.RECOMMENDED;
 
-        resolution_box.changed.connect (() => {
-            Value resolution;
-            var compress = false;
-            resolution_box.get_active_iter (out iter);
-            resolution_store.get_value (iter, 0, out resolution);
-            var str_resolution = resolution.dup_string ();
-            if (str_resolution == "screen") {
-                level_description.label = _("Less quality, high compression");
-            } else if (str_resolution == "printer") {
-                level_description.label = _("Good quality, optimized for printing");
-            } else if (str_resolution == "ebook") {
-                level_description.label = _("Good quality, good compression");
-            } else if (str_resolution == "prepress") {
-                level_description.label = _("High quality, less compression");
-            }
+        dropdown.notify["selected"].connect (() => {
+            level_description.label = ((Compression)dropdown.selected).to_comment ();
         });
 
-        var renderer = new Gtk.CellRendererText ();
-        resolution_box.pack_start (renderer, true);
-        resolution_box.add_attribute (renderer, "text", 1);
-        resolution_box.active = 2;
+        compress_button = new Gtk.Button.with_label (_("Compress")) {
+            vexpand = true,
+            sensitive = false
+        };
+        compress_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var compress_button = new Gtk.Button.with_label (_("Compress"));
-        compress_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
-        compress_button.vexpand = true;
-        compress_button.sensitive = false;
+        spinner = new Gtk.Spinner () {
+            spinning = false
+        };
+
+        attach (new Granite.HeaderLabel (_("File to Compress:")), 0, 0, 1, 1);
+        attach (filechooser, 1, 0, 1, 1);
+
+        attach (new Granite.HeaderLabel (_("Compression Level:")), 0, 1, 1, 1);
+        attach (dropdown, 1, 1, 1, 1);
+
+        attach (level_description, 0, 2, 2, 1);
+        attach (compress_button, 0, 3, 2, 2);
+
+        attach (spinner, 0, 5, 2, 2);
+
+
         compress_button.clicked.connect (confirm_compress);
 
-        filechooser.file_set.connect (() => {
-
-            compress_button.set_sensitive (true);
-            resolution_box.set_sensitive (true);
+        filechooser.selected.connect (() => {
+            if (filechooser.selected_file != null) {
+                compress_button.sensitive = true;
+                dropdown.sensitive = true;
+            };
         });
 
-        grid = new Gtk.Grid ();
-        grid.orientation = Gtk.Orientation.VERTICAL;
-        grid.halign = Gtk.Align.CENTER;
-        grid.valign = Gtk.Align.CENTER;
-        grid.column_spacing = 16;
-        grid.row_spacing = 8;
-        grid.set_column_homogeneous (true);
-
-        grid.attach (new Granite.HeaderLabel (_("File to Compress:")), 0, 0, 1, 1);
-        grid.attach (filechooser, 1, 0, 1, 1);
-
-        grid.attach (new Granite.HeaderLabel (_("Compression Level:")), 0, 1, 1, 1);
-        grid.attach (resolution_box, 1, 1, 1, 1);
-
-        grid.attach (level_description, 0, 2, 2, 1);
-
-        grid.attach (compress_button, 0, 3, 2, 2);
-        spinner = new Gtk.Spinner ();
-        spinner.spinning = false;
-
-        grid.attach (spinner, 0, 5, 2, 2);
-        append (grid);
-
-        proccess_begin.connect (
+        process_begin.connect (
             () => {
                 spinner.spinning = true;
-                compress_button.set_sensitive (false);
+                compress_button.sensitive = false;
+                dropdown.sensitive = false;
             });
-        proccess_finished.connect (
+
+        process_finished.connect (
             (result) => {
                 spinner.spinning = false;
                 compress_button.set_sensitive (true);
@@ -141,38 +122,38 @@ public class PDFTricks.CompressPDF : Gtk.Box {
     }
 
     private void confirm_compress () {
-        Value resolution;
-        var compress = false;
-        resolution_box.get_active_iter (out iter);
-        resolution_store.get_value (iter, 0, out resolution);
 
-        var file_pdf = filechooser.get_filename ();
-        var str_resolution = resolution.dup_string ();
-        var output_file = "";
-        Gtk.FileChooserNative chooser_output = new Gtk.FileChooserNative (
-            _("Select the file to save"), window, Gtk.FileChooserAction.SAVE,
-            _("Save"),
-            _("Cancel"));
-        var split_filename = file_pdf.split ("/");
-        var filename = split_filename[split_filename.length - 1];
-        chooser_output.set_current_folder (Path.get_dirname (file_pdf));
-        chooser_output.set_current_name (filename.split (".")[0] + "_compressed.pdf");
-        chooser_output.do_overwrite_confirmation = true;
-        if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-            output_file = chooser_output.get_filename ();
-            compress = true;
-        }
-        chooser_output.destroy ();
-        if (compress == true && output_file != "") {
-            proccess_begin ();
-            compress_file.begin (file_pdf, output_file, str_resolution,
-                (obj, res) => {
-                    proccess_finished (compress_file.end (res));
-                });
-        }
+        var file_pdf = filechooser.selected_file;
+
+        var chooser_output = new Gtk.FileDialog () {
+            title = _("Select the file to save"),
+            initial_name = file_pdf.get_basename () + "_" + _("compressed") + ".pdf"
+        };
+
+        chooser_output.save.begin (window, null, (obj, res) => {
+            try {
+
+                var output_file = chooser_output.save.end (res);
+
+                if (output_file != null) {
+                    process_begin ();
+
+                    compress_file.begin (file_pdf.get_path (), output_file.get_path (),
+                        (obj, res) => {
+                            process_finished (compress_file.end (res));
+                        });
+                }
+
+            } catch (Error e) {
+                critical (e.message);
+            }
+
+
+
+        });
     }
 
-    private async bool compress_file (string input, string output_file, string resolution) {
+    private async bool compress_file (string input, string output_file) {
         bool ret = true;
         SourceFunc callback = compress_file.callback;
         ThreadFunc<void*> run = () => {
@@ -180,6 +161,7 @@ public class PDFTricks.CompressPDF : Gtk.Box {
             int exit_status = 0;
 
             try {
+                var resolution = ((Compression)dropdown.selected).to_parameter ();
                 var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/" + resolution + " -dNOPAUSE -dQUIET -dBATCH -sOutputFile=\"" + output_file + "\" \"" + input + "\"";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
