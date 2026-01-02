@@ -39,11 +39,12 @@ config_header = configure_file(
 code_files = files(
     'src/Application.vala',
     'src/MainWindow.vala',
-    'src/Widgets/Welcome.vala',
-    'src/Widgets/CompressPDF.vala',
-    'src/Widgets/SplitPDF.vala',
-    'src/Widgets/MergePDF.vala',
-    'src/Widgets/ConvertPDF.vala'
+    'src/Views/Welcome.vala',
+    'src/Views/CompressPDF.vala',
+    'src/Views/SplitPDF.vala',
+    'src/Views/MergePDF.vala',
+    'src/Views/ConvertPDF.vala',
+    'src/Widgets/FileChooserButton.vala'
 )
 
 executable(
