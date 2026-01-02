@@ -39,6 +39,7 @@ config_header = configure_file(
 code_files = files(
     'src/Application.vala',
     'src/MainWindow.vala',
+    'src/Format.vala',
     'src/Views/Welcome.vala',
     'src/Views/CompressPDF.vala',
     'src/Views/SplitPDF.vala',
