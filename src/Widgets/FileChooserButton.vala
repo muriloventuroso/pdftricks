@@ -56,11 +56,9 @@ public class PDFTricks.FileChooserButton : Gtk.Button {
         box.append (new Gtk.Separator (Gtk.Orientation.VERTICAL));
         box.append (new Gtk.Image.from_icon_name ("folder-open-symbolic"));
 
-
         child = box;
 
         clicked.connect (on_clicked);
-
     }
 
     private void on_clicked () {
@@ -69,17 +67,17 @@ public class PDFTricks.FileChooserButton : Gtk.Button {
         };
         all_files_filter.add_pattern ("*");
 
-        var text_files_filter = new Gtk.FileFilter () {
+        var pdf_files_filter = new Gtk.FileFilter () {
             name = _("PDF Files"),
         };
-        text_files_filter.add_mime_type ("application/pdf");
+        pdf_files_filter.add_mime_type ("application/pdf");
 
         var filter_model = new ListStore (typeof (Gtk.FileFilter));
         filter_model.append (all_files_filter);
-        filter_model.append (text_files_filter);
+        filter_model.append (pdf_files_filter);
 
         var open_dialog = new Gtk.FileDialog () {
-            default_filter = text_files_filter,
+            default_filter = pdf_files_filter,
             filters = filter_model,
             title = open_title,
         };
@@ -93,9 +91,4 @@ public class PDFTricks.FileChooserButton : Gtk.Button {
             }
         });
     }
-
-    private void set_new_label (string text) {
-        
-    }
-
 }
