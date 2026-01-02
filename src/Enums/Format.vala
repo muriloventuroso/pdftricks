@@ -28,6 +28,32 @@ public enum PDFTricks.Format {
     TXT,
     UNKNOWN;
 
+    public string to_string () {
+        switch (this) {
+            case PDF: return "PDF";
+            case JPG: return "JPG";
+            case PNG: return "PNG";
+            case SVG: return "SVG";
+            case BMP: return "BMP";
+            case TXT: return "TXT";
+            case UNKNOWN: return "UNKNOWN";
+            default: return "UNKNOWN";
+        }
+    }
+
+    public string to_friendly_string () {
+        switch (this) {
+            case PDF: return _("PDF Document");
+            case JPG: return _("JPG Image");
+            case PNG: return _("Portable Network Graphics (PNG)");
+            case SVG: return _("Vector image (SVG)");
+            case BMP: return _("Bitmap image (BMP)");
+            case TXT: return _("Text (TXT)");
+            case UNKNOWN: return _("Unhandled format");
+            default: return _("Unhandled format");
+        }
+    }
+
     public static Format from_file (File file) {
         FileInfo info;
 
