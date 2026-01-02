@@ -19,18 +19,22 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-public class PDFTricks.Welcome : Gtk.Grid {
+public class PDFTricks.Welcome : Granite.Bin {
     construct {
-        var welcome = new Granite.Widgets.Welcome ("PDF Tricks", _("Tricks for PDF files"));
-        welcome.append ("compress-pdf", _("Compress PDF"), _("Compress a PDF file to get the same quality with reduced filesize."));
-        welcome.append ("split-pdf", _("Split PDF"), _("Split a PDF file by page ranges, or extract all PDF pages to multiple PDF files."));
-        welcome.append ("merge-pdf", _("Merge PDF"), _("Select multiple PDF files or images, and merge them in seconds."));
-        welcome.append ("pdf-convert", _("Convert PDF"), _("Convert PDF files to JPG, PNG and TXT formats."));
-        add (welcome);
+        var welcome = new Granite.Placeholder (_("PDF Tricks")) {
+            description = _("Tricks for PDF files")
+        };
 
-        welcome.get_button_from_index (0).action_name = Application.ACTION_PREFIX + Application.ACTION_COMPRESS_PDF;
-        welcome.get_button_from_index (1).action_name = Application.ACTION_PREFIX + Application.ACTION_SPLIT_PDF;
-        welcome.get_button_from_index (2).action_name = Application.ACTION_PREFIX + Application.ACTION_MERGE_PDF;
-        welcome.get_button_from_index (3).action_name = Application.ACTION_PREFIX + Application.ACTION_CONVERT_PDF;
+        var compress = welcome.append_button (new ThemedIcon ("compress-pdf"), _("Compress PDF"), _("Compress a PDF file to get the same quality with reduced filesize."));
+        var split = welcome.append_button (new ThemedIcon ("split-pdf"), _("Split PDF"), _("Split a PDF file by page ranges, or extract all PDF pages to multiple PDF files."));
+        var merge = welcome.append_button (new ThemedIcon ("merge-pdf"), _("Merge PDF"), _("Select multiple PDF files or images, and merge them in seconds."));
+        var convert = welcome.append_button (new ThemedIcon ("pdf-convert"), _("Convert PDF"), _("Convert PDF files to JPG, PNG and TXT formats."));
+
+        compress.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_COMPRESS_PDF;
+        split.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_SPLIT_PDF;
+        merge.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_MERGE_PDF;
+        convert.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_CONVERT_PDF;
+
+        child = welcome;
     }
 }

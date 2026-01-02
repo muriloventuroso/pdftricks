@@ -82,10 +82,9 @@ public class PDFTricks.CompressPDF : Gtk.Box {
         resolution_box.active = 2;
 
         var compress_button = new Gtk.Button.with_label (_("Compress"));
-        compress_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-        compress_button.can_default = true;
+        compress_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
         compress_button.vexpand = true;
-        compress_button.set_sensitive (false);
+        compress_button.sensitive = false;
         compress_button.clicked.connect (confirm_compress);
 
         filechooser.file_set.connect (() => {
@@ -112,19 +111,19 @@ public class PDFTricks.CompressPDF : Gtk.Box {
 
         grid.attach (compress_button, 0, 3, 2, 2);
         spinner = new Gtk.Spinner ();
-        spinner.active = false;
+        spinner.spinning = false;
 
         grid.attach (spinner, 0, 5, 2, 2);
-        add (grid);
+        append (grid);
 
         proccess_begin.connect (
             () => {
-                spinner.active = true;
+                spinner.spinning = true;
                 compress_button.set_sensitive (false);
             });
         proccess_finished.connect (
             (result) => {
-                spinner.active = false;
+                spinner.spinning = false;
                 compress_button.set_sensitive (true);
                 if (result) {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully compressed."), "process-completed", Gtk.ButtonsType.CLOSE);

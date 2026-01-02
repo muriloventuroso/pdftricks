@@ -47,8 +47,7 @@ public class PDFTricks.ConvertPDF : Gtk.Box {
         format_conversion.append_text ("txt");
 
         var convert_button = new Gtk.Button.with_label (_("Convert"));
-        convert_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-        convert_button.can_default = true;
+        convert_button.get_style_context ().add_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
         convert_button.vexpand = true;
         convert_button.set_sensitive (false);
         convert_button.clicked.connect (confirm_convert);
@@ -102,31 +101,29 @@ public class PDFTricks.ConvertPDF : Gtk.Box {
 
         grid.attach (convert_button, 0, 2, 2, 2);
         spinner = new Gtk.Spinner ();
-        spinner.active = false;
+        spinner.spinning = false;
 
         grid.attach (spinner, 0, 5, 2, 2);
-        add (grid);
+        append (grid);
 
         proccess_begin.connect (
             () => {
-                spinner.active = true;
+                spinner.spinning = true;
                 convert_button.set_sensitive (false);
             });
         proccess_finished.connect (
             (result) => {
-                spinner.active = false;
+                spinner.spinning = false;
                 convert_button.set_sensitive (true);
                 if (result) {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File converted."), "process-completed", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
+                    message_dialog.show ();
                     message_dialog.destroy ();
                 } else {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not convert this file."), "process-stop", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
+                    message_dialog.show ();
                     message_dialog.destroy ();
                 };
             });
@@ -142,8 +139,7 @@ public class PDFTricks.ConvertPDF : Gtk.Box {
         if (input_format == format) {
             var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("The input format is the same as the output format."), "process-stop", Gtk.ButtonsType.CLOSE);
             message_dialog.set_transient_for (window);
-            message_dialog.show_all ();
-            message_dialog.run ();
+            message_dialog.show ();
             message_dialog.destroy ();
             return;
         }

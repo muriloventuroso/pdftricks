@@ -63,8 +63,9 @@ public class PDFTricks.MergePDF : Gtk.Box {
                                             Gdk.DragAction.MOVE);
         view.enable_model_drag_dest (TARGETS,
                                             Gdk.DragAction.DEFAULT);
-        view.drag_data_get.connect (on_drag_data_get);
-        view.drag_data_received.connect (on_drag_data_received);
+        //view.drag_data_get.connect (on_drag_data_get);
+        //view.drag_data_received.connect (on_drag_data_received);
+        
         add_button.clicked.connect (() => {
             Gtk.FileChooserNative chooser_file = new Gtk.FileChooserNative (
             _("Select the file to compress"), window, Gtk.FileChooserAction.OPEN,
@@ -134,18 +135,18 @@ public class PDFTricks.MergePDF : Gtk.Box {
         grid.attach (scroll, 0, 1, 5, 6);
         grid.attach (merge_button, 1, 7, 3);
         spinner = new Gtk.Spinner ();
-        spinner.active = false;
+        spinner.spinning = false;
         grid.attach (spinner, 2, 9);
         pack_start (grid, true, true, 0);
 
         proccess_begin.connect (
             () => {
-                spinner.active = true;
+                spinner.spinning = true;
                 merge_button.set_sensitive (false);
             });
         proccess_finished.connect (
             (result) => {
-                spinner.active = false;
+                spinner.spinning = false;
                 merge_button.set_sensitive (true);
                 if (result) {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully merged."), "process-completed", Gtk.ButtonsType.CLOSE);
@@ -183,7 +184,7 @@ public class PDFTricks.MergePDF : Gtk.Box {
 
     }
 
-    private void on_drag_data_get (Gtk.Widget widget, Gdk.DragContext context,
+/*      private void on_drag_data_get (Gtk.Widget widget, Gdk.DragContext context,
                                 Gtk.SelectionData selection_data,
                                 uint target_type, uint time) {
         var treeselection = view.get_selection ();
@@ -194,10 +195,10 @@ public class PDFTricks.MergePDF : Gtk.Box {
         model.get_value (iter, 0, out data_value);
         var data = data_value.dup_string ();
         selection_data.set (selection_data.get_target (), 8, (uchar [])data.to_utf8 ());
-    }
+    }  */
 
 
-    private void on_drag_data_received (Gtk.Widget widget, Gdk.DragContext context,
+    /*  private void on_drag_data_received (Gtk.Widget widget, Gdk.DragContext context,
                                     int x, int y,
                                     Gtk.SelectionData selection_data,
                                     uint target_type, uint time) {
@@ -229,7 +230,7 @@ public class PDFTricks.MergePDF : Gtk.Box {
             }
         }
 
-    }
+    }  */
 
     private void confirm_merge () {
         var merge = false;
@@ -290,8 +291,7 @@ public class PDFTricks.MergePDF : Gtk.Box {
             if (stderr.contains ("not allowed")) {
                 var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
                 message_dialog.set_transient_for (window);
-                message_dialog.show_all ();
-                message_dialog.run ();
+                message_dialog.show ();
                 message_dialog.destroy ();
                 return "";
             }

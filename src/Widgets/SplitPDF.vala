@@ -76,21 +76,21 @@ public class PDFTricks.SplitPDF : Gtk.Box {
         view_thumbs.vexpand = true;
         view_thumbs.set_item_padding (5);
 
-        var scrolled_thumbs = new Gtk.ScrolledWindow (null, null);
-        scrolled_thumbs.hexpand = true;
-        scrolled_thumbs.vexpand = true;
+        var scrolled_thumbs = new Gtk.ScrolledWindow () {
+            hexpand = true,
+            vexpand = true
+        };
         scrolled_thumbs.set_policy (Gtk.PolicyType.ALWAYS, Gtk.PolicyType.NEVER);
 
-        scrolled_thumbs.add (view_thumbs);
+        scrolled_thumbs.child = view_thumbs;
 
         entry_range = new Gtk.Entry ();
         entry_range.set_placeholder_text ("1-3,5,9");
 
         var range_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-
-        range_box.pack_start (scrolled_thumbs, false, false, 0);
-        range_box.pack_start (entry_range, false, false, 0);
-        revealer.add (range_box);
+        range_box.append (scrolled_thumbs);
+        range_box.append (entry_range);
+        revealer.child = range_box;
 
         var split_button = new Gtk.Button.with_label (_("Split"));
 
@@ -118,12 +118,12 @@ public class PDFTricks.SplitPDF : Gtk.Box {
         });
         create_thumb_begin.connect (
             () => {
-                spinner.active = true;
+                spinner.spinning = true;
                 split_button.set_sensitive (false);
             });
         create_thumb_finished.connect (
             (result) => {
-                spinner.active = false;
+                spinner.spinning = false;
                 split_button.set_sensitive (true);
                 if (result) {
                     view_thumbs.set_columns (page_size);
@@ -222,19 +222,19 @@ public class PDFTricks.SplitPDF : Gtk.Box {
         grid.attach (revealer, 1, 6, 2);
 
         spinner = new Gtk.Spinner ();
-        spinner.active = false;
+        spinner.spinning = false;
 
         grid.attach (spinner, 2, 7, 1, 1);
-        pack_start (grid, true, true, 0);
+        append (grid, true, true, 0);
 
         proccess_begin.connect (
             () => {
-                spinner.active = true;
+                spinner.spinning = true;
                 split_button.set_sensitive (true);
             });
         proccess_finished.connect (
             (result) => {
-                spinner.active = false;
+                spinner.spinning = false;
                 split_button.set_sensitive (true);
                 if (result) {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
@@ -447,17 +447,17 @@ public class PDFTricks.SplitPDF : Gtk.Box {
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 print (e.message);
-                spinner.active = false;
+                spinner.spinning = false;
                 ret = false;
             }
             if (output != "") {
                 if (output.contains ("Error")) {
-                    spinner.active = false;
+                    spinner.spinning = false;
                     ret = false;
                 }
             }
             if (stderr != "") {
-                spinner.active = false;
+                spinner.spinning = false;
                 ret = false;
             }
             Idle.add ((owned) callback);

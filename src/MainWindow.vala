@@ -21,7 +21,9 @@
 
 public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
 
+    private Gtk.Revealer navigation_revealer;
     private Gtk.Button navigation_button;
+
     private Gtk.HeaderBar headerbar;
     private Welcome welcome;
     private CompressPDF compress_pdf;
@@ -31,15 +33,15 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
     private Gtk.Stack stack;
 
     public const string ACTION_PREFIX = "win.";
+    public const string ACTION_BACK = "back";
     public const string ACTION_COMPRESS_PDF = "action_compress_pdf";
     public const string ACTION_SPLIT_PDF = "action_split_pdf";
     public const string ACTION_MERGE_PDF = "action_merge_pdf";
     public const string ACTION_CONVERT_PDF = "action_convert_pdf";
 
-    public SimpleActionGroup actions;
-    public Gtk.ActionGroup main_actions;
-
+    public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
     private const ActionEntry[] ACTION_ENTRIES = {
+        { ACTION_BACK, handle_navigation_button_clicked },
         { ACTION_COMPRESS_PDF, action_compress_pdf },
         { ACTION_SPLIT_PDF, action_split_pdf },
         { ACTION_MERGE_PDF, action_merge_pdf },
@@ -52,26 +54,39 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
 
     construct {
         Intl.setlocale ();
+        title = _("PDFTricks");
+        icon_name = "com.github.muriloventuroso.pdftricks";
 
         var actions = new SimpleActionGroup ();
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
 
-        navigation_button = new Gtk.Button ();
-        navigation_button.action_name = "app.back";
-        navigation_button.get_style_context ().add_class ("back-button");
-        navigation_button.label = _("Back");
+        navigation_button = new Gtk.Button.with_label (_("Back")) {
+            action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_BACK
+        };
+        navigation_button.add_css_class ("back-button");
 
-        headerbar = new Gtk.HeaderBar ();
-        headerbar.show_close_button = true;
-        headerbar.title = _("PDF Tricks");
-        headerbar.pack_start (navigation_button);
+        navigation_revealer = new Gtk.Revealer () {
+            child = navigation_button,
+            reveal_child = false,
+            transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT
+        };
+
+        var title_widget = new Gtk.Label (_("PDFTricks"));
+        title_widget.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
+
+        headerbar = new Gtk.HeaderBar () {
+            title_widget = title_widget
+        };
+        headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
+        headerbar.pack_start (navigation_revealer);
+        titlebar = headerbar;
 
         welcome = new Welcome ();
-        compress_pdf = new CompressPDF (main_window);
-        split_pdf = new SplitPDF (main_window);
-        merge_pdf = new MergePDF (main_window);
-        convert_pdf = new ConvertPDF (main_window);
+        compress_pdf = new CompressPDF (this);
+        split_pdf = new SplitPDF (this);
+        merge_pdf = new MergePDF (this);
+        convert_pdf = new ConvertPDF (this);
 
         stack = new Gtk.Stack ();
         stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
@@ -81,60 +96,35 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
         stack.add_named (merge_pdf, "merge_pdf");
         stack.add_named (convert_pdf, "convert_pdf");
 
-        icon_name = "com.github.muriloventuroso.pdftricks";
-        title = _("PDF Tricks");
-        add (stack);
-        set_size_request (800, 640);
-        set_resizable (false);
-        set_titlebar (headerbar);
-        insert_action_group ("win", actions);
-        show_all ();
-        hide ();
+        var handle = new Gtk.WindowHandle () {
+            child = stack
+        };
 
-        add_window (main_window);
-
-        var quit_action = new SimpleAction ("quit", null);
-        var back_action = new SimpleAction ("back", null);
-
-        add_action (back_action);
-
-        add_action (quit_action);
-
-        quit_action.activate.connect (() => {
-            if (main_window != null) {
-                main_window.destroy ();
-            }
-        });
-
-        back_action.activate.connect (() => {
-            handle_navigation_button_clicked ();
-        });
-
-        set_accels_for_action ("app.back", {"<Alt>Left", "Back"});
+        child = handle;
     }
 
     public void handle_navigation_button_clicked () {
-        navigation_button.hide ();
-        stack.set_visible_child (welcome);
+        stack.visible_child = welcome;
+        navigation_revealer.reveal_child = false;
     }
 
     public void action_compress_pdf () {
-        stack.set_visible_child (compress_pdf);
-        navigation_button.show ();
+        stack.visible_child = compress_pdf;
+        navigation_revealer.reveal_child = true;
     }
 
     public void action_split_pdf () {
-        stack.set_visible_child (split_pdf);
-        navigation_button.show ();
+        stack.visible_child = split_pdf;
+        navigation_revealer.reveal_child = true;
     }
 
     public void action_merge_pdf () {
-        stack.set_visible_child (merge_pdf);
-        navigation_button.show ();
+        stack.visible_child = merge_pdf;
+        navigation_revealer.reveal_child = true;
     }
 
     public void action_convert_pdf () {
-        stack.set_visible_child (convert_pdf);
-        navigation_button.show ();
+        stack.visible_child = convert_pdf;
+        navigation_revealer.reveal_child = true;
     }
 }

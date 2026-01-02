@@ -36,18 +36,15 @@ config_header = configure_file(
     configuration : conf_data
 )
 
-message ('Adds files to build')
-
 code_files = files(
     'src/Application.vala',
+    'src/MainWindow.vala',
     'src/Widgets/Welcome.vala',
     'src/Widgets/CompressPDF.vala',
     'src/Widgets/SplitPDF.vala',
     'src/Widgets/MergePDF.vala',
     'src/Widgets/ConvertPDF.vala'
 )
-
-message ('Defines executable')
 
 executable(
     meson.project_name(),

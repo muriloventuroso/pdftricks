@@ -21,35 +21,19 @@
 
 public class PDFTricks.Application : Gtk.Application {
 
-        private Gtk.Window main_window;
-        private Gtk.Button navigation_button;
-        private Gtk.HeaderBar headerbar;
-        private Welcome welcome;
-        private CompressPDF compress_pdf;
-        private SplitPDF split_pdf;
-        private MergePDF merge_pdf;
-        private ConvertPDF convert_pdf;
-        private Gtk.Stack stack;
+        private PDFTricks.MainWindow main_window;
 
-        public const string ACTION_PREFIX = "win.";
-        public const string ACTION_COMPRESS_PDF = "action_compress_pdf";
-        public const string ACTION_SPLIT_PDF = "action_split_pdf";
-        public const string ACTION_MERGE_PDF = "action_merge_pdf";
-        public const string ACTION_CONVERT_PDF = "action_convert_pdf";
+        public const string ACTION_PREFIX = "app.";
+        public const string ACTION_QUIT = "quit";
 
-        public SimpleActionGroup actions;
-        public Gtk.ActionGroup main_actions;
+        public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
         private const ActionEntry[] ACTION_ENTRIES = {
-            { ACTION_COMPRESS_PDF, action_compress_pdf },
-            { ACTION_SPLIT_PDF, action_split_pdf },
-            { ACTION_MERGE_PDF, action_merge_pdf },
-            { ACTION_CONVERT_PDF, action_convert_pdf }
+            { ACTION_QUIT, quit}
         };
 
         public Application () {
-            Object (application_id: "com.github.muriloventuroso.pdftricks",
-            flags: ApplicationFlags.FLAGS_NONE);
+            Object (application_id: "com.github.muriloventuroso.pdftricks");
         }
 
         construct {
@@ -59,99 +43,43 @@ public class PDFTricks.Application : Gtk.Application {
             Intl.textdomain (Constants.GETTEXT_PACKAGE);
         }
 
+    public override void startup () {
+        base.startup ();
+        Gtk.init ();
+        Granite.init ();
+
+        add_action_entries (ACTION_ENTRIES, this);
+        set_accels_for_action ("app.quit", {"<Control>Q"});
+        set_accels_for_action ("win.back", {"<Alt>Left", "Back"});
+
+        // Force the eOS icon theme, and set the blueberry as fallback, if for some reason it fails for individual notes
+        var granite_settings = Granite.Settings.get_default ();
+        var gtk_settings = Gtk.Settings.get_default ();
+        gtk_settings.gtk_icon_theme_name = "elementary";
+        gtk_settings.gtk_theme_name = "elementary";
+
+        gtk_settings.gtk_application_prefer_dark_theme = (
+	            granite_settings.prefers_color_scheme == DARK
+        );
+	
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            gtk_settings.gtk_application_prefer_dark_theme = (
+                    granite_settings.prefers_color_scheme == DARK
+                );
+        });
+    }
         public override void activate () {
-            if (get_windows ().length () > 0) {
-                get_windows ().data.present ();
+            if (main_window != null) {
+                main_window.present ();
                 return;
             }
-            actions = new SimpleActionGroup ();
-            actions.add_action_entries (ACTION_ENTRIES, this);
-            main_window = new Gtk.Window ();
-            navigation_button = new Gtk.Button ();
-            navigation_button.action_name = "app.back";
-            navigation_button.get_style_context ().add_class ("back-button");
-            navigation_button.label = _("Back");
 
-            headerbar = new Gtk.HeaderBar ();
-            headerbar.show_close_button = true;
-            headerbar.title = _("PDF Tricks");
-            headerbar.pack_start (navigation_button);
-
-            welcome = new Welcome ();
-            compress_pdf = new CompressPDF (main_window);
-            split_pdf = new SplitPDF (main_window);
-            merge_pdf = new MergePDF (main_window);
-            convert_pdf = new ConvertPDF (main_window);
-            stack = new Gtk.Stack ();
-            stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
-            stack.add_named (welcome, "main");
-            stack.add_named (compress_pdf, "compress_pdf");
-            stack.add_named (split_pdf, "split_pdf");
-            stack.add_named (merge_pdf, "merge_pdf");
-            stack.add_named (convert_pdf, "convert_pdf");
-
-            main_window.application = this;
-            main_window.icon_name = "com.github.muriloventuroso.pdftricks";
-            main_window.title = _("PDF Tricks");
-            main_window.add (stack);
-            main_window.set_size_request (800, 640);
-            main_window.set_resizable (false);
-            main_window.set_titlebar (headerbar);
-            main_window.insert_action_group ("win", actions);
-            main_window.show_all ();
-            navigation_button.hide ();
-
-            add_window (main_window);
-
-            var quit_action = new SimpleAction ("quit", null);
-            var back_action = new SimpleAction ("back", null);
-
-            add_action (back_action);
-
-            add_action (quit_action);
-
-            quit_action.activate.connect (() => {
-                if (main_window != null) {
-                    main_window.destroy ();
-                }
-            });
-
-            back_action.activate.connect (() => {
-                handle_navigation_button_clicked ();
-            });
-
-            set_accels_for_action ("app.back", {"<Alt>Left", "Back"});
-        }
-
-        private void handle_navigation_button_clicked () {
-            navigation_button.hide ();
-            stack.set_visible_child_name ("main");
-        }
-
-        private void action_compress_pdf () {
-            stack.set_visible_child_name ("compress_pdf");
-            navigation_button.show ();
-        }
-
-        private void action_split_pdf () {
-            stack.set_visible_child_name ("split_pdf");
-            navigation_button.show ();
-        }
-
-        private void action_merge_pdf () {
-            stack.set_visible_child_name ("merge_pdf");
-            navigation_button.show ();
-        }
-
-        private void action_convert_pdf () {
-            stack.set_visible_child_name ("convert_pdf");
-            navigation_button.show ();
+            main_window = new MainWindow (this);
+            main_window.show ();
+            main_window.present ();
         }
 
         private static int main (string[] args) {
-            Gtk.init (ref args);
-
-            var app = new Application ();
-            return app.run (args);
+            return new Application ().run (args);
         }
 }
