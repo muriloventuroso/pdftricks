@@ -1,5 +1,6 @@
 src/Application.vala
 src/MainWindow.vala
+src/Enums/Format.vala
 src/Enums/Compression.vala
 src/Views/Welcome.vala
 src/Views/CompressPDF.vala
