@@ -36,17 +36,6 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
         Object (window: window);
     }
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
-        halign = Gtk.Align.CENTER;
-        valign = Gtk.Align.CENTER;
-        column_spacing = 32;
-        row_spacing = 16;
-        column_homogeneous = true;
-        row_homogeneous = true;
-        hexpand = true;
-        vexpand = true;
-
-
 
         // The Model:
         var add_button = new Gtk.Button.with_label (_("Add File"));

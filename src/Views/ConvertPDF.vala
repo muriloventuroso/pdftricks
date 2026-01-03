@@ -31,13 +31,6 @@ public class PDFTricks.ConvertPDF : PDFTricks.PageTemplate {
         Object (window: window);
     }
     construct {
-        orientation = Gtk.Orientation.VERTICAL;
-        halign = Gtk.Align.CENTER;
-        valign = Gtk.Align.CENTER;
-        column_spacing = 32;
-        row_spacing = 16;
-        column_homogeneous = true;
-
 
         filechooser = new PDFTricks.FileChooserButton (_("Select the file to convert"));
 

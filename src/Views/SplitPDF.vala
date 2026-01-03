@@ -36,24 +36,13 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
     private Gtk.CheckButton btn_range;
     private Gtk.CheckButton btn_colors;
 
-
-    private enum SplitType {
-        ALL, RANGE, COLORS;
-    }
-
+    private enum SplitType {ALL, RANGE, COLORS;}
 
     public SplitPDF (Gtk.Window window) {
         Object (window: window);
     }
-    construct {
-        orientation = Gtk.Orientation.VERTICAL;
-        halign = Gtk.Align.CENTER;
-        valign = Gtk.Align.CENTER;
-        column_spacing = 32;
-        row_spacing = 16;
-        hexpand = true;
-        vexpand = true;
 
+    construct {
 
         page_size = 0;
         type_split = "all";
