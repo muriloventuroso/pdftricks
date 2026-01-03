@@ -3,7 +3,7 @@ project(
     'com.github.muriloventuroso.pdftricks',
     'vala',
     'c',
-    version: '0.2.3')
+    version: '0.3.0')
 
 add_project_arguments([
         '-DGETTEXT_PACKAGE=\"@0@\"'.format(meson.project_name())
@@ -42,6 +42,7 @@ code_files = files(
     'src/Enums/Format.vala',
     'src/Enums/Compression.vala',
     'src/Views/Welcome.vala',
+    'src/Views/PageTemplate.vala',
     'src/Views/CompressPDF.vala',
     'src/Views/SplitPDF.vala',
     'src/Views/MergePDF.vala',

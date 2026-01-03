@@ -19,10 +19,8 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-public class PDFTricks.MergePDF : Gtk.Grid {
-    public signal void process_begin ();
-    public signal void process_finished (bool result);
-    public Gtk.Window window { get; construct; }
+public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
+
     private Gtk.TreeView view;
     private Gtk.ListStore list_store;
     private Gtk.Spinner spinner;
@@ -35,20 +33,14 @@ public class PDFTricks.MergePDF : Gtk.Grid {
     private Gtk.FileDialog chooser_file;
 
     public MergePDF (Gtk.Window window) {
-        Object (
-            margin_start: 20,
-            margin_end: 20,
-            window: window,
-            hexpand: true,
-            homogeneous: true
-        );
+        Object (window: window);
     }
     construct {
         orientation = Gtk.Orientation.VERTICAL;
         halign = Gtk.Align.CENTER;
         valign = Gtk.Align.CENTER;
-        column_spacing = 16;
-        row_spacing = 8;
+        column_spacing = 32;
+        row_spacing = 16;
         column_homogeneous = true;
         row_homogeneous = true;
         hexpand = true;

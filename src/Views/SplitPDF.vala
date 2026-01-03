@@ -19,50 +19,59 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-public class PDFTricks.SplitPDF : Gtk.Box {
-    public signal void proccess_begin ();
-    public signal void proccess_finished (bool result);
+public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
+
     public signal void create_thumb_begin ();
     public signal void create_thumb_finished (bool result);
-    private Gtk.FileChooserButton filechooser;
-    public Gtk.Window window { get; construct; }
+
+    private PDFTricks.FileChooserButton filechooser;
+
     private int page_size;
     private Gtk.Entry entry_range;
     private string type_split;
     private Gtk.Spinner spinner;
 
+    private Gtk.Revealer revealer;
+    private Gtk.CheckButton btn_all;
+    private Gtk.CheckButton btn_range;
+    private Gtk.CheckButton btn_colors;
+
+
+    private enum SplitType {
+        ALL, RANGE, COLORS;
+    }
+
+
     public SplitPDF (Gtk.Window window) {
-        Object (
-            margin_start: 20,
-            margin_end: 20,
-            window: window,
-            hexpand: true,
-            homogeneous: true
-        );
+        Object (window: window);
     }
     construct {
+        orientation = Gtk.Orientation.VERTICAL;
+        halign = Gtk.Align.CENTER;
+        valign = Gtk.Align.CENTER;
+        column_spacing = 32;
+        row_spacing = 16;
+        hexpand = true;
+        vexpand = true;
+
+
         page_size = 0;
         type_split = "all";
 
-        filechooser = new Gtk.FileChooserButton (_("Select the file to compress"), Gtk.FileChooserAction.OPEN);
+        filechooser = new PDFTricks.FileChooserButton (_("Select the file to split"));
 
-        Gtk.FileFilter filter = new Gtk.FileFilter ();
-        filechooser.set_filter (filter);
-        filter.add_mime_type ("application/pdf");
+        btn_all = new Gtk.CheckButton.with_label (_("Extract all pages"));
+        btn_range = new Gtk.CheckButton.with_label (_("Select range of pages"));
+        btn_colors = new Gtk.CheckButton.with_label (_("Separate colored pages"));
 
-        Gtk.RadioButton btn_all = new Gtk.RadioButton.with_label_from_widget (null, _("Extract all pages"));
-        btn_all.set_sensitive (false);
-
-        Gtk.RadioButton btn_range = new Gtk.RadioButton.with_label_from_widget (btn_all, _("Select range of pages"));
-        btn_range.set_sensitive (false);
-
-        Gtk.RadioButton btn_colors = new Gtk.RadioButton.with_label_from_widget (btn_all, _("Separate colored pages"));
-        btn_colors.set_sensitive (false);
+        btn_range.group = btn_all;
+        btn_colors.group = btn_all;
+        btn_all.sensitive = false;
 
         Gtk.CheckButton with_thumbs = new Gtk.CheckButton.with_label (_("Show Thumbnails"));
         with_thumbs.set_active (false);
 
-        var revealer = new Gtk.Revealer ();
+        revealer = new Gtk.Revealer ();
 
         Gtk.ListStore model_thumbs = new Gtk.ListStore (2, typeof (Gdk.Pixbuf), typeof (string));
         Gtk.TreeIter iter;
@@ -105,7 +114,7 @@ public class PDFTricks.SplitPDF : Gtk.Box {
                 model_thumbs.get_value (iter, 1, out title);
                 if (result == "") {
                     result = title.dup_string ();
-                }else {
+                } else {
                     result = title.dup_string () + "," + result;
                 }
             }
@@ -151,8 +160,8 @@ public class PDFTricks.SplitPDF : Gtk.Box {
                 //  }
                 //revealer.set_reveal_child(true);
             }
-            var file_pdf = filechooser.get_filename ();
-            if (file_pdf != null && file_pdf != "") {
+            var file_pdf = filechooser.selected_file;
+            if (file_pdf != null) {
                 split_button.set_sensitive (true);
             }
         });
@@ -161,8 +170,8 @@ public class PDFTricks.SplitPDF : Gtk.Box {
                 type_split = "all";
                 revealer.set_reveal_child (false);
             }
-            var file_pdf = filechooser.get_filename ();
-            if (file_pdf != null && file_pdf != "") {
+            var file_pdf = filechooser.selected_file;
+            if (file_pdf != null) {
                 split_button.set_sensitive (true);
             }
         });
@@ -172,19 +181,18 @@ public class PDFTricks.SplitPDF : Gtk.Box {
                 type_split = "colors";
                 revealer.set_reveal_child (false);
             }
-            var file_pdf = filechooser.get_filename ();
-            if (file_pdf != null && file_pdf != "") {
+            var file_pdf = filechooser.selected_file;
+            if (file_pdf != null) {
                 split_button.set_sensitive (true);
             }
         });
-        split_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-        split_button.can_default = true;
+        split_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
         split_button.vexpand = true;
         split_button.clicked.connect (confirm_split);
         split_button.set_sensitive (false);
 
-        filechooser.file_set.connect (() => {
-            var file_pdf = filechooser.get_filename ();
+        filechooser.selected.connect (() => {
+            var file_pdf = filechooser.selected_file.get_path ();
             page_size = get_page_count (file_pdf);
             split_button.set_sensitive (true);
             btn_all.set_sensitive (true);
@@ -202,51 +210,41 @@ public class PDFTricks.SplitPDF : Gtk.Box {
             //  }
         });
 
-        var grid = new Gtk.Grid ();
-        grid.orientation = Gtk.Orientation.VERTICAL;
-        grid.halign = Gtk.Align.CENTER;
-        grid.valign = Gtk.Align.CENTER;
-        grid.column_spacing = 16;
-        grid.row_spacing = 8;
-        grid.hexpand = true;
-        grid.vexpand = true;
 
-        grid.attach (new Granite.HeaderLabel (_("File to Split:")), 1, 0);
-        grid.attach (filechooser, 2, 0);
+        attach (new Granite.HeaderLabel (_("File to Split:")), 1, 0);
+        attach (filechooser, 2, 0);
 
-        grid.attach (btn_all, 2, 1);
-        grid.attach (btn_range, 2, 2);
-        grid.attach (btn_colors, 2, 3);
+        attach (btn_all, 2, 1);
+        attach (btn_range, 2, 2);
+        attach (btn_colors, 2, 3);
         //grid.attach (with_thumbs, 2, 4);
-        grid.attach (split_button, 1, 5, 2);
-        grid.attach (revealer, 1, 6, 2);
+        attach (split_button, 1, 5, 2);
+        attach (revealer, 1, 6, 2);
 
         spinner = new Gtk.Spinner ();
         spinner.spinning = false;
 
-        grid.attach (spinner, 2, 7, 1, 1);
-        append (grid, true, true, 0);
+        attach (spinner, 2, 7, 1, 1);
 
-        proccess_begin.connect (
+        process_begin.connect (
             () => {
                 spinner.spinning = true;
                 split_button.set_sensitive (true);
             });
-        proccess_finished.connect (
+
+        process_finished.connect (
             (result) => {
                 spinner.spinning = false;
                 split_button.set_sensitive (true);
                 if (result) {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for(window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
+                    message_dialog.set_transient_for (window);
+                    message_dialog.show ();
                     message_dialog.destroy ();
                 } else {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not split this file."), "process-stop", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
-                    message_dialog.show_all ();
-                    message_dialog.run ();
+                    message_dialog.show ();
                     message_dialog.destroy ();
                 };
             });
@@ -255,55 +253,53 @@ public class PDFTricks.SplitPDF : Gtk.Box {
 
     private void confirm_split () {
         var split = false;
+        var file_pdf = filechooser.selected_file;
 
+        var chooser_output = new Gtk.FileDialog () {
+            title = _("Select the file to save to")
+        };
 
-        var file_pdf = filechooser.get_filename();
-        var output_file = "";
-        Gtk.FileChooserNative chooser_output = new Gtk.FileChooserNative (
-            _("Select the file to compress"), window, Gtk.FileChooserAction.SAVE,
-            _("Save"),
-            _("Cancel"));
-        var split_filename = file_pdf.split ("/");
-        var filename = split_filename[split_filename.length - 1];
-        chooser_output.set_current_folder (file_pdf);
-        chooser_output.set_current_name (filename);
-        chooser_output.do_overwrite_confirmation = false;
-        if (chooser_output.run () == Gtk.ResponseType.ACCEPT) {
-            output_file = chooser_output.get_filename ();
-            split = true;
-        }
-        chooser_output.destroy ();
-        if (split == true) {
-            if (type_split == "all") {
-                proccess_begin ();
-                split_file_all.begin (file_pdf, output_file,
-                    (obj, res) => {
-                        proccess_finished (split_file_all.end (res));
-                    });
-            }else if (type_split == "range") {
-                var pages = entry_range.get_text ();
-                proccess_begin ();
-                split_file_range.begin (file_pdf, output_file, pages,
-                    (obj, res) => {
-                        proccess_finished (split_file_range.end (res));
-                    });
-            }else if (type_split == "colors") {
-                var pages = get_colors (file_pdf);
-                if (pages != "" && pages != ";") {
-                    var pages_black = group_list (pages.split (";")[0]);
-                    var pages_colored = group_list (pages.split (";")[1]);
-                    var output_file_black = output_file.replace (".pdf", "_black.pdf");
-                    var output_file_colored = output_file.replace (".pdf", "_colored.pdf");
-                    proccess_begin ();
-                    split_file_range.begin (file_pdf, output_file_black, pages_black);
-                    split_file_range.begin (file_pdf, output_file_colored, pages_colored,
-                        (obj, res) => {
-                            proccess_finished (split_file_range.end (res));
-                        });
+        chooser_output.save.begin (window, null, (obj, res) => {
+            try {
+
+                var output_file = chooser_output.save.end (res).get_path ();
+
+                if (split == true) {
+                    if (btn_all.active) {
+                        process_begin ();
+                        split_file_all.begin (file_pdf.get_path (), output_file,
+                            (obj, res) => {
+                                process_finished (split_file_all.end (res));
+                            });
+                    } else if (btn_range.active) {
+                        var pages = entry_range.get_text ();
+                        process_begin ();
+                        split_file_range.begin (file_pdf.get_path (), output_file, pages,
+                            (obj, res) => {
+                                process_finished (split_file_range.end (res));
+                            });
+                    }else if (btn_colors.active) {
+                        var pages = get_colors (file_pdf.get_path ());
+                        if (pages != "" && pages != ";") {
+                            var pages_black = group_list (pages.split (";")[0]);
+                            var pages_colored = group_list (pages.split (";")[1]);
+                            var output_file_black = output_file.replace (".pdf", "_" + _("black") + ".pdf");
+                            var output_file_colored = output_file.replace (".pdf", "_" + _("colored") + ".pdf");
+                            process_begin ();
+                            split_file_range.begin (file_pdf.get_path (), output_file_black, pages_black);
+                            split_file_range.begin (file_pdf.get_path (), output_file_colored, pages_colored,
+                                (obj, res) => {
+                                    process_finished (split_file_range.end (res));
+                                });
+                        }
+                    }
+
                 }
+            } catch (Error e) {
+                critical (e.message);
             }
+        });
 
-        }
     }
 
     private string get_colors (string input) {
@@ -319,7 +315,7 @@ public class PDFTricks.SplitPDF : Gtk.Box {
             spinner.hide ();
             return "";
         }
-        if(output == "") {
+        if (output == "") {
             return "";
         }
         spinner.hide ();
@@ -398,7 +394,7 @@ public class PDFTricks.SplitPDF : Gtk.Box {
         int exit_status = 0;
         string output_filename = output_file.replace (".pdf", "_" + label + ".pdf");
         try {
-            var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dFirstPage=" + page_start.to_string () + " -dLastPage=" + page_end.to_string () + " -sOutputFile=\"" + output_filename +"\" \"" + file_pdf + "\"";
+            var cmd = "gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -dAutoFilterColorImages=false -dEncodeColorImages=true -dColorImageFilter=/DCTEncode -dFirstPage=" + page_start.to_string () + " -dLastPage=" + page_end.to_string () + " -sOutputFile=\"" + output_filename + "\" \"" + file_pdf + "\"";
             Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
         } catch (Error e) {
             critical (e.message);
@@ -443,7 +439,7 @@ public class PDFTricks.SplitPDF : Gtk.Box {
             string output, stderr = "";
             int exit_status = 0;
             try {
-                var cmd = "gs -dNumRenderingThreads=4 -dNOPAUSE -sDEVICE=jpeg -g125x175 -dPDFFitPage -sOutputFile=/tmp/h%d.jpg -dJPEGQ=100 -r300 -q \"" + file_pdf +"\" -c quit";
+                var cmd = "gs -dNumRenderingThreads=4 -dNOPAUSE -sDEVICE=jpeg -g125x175 -dPDFFitPage -sOutputFile=/tmp/h%d.jpg -dJPEGQ=100 -r300 -q \"" + file_pdf + "\" -c quit";
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 print (e.message);

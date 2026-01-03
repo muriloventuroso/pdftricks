@@ -19,26 +19,26 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-public class PDFTricks.ConvertPDF : Gtk.Grid {
-    public signal void process_begin ();
-    public signal void process_finished (bool result);
+public class PDFTricks.ConvertPDF : PDFTricks.PageTemplate {
+
     private PDFTricks.FileChooserButton filechooser;
-    public Gtk.Window window { get; construct; }
     private Gtk.Grid grid;
     private Gtk.Spinner spinner;
     private Gtk.DropDown format_conversion;
     private Gtk.Button convert_button;
 
     public ConvertPDF (Gtk.Window window) {
-        Object (
-            margin_start: 20,
-            margin_end: 20,
-            window: window,
-            hexpand: true,
-            homogeneous: true
-        );
+        Object (window: window);
     }
     construct {
+        orientation = Gtk.Orientation.VERTICAL;
+        halign = Gtk.Align.CENTER;
+        valign = Gtk.Align.CENTER;
+        column_spacing = 32;
+        row_spacing = 16;
+        column_homogeneous = true;
+
+
         filechooser = new PDFTricks.FileChooserButton (_("Select the file to convert"));
 
         var jpg_filter = new Gtk.FileFilter () {name = Format.JPG.to_friendly_string ()};
@@ -76,13 +76,6 @@ public class PDFTricks.ConvertPDF : Gtk.Grid {
         convert_button.clicked.connect (confirm_convert);
 
         filechooser.selected.connect (on_file_selected);
-
-        orientation = Gtk.Orientation.VERTICAL;
-        halign = Gtk.Align.CENTER;
-        valign = Gtk.Align.CENTER;
-        column_spacing = 16;
-        row_spacing = 8;
-        set_column_homogeneous (true);
 
         attach (new Granite.HeaderLabel (_("File to Convert:")), 0, 0, 1, 1);
         attach (filechooser, 1, 0, 1, 1);
