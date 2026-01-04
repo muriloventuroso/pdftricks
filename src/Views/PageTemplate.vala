@@ -19,27 +19,48 @@
 * Authored by: Murilo Venturoso <muriloventuroso@gmail.com>
 */
 
-public class PDFTricks.PageTemplate : Gtk.Grid {
+public class PDFTricks.PageTemplate : Gtk.Box {
     public Gtk.Window window { get; construct; }
+    private Granite.HeaderLabel headerlabel;
+    public Gtk.Grid grid;
 
     public signal void process_begin ();
     public signal void process_finished (bool result);
 
-    public PageTemplate (Gtk.Window window) {
+    public string title {get; construct;}
+
+    public PageTemplate (Gtk.Window window, string title) {
         Object (
-            window: window
+            window: window,
+            title: title
         );
     }
 
     construct {
         orientation = Gtk.Orientation.VERTICAL;
-        halign = Gtk.Align.CENTER;
-        valign = Gtk.Align.CENTER;
-        column_spacing = 16;
-        row_spacing = 8;
-        column_homogeneous = true;
+        spacing = 0;
 
-        hexpand = true;
-        vexpand = true;
+        headerlabel = new Granite.HeaderLabel (title) {
+            margin_top = 24,
+            margin_bottom = 12,
+            valign = Gtk.Align.START,
+            halign = Gtk.Align.CENTER,
+        };
+        headerlabel.add_css_class (Granite.STYLE_CLASS_H2_LABEL);
+
+        grid = new Gtk.Grid () {
+            orientation = Gtk.Orientation.VERTICAL,
+            halign = Gtk.Align.CENTER,
+            valign = Gtk.Align.CENTER,
+            column_spacing = 32,
+            row_spacing = 20,
+            column_homogeneous = true,
+            hexpand = true,
+            vexpand = true,
+        };
+
+        append (headerlabel);
+        append (grid);
+
     }
 }

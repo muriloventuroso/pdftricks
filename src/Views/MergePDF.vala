@@ -23,7 +23,6 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
 
     private Gtk.TreeView view;
     private Gtk.ListStore list_store;
-    private Gtk.Spinner spinner;
     //  private const Gtk.TargetEntry[] TARGETS = {
     //      {"STRING", 0, 0}
     //  };
@@ -33,7 +32,8 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
     private Gtk.FileDialog chooser_file;
 
     public MergePDF (Gtk.Window window) {
-        Object (window: window);
+        Object (window: window,
+                title: _("Merge PDF"));
     }
     construct {
 
@@ -91,26 +91,19 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
         };
         scroll.child = view;
 
-        attach (add_button, 1, 0);
-        attach (del_button, 2, 0);
-        attach (clear_button, 3, 0);
-        attach (scroll, 0, 1, 5, 6);
-        attach (merge_button, 1, 7, 3);
-
-        spinner = new Gtk.Spinner ();
-        spinner.spinning = false;
-        attach (spinner, 2, 9);
-
+        grid.attach (add_button, 1, 0);
+        grid.attach (del_button, 2, 0);
+        grid.attach (clear_button, 3, 0);
+        grid.attach (scroll, 0, 1, 5, 6);
+        grid.attach (merge_button, 1, 7, 3);
 
         process_begin.connect (
             () => {
-                spinner.spinning = true;
                 merge_button.set_sensitive (false);
             });
 
         process_finished.connect (
             (result) => {
-                spinner.spinning = false;
                 merge_button.set_sensitive (true);
                 if (result) {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully merged."), "process-completed", Gtk.ButtonsType.CLOSE);
@@ -133,7 +126,7 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
 
         chooser_file.open_multiple.begin (window, null, (obj, res) => {
             
-                var all_files = chooser_file.open_multiple.end (res);
+            var all_files = chooser_file.open_multiple.end (res);
                 for (int i = 0; i < all_files.get_n_items (); i++) {
                     var pdf_file = (File)all_files.get_item (i);
 

@@ -22,13 +22,12 @@
 public class PDFTricks.ConvertPDF : PDFTricks.PageTemplate {
 
     private PDFTricks.FileChooserButton filechooser;
-    private Gtk.Grid grid;
-    private Gtk.Spinner spinner;
     private Gtk.DropDown format_conversion;
     private Gtk.Button convert_button;
 
     public ConvertPDF (Gtk.Window window) {
-        Object (window: window);
+        Object (window: window,
+                title: _("Convert PDF"));
     }
     construct {
 
@@ -70,27 +69,22 @@ public class PDFTricks.ConvertPDF : PDFTricks.PageTemplate {
 
         filechooser.selected.connect (on_file_selected);
 
-        attach (new Granite.HeaderLabel (_("File to Convert:")), 0, 0, 1, 1);
-        attach (filechooser, 1, 0, 1, 1);
+        grid.attach (new Granite.HeaderLabel (_("File to Convert:")) {valign = Gtk.Align.CENTER}, 0, 0, 1, 1);
+        grid.attach (filechooser, 1, 0, 1, 1);
 
-        attach (new Granite.HeaderLabel (_("Format to Convert:")), 0, 1, 1, 1);
-        attach (format_conversion, 1, 1, 1, 1);
+        grid.attach (new Granite.HeaderLabel (_("Format to Convert:")) {valign = Gtk.Align.CENTER}, 0, 1, 1, 1);
+        grid.attach (format_conversion, 1, 1, 1, 1);
 
-        attach (convert_button, 0, 2, 2, 2);
-        spinner = new Gtk.Spinner ();
-        spinner.spinning = false;
+        grid.attach (convert_button, 0, 2, 2, 2);
 
-        attach (spinner, 0, 5, 2, 2);
 
         process_begin.connect (
             () => {
-                spinner.spinning = true;
                 convert_button.set_sensitive (false);
         });
 
         process_finished.connect (
             (result) => {
-                spinner.spinning = false;
                 convert_button.set_sensitive (true);
                 if (result) {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File converted."), "process-completed", Gtk.ButtonsType.CLOSE);

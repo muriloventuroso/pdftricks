@@ -29,7 +29,6 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
     private int page_size;
     private Gtk.Entry entry_range;
     private string type_split;
-    private Gtk.Spinner spinner;
 
     private Gtk.Revealer revealer;
     private Gtk.CheckButton btn_all;
@@ -39,7 +38,8 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
     private enum SplitType {ALL, RANGE, COLORS;}
 
     public SplitPDF (Gtk.Window window) {
-        Object (window: window);
+        Object (window: window,
+                title: _("Split PDF"));
     }
 
     construct {
@@ -56,6 +56,13 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
         btn_range.group = btn_all;
         btn_colors.group = btn_all;
         btn_all.sensitive = false;
+        btn_range.sensitive = false;
+        btn_colors.sensitive = false;
+
+        var checkbutton_box = new Gtk.Box (VERTICAL, 6);
+        checkbutton_box.append (btn_all);
+        checkbutton_box.append (btn_range);
+        checkbutton_box.append (btn_colors);
 
         Gtk.CheckButton with_thumbs = new Gtk.CheckButton.with_label (_("Show Thumbnails"));
         with_thumbs.set_active (false);
@@ -116,12 +123,10 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
         });
         create_thumb_begin.connect (
             () => {
-                spinner.spinning = true;
                 split_button.set_sensitive (false);
             });
         create_thumb_finished.connect (
             (result) => {
-                spinner.spinning = false;
                 split_button.set_sensitive (true);
                 if (result) {
                     view_thumbs.set_columns (page_size);
@@ -200,30 +205,22 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
         });
 
 
-        attach (new Granite.HeaderLabel (_("File to Split:")), 1, 0);
-        attach (filechooser, 2, 0);
+        grid.attach (new Granite.HeaderLabel (_("File to Split:")) {valign = Gtk.Align.CENTER}, 1, 0);
+        grid.attach (filechooser, 2, 0);
+        grid.attach (checkbutton_box, 2, 1);
 
-        attach (btn_all, 2, 1);
-        attach (btn_range, 2, 2);
-        attach (btn_colors, 2, 3);
-        //grid.attach (with_thumbs, 2, 4);
-        attach (split_button, 1, 5, 2);
-        attach (revealer, 1, 6, 2);
+        //grid.grid.attach (with_thumbs, 2, 4);
+        grid.attach (split_button, 1, 2, 2);
+        grid.attach (revealer, 1, 3, 2);
 
-        spinner = new Gtk.Spinner ();
-        spinner.spinning = false;
-
-        attach (spinner, 2, 7, 1, 1);
 
         process_begin.connect (
             () => {
-                spinner.spinning = true;
                 split_button.set_sensitive (true);
             });
 
         process_finished.connect (
             (result) => {
-                spinner.spinning = false;
                 split_button.set_sensitive (true);
                 if (result) {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
@@ -295,19 +292,16 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
         string file_pdf = input;
         string output, stderr = "";
         int exit_status = 0;
-        spinner.show ();
         try {
             var cmd = "gs -dNOPAUSE -dQUIET -dBATCH -q  -o - -sDEVICE=inkcov \"" + file_pdf + "\" -c quit  | grep -v Page";
             Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
         } catch (Error e) {
             critical (e.message);
-            spinner.hide ();
             return "";
         }
         if (output == "") {
             return "";
         }
-        spinner.hide ();
         var split_output = output.split ("\n");
         var pages_color = "";
         var pages_black = "";
@@ -432,17 +426,14 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
                 Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
             } catch (Error e) {
                 print (e.message);
-                spinner.spinning = false;
                 ret = false;
             }
             if (output != "") {
                 if (output.contains ("Error")) {
-                    spinner.spinning = false;
                     ret = false;
                 }
             }
             if (stderr != "") {
-                spinner.spinning = false;
                 ret = false;
             }
             Idle.add ((owned) callback);

@@ -32,6 +32,9 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
     private ConvertPDF convert_pdf;
     private Gtk.Stack stack;
 
+    private Gtk.Spinner busy_spinner;
+    private Gtk.Revealer busy_revealer;
+
     public const string ACTION_PREFIX = "win.";
     public const string ACTION_BACK = "back";
     public const string ACTION_COMPRESS_PDF = "action_compress_pdf";
@@ -61,6 +64,7 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
 
+        /* ---------------- NAVIGATION ---------------- */        
         navigation_button = new Gtk.Button.with_label (_("Back")) {
             action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_BACK
         };
@@ -69,9 +73,32 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
         navigation_revealer = new Gtk.Revealer () {
             child = navigation_button,
             reveal_child = false,
-            transition_type = Gtk.RevealerTransitionType.SLIDE_RIGHT
+            transition_type = Gtk.RevealerTransitionType.SWING_LEFT
         };
 
+
+        /* ---------------- BUSY ---------------- */
+        busy_spinner = new Gtk.Spinner () {spinning = false};
+
+        var busy_label = new Gtk.Label (_("Processing..."));
+        busy_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
+
+        var busy_box = new Gtk.Box (HORIZONTAL, 3);
+        busy_box.append (busy_spinner);
+        busy_box.append (busy_label);
+
+        busy_revealer = new Gtk.Revealer () {
+            child = busy_box,
+            reveal_child = false,
+            transition_type = Gtk.RevealerTransitionType.SWING_RIGHT
+        };
+
+        busy_spinner.bind_property (
+            "spinning",
+            busy_revealer, "reveal_child",
+            GLib.BindingFlags.SYNC_CREATE);
+
+        /* ---------------- HEADERBAR ---------------- */
         var title_widget = new Gtk.Label (_("PDFTricks"));
         title_widget.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
 
@@ -80,13 +107,28 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
         };
         headerbar.add_css_class (Granite.STYLE_CLASS_FLAT);
         headerbar.pack_start (navigation_revealer);
+        headerbar.pack_end (busy_revealer);
+
         titlebar = headerbar;
 
+
+
+        /* ---------------- WINDOW CONTENT ---------------- */
         welcome = new Welcome ();
         compress_pdf = new CompressPDF (this);
         split_pdf = new SplitPDF (this);
         merge_pdf = new MergePDF (this);
         convert_pdf = new ConvertPDF (this);
+
+        compress_pdf.process_begin.connect (busy);
+        split_pdf.process_begin.connect (busy);
+        merge_pdf.process_begin.connect (busy);
+        convert_pdf.process_begin.connect (busy);
+
+        compress_pdf.process_finished.connect (idle);
+        split_pdf.process_finished.connect (idle);
+        merge_pdf.process_finished.connect (idle);
+        convert_pdf.process_finished.connect (idle);
 
         stack = new Gtk.Stack ();
         stack.transition_type = Gtk.StackTransitionType.SLIDE_LEFT_RIGHT;
@@ -126,5 +168,13 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
     public void action_convert_pdf () {
         stack.visible_child = convert_pdf;
         navigation_revealer.reveal_child = true;
+    }
+
+    private void busy () {
+        busy_spinner.spinning = true;
+    }
+
+    private void idle () {
+        busy_spinner.spinning = false;
     }
 }

@@ -22,13 +22,12 @@
 public class PDFTricks.CompressPDF : PDFTricks.PageTemplate {
     private PDFTricks.FileChooserButton filechooser;
     private Gtk.DropDown dropdown;
-
-    private Gtk.Spinner spinner;
     private Gtk.Label level_description;
     private Gtk.Button compress_button;
 
     public CompressPDF (Gtk.Window window) {
-        Object (window: window);
+        Object (window: window,
+                title: _("Compress PDF"));
     }
 
     construct {
@@ -51,20 +50,14 @@ public class PDFTricks.CompressPDF : PDFTricks.PageTemplate {
         };
         compress_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        spinner = new Gtk.Spinner () {
-            spinning = false
-        };
+        grid.attach (new Granite.HeaderLabel (_("File to Compress:")), 0, 0, 1, 1);
+        grid.attach (filechooser, 1, 0, 1, 1);
 
-        attach (new Granite.HeaderLabel (_("File to Compress:")), 0, 0, 1, 1);
-        attach (filechooser, 1, 0, 1, 1);
+        grid.attach (new Granite.HeaderLabel (_("Compression Level:")), 0, 1, 1, 1);
+        grid.attach (dropdown, 1, 1, 1, 1);
 
-        attach (new Granite.HeaderLabel (_("Compression Level:")), 0, 1, 1, 1);
-        attach (dropdown, 1, 1, 1, 1);
-
-        attach (level_description, 0, 2, 2, 1);
-        attach (compress_button, 0, 3, 2, 2);
-
-        attach (spinner, 0, 5, 2, 2);
+        grid.attach (level_description, 0, 2, 2, 1);
+        grid.attach (compress_button, 0, 3, 2, 2);
 
 
         compress_button.clicked.connect (confirm_compress);
@@ -78,14 +71,12 @@ public class PDFTricks.CompressPDF : PDFTricks.PageTemplate {
 
         process_begin.connect (
             () => {
-                spinner.spinning = true;
                 compress_button.sensitive = false;
                 dropdown.sensitive = false;
             });
 
         process_finished.connect (
             (result) => {
-                spinner.spinning = false;
                 compress_button.set_sensitive (true);
                 if (result) {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully compressed."), "process-completed", Gtk.ButtonsType.CLOSE);
