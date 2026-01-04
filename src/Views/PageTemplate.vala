@@ -42,6 +42,7 @@ public class PDFTricks.PageTemplate : Gtk.Box {
     construct {
         orientation = Gtk.Orientation.VERTICAL;
         spacing = 0;
+        freeze_list = new Gee.ArrayList<Gtk.Widget> ();
 
         headerlabel = new Granite.HeaderLabel (title) {
             margin_top = 24,

@@ -44,11 +44,11 @@ public enum PDFTricks.Format {
     public string to_friendly_string () {
         switch (this) {
             case PDF: return _("PDF Document");
-            case JPG: return _("JPG Image");
-            case PNG: return _("Portable Network Graphics (PNG)");
+            case JPG: return _("JPEG Image");
+            case PNG: return _("PNG Image");
             case SVG: return _("Vector image (SVG)");
             case BMP: return _("Bitmap image (BMP)");
-            case TXT: return _("Text (TXT)");
+            case TXT: return _("Plain text");
             case UNKNOWN: return _("Unhandled format");
             default: return _("Unhandled format");
         }

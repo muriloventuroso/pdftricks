@@ -48,7 +48,8 @@ code_files = files(
     'src/Views/MergePDF.vala',
     'src/Views/ConvertPDF.vala',
     'src/Widgets/FileChooserButton.vala',
-        'src/Widgets/SplitCheckButtons.vala'
+    'src/Widgets/SplitCheckButtons.vala',
+    'src/Widgets/MergeList.vala'
 )
 
 executable(

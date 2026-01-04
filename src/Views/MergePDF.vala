@@ -23,6 +23,7 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
 
     private Gtk.TreeView view;
     private Gtk.ListStore list_store;
+    private PDFTricks.MergeList mergelist;
     //  private const Gtk.TargetEntry[] TARGETS = {
     //      {"STRING", 0, 0}
     //  };
@@ -42,34 +43,19 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
         var del_button = new Gtk.Button.with_label (_("Remove Selected"));
         var clear_button = new Gtk.Button.with_label (_("Clear All"));
 
-        list_store = new Gtk.ListStore (2, typeof (string), typeof (string));
-        Gtk.TreeIter iter;
-
-        // The View:
-        view = new Gtk.TreeView.with_model (list_store) {
-            hexpand = true,
-            vexpand = true
-        };
-
-        Gtk.CellRendererText cell = new Gtk.CellRendererText ();
-        view.insert_column_with_attributes (-1, _("Files"), cell, "text", 0);
-        view.insert_column_with_attributes (-1, _("Pages"), cell, "text", 1);
+        mergelist = new PDFTricks.MergeList ();
+        view = mergelist.view;
+        list_store = mergelist.list_store;
 
         var merge_button = new Gtk.Button.with_label (_("Merge")) {
             vexpand = true
         };
         merge_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
 
-        var scroll = new Gtk.ScrolledWindow () {
-            vexpand = true,
-            hexpand = true
-        };
-        scroll.child = view;
-
         grid.attach (add_button, 1, 0);
         grid.attach (del_button, 2, 0);
         grid.attach (clear_button, 3, 0);
-        grid.attach (scroll, 0, 1, 5, 6);
+        grid.attach (mergelist, 0, 1, 5, 6);
         grid.attach (merge_button, 1, 7, 3);
         freeze_widgets (true);
 
