@@ -43,7 +43,7 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
         var del_button = new Gtk.Button.with_label (_("Remove Selected"));
         var clear_button = new Gtk.Button.with_label (_("Clear All"));
 
-        mergelist = new PDFTricks.MergeList ();
+        mergelist = new PDFTricks.MergeList (window);
         view = mergelist.view;
         list_store = mergelist.list_store;
 
