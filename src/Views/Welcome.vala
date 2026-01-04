@@ -25,10 +25,10 @@ public class PDFTricks.Welcome : Granite.Bin {
             description = _("Tricks for PDF files")
         };
 
-        var compress = welcome.append_button (new ThemedIcon ("compress-pdf"), _("Compress PDF"), _("Compress a PDF file to get the same quality with reduced filesize."));
-        var split = welcome.append_button (new ThemedIcon ("split-pdf"), _("Split PDF"), _("Split a PDF file by page ranges, or extract all PDF pages to multiple PDF files."));
-        var merge = welcome.append_button (new ThemedIcon ("merge-pdf"), _("Merge PDF"), _("Select multiple PDF files or images, and merge them in seconds."));
-        var convert = welcome.append_button (new ThemedIcon ("pdf-convert"), _("Convert PDF"), _("Convert PDF files to JPG, PNG and TXT formats."));
+        var compress = welcome.append_button (new ThemedIcon ("compress"), _("Compress PDF"), _("Compress a PDF file to get the same quality with reduced filesize."));
+        var split = welcome.append_button (new ThemedIcon ("split"), _("Split PDF"), _("Split a PDF file by page ranges, or extract all PDF pages to multiple PDF files."));
+        var merge = welcome.append_button (new ThemedIcon ("merge"), _("Merge PDF"), _("Select multiple PDF files or images, and merge them in seconds."));
+        var convert = welcome.append_button (new ThemedIcon ("convert"), _("Convert PDF"), _("Convert PDF files to JPG, PNG and TXT formats."));
 
         compress.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_COMPRESS_PDF;
         split.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_SPLIT_PDF;

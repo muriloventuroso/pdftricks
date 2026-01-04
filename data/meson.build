@@ -9,24 +9,30 @@ foreach i : icon_sizes
         join_paths('icons', i, meson.project_name() + '.svg'),
         install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
     )
-    install_data(
-        join_paths('icons', i, 'compress-pdf.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
-    )
-    install_data(
-        join_paths('icons', i, 'split-pdf.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
-    )
-    install_data(
-        join_paths('icons', i, 'merge-pdf.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
-    )
-    install_data(
-        join_paths('icons', i, 'pdf-convert.svg'),
-        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
-    )
-
 endforeach
+
+
+install_data(
+    'resources' / 'compress.svg',
+    install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps'
+)
+install_data(
+    'resources' / 'split.svg',
+    install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps'
+)
+install_data(
+    'resources' / 'merge.svg',
+    install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps'
+)
+install_data(
+    'resources' / 'convert.svg',
+    install_dir: get_option('datadir') / 'icons' / 'hicolor' /'scalable' / 'apps'
+)
+
+
+
+
+
 
 #======== Internationalization ========
 #Translate and install our .desktop file
