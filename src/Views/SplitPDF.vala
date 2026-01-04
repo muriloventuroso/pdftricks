@@ -261,42 +261,6 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
 
     }
 
-    private async bool create_thumbs (string input_file) {
-        string file_pdf = input_file;
-        bool ret = true;
-
-        SourceFunc callback = create_thumbs.callback;
-        ThreadFunc<void*> run = () => {
-            string output, stderr = "";
-            int exit_status = 0;
-            try {
-                var cmd = "gs -dNumRenderingThreads=4 -dNOPAUSE -sDEVICE=jpeg -g125x175 -dPDFFitPage -sOutputFile=/tmp/h%d.jpg -dJPEGQ=100 -r300 -q \"" + file_pdf + "\" -c quit";
-                Process.spawn_command_line_sync (cmd, out output, out stderr, out exit_status);
-            } catch (Error e) {
-                print (e.message);
-                ret = false;
-            }
-            if (output != "") {
-                if (output.contains ("Error")) {
-                    ret = false;
-                }
-            }
-            if (stderr != "") {
-                ret = false;
-            }
-            Idle.add ((owned) callback);
-            return null;
-        };
-        try {
-            new Thread<void*>.try (null, run);
-        } catch (Error e) {
-            warning (e.message);
-        }
-        yield;
-        return ret;
-
-    }
-
     private string group_list (string result) {
         var list_result = result.split (",");
         var first = list_result[0];

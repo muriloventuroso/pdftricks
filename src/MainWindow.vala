@@ -23,8 +23,9 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
 
     private Gtk.Revealer navigation_revealer;
     private Gtk.Button navigation_button;
-
+    private Gtk.Label title_widget;
     private Gtk.HeaderBar headerbar;
+
     private Welcome welcome;
     private CompressPDF compress_pdf;
     private SplitPDF split_pdf;
@@ -64,11 +65,11 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
         actions.add_action_entries (ACTION_ENTRIES, this);
         insert_action_group ("win", actions);
 
-        /* ---------------- NAVIGATION ---------------- */        
+        /* ---------------- NAVIGATION ---------------- */
         navigation_button = new Gtk.Button.with_label (_("Back")) {
             action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_BACK
         };
-        navigation_button.add_css_class ("back-button");
+        navigation_button.add_css_class (Granite.STYLE_CLASS_BACK_BUTTON);
 
         navigation_revealer = new Gtk.Revealer () {
             child = navigation_button,
@@ -80,7 +81,7 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
         /* ---------------- BUSY ---------------- */
         busy_spinner = new Gtk.Spinner () {spinning = false};
 
-        var busy_label = new Gtk.Label (_("Processing..."));
+        var busy_label = new Gtk.Label (_("Processing"));
         busy_label.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
         var busy_box = new Gtk.Box (HORIZONTAL, 3);
@@ -99,7 +100,7 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
             GLib.BindingFlags.SYNC_CREATE);
 
         /* ---------------- HEADERBAR ---------------- */
-        var title_widget = new Gtk.Label (_("PDFTricks"));
+        title_widget = new Gtk.Label (_("PDFTricks"));
         title_widget.add_css_class (Granite.STYLE_CLASS_TITLE_LABEL);
 
         headerbar = new Gtk.HeaderBar () {
@@ -146,26 +147,31 @@ public class PDFTricks.MainWindow : Gtk.ApplicationWindow {
     }
 
     public void handle_navigation_button_clicked () {
+        title_widget.label = _("PDFTricks");
         stack.visible_child = welcome;
         navigation_revealer.reveal_child = false;
     }
 
     public void action_compress_pdf () {
+        title_widget.label = _("Compress PDF");
         stack.visible_child = compress_pdf;
         navigation_revealer.reveal_child = true;
     }
 
     public void action_split_pdf () {
+        title_widget.label = _("Split PDF");
         stack.visible_child = split_pdf;
         navigation_revealer.reveal_child = true;
     }
 
     public void action_merge_pdf () {
+        title_widget.label = _("Merge PDF");
         stack.visible_child = merge_pdf;
         navigation_revealer.reveal_child = true;
     }
 
     public void action_convert_pdf () {
+        title_widget.label = _("Convert PDF");
         stack.visible_child = convert_pdf;
         navigation_revealer.reveal_child = true;
     }

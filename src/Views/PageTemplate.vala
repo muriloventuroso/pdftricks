@@ -63,7 +63,7 @@ public class PDFTricks.PageTemplate : Gtk.Box {
             vexpand = true,
         };
 
-        append (headerlabel);
+        //append (headerlabel);
         append (grid);
     }
 
