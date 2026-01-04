@@ -61,6 +61,5 @@ public class PDFTricks.PageTemplate : Gtk.Box {
 
         append (headerlabel);
         append (grid);
-
     }
 }

@@ -30,12 +30,7 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
     private Gtk.Entry entry_range;
     private string type_split;
 
-    private Gtk.Revealer revealer;
-    private Gtk.CheckButton btn_all;
-    private Gtk.CheckButton btn_range;
-    private Gtk.CheckButton btn_colors;
-
-    private enum SplitType {ALL, RANGE, COLORS;}
+    private PDFTricks.SplitCheckButtons checkbuttons;
 
     public SplitPDF (Gtk.Window window) {
         Object (window: window,
@@ -43,143 +38,14 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
     }
 
     construct {
-
         page_size = 0;
         type_split = "all";
 
         filechooser = new PDFTricks.FileChooserButton (_("Select the file to split"));
-
-        btn_all = new Gtk.CheckButton.with_label (_("Extract all pages"));
-        btn_range = new Gtk.CheckButton.with_label (_("Select range of pages"));
-        btn_colors = new Gtk.CheckButton.with_label (_("Separate colored pages"));
-
-        btn_range.group = btn_all;
-        btn_colors.group = btn_all;
-        btn_all.sensitive = false;
-        btn_range.sensitive = false;
-        btn_colors.sensitive = false;
-
-        var checkbutton_box = new Gtk.Box (VERTICAL, 6);
-        checkbutton_box.append (btn_all);
-        checkbutton_box.append (btn_range);
-        checkbutton_box.append (btn_colors);
-
-        Gtk.CheckButton with_thumbs = new Gtk.CheckButton.with_label (_("Show Thumbnails"));
-        with_thumbs.set_active (false);
-
-        revealer = new Gtk.Revealer ();
-
-        Gtk.ListStore model_thumbs = new Gtk.ListStore (2, typeof (Gdk.Pixbuf), typeof (string));
-        Gtk.TreeIter iter;
-
-        Gtk.IconView view_thumbs = new Gtk.IconView.with_model (model_thumbs);
-        view_thumbs.set_pixbuf_column (0);
-        view_thumbs.set_text_column (1);
-        view_thumbs.set_selection_mode (Gtk.SelectionMode.MULTIPLE);
-        view_thumbs.set_item_width (105);
-        view_thumbs.hexpand = true;
-        view_thumbs.vexpand = true;
-        view_thumbs.set_item_padding (5);
-
-        var scrolled_thumbs = new Gtk.ScrolledWindow () {
-            hexpand = true,
-            vexpand = true
-        };
-        scrolled_thumbs.set_policy (Gtk.PolicyType.ALWAYS, Gtk.PolicyType.NEVER);
-
-        scrolled_thumbs.child = view_thumbs;
-
-        entry_range = new Gtk.Entry ();
-        entry_range.set_placeholder_text ("1-3,5,9");
-
-        var range_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        range_box.append (scrolled_thumbs);
-        range_box.append (entry_range);
-        revealer.child = range_box;
+        checkbuttons = new PDFTricks.SplitCheckButtons ();
 
         var split_button = new Gtk.Button.with_label (_("Split"));
 
-        view_thumbs.selection_changed.connect (() => {
-            List<Gtk.TreePath> paths = view_thumbs.get_selected_items ();
-            Value title;
-            string result = "";
-            foreach (Gtk.TreePath path in paths) {
-                bool tmp = model_thumbs.get_iter (out iter, path);
-                assert (tmp == true);
-
-                model_thumbs.get_value (iter, 1, out title);
-                if (result == "") {
-                    result = title.dup_string ();
-                } else {
-                    result = title.dup_string () + "," + result;
-                }
-            }
-
-            var result_grouped = group_list (result);
-            if (result_grouped != "") {
-                entry_range.set_text (result_grouped);
-            }
-
-        });
-        create_thumb_begin.connect (
-            () => {
-                split_button.set_sensitive (false);
-            });
-        create_thumb_finished.connect (
-            (result) => {
-                split_button.set_sensitive (true);
-                if (result) {
-                    view_thumbs.set_columns (page_size);
-                    for (int a = 1; a <= page_size; a++) {
-                        try {
-                            model_thumbs.append (out iter);
-                            Gdk.Pixbuf pixbuf = new Gdk.Pixbuf.from_file ("/tmp/h" + a.to_string () + ".jpg");
-                            model_thumbs.set (iter, 0, pixbuf, 1, a.to_string ());
-
-                        } catch (Error e) {
-                            print ("erro");
-                        }
-                    }
-                };
-            });
-        btn_range.toggled.connect (() => {
-            if (btn_range.get_active () == true) {
-                model_thumbs.clear ();
-                type_split = "range";
-                //var file_pdf = filechooser.get_filename();
-                //  if(with_thumbs.get_active() == true){
-                //      create_thumbs.begin(file_pdf, (obj, res) => {
-                //          create_thumb_finished (create_thumbs.end (res));
-                //      });
-                //  }
-                //revealer.set_reveal_child(true);
-            }
-            var file_pdf = filechooser.selected_file;
-            if (file_pdf != null) {
-                split_button.set_sensitive (true);
-            }
-        });
-        btn_all.toggled.connect (() => {
-            if (btn_all.get_active () == true) {
-                type_split = "all";
-                revealer.set_reveal_child (false);
-            }
-            var file_pdf = filechooser.selected_file;
-            if (file_pdf != null) {
-                split_button.set_sensitive (true);
-            }
-        });
-
-        btn_colors.toggled.connect (() => {
-            if (btn_colors.get_active () == true) {
-                type_split = "colors";
-                revealer.set_reveal_child (false);
-            }
-            var file_pdf = filechooser.selected_file;
-            if (file_pdf != null) {
-                split_button.set_sensitive (true);
-            }
-        });
         split_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
         split_button.vexpand = true;
         split_button.clicked.connect (confirm_split);
@@ -189,30 +55,14 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
             var file_pdf = filechooser.selected_file.get_path ();
             page_size = get_page_count (file_pdf);
             split_button.set_sensitive (true);
-            btn_all.set_sensitive (true);
-            btn_range.set_sensitive (true);
-            btn_colors.set_sensitive (true);
-            model_thumbs.clear ();
-            //  if(btn_range.get_active() == true){
-            //      if(with_thumbs.get_active() == true){
-            //          view_thumbs.set_columns(page_size);
-            //          create_thumbs.begin(file_pdf, (obj, res) => {
-            //              create_thumb_finished (create_thumbs.end (res));
-            //          });
-            //      }
-            //      revealer.set_reveal_child(true);
-            //  }
+            checkbuttons.set_sensitive (true);
         });
 
 
         grid.attach (new Granite.HeaderLabel (_("File to Split:")) {valign = Gtk.Align.CENTER}, 1, 0);
         grid.attach (filechooser, 2, 0);
-        grid.attach (checkbutton_box, 2, 1);
-
-        //grid.grid.attach (with_thumbs, 2, 4);
+        grid.attach (checkbuttons, 2, 1);
         grid.attach (split_button, 1, 2, 2);
-        grid.attach (revealer, 1, 3, 2);
-
 
         process_begin.connect (
             () => {
@@ -226,12 +76,12 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
                     message_dialog.show ();
-                    message_dialog.destroy ();
+
                 } else {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not split this file."), "process-stop", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
                     message_dialog.show ();
-                    message_dialog.destroy ();
+
                 };
             });
 
@@ -251,20 +101,20 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
                 var output_file = chooser_output.save.end (res).get_path ();
 
                 if (split == true) {
-                    if (btn_all.active) {
+                    if (checkbuttons.selected == SplitCheckButtons.SplitType.ALL) {
                         process_begin ();
                         split_file_all.begin (file_pdf.get_path (), output_file,
                             (obj, res) => {
                                 process_finished (split_file_all.end (res));
                             });
-                    } else if (btn_range.active) {
-                        var pages = entry_range.get_text ();
+                    } else if (checkbuttons.selected == SplitCheckButtons.SplitType.RANGE) {
+                        var pages = checkbuttons.range;
                         process_begin ();
                         split_file_range.begin (file_pdf.get_path (), output_file, pages,
                             (obj, res) => {
                                 process_finished (split_file_range.end (res));
                             });
-                    }else if (btn_colors.active) {
+                    }else if (checkbuttons.selected == SplitCheckButtons.SplitType.COLORS) {
                         var pages = get_colors (file_pdf.get_path ());
                         if (pages != "" && pages != ";") {
                             var pages_black = group_list (pages.split (";")[0]);

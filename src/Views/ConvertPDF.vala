@@ -90,12 +90,10 @@ public class PDFTricks.ConvertPDF : PDFTricks.PageTemplate {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File converted."), "process-completed", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
                     message_dialog.show ();
-                    message_dialog.destroy ();
                 } else {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not convert this file."), "process-stop", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
                     message_dialog.show ();
-                    message_dialog.destroy ();
                 };
         });
 
@@ -215,7 +213,7 @@ public class PDFTricks.ConvertPDF : PDFTricks.PageTemplate {
                         var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
                         message_dialog.set_transient_for (window);
                         message_dialog.show ();
-                        message_dialog.destroy ();
+    
                         ret = false;
                     }
                     if (exit_status != 0) {

@@ -9,9 +9,6 @@ finish-args:
   - '--device=dri'
   - '--socket=fallback-x11'
   - '--socket=wayland'
-  - '--system-talk-name=org.freedesktop.Accounts'
-  - '--filesystem=/tmp'
-  - '--filesystem=host'
 
 modules:
 

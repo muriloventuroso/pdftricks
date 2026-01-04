@@ -82,12 +82,10 @@ public class PDFTricks.CompressPDF : PDFTricks.PageTemplate {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully compressed."), "process-completed", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
                     message_dialog.show ();
-                    message_dialog.destroy ();
                 } else {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem compressing your file."), "process-stop", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
                     message_dialog.show ();
-                    message_dialog.destroy ();
                 };
             });
 

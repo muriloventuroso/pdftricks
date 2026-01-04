@@ -44,12 +44,6 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
 
         list_store = new Gtk.ListStore (2, typeof (string), typeof (string));
         Gtk.TreeIter iter;
-        Gtk.FileFilter filter = new Gtk.FileFilter ();
-        filter.add_mime_type ("application/pdf");
-        filter.add_mime_type ("image/jpeg");
-        filter.add_mime_type ("image/png");
-        filter.add_mime_type ("image/bmp");
-        filter.add_mime_type ("image/svg+xml");
 
         // The View:
         view = new Gtk.TreeView.with_model (list_store) {
@@ -109,23 +103,37 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully merged."), "process-completed", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
                     message_dialog.show ();
-                    message_dialog.destroy ();
+
                 } else {
                     var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem merging your file."), "process-stop", Gtk.ButtonsType.CLOSE);
                     message_dialog.set_transient_for (window);
                     message_dialog.show ();
-                    message_dialog.destroy ();
+
                 };
             });
     }
 
     private void on_add_files () {
+        var all_files_filter = new Gtk.FileFilter () {
+            name = _("All files"),
+        };
+        all_files_filter.add_pattern ("*");
+
+        var pdf_files_filter = new Gtk.FileFilter () {
+            name = _("PDF Files"),
+        };
+        pdf_files_filter.add_mime_type ("application/pdf");
+
+        var filter_model = new ListStore (typeof (Gtk.FileFilter));
+        filter_model.append (all_files_filter);
+        filter_model.append (pdf_files_filter);
+
         chooser_file = new Gtk.FileDialog () {
-            title = _("Select the file to compress")
+            title = _("Select the file to merge"),
+            filters = filter_model
         };
 
         chooser_file.open_multiple.begin (window, null, (obj, res) => {
-            
             var all_files = chooser_file.open_multiple.end (res);
                 for (int i = 0; i < all_files.get_n_items (); i++) {
                     var pdf_file = (File)all_files.get_item (i);
@@ -224,7 +232,6 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
                 var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("ImageMagick Policies"), _("Change the ImageMagick security policies that prevent this operation and try again."), "process-stop", Gtk.ButtonsType.CLOSE);
                 message_dialog.set_transient_for (window);
                 message_dialog.show ();
-                message_dialog.destroy ();
                 return "";
             }
             if (exit_status != 0) {
