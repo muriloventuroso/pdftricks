@@ -51,6 +51,30 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
             vexpand = true
         };
 
+        Gtk.CellRendererText cell = new Gtk.CellRendererText ();
+        view.insert_column_with_attributes (-1, _("Files"), cell, "text", 0);
+        view.insert_column_with_attributes (-1, _("Pages"), cell, "text", 1);
+
+        var merge_button = new Gtk.Button.with_label (_("Merge")) {
+            vexpand = true
+        };
+        merge_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+
+        var scroll = new Gtk.ScrolledWindow () {
+            vexpand = true,
+            hexpand = true
+        };
+        scroll.child = view;
+
+        grid.attach (add_button, 1, 0);
+        grid.attach (del_button, 2, 0);
+        grid.attach (clear_button, 3, 0);
+        grid.attach (scroll, 0, 1, 5, 6);
+        grid.attach (merge_button, 1, 7, 3);
+        freeze_widgets (true);
+
+        /* ---------------- CONNECTS & BINDS ---------------- */
+
         add_button.clicked.connect (on_add_files);
 
         del_button.clicked.connect (() => {
@@ -67,29 +91,7 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
             list_store.clear ();
         });
 
-
-        Gtk.CellRendererText cell = new Gtk.CellRendererText ();
-        view.insert_column_with_attributes (-1, _("Files"), cell, "text", 0);
-        view.insert_column_with_attributes (-1, _("Pages"), cell, "text", 1);
-
-
-
-        var merge_button = new Gtk.Button.with_label (_("Merge"));
-        merge_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
-        merge_button.vexpand = true;
         merge_button.clicked.connect (confirm_merge);
-
-        var scroll = new Gtk.ScrolledWindow () {
-            vexpand = true,
-            hexpand = true
-        };
-        scroll.child = view;
-
-        grid.attach (add_button, 1, 0);
-        grid.attach (del_button, 2, 0);
-        grid.attach (clear_button, 3, 0);
-        grid.attach (scroll, 0, 1, 5, 6);
-        grid.attach (merge_button, 1, 7, 3);
 
         process_begin.connect (
             () => {

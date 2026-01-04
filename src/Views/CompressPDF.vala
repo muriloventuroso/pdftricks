@@ -34,21 +34,18 @@ public class PDFTricks.CompressPDF : PDFTricks.PageTemplate {
         filechooser = new PDFTricks.FileChooserButton (_("Select the file to compress"));
 
         level_description = new Gtk.Label (_("Good quality, good compression"));
+        level_description.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
         dropdown = new Gtk.DropDown.from_strings (Compression.choices ()) {
             sensitive = false
         };
         dropdown.selected = Compression.RECOMMENDED;
 
-        dropdown.notify["selected"].connect (() => {
-            level_description.label = ((Compression)dropdown.selected).to_comment ();
-        });
-
         compress_button = new Gtk.Button.with_label (_("Compress")) {
-            vexpand = true,
-            sensitive = false
+            vexpand = true
         };
         compress_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+        freeze_list.add (compress_button);
 
         grid.attach (new Granite.HeaderLabel (_("File to Compress:")), 0, 0, 1, 1);
         grid.attach (filechooser, 1, 0, 1, 1);
@@ -59,15 +56,21 @@ public class PDFTricks.CompressPDF : PDFTricks.PageTemplate {
         grid.attach (level_description, 0, 2, 2, 1);
         grid.attach (compress_button, 0, 3, 2, 2);
 
+        freeze_widgets (true);
 
-        compress_button.clicked.connect (confirm_compress);
-
+        /* ---------------- CONNECTS & BINDS ---------------- */
         filechooser.selected.connect (() => {
             if (filechooser.selected_file != null) {
                 compress_button.sensitive = true;
                 dropdown.sensitive = true;
             };
         });
+
+        dropdown.notify["selected"].connect (() => {
+            level_description.label = ((Compression)dropdown.selected).to_comment ();
+        });
+
+        compress_button.clicked.connect (confirm_compress);
 
         process_begin.connect (
             () => {

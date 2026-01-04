@@ -29,6 +29,9 @@ public class PDFTricks.PageTemplate : Gtk.Box {
 
     public string title {get; construct;}
 
+
+    public Gee.ArrayList<Gtk.Widget> freeze_list;
+
     public PageTemplate (Gtk.Window window, string title) {
         Object (
             window: window,
@@ -61,5 +64,11 @@ public class PDFTricks.PageTemplate : Gtk.Box {
 
         append (headerlabel);
         append (grid);
+    }
+
+    public void freeze_widgets (bool if_freeze) {
+        foreach (var widget in freeze_list) {
+            widget.sensitive = !if_freeze;
+        }
     }
 }

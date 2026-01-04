@@ -26,9 +26,7 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
 
     private PDFTricks.FileChooserButton filechooser;
 
-    private int page_size;
-    private Gtk.Entry entry_range;
-    private string type_split;
+    private int page_size = 0;
 
     private PDFTricks.SplitCheckButtons checkbuttons;
 
@@ -38,25 +36,14 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
     }
 
     construct {
-        page_size = 0;
-        type_split = "all";
-
         filechooser = new PDFTricks.FileChooserButton (_("Select the file to split"));
         checkbuttons = new PDFTricks.SplitCheckButtons ();
 
-        var split_button = new Gtk.Button.with_label (_("Split"));
-
+        var split_button = new Gtk.Button.with_label (_("Split")) {
+            vexpand = true
+        };
         split_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
-        split_button.vexpand = true;
-        split_button.clicked.connect (confirm_split);
-        split_button.set_sensitive (false);
-
-        filechooser.selected.connect (() => {
-            var file_pdf = filechooser.selected_file.get_path ();
-            page_size = get_page_count (file_pdf);
-            split_button.set_sensitive (true);
-            checkbuttons.set_sensitive (true);
-        });
+        freeze_list.add (split_button);
 
 
         grid.attach (new Granite.HeaderLabel (_("File to Split:")) {valign = Gtk.Align.CENTER}, 1, 0);
@@ -64,6 +51,17 @@ public class PDFTricks.SplitPDF : PDFTricks.PageTemplate {
         grid.attach (checkbuttons, 2, 1);
         grid.attach (split_button, 1, 2, 2);
 
+        freeze_widgets (true);
+
+        /* ---------------- CONNECTS & BINDS ---------------- */
+        filechooser.selected.connect (() => {
+            var file_pdf = filechooser.selected_file.get_path ();
+            page_size = get_page_count (file_pdf);
+            split_button.set_sensitive (true);
+            checkbuttons.set_sensitive (true);
+        });
+
+        split_button.clicked.connect (confirm_split);
         process_begin.connect (
             () => {
                 split_button.set_sensitive (true);

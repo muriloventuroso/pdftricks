@@ -62,12 +62,10 @@ public class PDFTricks.ConvertPDF : PDFTricks.PageTemplate {
         });
 
         convert_button = new Gtk.Button.with_label (_("Convert"));
-        convert_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
-        convert_button.vexpand = true;
-        convert_button.set_sensitive (false);
-        convert_button.clicked.connect (confirm_convert);
 
-        filechooser.selected.connect (on_file_selected);
+        convert_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
+        freeze_list.add (convert_button);
+
 
         grid.attach (new Granite.HeaderLabel (_("File to Convert:")) {valign = Gtk.Align.CENTER}, 0, 0, 1, 1);
         grid.attach (filechooser, 1, 0, 1, 1);
@@ -77,6 +75,11 @@ public class PDFTricks.ConvertPDF : PDFTricks.PageTemplate {
 
         grid.attach (convert_button, 0, 2, 2, 2);
 
+        freeze_widgets (true);
+
+        /* ---------------- CONNECTS & BINDS ---------------- */
+        convert_button.clicked.connect (confirm_convert);
+        filechooser.selected.connect (on_file_selected);
 
         process_begin.connect (
             () => {
