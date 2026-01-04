@@ -30,7 +30,7 @@ public class PDFTricks.FileChooserButton : Gtk.Button {
         }
         set {
             _selected = value;
-            label.label = value.get_basename () ?? _("None");
+            label.label = value.get_basename () ?? _("(None)");
             selected ();
         }
     }
@@ -48,7 +48,7 @@ public class PDFTricks.FileChooserButton : Gtk.Button {
             margin_end = 3
         };
 
-        label = new Gtk.Label (_("None")) {
+        label = new Gtk.Label (_("(None)")) {
             hexpand = true,
             halign = Gtk.Align.START,
             width_request = 32
