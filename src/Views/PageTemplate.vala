@@ -65,11 +65,29 @@ public class PDFTricks.PageTemplate : Gtk.Box {
 
         //append (headerlabel);
         append (grid);
+
+        process_begin.connect (() => {freeze_widgets (true);});
+        process_finished.connect (on_result);
     }
 
     public void freeze_widgets (bool if_freeze) {
         foreach (var widget in freeze_list) {
             widget.sensitive = !if_freeze;
         }
+    }
+
+    private void on_result () {
+        freeze_widgets (false);
+        //  if (result == 0) {
+        //      var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("File split."), "process-completed", Gtk.ButtonsType.CLOSE);
+        //      message_dialog.set_transient_for (window);
+        //      message_dialog.show ();
+
+        //  } else {
+        //      var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("Could not split this file."), "process-stop", Gtk.ButtonsType.CLOSE);
+        //      message_dialog.set_transient_for (window);
+        //      message_dialog.show ();
+
+        //  };
     }
 }

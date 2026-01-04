@@ -36,9 +36,7 @@ public class PDFTricks.CompressPDF : PDFTricks.PageTemplate {
         level_description = new Gtk.Label (_("Good quality, good compression"));
         level_description.add_css_class (Granite.STYLE_CLASS_DIM_LABEL);
 
-        dropdown = new Gtk.DropDown.from_strings (Compression.choices ()) {
-            sensitive = false
-        };
+        dropdown = new Gtk.DropDown.from_strings (Compression.choices ());
         dropdown.selected = Compression.RECOMMENDED;
 
         compress_button = new Gtk.Button.with_label (_("Compress")) {
@@ -71,27 +69,6 @@ public class PDFTricks.CompressPDF : PDFTricks.PageTemplate {
         });
 
         compress_button.clicked.connect (confirm_compress);
-
-        process_begin.connect (
-            () => {
-                compress_button.sensitive = false;
-                dropdown.sensitive = false;
-            });
-
-        process_finished.connect (
-            (result) => {
-                compress_button.set_sensitive (true);
-                if (result) {
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully compressed."), "process-completed", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for (window);
-                    message_dialog.show ();
-                } else {
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem compressing your file."), "process-stop", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for (window);
-                    message_dialog.show ();
-                };
-            });
-
     }
 
     private void confirm_compress () {

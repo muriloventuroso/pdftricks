@@ -78,27 +78,6 @@ public class PDFTricks.MergePDF : PDFTricks.PageTemplate {
         });
 
         merge_button.clicked.connect (confirm_merge);
-
-        process_begin.connect (
-            () => {
-                merge_button.set_sensitive (false);
-            });
-
-        process_finished.connect (
-            (result) => {
-                merge_button.set_sensitive (true);
-                if (result) {
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Success."), _("Your file was succefully merged."), "process-completed", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for (window);
-                    message_dialog.show ();
-
-                } else {
-                    var message_dialog = new Granite.MessageDialog.with_image_from_icon_name (_("Failure."), _("There was a problem merging your file."), "process-stop", Gtk.ButtonsType.CLOSE);
-                    message_dialog.set_transient_for (window);
-                    message_dialog.show ();
-
-                };
-            });
     }
 
     private void on_add_files () {
