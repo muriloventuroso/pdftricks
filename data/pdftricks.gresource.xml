@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/github/ellie_commons/pdftricks">
+    <file alias="compress.svg">resources/compress.svg</file>
+    <file alias="convert.svg">resources/convert.svg</file>
+    <file alias="merge.svg">resources/merge.svg</file>
+    <file alias="split.svg">resources/split.svg</file>
+  </gresource>
+</gresources>
