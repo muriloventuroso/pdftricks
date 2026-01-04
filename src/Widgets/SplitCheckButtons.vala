@@ -24,7 +24,7 @@ public class PDFTricks.SplitCheckButtons : Gtk.Box {
     private Gtk.CheckButton btn_all;
     private Gtk.CheckButton btn_range;
 
-    private Gtk.Entry entry_range;
+    private Granite.ValidatedEntry entry_range;
     private Gtk.Revealer entry_revealer;
 
     private Gtk.CheckButton btn_colors;
@@ -43,6 +43,10 @@ public class PDFTricks.SplitCheckButtons : Gtk.Box {
         get {return entry_range.text;}
     }
 
+    public bool is_valid {
+        get {return entry_range.is_valid;}
+    }
+
     construct {
         orientation = Gtk.Orientation.VERTICAL;
         spacing = 0;
@@ -52,15 +56,23 @@ public class PDFTricks.SplitCheckButtons : Gtk.Box {
             margin_bottom = 9
         };
 
-        btn_range = new Gtk.CheckButton.with_label (_("Select range of pages")) {
-            margin_bottom = 3
-        };
+        btn_range = new Gtk.CheckButton.with_label (_("Select range of pages"));
         btn_range.group = btn_all;
 
-        ///TODO: ValidatedEntry
-        entry_range = new Gtk.Entry () {
-            placeholder_text = "1-3,5,9"
+        entry_range = new Granite.ValidatedEntry () {
+            placeholder_text = "1-3,5,9",
+            margin_top = 6
         };
+
+        // Regex: As in the placeholder: Numbers, dashes and commas
+        // TODO: Ensure only one dash or comma, to avoid stuff like 8--3,,,5
+        // Im not sure if ghostscript can work with that though....
+        try {
+            var regex = new Regex ("^[0-9,-]*$");
+            entry_range.regex = regex;
+        } catch (Error e) {
+            critical (e.message);
+        }
 
         entry_revealer = new Gtk.Revealer () {
             child = entry_range,
