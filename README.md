@@ -58,7 +58,7 @@ To install, use `ninja install`, then execute with `com.github.muriloventuroso.p
 
 ## ImageMagick
 
-In recent versions of ImageMagick has been added a security policy that blocks manipulations in PDF files. This affects PDFTricks operations. To correct this change the settings of your ImageMagick installation.
+In recent versions of ImageMagick, a security policy was added that blocks manipulations in PDF files. This affects PDFTricks operations. To correct this change the settings of your ImageMagick installation.
 
 Find and edit the configuration file.
 

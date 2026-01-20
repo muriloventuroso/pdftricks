@@ -11,6 +11,7 @@ Build-Depends: cmake (>= 2.8),
                ghostscript,
                imagemagick
 Standards-Version: 3.9.3
+Homepage: https://github.com/muriloventuroso/pdftricks
 
 Package: com.github.muriloventuroso.pdftricks
 Architecture: any
