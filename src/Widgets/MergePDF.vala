@@ -68,7 +68,7 @@ namespace pdftricks {
             view.drag_data_received.connect(on_drag_data_received);
             add_button.clicked.connect(() => {
                 Gtk.FileChooserNative chooser_file = new Gtk.FileChooserNative (
-                _("Select the file to compress"), window, Gtk.FileChooserAction.OPEN,
+                _("Select the file to merge"), window, Gtk.FileChooserAction.OPEN,
                 _("Open"),
                 _("Cancel"));
 
@@ -255,7 +255,7 @@ namespace pdftricks {
             }
             var output_file = "";
             Gtk.FileChooserNative chooser_output = new Gtk.FileChooserNative (
-                _("Select the file to compress"), window, Gtk.FileChooserAction.SAVE,
+                _("Select the file to save"), window, Gtk.FileChooserAction.SAVE,
                 _("Save"),
                 _("Cancel"));
             chooser_output.do_overwrite_confirmation = true;

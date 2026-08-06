@@ -45,7 +45,7 @@ namespace pdftricks {
             page_size = 0;
             type_split = "all";
 
-            filechooser = new Gtk.FileChooserButton (_("Select the file to compress"), Gtk.FileChooserAction.OPEN);
+            filechooser = new Gtk.FileChooserButton (_("Select the file to split"), Gtk.FileChooserAction.OPEN);
 
             Gtk.FileFilter filter = new Gtk.FileFilter ();
             filechooser.set_filter (filter);
@@ -261,7 +261,7 @@ namespace pdftricks {
             var file_pdf = filechooser.get_filename();
             var output_file = "";
             Gtk.FileChooserNative chooser_output = new Gtk.FileChooserNative (
-                _("Select the file to compress"), window, Gtk.FileChooserAction.SAVE,
+                _("Select the file to save"), window, Gtk.FileChooserAction.SAVE,
                 _("Save"),
                 _("Cancel"));
             var split_filename = file_pdf.split("/");
